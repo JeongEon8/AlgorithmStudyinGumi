@@ -1,51 +1,41 @@
-# [백준 - S4] 1920. 수 찾기
+# [백준 - G3] 1644. 소수의 연속합
  
 ## ⏰  **time**
-20분
+60분
 
 ## :pushpin: **Algorithm**
-이진 탐색
+투 포인터
 
 ## ⏲️**Time Complexity**
-$O((N+M)logN)$
+$O(N)$
 
 ## :round_pushpin: **Logic**
-1. 이진 탐색을 위해 A배열 정렬 시키기
+1. 입력 받은 수 이하의 소수찾기
   
-2. for문을 사용해서 찾고자 하는 값들 차례대로 이진 탐색
+2. for문으로, 연속되는 소수 값 더하기
+
+3. 합이 입력 받은 값보다 클 경우 while문으로 작아질때까지 뺴기
 ```java
-		while(true) {
-			if(arr[mid] == n) { // 찾고자하는 값이 있으면 1을 출력하고 종료
-				System.out.println(1);
-				break;
+		for(int i = 0; i<num; i++) { // (투 포인트 구현)
+			
+			total += arr[i]; // 연속되는 소수 더하기
+			
+			while(total > N) { // 합이 입력받은 값보다 클 경우
+				total -= arr[arrN++]; // 더했던 소수 증에 제일 작은 소수 빼기
 			}
 			
-			if(st>ed) { // 시작 점이 끝 점보다 클경우 0을 출력하고 종료
-				System.out.println(0);
-				break;
+			if(total == N) {
+				total -= arr[arrN++];
+				count++; // 횟수 추가
 			}
 			
-			if(arr[mid]<n) { // 찾고자하는 값이 중간 값보다 클 경우 
-				st = mid +1; // 탐색을 시작 점을 중간 점보다 1크게 설정
-			}else { // 찾고자하는 값이 중간 값보다 작을 경우
-				ed = mid - 1; // 끝 점을 중간 점보다 1작게 설정
-			}
 			
-			mid = (st + ed) /2; // 변경된 값을 기준으로 중간 점 설정
 		}
 ```
 
 ## :black_nib: **Review**
-- 메모리가 부족해서 틀렸어요!!
-- <img
-  src="./public/stamp.PNG"
-  width="400"
-  height="200"
-/>
- <img
-  src="./public/stamp.PNG"
-  width="400"
-  height="200"
-/>
+- 소수를 찾을때 이중 for문을 사용하니 시간이 부족했어요
+- 에라토스테네스의 체를 사용하니 시간 문제 해결👍
+
 
   
