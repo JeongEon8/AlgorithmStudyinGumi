@@ -25,6 +25,8 @@
 |------|---|
 |[JeongEon](https://github.com/JeongEon8)| 실버 1문제, 골드 1문제 |
 |[Dufrane-S](https://github.com/Dufrane-S)| 실버 2문제 |
+|[hyuksanglee](https://github.com/hyuksanglee)| 실버 2문제 |
+
 
 <br>
 
