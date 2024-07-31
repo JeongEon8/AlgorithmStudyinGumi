@@ -36,16 +36,20 @@ $O((N+M)logN)$
 ```
 
 ## :black_nib: **Review**
-- 메모리가 부족해서 틀렸어요!!
-- <img
-  src="./public/stamp.PNG"
-  width="400"
-  height="200"
+- 메모리가 부족해서 틀렸어요😭
+
+  <img
+  src="./img/fail.png"
+  width="800"
+  height="100"
 />
- <img
-  src="./public/stamp.PNG"
-  width="400"
-  height="200"
+
+- 필요없는 배열 삭제후 통과!!
+
+  <img
+  src="./img/success.png"
+  width="800"
+  height="50"
 />
 
   
