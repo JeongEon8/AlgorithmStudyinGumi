@@ -1,15 +1,12 @@
 # [SWEA - D3️] 1860. 진기의 최고급 붕어빵
  
 ## ⏰  **time**
-
 20분
 
 ## :pushpin: **Algorithm**
-
 구현
 
 ## ⏲️**Time Complexity**
-
 $O(NlogN)$
 
 ## :round_pushpin: **Logic**
