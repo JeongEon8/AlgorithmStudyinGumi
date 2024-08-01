@@ -43,4 +43,4 @@ $O(NlogN)$
 - 0초일 때를 포함 안해서 틀렸다.. 으악
 
 ## 📡**Link**
-https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5LsaaqDzYDFAXc
+- https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5LsaaqDzYDFAXc
