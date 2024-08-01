@@ -25,7 +25,7 @@
 |------|---|
 |[JeongEon](https://github.com/JeongEon8)| 실버 1문제, 골드 1문제 |
 |[Dufrane-S](https://github.com/Dufrane-S)| 실버 2문제 |
-|[hyuksanglee](https://github.com/hyuksanglee)| 실버 3문제 |
+|[hyuksanglee](https://github.com/hyuksanglee)| 실버이상 3문제 |
 |[HwangSeonHyeok](https://github.com/HwangSeonHyeok)| 실버이상 4문제 |
 |[hanayoung](https://github.com/hanayoung)| SWEA D4 2문제 |
 
