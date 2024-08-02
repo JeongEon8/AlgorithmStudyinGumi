@@ -29,7 +29,7 @@
 |[HwangSeonHyeok](https://github.com/HwangSeonHyeok)| 실버이상 4문제 |
 |[hanayoung](https://github.com/hanayoung)| SWEA D4 2문제 |
 |장홍준|실버 4문제|
-|구현진|D4 1문제, D3 2문제|
+|[2jin8](https://github.com/2jin8)|SWEA D4 1문제, D3 2문제|
 |이서현| solved.ac 새싹 24문제|
 
 
