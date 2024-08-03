@@ -38,4 +38,8 @@ $O((N+M)logN)$
 ## :black_nib: **Review**
 - 메모리가 부족해서 틀렸어요😭
 
+  ## 📡**Link**
+
+- https://www.acmicpc.net/problem/1920
+
   
