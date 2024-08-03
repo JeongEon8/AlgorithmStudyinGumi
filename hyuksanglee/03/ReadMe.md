@@ -1,41 +1,39 @@
-# [백준 - G3] 1644. 소수의 연속합
+# [백준 - S2] 11725. 트리의 부모 찾기
  
 ## ⏰  **time**
 60분
 
 ## :pushpin: **Algorithm**
-투 포인터
+dfs
 
 ## ⏲️**Time Complexity**
 $O(N)$
 
 ## :round_pushpin: **Logic**
-1. 입력 받은 수 이하의 소수찾기
-  
-2. for문으로, 연속되는 소수 값 더하기
+1. 서로 연결된 노드 2차원 배열에 넣기
 
-3. 합이 입력 받은 값보다 클 경우 while문으로 작아질때까지 뺴기
+2. dfs를 사용하여 해당 노드에 하위 노드를 찾기
+
+3. 찾은 하위노드에 상위 노드 입력하기
+  
 ```java
-		for(int i = 0; i<num; i++) { // (투 포인트 구현)
-			
-			total += arr[i]; // 연속되는 소수 더하기
-			
-			while(total > N) { // 합이 입력받은 값보다 클 경우
-				total -= arr[arrN++]; // 더했던 소수 증에 제일 작은 소수 빼기
+		public static void dfs(int i) {
+		
+		check[i] = true; // 방문 여부 true
+		
+		for(int n : arrList.get(i)) {
+			if(check[n]== false) { // 방문 하지않았을때 
+				result[n]=i; // 해당 노드에 상위노드(i) 입력
+				
+				dfs(n); // 해당 노드 dfs 탐색시작
 			}
-			
-			if(total == N) {
-				total -= arr[arrN++];
-				count++; // 횟수 추가
-			}
-			
-			
 		}
+	}
 ```
 
 ## :black_nib: **Review**
-- 소수를 찾을때 이중 for문을 사용하니 시간이 부족했어요
-- 에라토스테네스의 체를 사용하니 시간 문제 해결👍
+- 처음에 서로 연결된 부분 2차원 배열에 넣을때 '[]'를 사용했더니 메모리 초과 떴어요
+- list 대신 'arrayList<>'를 사용하니 메모리 초과 문제 해결👍
 
 
   
