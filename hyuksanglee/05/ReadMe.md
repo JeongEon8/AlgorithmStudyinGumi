@@ -1,44 +1,41 @@
-# [백준 - S2] 11725. 트리의 부모 찾기
+# [백준 - S3] 11659.구간 합 구하기 4
  
 ## ⏰  **time**
-60분
+30분
 
 ## :pushpin: **Algorithm**
-dfs
+누적합
 
 ## ⏲️**Time Complexity**
 $O(N)$
 
 ## :round_pushpin: **Logic**
-1. 서로 연결된 노드 2차원 배열에 넣기
+1. 입력받은 수 누적합하여 배열에 담기
 
-2. dfs를 사용하여 해당 노드에 하위 노드를 찾기
-
-3. 찾은 하위노드에 상위 노드 입력하기
+2. 입력받은 범위가 start ~ end이면 누적합 배열에서 end까지에 누접합에서 start-1 의 누적합을 빼준다.
   
 ```java
-		public static void dfs(int i) {
-		
-		check[i] = true; // 방문 여부 true
-		
-		for(int n : arrList.get(i)) {
-			if(check[n]== false) { // 방문 하지않았을때 
-				result[n]=i; // 해당 노드에 상위노드(i) 입력
-				
-				dfs(n); // 해당 노드 dfs 탐색시작
-			}
+		for (int n = 1; n<=N; n++) { // 누적합으로 배열 넣기
+			arr[n] = Integer.parseInt(input[n-1])+arr[n-1];
 		}
-	}
+		
+		for(int n = 0; n<M; n++) { 
+			input = br.readLine().split(" "); // i와 j입력 받기
+			int i = Integer.parseInt(input[0]); 
+			int j = Integer.parseInt(input[1]);
+			
+			System.out.println(arr[j]-arr[i-1]); // j 에서 i -1 을 빼주면 i~j의 합이 된다.
+		}
 ```
 
 ## :black_nib: **Review**
-- 처음에 서로 연결된 부분 2차원 배열에 넣을때 '[]'를 사용했더니 메모리 초과 떴어요
-- list 대신 'arrayList<>'를 사용하니 메모리 초과 문제 해결👍
+- 처음에 이중 for문을 돌려서 i에서 j 만큼 더했는데 시간초과 하였다.
+- 알고리즘 힌트를 얻고 누적합으로 풀었더니 문제를 해결했다.
 
   
 ## 📡**Link**
 
-- https://www.acmicpc.net/problem/11725
+- https://www.acmicpc.net/problem/11659
 
 
   
