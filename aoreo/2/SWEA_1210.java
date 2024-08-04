@@ -4,7 +4,7 @@ import java.util.*;
 import java.awt.Point;;
 
 
-class Solution1210
+class Solution
 {
 	public static void main(String args[]) throws Exception
 	{
@@ -58,7 +58,7 @@ class Solution1210
                 }
 
             }
-            System.out.println("# "+tc+" "+answer);
+            System.out.println("#"+tc+" "+answer);
 		}
 	}
 }
