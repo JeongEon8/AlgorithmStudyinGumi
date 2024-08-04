@@ -9,6 +9,7 @@ dp
 ## ⏲️**Time Complexity**
 $O(N)$
 
+
 ## :round_pushpin: **Logic**
 - 점화식 : N2 : M3 에서 N2 : M4로 추가된 경우
 -  N에서 2번째는 경우의 수가 2가지이다.
