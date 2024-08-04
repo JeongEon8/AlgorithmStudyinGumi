@@ -4,7 +4,9 @@
 3분
 
 ## :pushpin: **Algorithm**
+수학
 구현
+사칙연산
 
 ## ⏲️**Time Complexity**
 $O(NlogN)$
