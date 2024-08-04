@@ -6,7 +6,8 @@ public class Beakjoon11658 {
 
 	public static void main(String[] str)throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
+		  
+		  
 		String [] input = br.readLine().split(" "); // N과 M 입력받기
 		int N = Integer.parseInt(input[0]);
 		int M = Integer.parseInt(input[1]);
