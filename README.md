@@ -23,14 +23,14 @@
 # 📚 목표
 |아이디|목표|
 |------|---|
-|[JeongEon](https://github.com/JeongEon8)| 골드 2문제 |
-|[Dufrane-S](https://github.com/Dufrane-S)| 실버 2문제 |
-|[hyuksanglee](https://github.com/hyuksanglee)| 실버이상 3문제 |
-|[HwangSeonHyeok](https://github.com/HwangSeonHyeok)| 실버이상 4문제 |
-|[hanayoung](https://github.com/hanayoung)| SWEA D4 2문제 |
-|[ajang369](https://github.com/ajang369)|실버이상 4문제|
-|[2jin8](https://github.com/2jin8)|SWEA D4 1문제, D3 2문제|
-|[kizife](https://github.com/kizife)| solved.ac 새싹 24문제|
+|[JeongEon](https://github.com/JeongEon8)| 실버이상 7문제 |
+|[Dufrane-S](https://github.com/Dufrane-S)| 실버 4문제 |
+|[hyuksanglee](https://github.com/hyuksanglee)| SWEA 모의 6문제 |
+|[HwangSeonHyeok](https://github.com/HwangSeonHyeok)| 실버 이상 7문제 |
+|[hanayoung](https://github.com/hanayoung)| SWEA D4 4문제 |
+|[ajang369](https://github.com/ajang369)| 실버이상 7문제 + SWEA D2 이상 3문제 |
+|[2jin8](https://github.com/2jin8)|SWEA 모의 4문제 |
+|[kizife](https://github.com/kizife)| solved.ac 14문제 + SWEA D2 2문제 + D3 1문제 |
 
 
 # 공통문제
