@@ -33,6 +33,9 @@
 |[kizife](https://github.com/kizife)| solved.ac 새싹 24문제|
 
 
+# 공통문제
+https://www.acmicpc.net/problem/2589
+
 
 <br>
 
