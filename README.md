@@ -25,7 +25,7 @@
 |------|---|
 |[JeongEon](https://github.com/JeongEon8)| 실버이상 7문제 |
 |[Dufrane-S](https://github.com/Dufrane-S)| 실버 4문제 |
-|[hyuksanglee](https://github.com/hyuksanglee)| SWEA 모의 6문제 |
+|[hyuksanglee](https://github.com/hyuksanglee)| SWEA 모의 5문제 |
 |[HwangSeonHyeok](https://github.com/HwangSeonHyeok)| 실버 이상 7문제 |
 |[hanayoung](https://github.com/hanayoung)| SWEA D4 4문제 |
 |[ajang369](https://github.com/ajang369)| 실버이상 7문제 + SWEA D2 이상 3문제 |
