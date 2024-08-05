@@ -9,9 +9,9 @@ bfs
 
 ## :round_pushpin: **Logic**
 1. 모든 가능한 시작점 L마다 bfs해서 가장 먼 거리를 구해주고 모든 시작점 별 최대 거리를 계산
-```# [백준 - S1] 2468. 안전 영역
+```
  
-```#include <iostream>
+include <iostream>
 #include <queue>
 
 
