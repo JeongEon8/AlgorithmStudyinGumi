@@ -18,17 +18,14 @@ void addAB(string arr, string result) {
 		cout << "1\n";
 		exit(0);
 	}
-
 	if (arr.length() >= result.length()) {
 		return;
 	}
-
 	if (result[result.length() - 1] == 'A') {
 		temp = result;
 		temp.erase(temp.length() - 1);
 		addAB(arr, temp);
 	}
-
 	if (result[0] == 'B') {
 		temp = result;
 		temp.erase(temp.begin());
