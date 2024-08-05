@@ -30,7 +30,7 @@
 |[hanayoung](https://github.com/hanayoung)| SWEA D4 2문제 |
 |[ajang369](https://github.com/ajang369)|실버이상 4문제|
 |[2jin8](https://github.com/2jin8)|SWEA D4 1문제, D3 2문제|
-|이서현| solved.ac 새싹 24문제|
+|[kizife](https://github.com/kizife)| solved.ac 새싹 24문제|
 
 
 
