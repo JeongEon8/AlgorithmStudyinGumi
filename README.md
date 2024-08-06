@@ -30,7 +30,7 @@
 |[hanayoung](https://github.com/hanayoung)| SWEA D4 4문제 |
 |[ajang369](https://github.com/ajang369)| 실버이상 7문제 + SWEA D2 이상 3문제 |
 |[2jin8](https://github.com/2jin8)|SWEA 모의 4문제 |
-|[kizife](https://github.com/kizife)| solved.ac 14문제 + SWEA D2 2문제 + D3 1문제 |
+|[kizife](https://github.com/kizife)| solved.ac 14문제 + 백준 IM수준 5문제 |
 
 
 # 공통문제
