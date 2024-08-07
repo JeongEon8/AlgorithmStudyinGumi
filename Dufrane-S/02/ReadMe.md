@@ -9,6 +9,7 @@
 
 ## :round_pushpin: **Logic**
 1. next_permutaion을 활용하여 가능한 모든 경우의 수를 체크
+2. next_permutation 이용적 sort해줘야함에 주의, next_permutation은 중복을 제거해서 제공함에 주의
 ```#include <iostream>
 #include <algorithm>
 #include <vector>
