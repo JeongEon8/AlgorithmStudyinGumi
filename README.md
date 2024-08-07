@@ -32,10 +32,11 @@
 |[2jin8](https://github.com/2jin8)|SWEA 모의 4문제 |
 |[kizife](https://github.com/kizife)| solved.ac 14문제 + 백준 IM수준 5문제 |
 
+<br>
 
 # 🔑공통문제
-https://www.acmicpc.net/problem/2589
-
+### https://www.acmicpc.net/problem/2589
+![image](https://github.com/user-attachments/assets/db9c3648-e128-4fff-be58-dadaad663993)
 
 <br>
 
