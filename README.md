@@ -33,7 +33,7 @@
 |[kizife](https://github.com/kizife)| solved.ac 14문제 + 백준 IM수준 5문제 |
 
 
-# 공통문제
+# 🔑공통문제
 https://www.acmicpc.net/problem/2589
 
 
