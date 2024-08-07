@@ -42,7 +42,7 @@ public class Main {
 ```
 
 ## :black_nib: **Review**
-- 어려운 것은 없었다.
+- 어려운 것은 없었다. 
 
 ## 📡**Link**
 - https://www.acmicpc.net/problem/10871
