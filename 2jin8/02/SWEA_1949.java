@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution {
+public class SWEA_1949 {
 
     static int N, K, maxH, maxLen;
     static int[][] map;
