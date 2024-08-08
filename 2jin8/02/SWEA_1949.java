@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class SWEA_1949 {
+public class Solution {
 
     static int N, K, maxH, maxLen;
     static int[][] map;
@@ -57,16 +57,16 @@ public class SWEA_1949 {
                 continue;
             }
 
-            // 높은 지형에서 낮은 지형으로 이동하는 경우
+            // 현재 지형보다 낮은 지형으로 이동하는 경우
             if (map[nx][ny] < map[x][y]) {
                 visited[nx][ny] = true;
                 dfs(nx, ny, len + 1, isCrash);
                 visited[nx][ny] = false;
             }
-            // 낮은 지형에서 높은 지형으로 이동하는 경우 & 지형을 깎지 않은 경우
+            // 현재 지형보다 높은 지형으로 이동하는 경우 && 지형을 깎지 않은 경우
             else if (map[nx][ny] >= map[x][y] && !isCrash) {
                 int crash = map[nx][ny] - map[x][y] + 1;
-                // 현재 지형과 차이가 적을수록 등산로의 길이가 길어짐
+                // 현재 지형과 차이가 적을수록 등산로의 길이가 길어짐 ⇒ "현재 지형 - 1"한 것만 살펴보면 됨
                 if (crash <= K) { // 깎는 높이가 K를 넘지 않을 때만 깎기
                     map[nx][ny] -= crash;
                     visited[nx][ny] = true;
