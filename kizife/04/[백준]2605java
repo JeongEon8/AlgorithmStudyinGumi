@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt(); // 학생 수 입력
+        int[] arr = new int[N];
+
+        for (int i = 1; i <= N; i++) {
+
+            // 입력값(seat)은 무엇을 뜻하는가? 인덱스 N-1-seat의 자리에 삽입된다...
+            // 이것을 어떻게 차곡차곡 쌓을 것인가?
+
+            int seat = sc.nextInt();
+            int index = i - 1 - seat;
+
+            // 계산된 인덱스 위치에 현재 학생 번호 배치
+            for (int j = i - 1; j > index; j--) {
+                arr[j] = arr[j - 1]; // 자리를 옮겨줌
+            }
+            arr[index] = i; // 계산된 위치에 현재 학생 번호 배치
+
+        }
+
+        for (int i = 0; i < N; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+    }
+}
