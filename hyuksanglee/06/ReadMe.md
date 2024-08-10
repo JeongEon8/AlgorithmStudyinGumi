@@ -1,41 +1,64 @@
-# [백준 - S3] 11659.구간 합 구하기 4
+# [SWEA - 모의 SW 역량테스트] 4012.요리사
  
 ## ⏰  **time**
-30분
+90분
 
 ## :pushpin: **Algorithm**
-누적합
+dfs
 
 ## ⏲️**Time Complexity**
-$O(N)$
+$O(2^N)$
 
 ## :round_pushpin: **Logic**
-1. 입력받은 수 누적합하여 배열에 담기
+1. A음식과 B음식을 만들기 위해 필요한 재료 담는 스택 만들기
 
-2. 입력받은 범위가 start ~ end이면 누적합 배열에서 end까지에 누접합에서 start-1 의 누적합을 빼준다.
+2. A나 B에 담고 다시 dfs호출
+
+3. 담은 재료가 N개이면서 B에 담은 수가 N의 절반이면 계산을 한고 최솟값 비교하면서 갱신한다.
   
 ```java
-		for (int n = 1; n<=N; n++) { // 누적합으로 배열 넣기
-			arr[n] = Integer.parseInt(input[n-1])+arr[n-1];
-		}
+		public static void dfs(int n) {
 		
-		for(int n = 0; n<M; n++) { 
-			input = br.readLine().split(" "); // i와 j입력 받기
-			int i = Integer.parseInt(input[0]); 
-			int j = Integer.parseInt(input[1]);
-			
-			System.out.println(arr[j]-arr[i-1]); // j 에서 i -1 을 빼주면 i~j의 합이 된다.
+		// M 개수 일때 계산을 하거나 리턴
+		if (n == N) {
+			if (ingredientB.size() == N / 2) {
+				int cookA = 0, cookB = 0;
+				for (int i = 0; i < N / 2; i++) {
+					for (int j = 0; j < N / 2; j++) {
+						cookA += arr[ingredientA.get(i)][ingredientA.get(j)];
+						cookB += arr[ingredientB.get(i)][ingredientB.get(j)];
+					}
+					
+				}
+				int result = Math.abs(cookA - cookB);
+				if (min > result) {
+					min = result;
+				}
+			}
+			return;
 		}
+
+		// a음식에 재료 넣기
+		ingredientA.push(n);
+		dfs(n + 1); 
+		ingredientA.pop(); // 넣은 재료 빼기
+		
+		// b음식에 재료 넣기
+		ingredientB.push(n);
+		dfs(n + 1);
+		ingredientB.pop(); // 넣은 재료 빼기
+
+	}
 ```
 
 ## :black_nib: **Review**
-- 처음에 이중 for문을 돌려서 i에서 j 만큼 더했는데 시간초과 하였다.
-- 알고리즘 힌트를 얻고 누적합으로 풀었더니 문제를 해결했다.
+- 처음에는 조합으로 풀려다가 너무 답이 안나와서 인터넷을 보고 힌트를 얻어서 풀었습니다.
+- 너무 어려워요 ㅠㅠ
 
   
 ## 📡**Link**
 
-- https://www.acmicpc.net/problem/11659
+- https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWIeUtVakTMDFAVH&categoryId=AWIeUtVakTMDFAVH&categoryType=CODE&problemTitle=%EB%AA%A8%EC%9D%98&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=1
 
 
   
