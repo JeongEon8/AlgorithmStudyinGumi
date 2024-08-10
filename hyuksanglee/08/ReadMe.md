@@ -1,4 +1,4 @@
-# [백준 - S3] 11659.구간 합 구하기 4
+# [SWEA - 모의 SW 역량테스트] 4008. 숫자만들기
  
 ## ⏰  **time**
 30분
@@ -10,22 +10,61 @@
 $O(N)$
 
 ## :round_pushpin: **Logic**
-1. 입력받은 수 누적합하여 배열에 담기
-
-2. 입력받은 범위가 start ~ end이면 누적합 배열에서 end까지에 누접합에서 start-1 의 누적합을 빼준다.
+1. 연산자 배열에 완전 탐색을 한다.
+	1. 배열에서 연산자 하나씩 들고 와서 계산을 한다
+      	2. 수식에 개수 만큼 계산을 하고 전에 계산했던 max와 min을 비교해서 값을 해당 값이랑 변경해준다
+2. 완전 탐색으로 구한 max와 min의 차이를 구한다.
   
 ```java
-		for (int n = 1; n<=N; n++) { // 누적합으로 배열 넣기
-			arr[n] = Integer.parseInt(input[n-1])+arr[n-1];
+		public static void quest(int count) {
+		if (count == N - 1) { // 연산자 수만큼 계산 다 했을때
+			if(max<total) {
+				max=total;
+			}
+			if(min> total) {
+				min = total;
+			}
+			return;
 		}
-		
-		for(int n = 0; n<M; n++) { 
-			input = br.readLine().split(" "); // i와 j입력 받기
-			int i = Integer.parseInt(input[0]); 
-			int j = Integer.parseInt(input[1]);
-			
-			System.out.println(arr[j]-arr[i-1]); // j 에서 i -1 을 빼주면 i~j의 합이 된다.
+
+		for (int i = 0; i < 4; i++) {
+			int tmp = total;
+			if (operator[i] != 0) {
+				if (i == 0) { // 더하기
+					operator[i] -= 1;
+					total += num[++count];
+					quest(count);
+					count--;
+					operator[i] += 1;
+					total = tmp;
+				}else if(i == 1) { // 빼기
+					operator[i] -= 1;
+					total -= num[++count];
+					quest(count);
+					count--;
+					operator[i] += 1;
+					total = tmp;
+				}else if(i == 2) { // 곱하기
+					operator[i] -= 1;
+					total *= num[++count];
+					quest(count);
+					count--;
+					operator[i] += 1;
+					total = tmp;
+					
+				}else if(i == 3) { // 나누기
+					operator[i] -= 1;
+					total /= num[++count];
+					quest(count);
+					count--;
+					operator[i] += 1;
+					total = tmp;
+				}
+
+			}
 		}
+
+	}
 ```
 
 ## :black_nib: **Review**
@@ -35,7 +74,7 @@ $O(N)$
   
 ## 📡**Link**
 
-- https://www.acmicpc.net/problem/11659
+- https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWIeRZV6kBUDFAVH&categoryId=AWIeRZV6kBUDFAVH&categoryType=CODE&problemTitle=%EB%AA%A8%EC%9D%98&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=1
 
 
   
