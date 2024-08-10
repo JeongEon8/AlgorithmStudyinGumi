@@ -1,41 +1,54 @@
-# [백준 - S3] 11659.구간 합 구하기 4
+# [SWEA - 모의 SW 역량테스트] 5658. 보물상자 비밀번호
  
 ## ⏰  **time**
 30분
 
 ## :pushpin: **Algorithm**
-누적합
+구현
 
 ## ⏲️**Time Complexity**
 $O(N)$
 
 ## :round_pushpin: **Logic**
-1. 입력받은 수 누적합하여 배열에 담기
+1. 4등분 해서 큐에 넣어준다
 
-2. 입력받은 범위가 start ~ end이면 누적합 배열에서 end까지에 누접합에서 start-1 의 누적합을 빼준다.
+2. 한 바퀴 돌리면 큐에서 하나 뽑아서 다음 칸에 넘겨준다
+
+3. 넘겨준다음 칸에 있는 string을 Integer.parse를 이용하여 16진수를 10진수로 변경하고 set에 넘어준다
+
+4. 다 돌고 나면 set을 배열로 바꾼 다음 sort로 정렬하고 해당 크기에 맞는 함수 찾는다
   
 ```java
-		for (int n = 1; n<=N; n++) { // 누적합으로 배열 넣기
-			arr[n] = Integer.parseInt(input[n-1])+arr[n-1];
-		}
-		
-		for(int n = 0; n<M; n++) { 
-			input = br.readLine().split(" "); // i와 j입력 받기
-			int i = Integer.parseInt(input[0]); 
-			int j = Integer.parseInt(input[1]);
-			
-			System.out.println(arr[j]-arr[i-1]); // j 에서 i -1 을 빼주면 i~j의 합이 된다.
-		}
+		// 번호 경우의 수 만큼 돌리기
+			for (int k = 0; k < n; k++) {
+
+				// 번호 한번 돌리기
+				for (int i = 0; i < 4; i++) {
+					arr[i].offer(arr[(i + 1) % 4].poll());
+				}
+
+				// 한줄의 수를 int롤 변형하여 set에 담기
+				for (int i = 0; i < 4; i++) {
+					String str = "";
+					for (int j = 0; j < n; j++) {
+						String tmp = arr[i].poll();
+						str += tmp;
+						arr[i].offer(tmp);
+					}
+					set.add(Integer.parseInt(str, 16));
+					
+				}
+
+			}
 ```
 
 ## :black_nib: **Review**
-- 처음에 이중 for문을 돌려서 i에서 j 만큼 더했는데 시간초과 하였다.
-- 알고리즘 힌트를 얻고 누적합으로 풀었더니 문제를 해결했다.
+- Integer.parse가 16진수를 10진수로 바꾸는거 이문제를 통해 알게 되었어요
 
   
 ## 📡**Link**
 
-- https://www.acmicpc.net/problem/11659
+- [https://www.acmicpc.net/problem/11659](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRUN9KfZ8DFAUo)
 
 
   
