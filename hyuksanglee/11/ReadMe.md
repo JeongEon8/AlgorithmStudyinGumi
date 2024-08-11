@@ -1,33 +1,57 @@
-# [SWEA - 모의 SW 역량테스트] 5650. 핀볼 게임
+# [백준 - G5] 2589. 보물섬
  
 ## ⏰  **time**
-5시간
+1시간 20분
 
 ## :pushpin: **Algorithm**
-시뮬레이션
+dfs
 
 ## ⏲️**Time Complexity**
-$O(N)$
+$O((R * C)^2)$
 
 ## :round_pushpin: **Logic**
-1. 입력 받은 배열 2차원 배열에 담기
-   - 웜홈이 있을경우 웜홈배열에 넣어준다
-3. 블록 들어오는 방향에 따라 설정
-	- 붙이는 면이 직각이면 180도 회전시켜주고 아닐경우 해당방향으로 회전시켜준다
-4. 웜홈을 만났을경우
-   	- 웜홈 배열에서 위치를 찾아 좌표를 바꿔어준다
-5. 이중 for문을 돌면서 해당판이 0인칸을 찾아 시뮬레이션 돌려준다.
+1. 최단 거리를 구하는 문제라서 dfs를 사용
+
+2. dfs를 할때 방문여부는 이동 시간으로 값을 입력
+
+3. 처음 출발지는 시간이 0이므로 구한 시간에서 -1을 해준다.
+
+```java
+		while (!que.isEmpty()) {
+			Place p = que.poll();
+
+			int nx = p.x;
+			int ny = p.y;
+
+			// 상,하,좌,우 방향으로 육지체크
+			for (int i = 0; i < 4; i++) {
+				int cx = nx + dx[i];
+				int cy = ny + dy[i];
+
+				if (cx < 0 || cx >= C || cy < 0 || cy >= R) { // 지도 밖으로 나갔을때 예외처리
+					continue;
+				}
+
+				if (map[cy][cx] == 0 && isSelect[cy][cx] == 0) { // 해당 지역이 육지이면서 방문을 안했을때
+					que.offer(new Place(cx, cy)); // 큐에 좌표 넣기
+					isSelect[cy][cx] = isSelect[ny][nx] + 1; // 이동할곳 방문 체크( 전 판에 있던 시간 +1)
+
+				}
+
+			}
+
+		}
+```
 
   
 
 ## :black_nib: **Review**
-- bufferedReader를 써서 돌렸을때는 오류가 뜨길래 다른방법으로 시도했지만
-- 알고보니 scanner만 바꾸면 해결되는거였어요
+- 입력받은 String배열에서 R과C를 뽑는 과정에서 C를 뽑을 때 1번 인덱스를 뽑아야하는데 0번 인덱스를 뽑는 실수를 자주함
 
   
 ## 📡**Link**
 
-- https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRF8s6ezEDFAUo&categoryId=AWXRF8s6ezEDFAUo&categoryType=CODE&problemTitle=%EB%AA%A8%EC%9D%98&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=1
+- https://www.acmicpc.net/problem/2589
 
 
   
