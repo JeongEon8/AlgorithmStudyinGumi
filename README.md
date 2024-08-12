@@ -24,14 +24,14 @@
 # 📚 목표
 |아이디|목표|
 |------|---|
-|[JeongEon](https://github.com/JeongEon8)| 실버이상 7문제 |
-|[Dufrane-S](https://github.com/Dufrane-S)| 실버 4문제 |
-|[hyuksanglee](https://github.com/hyuksanglee)| SWEA 모의 5문제 |
-|[HwangSeonHyeok](https://github.com/HwangSeonHyeok)| 실버 이상 7문제 |
-|[hanayoung](https://github.com/hanayoung)| SWEA D4 4문제 |
-|[ajang369](https://github.com/ajang369)| 실버이상 7문제 + SWEA D2 이상 3문제 |
-|[2jin8](https://github.com/2jin8)|SWEA 모의 4문제 |
-|[kizife](https://github.com/kizife)| solved.ac 14문제 + 백준 IM수준 5문제 |
+|[JeongEon](https://github.com/JeongEon8)| SWEA D4 6문제 |
+|[Dufrane-S](https://github.com/Dufrane-S)| A형 기출 2문제 + SWEA D4 2문제 |
+|[hyuksanglee](https://github.com/hyuksanglee)| IM수준 6문제 |
+|[HwangSeonHyeok](https://github.com/HwangSeonHyeok)| 실버이상 7문제 |
+|[hanayoung](https://github.com/hanayoung)| SWEA D4이상 5문제 |
+|[ajang369](https://github.com/ajang369)| 실버이상 + SWEA 8문제 |
+|[2jin8](https://github.com/2jin8)| 골드이상 3개 + SWEA 모의 2문제 |
+|[kizife](https://github.com/kizife)| IM수준 9문제 |
 
 <br>
 
