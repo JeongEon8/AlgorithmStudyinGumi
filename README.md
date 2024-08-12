@@ -36,8 +36,7 @@
 <br>
 
 # 🔑공통문제
-### https://www.acmicpc.net/problem/2589
-![image](https://github.com/user-attachments/assets/db9c3648-e128-4fff-be58-dadaad663993)
+### [https://www.acmicpc.net/problem/2589](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AV15PTkqAPYCFAYD&categoryId=AV15PTkqAPYCFAYD&categoryType=CODE&problemTitle=&orderBy=SUBMIT_COUNT&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=4)
 
 <br>
 
