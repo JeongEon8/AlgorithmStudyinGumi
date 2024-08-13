@@ -6,19 +6,9 @@
 
 <br>
 
-# ✅ 진행
-1. 매주 하루 온라인 회의를 통해 목표 설정 + 공통 한 문제 설정
-2. 개인 목표만큼 알고리즘 문제 풀이
-3. 푼 문제는 깃허브 업로드
-4. readme.md 작성을 통해 문제풀이 작성
-5. 온라인 회의 날 목표 완수 여부 확인
-
-<br>
-
-# ⌛ 진행상황
-- 제 1회 [24.08.01 - 24.08.05] (진행완료)
-- 제 2회 [24.08.06 - 24.08.12] (진행완료) [백준] 2589. 보물섬
-- 제 3회 [24.08.13 - 24.08.19] (진행중)
+# 🔑공통문제
+### [https://www.acmicpc.net/problem/2589](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AV15PTkqAPYCFAYD&categoryId=AV15PTkqAPYCFAYD&categoryType=CODE&problemTitle=&orderBy=SUBMIT_COUNT&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=4)
+<img width="815" alt="image" src="https://github.com/user-attachments/assets/4f2a5fed-3bf4-450b-be2c-9403ffbdb41e">
 
 <br>
 
@@ -36,9 +26,19 @@
 
 <br>
 
-# 🔑공통문제
-### [https://www.acmicpc.net/problem/2589](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AV15PTkqAPYCFAYD&categoryId=AV15PTkqAPYCFAYD&categoryType=CODE&problemTitle=&orderBy=SUBMIT_COUNT&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=4)
-<img width="815" alt="image" src="https://github.com/user-attachments/assets/4f2a5fed-3bf4-450b-be2c-9403ffbdb41e">
+# ⌛ 진행상황
+- 제 1회 [24.08.01 - 24.08.05] (진행완료)
+- 제 2회 [24.08.06 - 24.08.12] (진행완료) [백준] 2589. 보물섬
+- 제 3회 [24.08.13 - 24.08.19] (진행중)
+
+<br>
+
+# ✅ 진행방식
+1. 매주 하루 온라인 회의를 통해 목표 설정 + 공통 한 문제 설정
+2. 개인 목표만큼 알고리즘 문제 풀이
+3. 푼 문제는 깃허브 업로드
+4. readme.md 작성을 통해 문제풀이 작성
+5. 온라인 회의 날 목표 완수 여부 확인
 
 <br>
 
