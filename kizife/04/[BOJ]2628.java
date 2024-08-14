@@ -7,7 +7,7 @@ public class Main {
         int w = sc.nextInt();
         int h = sc.nextInt();
         int N = sc.nextInt();
-
+ 
         ArrayList<Integer> wList = new ArrayList<>(); //가로로 자르는 선, 즉 세로길이에 영향
         ArrayList<Integer> hList = new ArrayList<>(); //세로로 자르는 선, 즉 가로길이에 영향
 
