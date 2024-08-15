@@ -43,8 +43,9 @@ public class BOJ_17471 {
             return;
         }
 
-        // 한 선거구에 포함되는 지역의 개수를 1개 ~ N - 1개로 설정하기
-        for (int i = 1; i < N - 1; i++) {
+        // 한 선거구에 포함되는 지역의 개수를 1개 ~ N/2개로 설정하기
+        // nCm = nCn-m
+        for (int i = 1; i <= N / 2; i++) {
             dfs(0, i, 1, 0);
         }
         System.out.println(diff == MAX ? -1 : diff);
