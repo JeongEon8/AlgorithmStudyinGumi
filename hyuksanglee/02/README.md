@@ -2,7 +2,7 @@
 
 ## ⏰ **time**
 
-60분
+30분
 
 ## :pushpin: **Algorithm**
 
@@ -14,34 +14,31 @@ $O(logN)$
 
 ## :round_pushpin: **Logic**
 
-1. 101 x 101배열을 만들어준다.
+1. 가로 좌표와 세로 좌표를 받는 배열 생성
 
-2. 직사각형에 면적에 해당하는 구역을 1로 표시한다.
+2. 자르기 전에 가로와 세로를 (0,0)을 포함해서 배열에 넣어준다.
 
-3. 마지막으로 1의 개수를 세어서 출력한다.
+3. 입력 받은 자르는 부분을 가로로 자르면 세로 배열에 추가 해주고 세로로 자르면 가로 배열에 추가 해준다.
+
+4. 가로 배열과 세로 배열을 정렬을 하기 위해 리스트에 옴겨준다.
+
+5. 정렬을 하고 리스트에서 2개씩 뽑아서 면적을 구하고 최댓값 비교후 갱신해준다.
 
 ```java
-    // 입력 받기
-		for (int n = 0; n < 4; n++) {
-			String[] input = in.readLine().split(" ");
-			int x1 = Integer.parseInt(input[0]); 
-			int y1 = Integer.parseInt(input[1]);
-			int x2 = Integer.parseInt(input[2]);
-			int y2 = Integer.parseInt(input[3]);
-		
-			for(int i = x1;i<x2;i++) { 		// x1에서 x2까지
-				for(int j =y1; j<y2; j++) {	// y1에서 y2까지
-					arr[i][j] =1;			// 직사각형 면적을 1로 표시해준다.
-				}
+    for(int i = 0; i<listW.length-1; i++) {
+	for(int j=0; j<listH.length-1; j++) {
+		int total = Math.abs(listW[i]-listW[i+1]) * Math.abs(listH[j]-listH[j+1]);
+			if(max < total) {
+				max = total;
 			}
-
 		}
+	}
 ```
 
 ## :black_nib: **Review**
 
-- 처음에는 해당 사각형을 구해서 곁치는 부분을 지우려고 했지만 3개가 곁치는 부분에 예외처리를 하지못해서 구현을 못했습니다.
+- 이번 문제는 쉬웠어요
 
 ## 📡**Link**
 
-- https://www.acmicpc.net/problem/2669
+- https://www.acmicpc.net/problem/2628
