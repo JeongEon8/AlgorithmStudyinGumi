@@ -1,13 +1,12 @@
-# [백준 - S2] 14627. 파닭파닭
+# [백준 - S5] 2669. 네개의 합집합의 면적 구하기
 
 ## ⏰ **time**
 
-80분
+60분
 
 ## :pushpin: **Algorithm**
 
-- 이분 탐색
-- 매개 변수 탐색
+- 구현
 
 ## ⏲️**Time Complexity**
 
@@ -15,34 +14,34 @@ $O(logN)$
 
 ## :round_pushpin: **Logic**
 
-이분 탐색으로 파닭에 넣을 파의 길이를 최대 길이를 구해준다.
+1. 101 x 101배열을 만들어준다.
 
-```cpp
-    long long left = 1, right = 1e9, mid = (left + right) / 2;;
-    while (left <= right) {
-        long long sum = 0L;
-        long long cnt = 0L;
-        for (int i = 0; i < n; i++) {
-            cnt += arr[i] / mid;
-        }
-        if (cnt >= m) {
+2. 직사각형에 면적에 해당하는 구역을 1로 표시한다.
 
-            left = mid + 1;
-        }
-        else {
-            right = mid - 1;
-        }
-        mid = (left + right) / 2;
-    }
-    //ans엔 파의 길이의 합이 들어있었음
-    ans = ans - mid * m;
+3. 마지막으로 1의 개수를 세어서 출력한다.
+
+```java
+    // 입력 받기
+		for (int n = 0; n < 4; n++) {
+			String[] input = in.readLine().split(" ");
+			int x1 = Integer.parseInt(input[0]); 
+			int y1 = Integer.parseInt(input[1]);
+			int x2 = Integer.parseInt(input[2]);
+			int y2 = Integer.parseInt(input[3]);
+		
+			for(int i = x1;i<x2;i++) { 		// x1에서 x2까지
+				for(int j =y1; j<y2; j++) {	// y1에서 y2까지
+					arr[i][j] =1;			// 직사각형 면적을 1로 표시해준다.
+				}
+			}
+
+		}
 ```
 
 ## :black_nib: **Review**
 
-- 처음엔 답을 계산하는 방법이 달랐었는데 반례를 만들기가 너무 어려운 문제라 반례를 찾진 못했다. 답 계산하는 식을 바꾸고 풀린거 보면 원래 계산이 예외가 있었던것 같다.
-- 범위가 큰데 int를 사용한 문제도 있었다. 억단위가 보이면 일단 long long을 쓰자
+- 처음에는 해당 사각형을 구해서 곁치는 부분을 지우려고 했지만 3개가 곁치는 부분에 예외처리를 하지못해서 구현을 못했습니다.
 
 ## 📡**Link**
 
-- https://www.acmicpc.net/problem/14627
+- https://www.acmicpc.net/problem/2669
