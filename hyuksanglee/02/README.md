@@ -10,7 +10,7 @@
 
 ## ⏲️**Time Complexity**
 
-$O(logN)$
+$O(N)$
 
 ## :round_pushpin: **Logic**
 
