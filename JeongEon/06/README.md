@@ -6,7 +6,7 @@
   
 ## :pushpin: **Algorithm**
 
-구
+구현
   
 ## ⏲️**Time Complexity**
 
