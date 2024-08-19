@@ -7,7 +7,7 @@
 <br>
 
 # 🔑공통문제
-### [[https://www.acmicpc.net/problem/2589](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AV15PTkqAPYCFAYD&categoryId=AV15PTkqAPYCFAYD&categoryType=CODE&problemTitle=&orderBy=SUBMIT_COUNT&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=4)](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AV4yLUiKDUoDFAUx&categoryId=AV4yLUiKDUoDFAUx&categoryType=CODE&problemTitle=&orderBy=INQUERY_COUNT&selectCodeLang=JAVA&select-1=4&pageSize=10&pageIndex=2)
+### [https://www.acmicpc.net/problem/2589]
 <img width="815" alt="image" src="https://github.com/user-attachments/assets/4f2a5fed-3bf4-450b-be2c-9403ffbdb41e">
 
 <br>
