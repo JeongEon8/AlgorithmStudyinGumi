@@ -1,114 +1,48 @@
-# [백준 - G5] 14503. 로봇 청소기
+# [백준 - S1] 1991. 트리 순회
  
 ## ⏰  **time**
-40분
+60분
 
 ## :pushpin: **Algorithm**
-시뮬레이션
-구현
-
+- 트리
 
 ## :round_pushpin: **Logic**
-1. 청소할 곳 있으면 반시계 방향
-2. 없으면 뒤로!
-3. 벽과 청소하지 않은 곳을 구분하는 것에 주의
-```#include <iostream>
-#include <vector>
-using namespace std;
+1. 알파벳에 'A' 뺴서 정수로 만든다.
+2. 2차원 배열에서 부모정수에 왼쪽자식과 오른쪽 자식을 넣어준다.
+3. 전위: 해당 정수를 출력하고 -> 왼쪽 탐색 -> 오른쪽 탐색
+   중위 : 왼쪽탐색 -> 출력 -> 오른쪽 탐색
+   후위 : 왼쪽 탐색 -> 오른쪽 탐색 -> 출력
+   
+```#java
+// 전위 순회
+    public static void preorder(int node) {
+        if (node == -1) return;
+        System.out.print((char)(node + 'A'));  // 루트
+        preorder(tree[node][0]);  // 왼쪽 자식
+        preorder(tree[node][1]);  // 오른쪽 자식
+    }
 
-int dx[4] = { 1,-1,0,0 };
-int dy[4] = { 0,0,1,-1 };
+    // 중위 순회
+    public static void inorder(int node) {
+        if (node == -1) return;
+        inorder(tree[node][0]);  // 왼쪽 자식
+        System.out.print((char)(node + 'A'));  // 루트
+        inorder(tree[node][1]);  // 오른쪽 자식
+    }
 
-int main() {
-
-	int n, m;
-	cin >> n >> m;
-	int nowi, nowj, dir;
-	cin >> nowi >> nowj >> dir;
-	vector<vector<int>>box(n, vector<int>(m, 0));
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			int a;
-			cin >> a;
-			box[i][j] = a;
-		}
-	}
-	int y = nowi;
-	int x = nowj;
-	int answer = 0;
-	while (true) {
-		if (box[y][x] == 0) {
-			answer++;
-			box[y][x] = -1;
-		}
-		bool flag = false;
-		for (int k = 0; k < 4; k++) {
-			int ny = y + dy[k];
-			int nx = x + dx[k];
-			if (ny < 0 || nx < 0 || nx == m || ny == n)continue;
-			if (box[ny][nx] == 0) {
-				flag = true;
-				break;
-			}
-		}
-		if (flag) {// 청소 안된 곳 있으면
-			while (true) {
-				dir--;
-				if (dir == -1)dir = 3;
-				if (dir == 0) {
-					int ny = y - 1;
-					if (box[ny][x] == 0) {
-						y = ny;
-						break;
-					}
-				}
-				else if (dir == 1) {
-					int nx = x + 1;
-					if (box[y][nx] == 0) {
-						x = nx;
-						break;
-					}
-				}
-				else if (dir == 2) {
-					int ny = y + 1;
-					if (box[ny][x] == 0) {
-						y = ny;
-						break;
-					}
-				}
-				else if (dir == 3) {
-					int nx = x - 1;
-					if (box[y][nx] == 0) {
-						x = nx;
-						break;
-					}
-				}
-			}
-		}
-		else {// 없으면
-			if (dir == 0) {
-				y++;
-				if (y == n || box[y][x]==1)break;
-			}
-			else if (dir == 1 ) {
-				x--;
-				if (x < 0 || box[y][x] == 1)break;
-			}
-			else if (dir == 2) {
-				y--;
-				if (y < 0 || box[y][x] == 1)break;
-			}
-			else if (dir == 3) {
-				x++;
-				if (x == m || box[y][x] == 1)break;
-			}
-		}
-
-	}
-	cout << answer;
-	
-	
-	return 0;
-
-}
+    // 후위 순회
+    public static void postorder(int node) {
+        if (node == -1) return;
+        postorder(tree[node][0]);  // 왼쪽 자식
+        postorder(tree[node][1]);  // 오른쪽 자식
+        System.out.print((char)(node + 'A'));  // 루트
+    }
 ```
+## :black_nib: **Review**
+
+- dfs를 풀려고 했는데 실패하더라구요ㅠㅠ
+
+## 📡**Link**
+
+- https://www.acmicpc.net/problem/1991
+  
