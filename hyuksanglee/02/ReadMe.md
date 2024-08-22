@@ -1,48 +1,60 @@
-# [백준 - S1] 1991. 트리 순회
+# [백준 - S1] 2346. 풍선 터뜨리기
  
 ## ⏰  **time**
-60분
+40분
 
 ## :pushpin: **Algorithm**
 - 트리
 
 ## :round_pushpin: **Logic**
-1. 알파벳에 'A' 뺴서 정수로 만든다.
-2. 2차원 배열에서 부모정수에 왼쪽자식과 오른쪽 자식을 넣어준다.
-3. 전위: 해당 정수를 출력하고 -> 왼쪽 탐색 -> 오른쪽 탐색
-   중위 : 왼쪽탐색 -> 출력 -> 오른쪽 탐색
-   후위 : 왼쪽 탐색 -> 오른쪽 탐색 -> 출력
+1. 데크를 사용해서 (정수와 인덴스)클래스를 담는다
+
+2. 풍선안에 양수이면 데크에서 .poll()로 빼서 다시 .offer()로 오른쪽에 넣어준다. 
+
+3. 음수이면 데크에 오른쪽으로 .pollLeft()롤 뺴서 다시 offerFirst()로 왼쪽에 붙여준다
+
+4. 2 3번에 해당 되는 것에 숫자만큼 반복한 후 .poll이나 .pollLeft()를 통해서 해당 클래스를 뽑아서 덱스를 출력해준다.
    
 ```#java
-// 전위 순회
-    public static void preorder(int node) {
-        if (node == -1) return;
-        System.out.print((char)(node + 'A'));  // 루트
-        preorder(tree[node][0]);  // 왼쪽 자식
-        preorder(tree[node][1]);  // 오른쪽 자식
-    }
-
-    // 중위 순회
-    public static void inorder(int node) {
-        if (node == -1) return;
-        inorder(tree[node][0]);  // 왼쪽 자식
-        System.out.print((char)(node + 'A'));  // 루트
-        inorder(tree[node][1]);  // 오른쪽 자식
-    }
-
-    // 후위 순회
-    public static void postorder(int node) {
-        if (node == -1) return;
-        postorder(tree[node][0]);  // 왼쪽 자식
-        postorder(tree[node][1]);  // 오른쪽 자식
-        System.out.print((char)(node + 'A'));  // 루트
-    }
+while(!que.isEmpty()) {
+			
+			if(type ==0) {
+				nu =que.poll();
+				num = nu.num;
+			}else {
+				nu = que.pollLast();
+				num = nu.num;
+			}
+			
+			System.out.print(nu.index + " ");
+			
+			if(que.isEmpty()) {
+				break;
+			}
+			if(num <0) {
+				type = 1;
+				num = Math.abs(num);
+			}else {
+				type =0;
+			}
+			
+			for(int i = 0; i<num-1; i++) {
+				if(type == 0) {
+					que.offer(que.poll());
+					
+				
+				}else {
+					que.offerFirst(que.pollLast());
+				}
+			}
+			
+		}
 ```
 ## :black_nib: **Review**
 
-- dfs를 풀려고 했는데 실패하더라구요ㅠㅠ
+- 처음에 데크에 숫자만 받아서 뽑으려 했지만 인덱스를 뽑는데 어려운이있어서 클래스를만들어서 해결했어요
 
 ## 📡**Link**
 
-- https://www.acmicpc.net/problem/1991
+- https://www.acmicpc.net/problem/2346
   
