@@ -4,7 +4,7 @@
 40분
 
 ## :pushpin: **Algorithm**
-- 트리
+- Deque
 
 ## :round_pushpin: **Logic**
 1. 데크를 사용해서 (정수와 인덴스)클래스를 담는다
