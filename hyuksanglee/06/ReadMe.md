@@ -1,36 +1,50 @@
-# [백준 - S4] 10773. 제로
+# [백준 - G5] 100026. 적록색약
 ## ⏰  **time**
-20분
+40분
 
 ## :pushpin: **Algorithm**
-- 스텍
+- dfs
 
 ## :round_pushpin: **Logic**
-1. 정수를 담을수 있는 스택 만든다.
+1. 이중for문으로 방문 하지 않은 좌표를 찾는다
 
-2. for문을 돌면서 해당 0을 제외한 숫자이면 스택에 담기
+2. 방문하지 않은 좌표에 색상과 주변에 같은 색상이 있는지 dfs탐색
+   	- 탐색할 때 다음 적록색약인 사람을 검사해야하기 때문에 색상이 녹색이면 미리 적색으로 바꾸어준다.
+3. 탐색을 완료했으면 result값을 +1 해준다.
 
-3. 0이면서 스택이 비어있지 않으면 스택에서 한개를 pop()해준다.
+4. 이중 for문을 다 돌때까지 1번 반복
 
-4. 마지막으로 스택 안에 있는 빼서 더해준다.
+5.  적록색약인 사람을 검사해야하기위해 다시 1번 에서 한번더 이중 for문 실행
+
    
 ```#java
-for (int k = 0; k < K; k++) {
-			int N = Integer.parseInt(input.readLine());
-			if (N == 0) {
-				if (!stack.isEmpty()) {
-					stack.pop();
-				}
-			} else {
-				stack.add(N);
+public static void dfs(int i, int j) {
+		for(int d = 0; d<4; d++) {
+			int ni = i + di[d];
+			int nj = j + dj[d];
+			
+			if(ni<0 || ni >=N || nj <0 || nj>=N ) {
+				continue;
 			}
+			
+			if(arr[ni][nj].equals(arr[i][j]) && isSelected[ni][nj] == false) {
+				isSelected[ni][nj] = true;
+				
+				dfs(ni,nj);
+				if(arr[ni][nj].equals("G")) {
+					arr[ni][nj]="R";
+				}
+			}
+			
 		}
+	}
 ```
 ## :black_nib: **Review**
 
-- 스택으로 가뿐히 해결!!
+- 처음에는 적록색약이 아닌 사람 검사하는 dfs와 적록색약인 사람을 검사하는 dfs를 따로 만들라고 했지만
+- 생각해보니 적록색약이 아닌 사람 검사할때 G를 R로 바꾸면 dfs코드가 같기 때문에 코드길이를 줄일수있었다.
 
 ## 📡**Link**
 
-- https://www.acmicpc.net/problem/10773
+- https://www.acmicpc.net/problem/10026
   
