@@ -1,48 +1,40 @@
-# [백준 - S1] 1991. 트리 순회
+# [백준 - S2] 2644. 촌수계산
  
 ## ⏰  **time**
-60분
+50분
 
 ## :pushpin: **Algorithm**
-- 트리
+- dfs
 
 ## :round_pushpin: **Logic**
-1. 알파벳에 'A' 뺴서 정수로 만든다.
-2. 2차원 배열에서 부모정수에 왼쪽자식과 오른쪽 자식을 넣어준다.
-3. 전위: 해당 정수를 출력하고 -> 왼쪽 탐색 -> 오른쪽 탐색
-   중위 : 왼쪽탐색 -> 출력 -> 오른쪽 탐색
-   후위 : 왼쪽 탐색 -> 오른쪽 탐색 -> 출력
+1. 부모가 누구인지 저장하는 배열 생성하고 자기자신인 부모로 초기화시킴
+
+2. 입력 받은 자식과 부모 값을 배열에 넣어준다.
+    - 배열[자식] = 부모
+
+3. dfs를 돌려서 해당값의 조상을 찾아서 리스트에 넣어준다.
+
+4. 두 조상의 같은 조상이 있으면 멈추고 해당되는 index를 더해준다.
    
 ```#java
-// 전위 순회
-    public static void preorder(int node) {
-        if (node == -1) return;
-        System.out.print((char)(node + 'A'));  // 루트
-        preorder(tree[node][0]);  // 왼쪽 자식
-        preorder(tree[node][1]);  // 오른쪽 자식
-    }
-
-    // 중위 순회
-    public static void inorder(int node) {
-        if (node == -1) return;
-        inorder(tree[node][0]);  // 왼쪽 자식
-        System.out.print((char)(node + 'A'));  // 루트
-        inorder(tree[node][1]);  // 오른쪽 자식
-    }
-
-    // 후위 순회
-    public static void postorder(int node) {
-        if (node == -1) return;
-        postorder(tree[node][0]);  // 왼쪽 자식
-        postorder(tree[node][1]);  // 오른쪽 자식
-        System.out.print((char)(node + 'A'));  // 루트
-    }
+public static void dfs(int n, int y , ArrayList<Integer> p ) {
+		if(arr[n] == y) {
+			result = p.size()+1;
+			return;
+		}
+		
+		if(arr[n]== n) {
+			return;
+		}
+		p.add(arr[n]);
+		dfs(arr[n], y, p);
+	}
 ```
 ## :black_nib: **Review**
 
-- dfs를 풀려고 했는데 실패하더라구요ㅠㅠ
+- main을 mian으로 적어서 이클립스 작동을 안하길래 해결한다고 시간을 썻어요
 
 ## 📡**Link**
 
-- https://www.acmicpc.net/problem/1991
+- https://www.acmicpc.net/problem/2644
   
