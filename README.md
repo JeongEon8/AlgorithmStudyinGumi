@@ -1,5 +1,6 @@
 # 🔑공통문제
 ### https://www.acmicpc.net/problem/14502
+<img width="1000" alt="image" src="https://github.com/user-attachments/assets/1e0b18fb-16a5-4e54-895e-2d6bb852542a">
 
 <br>
 
