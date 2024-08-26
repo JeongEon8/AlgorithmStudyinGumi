@@ -1,20 +1,19 @@
 # 🔑공통문제
-### https://ko.fm/7RA
-<img width="916" alt="image" src="https://github.com/user-attachments/assets/4b1e47e2-69e1-408d-ad0f-2fa516d929e0">
+### https://www.acmicpc.net/problem/14502
 
 <br>
 
 # 📚 목표
 |아이디|목표|
 |------|---|
-|[구현진(2jin8)](https://github.com/2jin8)| 골드이상 2개 + SWEA 2문제 |
-|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 백준 실버이상, SWEA D3이상 5문제 |
-|[김정언(JeongEon)](https://github.com/JeongEon8)| 백준 실버이상 6문제 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 백준 실버이상 6문제 |
-|[이서현(kizife)](https://github.com/kizife)| 백준 실버이상 4문제 + 공통문제 꼭 시도 |
-|[장홍준(ajang369)](https://github.com/ajang369)| 백준 실버이상 7문제 |
-|[한아영(hanayoung)](https://github.com/hanayoung)| 백준 골드 3문제 + SWEA D4이상 2문제 |
-|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버이상 7문제 |
+|[구현진(2jin8)](https://github.com/2jin8)| 실버 이상 4개 + SWEA 2문제 |
+|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 백준 실버 이상, SWEA D3 이상 4문제 |
+|[김정언(JeongEon)](https://github.com/JeongEon8)| 백준 실버 이상 4문제 |
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 백준 실버 이상 4문제 |
+|[이서현(kizife)](https://github.com/kizife)| 백준 실버 이상 4문제 |
+|[장홍준(ajang369)](https://github.com/ajang369)| 백준 실버 이상 6문제 |
+|[한아영(hanayoung)](https://github.com/hanayoung)| SWEA D4이상 4문제 |
+|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 백준 실버 이상 7문제 |
 
 <br>
 
@@ -22,7 +21,7 @@
 - 목표: 💥*A형 취득*💥 (개인 알고 가능)
 - 전체 기간: 24년 8월 한 달 + 더 하고 싶으면 연장
 - 인원: 8명
-- 방식: 매주 월요일 오후 8시 온라인 회의 (참여율 저조시 오프라인 회의로 변경)
+- 방식: 다음주(9월 2일) 오후 6시 오프라인 회의
 
 <br>
 
