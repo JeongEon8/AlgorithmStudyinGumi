@@ -4,7 +4,7 @@
 2시간
 
 ## :pushpin: **Algorithm**
-구현(시뮬레이션)
+구현 + BFS
 
 ## :round_pushpin: **Logic**
 - 배열을 입력받을 때 `@`가 있는지 확인
