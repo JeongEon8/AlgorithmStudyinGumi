@@ -77,3 +77,15 @@
 - 50% 이상 미달성자는 5000원의 벌금을 납부한다
 - 50% 미만 미달성자는 10000원의 벌금을 납부한다
 - 달성자들은 총 벌금의 1/N만큼씩 수령한다
+
+<br>
+<br>
+
+# 📷 활동 사진
+|날짜|사진|
+|---|---|
+|24.08.05|<img width="500" alt="image" src="https://github.com/user-attachments/assets/9ca4397c-a876-4af3-9397-045d83e38d06">|
+|24.08.12|<img width="500" alt="image" src="https://github.com/user-attachments/assets/5e8cf656-81d0-4303-a912-dcbd67210a54">|
+|24.08.19|<img width="500" alt="image" src="https://github.com/user-attachments/assets/61c2c371-6a96-49af-87f4-bf28e523ba14">|
+|24.08.26|<img width="500" alt="image" src="https://github.com/user-attachments/assets/84962f15-5a0e-4c20-b0f0-624043360d6f">|
+|26일은 사진촬영을 까먹었습니다..! 커밋으로 확인해주세요ㅠ|
