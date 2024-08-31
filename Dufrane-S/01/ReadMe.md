@@ -1,100 +1,98 @@
-# [백준 - G5] 6593. 상범 빌딩
+# [백준 - G5] 4179. 불!
  
 ## ⏰  **time**
-30분
+60분
 
 ## :pushpin: **Algorithm**
 BFS
 
 
 ## :round_pushpin: **Logic**
-1. 3차원 bfs, 상하 이동 z 값 추가하여 bfs
+1. 먼저 사람의 탈출 경로를 bfs를 통해 구해준다. (탈출구가 여러 개 있으면 모두 저장)(불 경로로 구분을 위해 양수로 저장)
+2. 불을 bfs해준다.(불의 시작점이 여러 곳일 수 있음)(사람 경로와 구분을 위해 음수로 저장)
+3. 불 bfs시 다른 불이나 사람보다 늦었을 경우 굳이 탐색하지 않는다.
+4. 탈출구의 좌표를 다시 확인해서 양수인 경우 중 작은 것을 출력하거나 IMPOSSIBLE 출력
 ```#include <iostream>
 #include <vector>
 #include <queue>
+#include <climits>
 
 using namespace std;
 
-int dx[6] = {0, 0, 1, -1, 0, 0};
-int dy[6] = {1, -1, 0, 0, 0, 0};
-int dz[6] = {0, 0, 0, 0, 1, -1};
+int dx[4] = {0, 0, 1, -1};
+int dy[4] = {1, -1, 0, 0};
 
 int main() {
-    while (true) {
-        int a, b, c;
+    int n, m;
+    cin >> n >> m;
+    vector<vector<int>> box = vector<vector<int>>(n, vector<int>(m, 0));
 
-        cin >> a >> b >> c;
-        if (a == 0 && b == 0 && c == 0)break;
-        int sz, sy, sx, ez, ey, ex;
-        vector<vector<vector<int>>> box = vector<vector<vector<int>>>(a,
-                                                                      vector<vector<int>>(b, vector<int>(c, 0)));
-        for (int i = 0; i < a; i++) {
-            for (int j = 0; j < b; j++) {
-                for (int k = 0; k < c; k++) {
-                    char qwer;
-                    cin >> qwer;
-                    if (qwer == 'S') {
-                        sz = i;
-                        sy = j;
-                        sx = k;
-                        box[i][j][k] = 0;
-                    } else if (qwer == 'E') {
-                        ez = i;
-                        ey = j;
-                        ex = k;
-                        box[i][j][k] = -1;
-                    } else if (qwer == '#') {
-                        box[i][j][k] = -2;
-                    } else {
-                        box[i][j][k] = 0;
-                    }
-                }
+    queue<pair<int, int>> jq;
+    queue<pair<int, int>> fq;
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            char a;
+            cin >> a;
+            if (a == '#') {
+                box[i][j] = -1;
+            } else if (a == '.') {
+                box[i][j] = 0;
+            } else if (a == 'J') {
+                jq.emplace(i, j);
+                box[i][j] = 1;
+            } else if (a == 'F') {
+                fq.emplace(i, j);
+                box[i][j] = -2;
             }
-        }
-
-
-        queue<vector<int>> q;
-        vector<int> tmp;
-        box[sz][sy][sx] = 1;
-        tmp.push_back(sz);
-        tmp.push_back(sy);
-        tmp.push_back(sx);
-        q.push(tmp);
-
-        while (!q.empty()) {
-            int nowz = q.front()[0];
-            int nowy = q.front()[1];
-            int nowx = q.front()[2];
-            q.pop();
-            for (int idx = 0; idx < 6; idx++) {
-                int nz = nowz + dz[idx];
-                int ny = nowy + dy[idx];
-                int nx = nowx + dx[idx];
-                if (nz < 0 || ny < 0 || nx < 0 || nz == a || ny == b || nx == c || box[nz][ny][nx] == -2)continue;
-                if (box[nz][ny][nx] == -1) {
-                    box[nz][ny][nx] = box[nowz][nowy][nowx];
-                    break;
-                } else if (box[nz][ny][nx] == 0) {
-                    box[nz][ny][nx] = box[nowz][nowy][nowx] + 1;
-                    tmp.clear();
-                    tmp.push_back(nz);
-                    tmp.push_back(ny);
-                    tmp.push_back(nx);
-                    q.push(tmp);
-                } else {
-                    continue;
-                }
-
-            }
-        }
-
-        if (box[ez][ey][ex] == -1) {
-            cout << "Trapped!\n";
-        } else {
-            cout << "Escaped in " << box[ez][ey][ex] << " minute(s).\n";
         }
     }
+
+
+    vector<pair<int, int>> ep;
+    while (!jq.empty()) {
+        int nowjy = jq.front().first;
+        int nowjx = jq.front().second;
+        jq.pop();
+
+        for (int k = 0; k < 4; k++) {
+            if (box[nowjy][nowjx] == -2)break;
+            int njy = nowjy + dy[k];
+            int njx = nowjx + dx[k];
+            if (njy < 0 || njx < 0 || njy == n || njx == m) {
+                ep.emplace_back(nowjy, nowjx);
+                continue;
+            }
+            if (box[njy][njx] != 0)continue;
+
+            box[njy][njx] = box[nowjy][nowjx] + 1;
+            jq.emplace(njy, njx);
+        }
+    }
+    while (!fq.empty()) {
+        int nowy = fq.front().first;
+        int nowx = fq.front().second;
+        fq.pop();
+        for (int k = 0; k < 4; k++) {
+            int ny = nowy + dy[k];
+            int nx = nowx + dx[k];
+            if (ny < 0 || nx < 0 || ny == n || nx == m)continue;
+            if (box[ny][nx] < 0)continue;
+            if (box[ny][nx] < abs(box[nowy][nowx] - 1) - 1)continue;
+            box[ny][nx] = box[nowy][nowx] - 1;
+            fq.emplace(ny, nx);
+        }
+    }
+    int answer = INT_MAX;
+    for (auto i: ep) {
+
+        if (box[i.first][i.second] > 0 && answer > box[i.first][i.second])answer = box[i.first][i.second];
+    }
+    if (answer == INT_MAX) {
+        cout << "IMPOSSIBLE";
+    } else {
+        cout << answer;
+    }
+
 }
-
-
 ```
