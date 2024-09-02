@@ -20,4 +20,4 @@ $O(N^3)$
 플로이드는 3중 for문 쓰면 되서 초기값만 잘 설정하면 되는 듯 하다.
 
 ## 📡 Link
-https://www.acmicpc.net/problem/
+https://www.acmicpc.net/problem/1389
