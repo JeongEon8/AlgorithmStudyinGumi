@@ -89,3 +89,5 @@
 |24.08.19|<img width="500" alt="image" src="https://github.com/user-attachments/assets/61c2c371-6a96-49af-87f4-bf28e523ba14">|
 |24.08.26|<img width="500" alt="image" src="https://github.com/user-attachments/assets/84962f15-5a0e-4c20-b0f0-624043360d6f">|
 |26일은 사진촬영을 까먹었습니다..! 커밋으로 확인해주세요ㅠ|
+|24.09.02|<img width="500" alt="image" src="https://github.com/user-attachments/assets/229ca7e8-51cb-4fda-bbca-55c909c0bb0b">|
+
