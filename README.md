@@ -1,6 +1,5 @@
 # 🔑공통문제
-### https://www.acmicpc.net/problem/14502
-<img width="1000" alt="image" src="https://github.com/user-attachments/assets/1e0b18fb-16a5-4e54-895e-2d6bb852542a">
+한 주 쉬어가요~
 
 <br>
 
@@ -9,11 +8,11 @@
 |------|---|
 |[구현진(2jin8)](https://github.com/2jin8)| 실버 이상 4개 + SWEA 2문제 |
 |[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 백준 실버 이상, SWEA D3 이상 4문제 |
-|[김정언(JeongEon)](https://github.com/JeongEon8)| 백준 실버 이상 4문제 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 백준 실버 이상 4문제 |
-|[이서현(kizife)](https://github.com/kizife)| 백준 실버 이상 4문제 |
-|[장홍준(ajang369)](https://github.com/ajang369)| 백준 실버 이상 6문제 |
-|[한아영(hanayoung)](https://github.com/hanayoung)| SWEA D4이상 4문제 |
+|[김정언(JeongEon)](https://github.com/JeongEon8)| 소프티어 Lv2이 4문제 |
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 백준 골드 이상 3문제 |
+|[이서현(kizife)](https://github.com/kizife)| 백준 실버 이상 +SWEA D3이상 4문제 |
+|[장홍준(ajang369)](https://github.com/ajang369)| 백준 골드 이상 4문제 |
+|[한아영(hanayoung)](https://github.com/hanayoung)| 백준 실버 2문제 + 골드 2문제 |
 |[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 백준 실버 이상 7문제 |
 
 <br>
@@ -22,7 +21,7 @@
 - 목표: 💥*A형 취득*💥 (개인 알고 가능)
 - 전체 기간: 24년 8월 ~ (축🎉 8월 스터디원 전원 연장! 화이팅해요 우리😊)
 - 인원: 8명
-- 방식: 다음주(9월 2일) 오후 6시 구미 5반 오프라인 회의
+- 방식: 다음주(9월 10일) 오후 6시 구미 5반 오프라인 회의
 
 <br>
 
@@ -32,6 +31,7 @@
 - 제 3회 [24.08.13 - 24.08.19] (진행완료) [SWEA] 1248. [S/W 문제해결 응용] 3일차 - 공통조상
 - 제 4회 [24.08.20 - 24.08.26] (진행완료) [SWEA] 1824. 혁진이의 프로그램 검증
 - 제 5회 [24.08.27 - 24.09.02] (진행중) [백준] 14502. 연구소
+- 제 6회 [24.09.03 - 24.09.10] 
 
 <br>
 
