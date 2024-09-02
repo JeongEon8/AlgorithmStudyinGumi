@@ -16,3 +16,4 @@
 *.exe
 /.vscode
 .vscode
+*.idea
