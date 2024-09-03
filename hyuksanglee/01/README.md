@@ -1,72 +1,58 @@
-# [백준 - 골드 4] 14500. 테트로미노
+# [백준 - 골드 3] 4386. 별자리 만들기
  
 ## ⏰  **time**
-30분
+60분
 
 ## :pushpin: **Algorithm**
-벡트레킹
+MST
 
 ## ⏲️**Time Complexity**
-$O(N*M)$
+$O(N²)$
 
 ## :round_pushpin: **Logic**
-1. 상하좌우 방향벡터를 통해 4방향 탐색을 진행한다.
-2. 테트로미노는 4칸이므로, 4칸 탐색을 했다면 그 칸들의 합과 결과값을 비교해 큰 수를 결과값에 저장한다. (이때, 결과값의 초기값은 0이다.)
-3. 테트로미노는 (ㅓ, ㅏ , ㅗ, ㅜ) 모양도 존재한다.
-4. 해당 모양은 4방향 탐색을 통해 만들 수 없으므로, if문을 통해 확인했다.
-```cpp
-void backTracking(int sum, int x, int y, int cnt) {
-	if (cnt >= 4) {
-		result = max(result, sum);
-		//print();
-		return;
+1. 별과 별 사이의 거리를 계산해서 넣어준다.
+
+2. MST를 사용해서 모든 별들의 연결하는데 최소 비용을 구해준다.
+
+3. 구한 최소비용 총합에서 소수 둘째자리까지 반올림해서 출력해준다.
+```java
+public static void mst(int n) {
+		int index = 0;
+		float min = INF;
+		
+		for (int i = 0; i < N; i++) {
+			if (n != i) {
+				if(isSelected[i]==false) {
+					if( minD[i] > distance[n][i]) {
+						minD[i]=distance[n][i];
+					}
+					if(min>minD[i]) {
+						min = minD[i];
+						index = i;
+					}
+				}
+				
+			}
+		}
+		if(index !=0) {
+			isSelected[index]= true;
+			result+=minD[index];
+			mst(index);
+		}
+		
+	
 	}
-
-	for (int i = 0; i < 4; i++) {
-		int ny = y + dy[i];
-		int nx = x + dx[i];
-
-		if (ny < 0 || nx < 0 || ny >= N || nx >= M) {
-			continue;
-		}
-
-		if (visited[ny][nx] == true) {
-			continue;
-		}
-
-		if (visited[ny][nx] == false) {
-			visited[ny][nx] = true;
-			backTracking(sum + arr[ny][nx], nx, ny, cnt + 1);
-			visited[ny][nx] = false;
-		}
-	}
-}
 ```
 
-```cpp
-			// ㅗ
-			if (0 <= up && up < N && 0 <= left && left < M && 0 <= right && right < M) {
-				result = max(result, (arr[i][j] + arr[up][j] + arr[i][left] + arr[i][right]));
-			}
-			
-			// ㅏ
-			if (0 <= up && up < N && 0 <= right && right < M && 0 <= down && down < N) {
-				result = max(result, (arr[i][j] + arr[up][j] + arr[i][right] + arr[down][j]));
-			}
-
-			// ㅜ
-			if (0 <= down && down < N && 0 <= left && left < M && 0 <= right && right < M) {
-				result = max(result, (arr[i][j] + arr[down][j] + arr[i][left] + arr[i][right]));
-			}
-
-			// ㅓ
-			if (0 <= up && up < N && 0 <= left && left < M && 0 <= down && down < N) {
-				result = max(result, (arr[i][j] + arr[up][j] + arr[i][left] + arr[down][j]));
-			}
+```java
+	// 별과 별 사이의 거리를 구하는 식
+	public static float math(float a, float b) {
+		return (float) Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+	}
 ```
 
 ## :black_nib: **Review**
-- 좀 더 줄일 수 없을까? (ㅓ, ㅏ , ㅗ, ㅜ) 모양을 백트리킹 안에 넣고 싶다.
+- mst 짜기는 했는데 저렇게 짜는게 맞을까요?
 
 ## 📡 Link
-https://www.acmicpc.net/problem/14500
+https://www.acmicpc.net/problem/4386
