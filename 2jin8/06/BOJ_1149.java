@@ -13,10 +13,10 @@ public class BOJ_1149 {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			for (int j = 0; j < 3; j++) {
 				arr[i][j] = Integer.parseInt(st.nextToken());
-				dp[i][j] = arr[i][j];
+				dp[i][j] = arr[i][j]; // 각 집을 칠하는 비용을 초기값으로 저장
 			}
 		}
-
+		
 		for (int i = 1; i < N; i++) {
 			// i번째 집을
 			// 빨강으로 칠할 때
