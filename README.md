@@ -1,19 +1,24 @@
 # 🔑공통문제
-한 주 쉬어가요~
+https://www.acmicpc.net/problem/14567
+![image](https://github.com/user-attachments/assets/9b8f35d2-7acd-4ad8-8cc5-d10d01ed2273)
+
 
 <br>
 
 # 📚 목표
+- <추석특집> 못하면 벌금 30000원!!!
+- 50% 이상 달성시 15000원!!!!
+
 |아이디|목표|
 |------|---|
-|[구현진(2jin8)](https://github.com/2jin8)| 실버 이상 4개 + SWEA 2문제 |
-|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 백준 실버 이상, SWEA D3 이상 4문제 |
-|[김정언(JeongEon)](https://github.com/JeongEon8)| 소프티어 Lv2이 4문제 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 백준 골드 이상 3문제 |
-|[이서현(kizife)](https://github.com/kizife)| 백준 실버 이상 +SWEA D3이상 4문제 |
-|[장홍준(ajang369)](https://github.com/ajang369)| 백준 골드 이상 4문제 |
-|[한아영(hanayoung)](https://github.com/hanayoung)| 백준 실버 2문제 + 골드 2문제 |
-|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 백준 실버 이상 7문제 |
+|[구현진(2jin8)](https://github.com/2jin8)| 실버 이상 7개 |
+|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 실버 이상 7문제 |
+|[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 이상 10문제 |
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 골드 이상 6문제 |
+|[이서현(kizife)](https://github.com/kizife)| 실버 이상 +SWEA D3이상 10문제 |
+|[장홍준(ajang369)](https://github.com/ajang369)| 골드 이상 7문제 |
+|[한아영(hanayoung)](https://github.com/hanayoung)| 실버 이상 8문제 |
+|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버이상 13문제 |
 
 <br>
 
@@ -31,7 +36,8 @@
 - 제 3회 [24.08.13 - 24.08.19] (진행완료) [SWEA] 1248. [S/W 문제해결 응용] 3일차 - 공통조상
 - 제 4회 [24.08.20 - 24.08.26] (진행완료) [SWEA] 1824. 혁진이의 프로그램 검증
 - 제 5회 [24.08.27 - 24.09.02] (진행완료) [백준] 14502. 연구소
-- 제 6회 [24.09.03 - 24.09.10] (진행중)
+- 제 6회 [24.09.03 - 24.09.10] (진행완료)
+- 제 7회 [24.09.11 - 24.09.23] (진행중)
 
 <br>
 
@@ -77,6 +83,8 @@
 - 50% 이상 미달성자는 5000원의 벌금을 납부한다
 - 50% 미만 미달성자는 10000원의 벌금을 납부한다
 - 달성자들은 총 벌금의 1/N만큼씩 수령한다
+- <추석특집> 못하면 벌금 30000원!!!
+- 50% 이상 달성시 15000원!!!!
 
 <br>
 <br>
@@ -90,4 +98,5 @@
 |24.08.26|<img width="500" alt="image" src="https://github.com/user-attachments/assets/84962f15-5a0e-4c20-b0f0-624043360d6f">|
 |26일은 사진촬영을 까먹었습니다..! 커밋으로 확인해주세요ㅠ|
 |24.09.02|<img width="500" alt="image" src="https://github.com/user-attachments/assets/229ca7e8-51cb-4fda-bbca-55c909c0bb0b">|
+|24.09.10||
 
