@@ -17,7 +17,7 @@ https://www.acmicpc.net/problem/14567
 |[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 실버 이상 7문제 |
 |[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 이상 10문제 |
 |[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| B형문제 2문제 |
-|[이서현(kizife)](https://github.com/kizife)| 실버 이상 +SWEA D3이상 10문제 |
+|[이서현(kizife)](https://github.com/kizife)| 실버 or SWEA D3이상 10문제(골드 5문제 포함) |
 |[장홍준(ajang369)](https://github.com/ajang369)| 골드 이상 7문제 |
 |[한아영(hanayoung)](https://github.com/hanayoung)| 실버 이상 8문제 |
 |[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버이상 13문제 |
