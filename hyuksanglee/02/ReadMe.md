@@ -1,53 +1,117 @@
-# [SWEA - SSAFY Pro 연습4] No2. 승강제리그
+# [SWEA - SSAFY Pro 연습4] No4. 성적조회
  
 ## ⏰  **time**
-5시간
+4시간
 
 ## :pushpin: **Algorithm**
 - 구현, 정렬
 
 
 ## :round_pushpin: **Logic**
-1. init 단계에서 입력 받은 선수들을 해당 리그 배열에 넣어준다.
-   - 선수들의 전체수에 리그수를 나누어 수 만큼 각 리그에 선수를 넣어준다.(N/L)
-   - 리그 배열 안에는 리스트로 선수의 데이터를 담는다.
-      - 선수의 데이터를 넣을때는 리스트에 먼저 들어있는 선수들이랑 비교하여 맞는 인덱스에 값을 넣어준다.
+1. init 단계
+   - id, 점수의 정보를 받을 수 있는 클래스 생성
+   - 학년, 성별 그룹으로 나누어 담을수 있는 배열 생성
+2. add 단계
+   - 성별을 char[] -> Int형으로 변경
+   - 해당 학년과 성별 칸에 정렬 기준에 맞게 해당 칸에 추가
         
-2. move 단계에서는 해당 리그에 마지막 선수랑 다음 리드에 첫번째 선수를 교환해준다.
-    - 교환해야하는 선수들을 교환될 리그에 큐를 만들어서 해당 선수를 넣어주고 해당 선수의 id를 total변수에 합해준다.
-       ex) 1리그에 마지막 선수a는 다음리그로 이동될 2리그에 큐에 담긴다.
-    - 큐에 담긴 선수들을 하나씩 뽑아서 해당 리그에 리스트에 있는 선수들과 비교하여 능력과 id에 맞는 위치에 값을 넣어준다.
-    - total변수를 리턴 해준다.
+2. remove 단계
+   - 배열안에 전체를 다 탐색하면서 찾고자 하는 id를 찾으면 제거를 하고 해당 id를 탐색하고 있는 학년과 성별칸에 사이즈를 계산하고 1개 이상 있으면 첫번째 인덱스를 뽑는다.
       
-3. trade 단계에서는 해당 리그에 중간 선수와 다음 리그에 첫번째 선수를 교환한다.
-    - 교환해야할 선수를 2번과 같이 해당 리그에 큐에 담아준다.
-    - 큐에 담긴 선수들을 하나씩 뽑아서 해당 리그에 리스트에 있는 선수들과 비교하여 능력과 id에 맞는 위치에 값을 넣어준다.
-    - total변수를 리턴 해준다.
-    - 
+4. query 단계
+    - 조건에서 낮은 점수 중에서 낮은 id를 찾기 위해 id와 score라는 변수를 int최댓값으로 초기화 해준다.
+    - 학년과 성별 조건에 맞는 배열만 탐색을 하면서 조건 점수 이상이면 score에 저장된 값이랑 비교하여 갱신해주고 만약 같을 경우 id를 비교해서 갱신해준다.
+   	- 조건 점수 이상을 발견하면 뒤에 부분은 점수가 높기 때문에 탐색할 필요가 없어서 break문으로 빠져나온다. 
 ```
 java
-// 값을 추가 할때 크기에 맞게 추가
-	public static void insertSort(int l, Player player) {
-		int index = 0;
-		for (Player p : teamList[l]) {
-			if (p.ability > player.ability) {
-				index++;
-			} else if (p.ability == player.ability) {
-				if (p.id < player.id) {
-					index++;
+public int query(int mGradeCnt, int mGrade[], int mGenderCnt, char mGender[][], int mScore) {
+		int id = Integer.MAX_VALUE;
+		int score = Integer.MAX_VALUE;
+		boolean check = false;
+
+		int[] genders = new int[mGenderCnt];
+		for (int i = 0; i < mGenderCnt; i++) {
+			genders[i] = (mGender[i][0] == 'f') ? 1 : 0;
+		}
+
+		for (int grade : mGrade) {
+			if(grade==0) {
+				continue;
+			}
+			for (int gender : genders) {
+				for (Student s : school[grade-1][gender]) {
+					if (s.score >= mScore) {
+						if (score > s.score) {
+							id = s.id;
+							score = s.score;
+							check = true;
+						}else if(score == s.score) {
+							if(id > s.id) {
+								id = s.id;
+								score = s.score;
+								check = true;
+							}
+						}
+						break;
+					}
 				}
-			} else {
+
+			}
+		}
+		
+		
+		if(check) {
+//			System.out.println(id);
+			return id;
+		}else {
+//			System.out.println(0);
+			return 0;
+		}
+		
+	}
+```
+```
+java
+public int remove(int mId) {
+		int grade = -1; // 삭제한 학생의 학년
+		int gender = -1; // 삭제한 학생의 성별
+
+		int result = 0; // 결과
+
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 2; j++) {
+				for (int k = 0; k < school[i][j].size(); k++) {
+					if (school[i][j].get(k).id == mId) {
+						grade = i;
+						gender = j;
+						school[grade][gender].remove(k);
+
+						if (school[grade][gender].size() > 0) {
+							result = school[grade][gender].get(0).id;
+						}
+
+						break;
+					}
+				}
+				if (grade != -1) {
+					break;
+				}
+			}
+			if (gender != -1) {
 				break;
 			}
 		}
-		teamList[l].add(index, player);
+
+//		System.out.println(result);
+
+		return result;
 	}
 ```
 
 ## :black_nib: **Review**
-- 처음에 클래스에 Comparable를 사용해서 Arrays.sort를 이용해서 구현했지만 시간초과로 실패했지만 정렬부분 직접구현해서 해결했었요
+- 배열에서 해당 id를 찾을때 더 빠른 방법이 있을거 같아요
 
 
 
 ## 📡 Link
-https://swexpertacademy.com/main/code/codeBattle/problemDetail.do?contestProbId=AYH2FcG6secDFATO&categoryId=AZEGCEMa7TkDFAQW&categoryType=BATTLE&battleMainPageIndex=1
+https://swexpertacademy.com/main/code/codeBattle/problemDetail.do?contestProbId=AYhwyUKaxHQDFAT2&categoryId=AZEGCEMa7TkDFAQW&categoryType=BATTLE&battleMainPageIndex=1
