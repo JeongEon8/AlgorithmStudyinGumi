@@ -31,13 +31,21 @@ public class BOJ_14889 {
 	static void dfs(int depth, int start) {
 		if (depth == N / 2) {
 			int startScore = 0, linkScore = 0;
-			for (int i = 0; i < N; i++) {
+			// 스타트 팀의 능력치 구하기 (used[i]가 true)
+			for (int i = 0; i < N - 1; i++) {
+				if (!used[i]) continue;
 				for (int j = i + 1; j < N; j++) {
-					if (used[i] && used[j]) {
-						startScore += arr[i][j] + arr[j][i];
-					} else if (!used[i] && !used[j]) {
-						linkScore += arr[i][j] + arr[j][i];
-					}
+					if (!used[j]) continue;
+					startScore += arr[i][j] + arr[j][i];
+				}
+			}
+
+			// 링크 팀의 능력치 구하기 (used[i]가 false)
+			for (int i = 0; i < N - 1; i++) {
+				if (used[i]) continue;
+				for (int j = i + 1; j < N; j++) {
+					if (used[j]) continue;
+					linkScore += arr[i][j] + arr[j][i];
 				}
 			}
 			ans = Math.min(ans, Math.abs(startScore - linkScore));
