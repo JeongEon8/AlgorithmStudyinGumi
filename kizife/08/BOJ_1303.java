@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main10 {
+public class Main {
 
 	static int n, m;
 	static char[][] map;
