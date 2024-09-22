@@ -1,7 +1,7 @@
-# [SWEA - SSAFY Pro 연습4] No4. 성적조회
+# [SWEA - SSAFY Pro 연습4] No5. 메모장 프로그램
  
 ## ⏰  **time**
-4시간
+6시간
 
 ## :pushpin: **Algorithm**
 - 구현, 정렬
@@ -9,109 +9,56 @@
 
 ## :round_pushpin: **Logic**
 1. init 단계
-   - id, 점수의 정보를 받을 수 있는 클래스 생성
-   - 학년, 성별 그룹으로 나누어 담을수 있는 배열 생성
-2. add 단계
+   - 입력받은 문자 수, 커서의 위치 변수를 초기화
+   - 커서 뒤에 각 알파벳의 개수 받는 배열, 지금까지 입력 받은 리스트 초기화 시켜주기
+   -  초기에 mStr로 받는 문자들 알파벳 배열에 해당 알파벳칸을 +1해준다.
+2. insert 단계
    - 성별을 char[] -> Int형으로 변경
-   - 해당 학년과 성별 칸에 정렬 기준에 맞게 해당 칸에 추가
+   - 해당 학년과 성별 칸에 정렬 기준에 맞게 해당 칸에 추가하고 리스트에 추가 한다.
+   - size와 커서의 위치를 +1해준다.
         
-2. remove 단계
-   - 배열안에 전체를 다 탐색하면서 찾고자 하는 id를 찾으면 제거를 하고 해당 id를 탐색하고 있는 학년과 성별칸에 사이즈를 계산하고 1개 이상 있으면 첫번째 인덱스를 뽑는다.
+2. moveCursor 단계
+   - 2차원의 좌표로 위치의 데이터를 받는데 (mRow - 1) * W + mCol - 1식으로 1차원에 인덱스 위치로 바꾸어준다.
+   - 이동 시킬 커서의 위치가 현재 위치보다 뒤에 있으면 알파벳 배열에서 현재있던 이동한 커서 사이에 알파벳들 수만큼을 빼준다.
+   - 앞에 있으면 이동한 커서 사이에 알파벳들 수만큼을 더해준다.
+   - 이동 시킬 위치가 입력한 문자 수보다 많을 경우 알파벳 배열을 초기화 시켜주고 커서의 위치는 문자의 수로 바꾸어준다.
       
-4. query 단계
-    - 조건에서 낮은 점수 중에서 낮은 id를 찾기 위해 id와 score라는 변수를 int최댓값으로 초기화 해준다.
-    - 학년과 성별 조건에 맞는 배열만 탐색을 하면서 조건 점수 이상이면 score에 저장된 값이랑 비교하여 갱신해주고 만약 같을 경우 id를 비교해서 갱신해준다.
-   	- 조건 점수 이상을 발견하면 뒤에 부분은 점수가 높기 때문에 탐색할 필요가 없어서 break문으로 빠져나온다. 
+4. countCharacter 단계
+    - 알파벳 배열에서 해당 알파벳칸에 수를 리턴해준다.
 ```
 java
-public int query(int mGradeCnt, int mGrade[], int mGenderCnt, char mGender[][], int mScore) {
-		int id = Integer.MAX_VALUE;
-		int score = Integer.MAX_VALUE;
-		boolean check = false;
+char moveCursor(int mRow, int mCol) {
 
-		int[] genders = new int[mGenderCnt];
-		for (int i = 0; i < mGenderCnt; i++) {
-			genders[i] = (mGender[i][0] == 'f') ? 1 : 0;
-		}
+		char result = '$'; // 커서뒤에 있는 문자 받는 변수
 
-		for (int grade : mGrade) {
-			if(grade==0) {
-				continue;
+		int move = (mRow - 1) * W + mCol - 1; // 이동할 인덱스의 위치
+		if (move < size) {
+		if(cursor>move) {
+			for(int i = move; i< cursor; i++) {
+				alphabet[list.get(i)-'a'] += 1;
 			}
-			for (int gender : genders) {
-				for (Student s : school[grade-1][gender]) {
-					if (s.score >= mScore) {
-						if (score > s.score) {
-							id = s.id;
-							score = s.score;
-							check = true;
-						}else if(score == s.score) {
-							if(id > s.id) {
-								id = s.id;
-								score = s.score;
-								check = true;
-							}
-						}
-						break;
-					}
-				}
-
+		}else if(cursor<move) {
+			for(int i = cursor; i< move; i++) {
+				alphabet[list.get(i)-'a'] -= 1;
 			}
 		}
 		
-		
-		if(check) {
-//			System.out.println(id);
-			return id;
-		}else {
-//			System.out.println(0);
-			return 0;
+			result = list.get(move);
+			cursor = move;
+		} else {
+			cursor = size;
+			alphabet = new int[26];
 		}
-		
-	}
-```
-```
-java
-public int remove(int mId) {
-		int grade = -1; // 삭제한 학생의 학년
-		int gender = -1; // 삭제한 학생의 성별
-
-		int result = 0; // 결과
-
-		for (int i = 0; i < 3; i++) {
-			for (int j = 0; j < 2; j++) {
-				for (int k = 0; k < school[i][j].size(); k++) {
-					if (school[i][j].get(k).id == mId) {
-						grade = i;
-						gender = j;
-						school[grade][gender].remove(k);
-
-						if (school[grade][gender].size() > 0) {
-							result = school[grade][gender].get(0).id;
-						}
-
-						break;
-					}
-				}
-				if (grade != -1) {
-					break;
-				}
-			}
-			if (gender != -1) {
-				break;
-			}
-		}
-
-//		System.out.println(result);
 
 		return result;
 	}
 ```
 
+
 ## :black_nib: **Review**
-- 배열에서 해당 id를 찾을때 더 빠른 방법이 있을거 같아요
+- 처음에는 countCharacter단계에서 커서위치에서 리스트 끝까지 탐색하면서 값을 리턴하려했지만 시간초과가 떠서 커서를 이동하는 함수에서 계산하게 설정했더니 성공
 
 
 
 ## 📡 Link
-https://swexpertacademy.com/main/code/codeBattle/problemDetail.do?contestProbId=AYhwyUKaxHQDFAT2&categoryId=AZEGCEMa7TkDFAQW&categoryType=BATTLE&battleMainPageIndex=1
+https://swexpertacademy.com/main/code/codeBattle/problemDetail.do?contestProbId=AX4uQEB6N6wDFAQm&categoryId=AZEGCEMa7TkDFAQW&categoryType=BATTLE&battleMainPageIndex=1#none
