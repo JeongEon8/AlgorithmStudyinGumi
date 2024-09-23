@@ -73,10 +73,10 @@ https://www.acmicpc.net/problem/14567
   각 언어 형식에 맞는 소스코드 : JeongEon/01/{파일명}.java  JeongEon/01/{파일명}.py  JeongEon/01/{파일명}.cpp
   README.md : JeongEon/01/README.md
   ```
-- 커밋 규칙은 `[문제사이트] 문제순서_제목`으로 한다
+- 커밋 규칙은 `[문제사이트-난이도] 문제순서_제목`으로 한다
   ```
   예시)
-  [백준] 01_A와 B [SWEA] 01_체스말
+  [백준-실버5] 01_A와 B [SWEA-D3] 01_체스말
   ```
 
 
