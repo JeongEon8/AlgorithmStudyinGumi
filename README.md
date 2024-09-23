@@ -1,22 +1,14 @@
-# 🔑공통문제
-https://www.acmicpc.net/problem/14567
-![image](https://github.com/user-attachments/assets/9b8f35d2-7acd-4ad8-8cc5-d10d01ed2273)
-<br>
-
 # 📚 목표
-- <추석특집> 못하면 벌금 30000원!!!
-- 50% 이상 달성시 15000원!!!!
-
 |아이디|목표|
 |------|---|
-|[구현진(2jin8)](https://github.com/2jin8)| 실버 이상 7개 |
-|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 실버 이상 7문제 |
-|[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 이상 10문제 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| B형문제 2문제 |
-|[이서현(kizife)](https://github.com/kizife)| 실버 or SWEA D3이상 10문제(골드 5문제 포함) |
-|[장홍준(ajang369)](https://github.com/ajang369)| 골드 이상 7문제 |
-|[한아영(hanayoung)](https://github.com/hanayoung)| 실버 이상 8문제 |
-|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버이상 13문제 |
+|[구현진(2jin8)](https://github.com/2jin8)| 실버 이상 3개 |
+|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 실버 이상 4문제 |
+|[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 이상 3문제 |
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 실버이상 3문제|
+|[이서현(kizife)](https://github.com/kizife)| 실버 이상 3문제 |
+|[장홍준(ajang369)](https://github.com/ajang369)| 골드 이상 4문제 |
+|[한아영(hanayoung)](https://github.com/hanayoung)| 실버 이상 5문제 |
+|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버이상 7문제 |
 
 <br>
 
@@ -24,7 +16,7 @@ https://www.acmicpc.net/problem/14567
 - 목표: 💥*A형 취득*💥 (개인 알고 가능)
 - 전체 기간: 24년 8월 ~ (축🎉 8월 스터디원 전원 연장! 화이팅해요 우리😊)
 - 인원: 8명
-- 방식: 다음주(9월 10일) 오후 6시 구미 5반 오프라인 회의
+- 방식: 매주 월요일 오후 6시 구미 5반 오프라인 회의
 
 <br>
 
@@ -35,7 +27,8 @@ https://www.acmicpc.net/problem/14567
 - 제 4회 [24.08.20 - 24.08.26] (진행완료) [SWEA] 1824. 혁진이의 프로그램 검증
 - 제 5회 [24.08.27 - 24.09.02] (진행완료) [백준] 14502. 연구소
 - 제 6회 [24.09.03 - 24.09.10] (진행완료)
-- 제 7회 [24.09.11 - 24.09.23] (진행중)
+- 제 7회 [24.09.11 - 24.09.23] (진행완료) [백준-골드5] 14567. 선수과목
+- 제 8회 [24.09.23 - 24.09.30] (진행중)|
 
 <br>
 
@@ -97,4 +90,5 @@ https://www.acmicpc.net/problem/14567
 |26일은 사진촬영을 까먹었습니다..! 커밋으로 확인해주세요ㅠ|
 |24.09.02|<img width="500" alt="image" src="https://github.com/user-attachments/assets/229ca7e8-51cb-4fda-bbca-55c909c0bb0b">|
 |24.09.10||
+|24.09.23||
 
