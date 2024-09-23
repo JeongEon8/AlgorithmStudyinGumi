@@ -1,7 +1,3 @@
-<img width="1100" alt="image" src="https://github.com/user-attachments/assets/3bce9745-36d5-48ec-8c00-eab3b7b450b0">
-
-<br>
-
 # 🔑공통문제
 https://www.acmicpc.net/problem/14567
 ![image](https://github.com/user-attachments/assets/9b8f35d2-7acd-4ad8-8cc5-d10d01ed2273)
