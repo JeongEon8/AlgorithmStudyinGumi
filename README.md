@@ -1,13 +1,17 @@
+# 🏆공통문제
+![image](https://github.com/user-attachments/assets/97e0f477-4b75-4c5a-8278-30d99df8e52c)
+https://www.acmicpc.net/problem/14725
+
 # 📚 목표
 |아이디|목표|
 |------|---|
-|[구현진(2jin8)](https://github.com/2jin8)| 실버 이상 3개 |
+|[구현진(2jin8)](https://github.com/2jin8)| 실버 이상 4개 |
 |[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 실버 이상 4문제 |
-|[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 이상 3문제 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 실버이상 3문제|
-|[이서현(kizife)](https://github.com/kizife)| 실버 이상 3문제 |
+|[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 이상 4문제 |
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 실버 이상 4문제|
+|[이서현(kizife)](https://github.com/kizife)| 실버 이상 4문제 |
 |[장홍준(ajang369)](https://github.com/ajang369)| 골드 이상 4문제 |
-|[한아영(hanayoung)](https://github.com/hanayoung)| 실버 이상 5문제 |
+|[한아영(hanayoung)](https://github.com/hanayoung)| 골드 이상 4문제 |
 |[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버이상 7문제 |
 
 <br>
@@ -16,7 +20,7 @@
 - 목표: 💥*A형 취득*💥 (개인 알고 가능)
 - 전체 기간: 24년 8월 ~ (축🎉 8월 스터디원 전원 연장! 화이팅해요 우리😊)
 - 인원: 8명
-- 방식: 매주 월요일 오후 6시 구미 5반 오프라인 회의
+- 방식: 매주 월요일 오후 6시 구미 5반 오프라인 회의 
 
 <br>
 
@@ -91,4 +95,5 @@
 |24.09.02|<img width="500" alt="image" src="https://github.com/user-attachments/assets/229ca7e8-51cb-4fda-bbca-55c909c0bb0b">|
 |24.09.10||
 |24.09.23||
+|24.09.30||
 
