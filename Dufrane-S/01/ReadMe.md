@@ -7,7 +7,7 @@
 BFS
 
 ## ⏲️**Time Complexity**
-$O(N^2^)$
+$O(N^2)$
 
 ## :round_pushpin: **Logic**
 1. bfs로 연결확인 후 구하기
