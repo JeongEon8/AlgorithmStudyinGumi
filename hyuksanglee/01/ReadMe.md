@@ -7,7 +7,7 @@
 BFS
 
 ## ⏲️**Time Complexity**
-$O(N^2)$
+$O(N * M)$
 
 ## :round_pushpin: **Logic**
 1. 맵의 정보를 받을수 있는 2차원 배열 arr 을 생성하고, 벽부수기 횟수를 체크하면서 해당 지역을 방문 처리 하기 위해 3차원 배열 isSelected를 생성해준다.
