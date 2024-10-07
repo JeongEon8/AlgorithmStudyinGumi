@@ -5,12 +5,12 @@ https://www.acmicpc.net/problem/14725
 # 📚 목표
 |아이디|목표|
 |------|---|
-|[구현진(2jin8)](https://github.com/2jin8)| 실버 이상 4개 |
+|[구현진(2jin8)](https://github.com/2jin8)| 실버 이상 5개 |
 |[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 실버 이상 4문제 |
-|[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 이상 4문제 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 실버 이상 4문제|
+|[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 이상 3문제 |
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 골드 2문제|
 |[이서현(kizife)](https://github.com/kizife)| 실버 이상 4문제 |
-|[장홍준(ajang369)](https://github.com/ajang369)| 골드 이상 4문제 |
+|[장홍준(ajang369)](https://github.com/ajang369)| 골드 이상 3문제 |
 |[한아영(hanayoung)](https://github.com/hanayoung)| 골드 이상 4문제 |
 |[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버이상 7문제 |
 
@@ -34,6 +34,7 @@ https://www.acmicpc.net/problem/14725
 - 제 7회 [24.09.11 - 24.09.23] (진행완료) [백준-골드5] 14567. 선수과목
 - 제 8회 [24.09.23 - 24.09.30] (진행완료)
 - 제 9회 [24.10.01 ` 24.10.07] (진행중) [백준 - 골드3] 14725. 개미굴
+- 제 10회 [24.10.01 ` 24.10.07] (진행중)
 
 <br>
 
@@ -97,4 +98,4 @@ https://www.acmicpc.net/problem/14725
 |24.09.10||
 |24.09.23||
 |24.09.30||
-
+|24.10.07||
