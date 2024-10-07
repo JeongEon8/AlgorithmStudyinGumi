@@ -21,7 +21,7 @@ $O(N)$
    ```
 
 ## :black_nib: **Review**
-- 입력 크기를 잘 보자... input 크기가 integer가 아니야!!!
+- 입력 크기를 잘 보자... input 크기가 integer가 아니야!!
 
 ## 📡 Link
 https://www.acmicpc.net/problem/11652
