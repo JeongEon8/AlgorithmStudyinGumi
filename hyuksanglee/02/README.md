@@ -1,54 +1,47 @@
-# [백준 - G5] 1107.리모컨 
+# [백준 - G3] 1937.욕심쟁이 판다 
  
 ## ⏰  **time**
 1시간 
 
 ## :pushpin: **Algorithm**
-구현
+dfs, dp
 
 ## ⏲️**Time Complexity**
-O(NM)
+O(n^2)
 
 ## :round_pushpin: **Logic**
-1. for문으로 0부터 999999만큼 돌아준다
-   	- 최대 채널입력이 500000이라서 입력수만큼 9를 대입하면 999999가 된다.
-2. 고장난 수가 있으면 continue 해준다.
-   	- String으로 바꾸고 .contains를 사용하여 고장난 수가 포함된느지 확인
-3. Math.abs() 를 사용하여 차이를 구하고 최솟값을 갱신해준다.
+1. 대나무를 담는 함수 2차원 배열 map과 현재 칸에서 최대 이동할수 있는 2차원 배열 dp를 생성해준다.
 
-4. 그리고 기본 채널값이 100번이므로 100에서 차이를 구해서 최솟값이랑 비교하여 갱신해준다.
-5. 최솟값 출력
+   
+2. for문을 돌면서 하나씩 dfs를 탐색한 결과와 dp에 저장된 값을 비교하여 최댓값으로 dp에 저장
+3. dp에 가장 큰 값을 출력
+	
 ```java
-	for(int i = 0; i<=999999;i++) {
-        	boolean check = false;
-        	for(int n:num) {
-        		if((i+"").contains(n+"")) {
-        			check= true;
-        			break;	
-        		}
-        	}
-        	if(check) {
-        		continue;
-        	}
-        	int total = Math.abs(N-i)+(i+"").length();
-        	
-        	if(min>total) {
-        		min = total;
-        	}
-        	
-        	
-        }
-        if(Math.abs(N-100)<min) {
-        	min=Math.abs(N-100);
-        }
-        System.out.println(min);
+	public static int dfs(int i, int j) {
+
+	    if (isSelected[i][j] != 0) {
+	        return isSelected[i][j];
+	    }
+
+	    isSelected[i][j] = 1;  // 처음에는 자기 자신만 방문
+
+	    for (int d = 0; d < 4; d++) {
+	        int ni = i + di[d];
+	        int nj = j + dj[d];
+	        // 범위를 벗어나지 않고, 다음 칸이 현재 칸보다 대나무 양이 많을 경우에만 이동
+	        if (ni >= 0 && nj >= 0 && ni < n && nj < n && map[ni][nj] > map[i][j]) {
+	            isSelected[i][j] = Math.max(isSelected[i][j], dfs(ni, nj) + 1);
+	        }
+	    }
+
+	    return isSelected[i][j];
+	}
 ```
 
 
 
 ## :black_nib: **Review**
-- 처음에는 bfs로 채널 누르는거 다 탐색 했지만 메모리 초과가 뜨더라구요
-- 제가 푼거 보다 더 좋은 방식이 있을까요?
+- dp가 너무 어려워요 
 
 ## 📡**Link**
-- https://www.acmicpc.net/problem/1107
+- https://www.acmicpc.net/submit/1937/85154199
