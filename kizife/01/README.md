@@ -1,7 +1,7 @@
 # [백준] 6593. 상범 빌딩  
  
 ## ⏰  **time**
-
+40분 
 
 ## :pushpin: **Algorithm**
 bfs
