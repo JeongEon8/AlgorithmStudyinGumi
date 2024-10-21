@@ -15,7 +15,7 @@ bfs
 
 이동할 때마다 dist값을 +1 해주고, 종점에 다다랐을 경우 이 dist값을 리턴한다.
 만약 출구를 찾지 못한 채로 종료되면 -1을 리턴한다.
-``java
+```java
                 int x = now[0];
                 int y = now[1];
                 int z = now[2];
@@ -25,10 +25,11 @@ bfs
                     return dist;
                 }
 
-                // ...
+                ...
 
                 return -1;
 ```
+
 
 ## :black_nib: **Review**
 - 좌표값 자체에 +1 하면서 값을 구하고 있었는데, 짝꿍이 dist를 따로 빼주어서 그렇게 풀었다.
