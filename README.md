@@ -98,6 +98,6 @@ https://www.acmicpc.net/problem/2096
 |24.09.02|<img width="500" alt="image" src="https://github.com/user-attachments/assets/229ca7e8-51cb-4fda-bbca-55c909c0bb0b">|
 |24.09.10||
 |24.09.23||
-|24.09.30||
-|24.10.07||
-|24.10.14||
+|24.09.30|<img width="500" alt="image" src="https://github.com/user-attachments/assets/ecb7e9cf-544b-49ed-b6aa-614d70e52114">|
+|24.10.07|<img width="500" alt="image" src="https://github.com/user-attachments/assets/27dfee25-3c39-49a3-83ec-3a64a5c0c06e">|
+|24.10.14|<img width="500" alt="image" src="https://github.com/user-attachments/assets/d540037f-12ef-46a3-bb7c-5f524a6fc4b2">|
