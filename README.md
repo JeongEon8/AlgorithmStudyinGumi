@@ -16,7 +16,7 @@
 <br>
 
 # 💚알고리즘 스터디 in 구미💚
-- 목표: 💥*A형 취득*💥 (개인 알고 가능)
+- 목표: 💥*A형 취득*💥 + 매주 알고리즘 문제를 풀며 감을 잃지 말자!
 - 전체 기간: 24년 8월 ~ (축🎉 8월 스터디원 전원 연장! 화이팅해요 우리😊)
 - 인원: 8명
 - 방식: 매주 월요일 오후 6시 구미 5반 오프라인 회의 
@@ -102,3 +102,6 @@
 |24.09.30|<img width="500" alt="image" src="https://github.com/user-attachments/assets/ecb7e9cf-544b-49ed-b6aa-614d70e52114">|
 |24.10.07|<img width="500" alt="image" src="https://github.com/user-attachments/assets/27dfee25-3c39-49a3-83ec-3a64a5c0c06e">|
 |24.10.14|<img width="500" alt="image" src="https://github.com/user-attachments/assets/d540037f-12ef-46a3-bb7c-5f524a6fc4b2">|
+|24.10.21|<img width="500" alt="image" src="https://github.com/user-attachments/assets/1b623568-4073-4248-9352-976e857e0112">|
+|24.10.28|<img width="500" alt="image" src="https://github.com/user-attachments/assets/146eb2de-d5b7-4d44-9341-e9348d1ae795">|
+
