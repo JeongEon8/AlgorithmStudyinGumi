@@ -4,7 +4,7 @@
 # 📚 목표
 |아이디|목표|
 |------|---|
-|[구현진(2jin8)](https://github.com/2jin8)| 실버 이상 7개 |
+|[구현진(2jin8)](https://github.com/2jin8)| 실버 이상 4개 |
 |[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 실버 이상 4문제 |
 |[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 이상 3문제 |
 |[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 골드 2문제 |
