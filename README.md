@@ -5,12 +5,12 @@
 |아이디|목표|
 |------|---|
 |[구현진(2jin8)](https://github.com/2jin8)| 실버 이상 4개 |
-|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 실버 이상 4문제 |
-|[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 이상 3문제 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 골드 2문제 |
-|[이서현(kizife)](https://github.com/kizife)| 실버 이상 6문제 |
-|[장홍준(ajang369)](https://github.com/ajang369)| 골드 이상 7문제 |
-|[한아영(hanayoung)](https://github.com/hanayoung)| 골드 이상 3문제 |
+|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 실버 이상 3문제 |
+|[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 이상 2문제 |
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| B형 3문제 |
+|[이서현(kizife)](https://github.com/kizife)| 골드 이상 3문제 |
+|[장홍준(ajang369)](https://github.com/ajang369)| 실버 이상 4문제 |
+|[한아영(hanayoung)](https://github.com/hanayoung) | 골드 or SWEA D3 이상 3문제 |
 |[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버 이상 7문제 |
 
 <br>
@@ -104,4 +104,4 @@
 |24.10.14|<img width="500" alt="image" src="https://github.com/user-attachments/assets/d540037f-12ef-46a3-bb7c-5f524a6fc4b2">|
 |24.10.21|<img width="500" alt="image" src="https://github.com/user-attachments/assets/1b623568-4073-4248-9352-976e857e0112">|
 |24.10.28|<img width="500" alt="image" src="https://github.com/user-attachments/assets/146eb2de-d5b7-4d44-9341-e9348d1ae795">|
-
+|24.11.04|<img width="500" alt="image" src="https://github.com/user-attachments/assets/146eb2de-d5b7-4d44-9341-e9348d1ae795">|
