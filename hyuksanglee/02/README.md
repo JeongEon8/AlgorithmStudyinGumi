@@ -1,75 +1,40 @@
-# [백준 - 골드 3] 1238. 파티
+# [백준 - 골드 3] 2252. 줄 세우기
  
 ## ⏰  **time**
-60분
+30분
 
 ## :pushpin: **Algorithm**
-다익스트라
+위상정렬
 
 ## ⏲️**Time Complexity**
-$O(N²+M)$
+$O(N+M)$
 
 ## :round_pushpin: **Logic**
-1. 다익스트라 2개 이용한다.
-	- 하나는 모든 지점에서 특정 지점까지 도착하는 최단 시간이고 나머지 하나는 특정 지점에서 모든 지점까지 최단시간 이다
+1. 2차원 배열을 사용하여 해당 학생에 인덱스 해당 학생보다 큰 학생을 담는 배열 ArrayList<Integer>[]arr을 생성한다.
+2. 해당 학생보다 작은 학생이 몇명인지 받는 배열 indegree 생성
 
-2. 출발과 도착 배열을 for문을 돌면서 왕복 시간을 구하고 최대 시간과 비교하여 갱신 하고 마지막에는 출력해준다.
+3. 학생의 정보를 받을때 a의 학생 칸에 b학생을 추가 해주고 B학생 indegree배열에 1증가 시켜준다.
+
+4.  indegree을 for문을 돌면서 값이 0인 값을 찾아서 que에 넣어준다.
+
+5.  que에서 하나씩 뽑아서 출력하고 해당 숫자가 arr안에 있는 학생들을 하나씩 꺼내서 indegree을값을 비교하고 0이 아니면 1감소시키고 0이면 출력한다.
    ```java
-	public static void dijkstra(int n,  int sum) {
-		Queue<Student> que = new ArrayDeque();
-		Student student = new Student();
-		student.current = n;
-		student.total = sum;
-		que.add(student);
-		while(!que.isEmpty()) {
-			Student cStudent = que.poll();
-			int cn = cStudent.current;
-			int ct = cStudent.total;
-			
-			for(int i =0; i<N; i++) {
-				int total = sum+map[cn][i]+ct;
-			
-				if(map[cn][i]!=0 && start[i]>total) {
-					student = new Student();
-					student.current = i;
-					student.total = total;
-					que.add(student);
-					start[i]=total;
-				}
-			}
-		}
-		
-	}
-	
-	public static void rDijkstra(int n,  int sum) {
-		Queue<Student> que = new ArrayDeque();
-		Student student = new Student();
-		student.current = n;
-		student.total = sum;
-		que.add(student);
-		while(!que.isEmpty()) {
-			Student cStudent = que.poll();
-			int cn = cStudent.current;
-			int ct = cStudent.total;
-			
-			for(int i =0; i<N; i++) {
-				int total = sum+map[i][cn]+ct;
-			
-				if(map[i][cn]!=0 && end[i]>total) {
-					student = new Student();
-					student.current = i;
-					student.total = total;
-					que.add(student);
-					end[i]=total;
-				}
-			}
-		}
-		
-	}
+	while (!queue.isEmpty()) {
+            int current = queue.poll();
+            System.out.print(current);
+            System.out.print(" ");
+
+            for (int next : arr[current]) {
+                indegree[next]--;
+                if (indegree[next] == 0) {
+                    queue.offer(next); // 진입 차수가 0이 된 문제를 큐에 추가
+                }
+            }
+        }
    ```
 
 ## :black_nib: **Review**
-- 다익스트라 문제를 오랜만에 풀려고 하니깐 어떻게 풀어야할지 처음에 헤맷어요
+- 위상정렬 어려워요
 
 ## 📡 Link
-https://www.acmicpc.net/problem/1238
+https://www.acmicpc.net/problem/2252
