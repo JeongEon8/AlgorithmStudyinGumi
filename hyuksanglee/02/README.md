@@ -1,13 +1,13 @@
-# [백준 - S1] 1105. 팔
+# [SWEA - D3] 10726. 이진수 표현
 
 ## ⏰ **time**
 
-20분
+30분
 
 ## :pushpin: **Algorithm**
 
 - 수학
-- 그리디 알고리즘
+- 비트연산
 
 ## ⏲️**Time Complexity**
 
@@ -15,26 +15,33 @@ $O(1)$
 
 ## :round_pushpin: **Logic**
 
-두 수의 자리수가 다르면 무조건 $10^n$을 지나가므로 0개다.  
-두 수의 자릿수 왼쪽부터 두 수의 연속된 같은부분은 변하지 않는다. 변할 수 있으면 무조건 8이 아닌 수가 될 수 있음.
-즉 왼쪽부터 연속된 같은 부분에서 8의 개수를 구하면 답이다.
+- M의 이진수 표현의 마지막 N 비트가 모두 1 켜져있는지 확인 하기 위해
+- 1에서 시프트 연산을 사용해서 왼쪽으로 밀고 1을 더해주는것을 N번 반복해서 N 크기 만큼 1을 채워준다.
+- 위에서 구한 값에서 &연산을 사용해서 위에 구한 값이랑 같은지 비교해준다.
+- 만약 같은면 모두 켜져있는 것이라 ON출력 아닐경우 OFF 출력해준다.
+
 
 ```
-int ans = 0;
-if (start.length() == end.length()) {
-	for (int i = 0; i < start.length(); i++) {
-		if (start.charAt(i) != end.charAt(i)) {
-			break;
+for(int t =1; t<= TC; t++) {
+			String[] input = in.readLine().split(" ");
+			int N = Integer.parseInt(input[0]);
+			int M = Integer.parseInt(input[1]);
+			
+			int num = 0;
+			for(int n =0; n<N; n++) {
+			num =num <<1;
+			num = num+1;
+			}
+			String str = "OFF";
+			if((num& M) == num) {
+				str = "ON";
+			}
+			System.out.println("#"+t+" "+str);
 		}
-		if (start.charAt(i) == '8') {
-			ans++;
-		}
-	}
-}
 ```
 
 ## :black_nib: **Review**
 
 ## 📡**Link**
 
-https://www.acmicpc.net/problem/1105
+https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AXRSXf_a9qsDFAXS
