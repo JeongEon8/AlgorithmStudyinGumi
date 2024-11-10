@@ -2,34 +2,47 @@
 
 ## ⏰ **time**
 
-20분
+30분
 
 ## :pushpin: **Algorithm**
 
-- 수학
-- 그리디 알고리즘
+- 구현
 
 ## ⏲️**Time Complexity**
 
-$O(1)$
+$O(log(N))$
 
 ## :round_pushpin: **Logic**
 
-두 수의 자리수가 다르면 무조건 $10^n$을 지나가므로 0개다.  
-두 수의 자릿수 왼쪽부터 두 수의 연속된 같은부분은 변하지 않는다. 변할 수 있으면 무조건 8이 아닌 수가 될 수 있음.
-즉 왼쪽부터 연속된 같은 부분에서 8의 개수를 구하면 답이다.
+- N 에 1부터 1씩 증가한 값을 곱해준다. 
+- 곱값을 문자열로 바꾸고 chatAt을 사용해서 하나씩 뽑는다.
+- 뽑은 값을 0 ~ 10 까지 있는 배열에 해당 인덱스를 true 바꿔서 해당 숫자가 한번 나온것을 표시해준다.
+- 배열에서 0 ~ 10 까지 모두 true 이면 N 에 곱한 값을 출력해준다.
 
 ```
-int ans = 0;
-if (start.length() == end.length()) {
-	for (int i = 0; i < start.length(); i++) {
-		if (start.charAt(i) != end.charAt(i)) {
-			break;
-		}
-		if (start.charAt(i) == '8') {
-			ans++;
-		}
-	}
+while(true) {
+				int cN = N*i;
+				
+				String str = cN+"";
+				for(int j = 0 ; j <str.length(); j++) {
+					int num  = str.charAt(j) -'0';
+					isSelected[num] = true;
+				}
+				
+				i++;
+				
+				boolean check = false;
+				for(int j = 0; j<10; j++) {
+					if(isSelected[j]== false) {
+						check = true;
+						break;
+					}
+				}
+				if(!check) {
+					break;
+				}
+				
+			}
 }
 ```
 
@@ -37,4 +50,4 @@ if (start.length() == end.length()) {
 
 ## 📡**Link**
 
-https://www.acmicpc.net/problem/1105
+https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=2&contestProbId=AV18_yw6I9MCFAZN&categoryId=AV18_yw6I9MCFAZN&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=2&pageSize=10&pageIndex=3
