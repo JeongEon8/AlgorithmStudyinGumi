@@ -36,7 +36,9 @@
 - 제 10회 [24.10.08 - 24.10.14] (진행완료)
 - 제 11회 [24.10.15 - 24.10.21] (진행완료)
 - 제 12회 [24.10.15 - 24.10.28] (진행완료)
-- **제 13회 [24.10.29 - 24.11.04] (진행중)** 
+- 제 13회 [24.10.29 - 24.11.04] (진행완료)
+- 제 14회 [24.11.05 - 24.11.11] (진행완료)
+- **제 14회 [24.11.12 - 24.11.18] (진행중)**
 
 <br>
 
@@ -105,3 +107,5 @@
 |24.10.21|<img width="500" alt="image" src="https://github.com/user-attachments/assets/1b623568-4073-4248-9352-976e857e0112">|
 |24.10.28|<img width="500" alt="image" src="https://github.com/user-attachments/assets/146eb2de-d5b7-4d44-9341-e9348d1ae795">|
 |24.11.04|<img width="500" alt="image" src="https://github.com/user-attachments/assets/146eb2de-d5b7-4d44-9341-e9348d1ae795">|
+|24.11.11|<img width="500" alt="image" src="">|
+|24.11.18|<img width="500" alt="image" src="">|
