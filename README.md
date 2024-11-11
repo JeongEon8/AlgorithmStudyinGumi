@@ -4,14 +4,14 @@
 # 📚 목표
 |아이디|목표|
 |------|---|
-|[구현진(2jin8)](https://github.com/2jin8)| 실버 이상 4개 |
-|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 실버 이상 3문제 |
+|[구현진(2jin8)](https://github.com/2jin8)| 골드 이상 3개 |
+|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 실버 이상 7문제 |
 |[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 이상 2문제 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| B형 3문제 |
-|[이서현(kizife)](https://github.com/kizife)| 골드 or SWEA D4 이상 3문제 |
-|[장홍준(ajang369)](https://github.com/ajang369)| 실버 이상 4문제 |
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| B형 1문제 |
+|[이서현(kizife)](https://github.com/kizife)| 골드 or SWEA D4 이상 2문제 |
+|[장홍준(ajang369)](https://github.com/ajang369)| 골드 이상 3문제 |
 |[한아영(hanayoung)](https://github.com/hanayoung) | 골드 or SWEA D3 이상 3문제 |
-|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버 이상 7문제 |
+|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버 이상 5문제 |
 
 <br>
 
