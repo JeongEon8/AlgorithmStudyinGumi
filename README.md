@@ -5,7 +5,7 @@
 |아이디|목표|
 |------|---|
 |[구현진(2jin8)](https://github.com/2jin8)| 골드 이상 3개 |
-|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 실버 이상 7문제 |
+|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 실버 이상 3문제 |
 |[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 이상 2문제 |
 |[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| B형 1문제 |
 |[이서현(kizife)](https://github.com/kizife)| 골드 or SWEA D4 이상 2문제 |
