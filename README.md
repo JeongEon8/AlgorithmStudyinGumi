@@ -1,9 +1,4 @@
-## 1학기 스터디 마감! 12월 9일에 봐요! 안녕~~~
-
 # 📚 목표
-
-**자율!!**
-
 |아이디|목표|
 |------|---|
 |[구현진(2jin8)](https://github.com/2jin8)|  |
@@ -18,10 +13,11 @@
 <br>
 
 # 💚알고리즘 스터디 in 구미💚
-- 목표: 💥*A형 취득*💥 + 매주 알고리즘 문제를 풀며 감을 잃지 말자!
-- 전체 기간: 24년 8월 ~ (축🎉 8월 스터디원 전원 연장! 화이팅해요 우리😊)
+- 목표: 매주 알고리즘 문제를 풀며 감을 잃지 말자!
+- 🎉전원 A형 취득 달성!🎉
+- 전체 기간: 24년 8월 ~
 - 인원: 8명
-- 방식: 매주 월요일 오후 6시 구미 5반 오프라인 회의 
+- 방식: 매주 월요일 오후 6시 오프라인 회의
 
 <br>
 
@@ -40,12 +36,13 @@
 - 제 12회 [24.10.15 - 24.10.28] (진행완료)
 - 제 13회 [24.10.29 - 24.11.04] (진행완료)
 - 제 14회 [24.11.05 - 24.11.11] (진행완료)
-- **제 14회 [24.11.12 - 24.11.18] (진행중)**
+- 제 15회 [24.11.12 - 24.11.18] (진행완료)
+- **제 16회 [24.12.09 - 24.12.16] (진행중)**
 
 <br>
 
 # ✅ 진행방식
-1. 매주 하루 온라인 회의를 통해 목표 설정 + 공통 한 문제 설정
+1. 매주 하루 온라인 회의를 통해 목표 설정
 2. 개인 목표만큼 알고리즘 문제 풀이
 3. 푼 문제는 깃허브 업로드
 4. readme.md 작성을 통해 문제풀이 작성
@@ -86,28 +83,5 @@
 - 50% 이상 미달성자는 5000원의 벌금을 납부한다
 - 50% 미만 미달성자는 10000원의 벌금을 납부한다
 - 달성자들은 총 벌금의 1/N만큼씩 수령한다
-- <추석특집> 못하면 벌금 30000원!!!
-- 50% 이상 달성시 15000원!!!!
 
 <br>
-<br>
-
-# 📷 활동 사진
-|날짜|사진|
-|---|---|
-|24.08.05|<img width="500" alt="image" src="https://github.com/user-attachments/assets/9ca4397c-a876-4af3-9397-045d83e38d06">|
-|24.08.12|<img width="500" alt="image" src="https://github.com/user-attachments/assets/5e8cf656-81d0-4303-a912-dcbd67210a54">|
-|24.08.19|<img width="500" alt="image" src="https://github.com/user-attachments/assets/61c2c371-6a96-49af-87f4-bf28e523ba14">|
-|24.08.26|<img width="500" alt="image" src="https://github.com/user-attachments/assets/84962f15-5a0e-4c20-b0f0-624043360d6f">|
-|26일은 사진촬영을 까먹었습니다..! 커밋으로 확인해주세요ㅠ|
-|24.09.02|<img width="500" alt="image" src="https://github.com/user-attachments/assets/229ca7e8-51cb-4fda-bbca-55c909c0bb0b">|
-|24.09.10||
-|24.09.23||
-|24.09.30|<img width="500" alt="image" src="https://github.com/user-attachments/assets/ecb7e9cf-544b-49ed-b6aa-614d70e52114">|
-|24.10.07|<img width="500" alt="image" src="https://github.com/user-attachments/assets/27dfee25-3c39-49a3-83ec-3a64a5c0c06e">|
-|24.10.14|<img width="500" alt="image" src="https://github.com/user-attachments/assets/d540037f-12ef-46a3-bb7c-5f524a6fc4b2">|
-|24.10.21|<img width="500" alt="image" src="https://github.com/user-attachments/assets/1b623568-4073-4248-9352-976e857e0112">|
-|24.10.28|<img width="500" alt="image" src="https://github.com/user-attachments/assets/146eb2de-d5b7-4d44-9341-e9348d1ae795">|
-|24.11.04|<img width="500" alt="image" src="https://github.com/user-attachments/assets/146eb2de-d5b7-4d44-9341-e9348d1ae795">|
-|24.11.11|<img width="500" alt="image" src="">|
-|24.11.18|<img width="500" alt="image" src="">|
