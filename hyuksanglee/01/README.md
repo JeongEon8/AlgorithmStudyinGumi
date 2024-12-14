@@ -1,39 +1,39 @@
-# [백준 - 골드 5] 1074. Z
+# [SWEA] K번째 문자열
  
 ## ⏰  **time**
-1시간
+3시간
 
 ## :pushpin: **Algorithm**
-분할정복
+trie
 
 ## ⏲️**Time Complexity**
-$O(Nlog(N))$
+$O(N²)$
 
 ## :round_pushpin: **Logic**
-1. 구간을 반으로 쪼개가며 현재 범위가 내가 찾는 위치인지 확인한다.
-2. 아니라면 현재 사이즈의 제곱을 더한다.
-3. 맞다면 현재 result를 출력한다.
-   ```cpp
-void divideNconquer(int x, int y, int size) {
-	if (x == c && y == r) {
-		cout << result << "\n";
-		return;
+1. 입력받은 문자열을 charAt을 활용하여 1개씩 뽑는다.
+2. Trie 클래스에 트리의 같은 레벨에 해당 문자가 있으면 넘어가고 없으면 노드를 추가 해준다.
+3. 노드가 추가 될때 마다 부모 노드에 자식 개수 추가 해준다.
+4. dfs를 사용하여 a~z까지 순차적으로 찾아준다.
+5. 찾을때 마다 K를 감소 해준다
+6. K가 0이 되면 해당 알파벳까지 값 출력
+
+   ```java
+class KTrie{
+		char alphabet;
+		int cnt=0;
+		Map<Character, KTrie>chidren = new TreeMap<Character, KTrie>();
+		
+		KTrie(char alphabet){
+			this.alphabet = alphabet;
+		}
+		
+		KTrie(){
+			}
 	}
-	else if (c < x + size && r < y + size && c >= x && r >= y) {
-		//찾으려는 열과 행이 4분면안에 있을 경우
-		divideNconquer(x, y, size / 2);
-		divideNconquer(x + size / 2, y, size / 2);
-		divideNconquer(x, y + size / 2, size / 2);
-		divideNconquer(x + size / 2, y + size / 2, size / 2);
-	}
-	else { // 없다면 숫자 카운트 -> 정사각형 넓이
-		result += size * size;
-	}
-}
    ```
 
 ## :black_nib: **Review**
-- 지그제그지그제그....
+- 너무 어려줘요
 
 ## 📡 Link
-https://www.acmicpc.net/problem/1074
+https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18KWf6ItECFAZN&categoryId=AV18KWf6ItECFAZN&categoryType=CODE&problemTitle=K%EB%B2%88%EC%A7%B8&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=1&&&&&&&&&
