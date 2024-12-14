@@ -17,8 +17,9 @@ $O(N²)$
 5. 찾을때 마다 K를 감소 해준다
 6. K가 0이 되면 해당 알파벳까지 값 출력
 
-   ```java
-class KTrie{
+   ```
+   java
+       class KTrie{
 		char alphabet;
 		int cnt=0;
 		Map<Character, KTrie>chidren = new TreeMap<Character, KTrie>();
