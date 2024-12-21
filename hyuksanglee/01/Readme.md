@@ -1,4 +1,4 @@
-# [백준 - G5] 13549. 숨바꼭질 3
+# [SWEA] 0/1 Knapsack
 
 ## ⏰ **time**
 
@@ -10,7 +10,7 @@
 
 ## ⏲️**Time Complexity**
 
-$O(N)^2$
+$O(T×N×K)
 
 ## :round_pushpin: **Logic**
 
