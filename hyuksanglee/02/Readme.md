@@ -1,43 +1,48 @@
-# [SWEA] 0/1 Knapsack
+# [SWEA] 힙
 
 ## ⏰ **time**
 
-1시간
+30분
 
 ## :pushpin: **Algorithm**
 
-- dp
+- 힙
 
 ## ⏲️**Time Complexity**
 
-$O(T×N×K)
+$O(T×N×logN)
 
 ## :round_pushpin: **Logic**
 
-- dp의 값을 담는 리스트 생성
-- 점화식 : dp[n-1][k] 이랑 dp[n-1][k-V]+C 둘이 비교해서 큰 값 넣기
-  	- dp[n-1][k] : 현재 값을 넣지 않았을때 부피k 일때 최댓값
-  	- dp[n-1][k-V]+C : 현제 값을 넣고 남는 부피만큼 중에서 최댓값을 더한값
+- PriorityQueue를 사용하기
+- 최댓순으로 뽑아야하기 때문에 new PriorityQueue<>((a,b) -> b - a)로 생성하기
 
 ```java
-	 for (int n = 1; n <= N; n++) {
-                input = in.readLine().split(" ");
-                int V = Integer.parseInt(input[0]);
-                int C = Integer.parseInt(input[1]);
-
-                for (int j = 0; j <= K; j++) {
-                    dp[n][j] = dp[n - 1][j];
-                    if (j >= V) { 
-                        dp[n][j] = Math.max(dp[n][j], dp[n - 1][j - V] + C);
-                    }
-                }
-            }
+	 PriorityQueue<Integer> que = new PriorityQueue<>((a,b) -> b - a);
+			
+			for(int n =0; n<N; n++) {
+				String[] input = in.readLine().split(" ");
+				int type = Integer.parseInt(input[0]);
+				if(type == 1) {
+					que.add(Integer.parseInt(input[1]));
+				}
+				else if(type ==2) {
+					int result = -1;
+					if(!que.isEmpty()) {
+						result = que.poll();
+					}
+					
+					System.out.print(" "+result);
+				}
+				
+				
+			}
 ```
 
 ## :black_nib: **Review**
-- dp는 너무 어려워요
+- 이번꺼는 PriorityQueue 이것만 사용하면 되서 너무 쉬웠어요
 
 
 ## 📡**Link**
 
-https://swexpertacademy.com/main/code/codeBattle/problemDetail.do?contestProbId=AWBJAVpqrzQDFAWr&categoryId=AY1INdsqPvADFAWX&categoryType=BATTLE&battleMainPageIndex=1&&&&
+https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV-Tj7ya3jYDFAXr
