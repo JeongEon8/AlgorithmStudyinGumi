@@ -2,11 +2,12 @@
 |아이디|목표|
 |------|---|
 |[구현진(2jin8)](https://github.com/2jin8)| 백준 골드 2문제 |
+|[김미경()]()| 백준 골드 2문제 |
 |[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 백준 골드 2문제 |
 |[김정언(JeongEon)](https://github.com/JeongEon8)| 백준 골드 1문제 실버 1문제 |
 |[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 소프티어 2문제 |
-|[이서현(kizife)](https://github.com/kizife)| 백준 골드 3문제 |
-|[장홍준(ajang369)](https://github.com/ajang369)| 백준 실버이상 5개 |
+|[이서현(kizife)](https://github.com/kizife)| 백준 골드 2문제 |
+|[장홍준(ajang369)](https://github.com/ajang369)| 백준 골드 4개 |
 |[한아영(hanayoung)](https://github.com/hanayoung) |  골드 1문제 + 프로그래머스 lv2 1문제 |
 |[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 백준 실버 이상 5문제 |
 
