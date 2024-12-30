@@ -1,4 +1,4 @@
-![새해 복 많이 받으세요](https://github.com/user-attachments/assets/5029152a-a939-4be9-b93d-d20ae9928f0f)
+![새해 복 많이 받으세요)](https://github.com/user-attachments/assets/3b0ac2c9-4231-4768-81d5-d894b6617be2)
 
 <br>
 
