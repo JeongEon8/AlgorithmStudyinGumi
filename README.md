@@ -1,15 +1,15 @@
 # 📚 목표
 |아이디|목표|
 |------|---|
-|[구현진(2jin8)](https://github.com/2jin8)| 백준 골드 2문제 |
-|[김미경(rmfosem613)](https://github.com/rmfosem613)| 백준 골드 2문제 |
-|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 백준 골드 2문제 |
-|[김정언(JeongEon)](https://github.com/JeongEon8)| 백준 골드 1문제 실버 1문제 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 소프티어 2문제 |
-|[이서현(kizife)](https://github.com/kizife)| 백준 골드 2문제 |
+|[구현진(2jin8)](https://github.com/2jin8)| 백준 골드 1문제 |
+|[김미경(rmfosem613)](https://github.com/rmfosem613)|  |
+|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 백준 골드 1문제 |
+|[김정언(JeongEon)](https://github.com/JeongEon8)| |
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)|  |
+|[이서현(kizife)](https://github.com/kizife)| 백준 골드 1문제 |
 |[장홍준(ajang369)](https://github.com/ajang369)| 백준 골드 4개 |
-|[한아영(hanayoung)](https://github.com/hanayoung) |  골드 1문제 + 프로그래머스 lv2 1문제 |
-|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 백준 실버 이상 5문제 |
+|[한아영(hanayoung)](https://github.com/hanayoung) |  |
+|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)|  |
 
 <br>
 
@@ -18,7 +18,7 @@
 - 🎉전원 A형 취득 달성!🎉
 - 전체 기간: 24년 8월 ~
 - 인원: 9명
-- 방식: 매주 월요일 오후 6시 오프라인 회의
+- 방식: 매주 월요일 오후 6시 오프라인 회의 (25년 1월 6일 온라인 회의)
 
 <br>
 
@@ -41,6 +41,7 @@
 - 제 16회 [24.12.09 - 24.12.16] (진행완료)
 - 제 17회 [24.12.17 - 24.12.23] (진행완료)
 - 제 18회 [24.12.24 - 24.12.30] (진행완료)
+- 제 19회 [24.12.31 - 25.1.6] (진행중)
 
 <br>
 
