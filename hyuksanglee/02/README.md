@@ -1,4 +1,4 @@
-# [백준 - S1] 6118. 숨바꼭질 
+# [프로그래머스-L2] 뒤에 있는 큰 수 찾기
 
 ## ⏰ **time**
 
@@ -6,43 +6,41 @@
 
 ## :pushpin: **Algorithm**
 
--그래프 이론
--그래프 탐색
--너비 우선 탐색
+- 스택
 ## ⏲️**Time Complexity**
 
-$O(NlogN)$
+$O(N)$
 
 ## :round_pushpin: **Logic**
-가장 거리가 먼 헛간 중 번호가 가장 작은 헛간을 찾아야 하므로 Step(거리) 우선순위 큐를 사용하였다.  
-더 우선순위 큐에서 더 step이 큰게 나오면 ansStep을 갱신해주고 정답 헛간 번호를 최대 값보다 크게 해준다.  
-더 작은 장소가 나오면 정답 번호를 갱신해주면 답을 구할 수 있다.
+1. 스택에 저장된 마지막 인덱스가 가리키는 값이 현재 값보다 작으면, 해당 인덱스를 스택에서 제거하고 answer 배열에 현재 값을 저장합니다.
+
+2. 1번을 스택에 마지막 값보다 큰 값이 나올떄까지 반복
+
+3. 현재 인덱스를 스택에 추가
+
+4. 스택에 남아 있는 인덱스 -1로 처리
 
 
 ```java
-while (!pq.isEmpty()) {
-	JaeSuGi cur = pq.poll();
-	if (cur.step > ansStep) {
-		ansStep = cur.step;
-		ansCnt = 0;
-		ansNum = n + 1;
-	}
-	ansCnt++;
-	if (cur.num < ansNum) {
-		ansNum = cur.num;
-	}
-	for (int next : graph[cur.num]) {
-		if (!visited[next]) {
-			visited[next] = true;
-			pq.add(new JaeSuGi(next, cur.step + 1));
-		}
-	}
-}
+for (int i = 0; i < numbers.length; i++) {
+            // 스택의 최상단 값과 비교하여 조건을 만족하면 결과 저장
+            while (!stack.isEmpty() && numbers[stack.peek()] < numbers[i]) {
+                int index = stack.pop();
+                answer[index] = numbers[i];
+            }
+            // 현재 인덱스를 스택에 추가
+            stack.push(i);
+        }
+
+        // 스택에 남아 있는 인덱스는 오른쪽에 큰 값이 없음
+        while (!stack.isEmpty()) {
+            answer[stack.pop()] = -1;
+        }
 ```
 
 ## :black_nib: **Review**
-BFS문제
+스택 , so easy
 
 ## 📡**Link**
 
-https://www.acmicpc.net/problem/6118
+https://school.programmers.co.kr/learn/courses/30/lessons/154539
