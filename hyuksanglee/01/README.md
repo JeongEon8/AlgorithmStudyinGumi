@@ -1,48 +1,53 @@
-# [백준 - S1] 6118. 숨바꼭질 
+# [프로그래머스 -L2] 연속된 부분 수열의 합
 
 ## ⏰ **time**
 
-20분
+30분
 
 ## :pushpin: **Algorithm**
 
--그래프 이론
--그래프 탐색
--너비 우선 탐색
+- 배열
+
 ## ⏲️**Time Complexity**
 
-$O(NlogN)$
+$O(N)$
 
 ## :round_pushpin: **Logic**
-가장 거리가 먼 헛간 중 번호가 가장 작은 헛간을 찾아야 하므로 Step(거리) 우선순위 큐를 사용하였다.  
-더 우선순위 큐에서 더 step이 큰게 나오면 ansStep을 갱신해주고 정답 헛간 번호를 최대 값보다 크게 해준다.  
-더 작은 장소가 나오면 정답 번호를 갱신해주면 답을 구할 수 있다.
+1. 입력 받은 배열안에 숫자를 하나씩 뽑아낸다.
+
+2. 그 숫자를 k랑 비교해서 크면 넘긴다.
+
+3. 작으면 total 변수에 합해주고 count 변수에 숫자를 1증가 시킨다.
+
+4. total이 k보다 크면 작아질때까지 제일 마지막에 total에 합한 값을 빼준다.
+   	- index변수를 만들어서 뺄때마다 index값 증가 해준다.
+
+5. total 값이랑 k값이 같고 count 값이 최소이면 index변수와 현재 배열에서 뽑은 인댁스를 저장 한다.
+   
 
 
 ```java
-while (!pq.isEmpty()) {
-	JaeSuGi cur = pq.poll();
-	if (cur.step > ansStep) {
-		ansStep = cur.step;
-		ansCnt = 0;
-		ansNum = n + 1;
-	}
-	ansCnt++;
-	if (cur.num < ansNum) {
-		ansNum = cur.num;
-	}
-	for (int next : graph[cur.num]) {
-		if (!visited[next]) {
-			visited[next] = true;
-			pq.add(new JaeSuGi(next, cur.step + 1));
-		}
-	}
-}
+for(int i= 0; i<sequence.length; i++){
+            if(k<sequence[i]){
+                break;
+            }
+            total+= sequence[i];
+            count+=1;
+            while(total>k){
+                total-= sequence[index++];
+                count--;
+            }
+            if(total==k && minC>count){
+                minC=count;
+                answer[0]= index;
+                answer[1] = i;
+            }
+        }
 ```
 
 ## :black_nib: **Review**
-BFS문제
+so easy !!
 
 ## 📡**Link**
 
-https://www.acmicpc.net/problem/6118
+https://school.programmers.co.kr/learn/courses/30/lessons/178870?language=java
