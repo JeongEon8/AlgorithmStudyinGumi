@@ -6,7 +6,7 @@
 |아이디|목표|
 |------|---|
 |[구현진(2jin8)](https://github.com/2jin8)| 백준 실버 2문제 |
-|[김미경(rmfosem613)](https://github.com/rmfosem613)| 백준 골드 2문제제 |
+|[김미경(rmfosem613)](https://github.com/rmfosem613)| 백준 골드 1문제 |
 |[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 백준 골드 1문제 |
 |[김정언(JeongEon)](https://github.com/JeongEon8)| 벡준 골드 1문제, 실버 1문제 |
 |[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 프로그래머스 lv2 2문제 |
