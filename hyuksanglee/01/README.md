@@ -1,28 +1,48 @@
-# [백준 - 실버 3] 17626. Four Squares
+# [백준 - 골드 4] 2573. 빙산
  
 ## ⏰  **time**
 1시간
 
 ## :pushpin: **Algorithm**
-dp
+dfs
 
 ## ⏲️**Time Complexity**
-$O(N^2)$
+$O(N*M)$
 
 ## :round_pushpin: **Logic**
-1. dp[i] = dp[i-1] + 1
-2. dp[i] = min(dp[i], dp[i-j*j]+1)로 자기보다 작은 모든 제곱수들을 탐색하면서 min함수로 최소 개수
-```cpp
-    for(int i=1;i<=n;i++){
-        dp[i] = dp[i-1] + 1;
-        for(int j=1;j*j<=i;j++){
-            dp[i] = min(dp[i],dp[i-j*j]+1);
+1. 배열 전체를 탐색하여 빙산을 녹인다.
+2. dfs 탐색을 하여 섬이 몇개 있는지 센다.
+   
+```java
+    while (true) {
+            int lend = 0; // 빙산 덩어리 수
+            visited = new boolean[N][M];
+
+            // 빙산 덩어리 수 계산
+            for (int x = 0; x < N; x++) {
+                for (int y = 0; y < M; y++) {
+                    if (arr[x][y] > 0 && !visited[x][y]) {
+                        dfs(x, y);
+                        lend++;
+                    }
+                }
+            }
+
+            if (lend >= 2) { // 두 덩어리 이상으로 분리된 경우
+                System.out.println(year);
+                break;
+            } else if (lend == 0) { // 빙산이 모두 녹은 경우
+                System.out.println(0);
+                break;
+            }
+
+            melt(); // 빙산 녹이기
+            year++;
         }
-    }
 ```
 
 ## :black_nib: **Review**
-- dp 짱어렵네.. 실버가 골드같았다..
+- 와 이제는 dfs도 까먹어서 한참 생각했어요
 
 ## 📡 Link
-https://www.acmicpc.net/problem/17626
+https://www.acmicpc.net/problem/2573
