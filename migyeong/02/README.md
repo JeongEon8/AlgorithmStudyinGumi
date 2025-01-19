@@ -22,4 +22,4 @@ else System.out.println("SK");
 - DP.. 문제였네요? 어쩐지 체점 시간이 오래걸리더라
 
 ## 📡 Link
-https://www.acmicpc.net/problem/1427
+https://www.acmicpc.net/problem/9655
