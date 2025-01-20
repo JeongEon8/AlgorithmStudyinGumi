@@ -5,15 +5,15 @@
 # 📚 목표
 |아이디|목표|
 |------|---|
-|[구현진(2jin8)](https://github.com/2jin8)| 백준 골드 2문제 |
+|[구현진(2jin8)](https://github.com/2jin8)| 백준 실버 4문제 |
 |[김미경(rmfosem613)](https://github.com/rmfosem613)| 백준 실버 3문제 |
-|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 백준 골드 1문제 |
-|[김정언(JeongEon)](https://github.com/JeongEon8)| 벡준 골드 1문제, 실버 1문제 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 백준 골드 2개 |
-|[이서현(kizife)](https://github.com/kizife)| 백준 골드 2문제 |
-|[장홍준(ajang369)](https://github.com/ajang369)| 백준 실버 5개 |
+|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 백준 골드 3문제 |
+|[김정언(JeongEon)](https://github.com/JeongEon8)| 벡준 실버 2문제 |
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 백준 실버 2개 |
+|[이서현(kizife)](https://github.com/kizife)| 백준 골드 4문제 |
+|[장홍준(ajang369)](https://github.com/ajang369)| 백준 골드 8개 |
 |[한아영(hanayoung)](https://github.com/hanayoung) | 백준 실버 3개 |
-|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 백준 실버이상 5문제 |
+|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 백준 실버이상 8문제 |
 
 <br>
 
