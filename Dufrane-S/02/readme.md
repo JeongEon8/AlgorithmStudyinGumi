@@ -13,7 +13,7 @@
 $O(N^2)$
 
 ## :round_pushpin: **Logic**
-bfs를 이용해 가장 빨리 도착하는 주사위 횟수을 확인하고 그 이상인 가지수는 제거해준다.
+bfs를 이용해 구해준다. dfs는 순환에 빠질 수 있어서 사용 불가
 
 ```java
 while (!q.isEmpty()) {
