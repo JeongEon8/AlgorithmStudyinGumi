@@ -1,48 +1,42 @@
-# [백준 - 골드 4] 2573. 빙산
+# [백준 - 실버3] 10972. 다음 순열
  
 ## ⏰  **time**
-1시간
+40분
 
 ## :pushpin: **Algorithm**
-dfs
+수
 
 ## ⏲️**Time Complexity**
-$O(N*M)$
+$O(NlogN)$
 
 ## :round_pushpin: **Logic**
-1. 배열 전체를 탐색하여 빙산을 녹인다.
-2. dfs 탐색을 하여 섬이 몇개 있는지 센다.
+1. 뒤에서 부터 수차적으로 검사를 하면서 값이 크면 변경하고 갱신
+2. 없을경우 -1 출력
    
 ```java
-    while (true) {
-            int lend = 0; // 빙산 덩어리 수
-            visited = new boolean[N][M];
+    while (idx > 0 && num[idx - 1] > num[idx]) {
+					idx--;
+				}
 
-            // 빙산 덩어리 수 계산
-            for (int x = 0; x < N; x++) {
-                for (int y = 0; y < M; y++) {
-                    if (arr[x][y] > 0 && !visited[x][y]) {
-                        dfs(x, y);
-                        lend++;
-                    }
-                }
-            }
+				if (idx == 0) {
+					System.out.println(-1);
+					return;
+				}
 
-            if (lend >= 2) { // 두 덩어리 이상으로 분리된 경우
-                System.out.println(year);
-                break;
-            } else if (lend == 0) { // 빙산이 모두 녹은 경우
-                System.out.println(0);
-                break;
-            }
+				
+				int big_idx = N - 1;
+				while (big_idx > idx && num[idx - 1] > num[big_idx]) {
+					big_idx--;
+				}
 
-            melt(); // 빙산 녹이기
-            year++;
-        }
+			
+				int temp = num[idx - 1];
+				num[idx - 1] = num[big_idx];
+				num[big_idx] = temp;
 ```
 
 ## :black_nib: **Review**
-- 와 이제는 dfs도 까먹어서 한참 생각했어요
+- 실버도 어려워
 
 ## 📡 Link
-https://www.acmicpc.net/problem/2573
+https://www.acmicpc.net/problem/10972
