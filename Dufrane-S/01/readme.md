@@ -13,7 +13,7 @@
 $O(NlogN)$
 
 ## :round_pushpin: **Logic**
-이분탐색하면서 예산을 계산해 본다.
+이분탐색하면서 예산을 계산해 본다. 최대 값을 찾으므로 상향 이분탐색
 
 ```java
  while(start<end) {
