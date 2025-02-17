@@ -5,15 +5,15 @@
 # 📚 목표
 |아이디|목표|
 |------|---|
-|[구현진(2jin8)](https://github.com/2jin8)|  |
-|[김미경(rmfosem613)](https://github.com/rmfosem613)|  |
-|[김성수(Dufrane-S)](https://github.com/Dufrane-S)|  |
-|[김정언(JeongEon)](https://github.com/JeongEon8)|  |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)|  |
-|[이서현(kizife)](https://github.com/kizife)|  |
-|[장홍준(ajang369)](https://github.com/ajang369)|  |
-|[한아영(hanayoung)](https://github.com/hanayoung) |  |
-|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)|  |
+|[구현진(2jin8)](https://github.com/2jin8)| 백준 골드 1 문제 |
+|[김미경(rmfosem613)](https://github.com/rmfosem613)| 백준 골드 1문제 |
+|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 백준 실버 이상 3문제 |
+|[김정언(JeongEon)](https://github.com/JeongEon8)| 백준 실버 이상 1문제 |
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 백준 실버 이상 1문제 |
+|[이서현(kizife)](https://github.com/kizife)| 백준 실버 이상 2문제 |
+|[장홍준(ajang369)](https://github.com/ajang369)| 홍준... 많이 바빠...? |
+|[한아영(hanayoung)](https://github.com/hanayoung) | 백준 실버 이상 1문제 |
+|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 백준 실버 이상 4문제 |
 
 <br>
 
