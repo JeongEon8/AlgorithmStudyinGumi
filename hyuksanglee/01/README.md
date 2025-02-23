@@ -1,37 +1,43 @@
-# [백준] 2195. 문자열 복사
+# [백준] 2960. 에라토스테네스의 체
 
 
 ## ⏰ **time**
-30분
+20분
 
 ## :pushpin: **Algorithm**
-그리디 알고리즘, 문자열
+구현
 
 ## ⏲️**Time Complexity**
-O(S.length() × P.length()) 
+O(N log N)
 
 ## :round_pushpin: **Logic**
-문자열 S, P에서 겹치는 부분을 몇 덩어리로 자를 수 있는지 생각하면 된다. <br/>
-일치하는 부분부터 시작해서 최장길이 뽑아내고 자르고 다시 뽑아내고...
+- 2부터 N까지 모든 정수를 적는다.
+- 아직 지우지 않은 수 중 가장 작은 수를 찾는다. 이것을 P라고 하고, 이 수는 소수이다.
+- P를 지우고, 아직 지우지 않은 P의 배수를 크기 순서대로 지운다.
+- 아직 모든 수를 지우지 않았다면, 다시 2번 단계로 간다.
 ```java
-            // S에서 P[pIndex]와 일치하는 부분 탐색
-            for (int start = 0; start < S.length(); start++) {
-                int currentLength = 0;
-
-                // 부분 문자열이 일치하는 최대 길이 계산
-                while (start + currentLength < S.length() &&
-                        pIndex + currentLength < P.length() &&
-                        S.charAt(start + currentLength) == P.charAt(pIndex + currentLength)) {
-                    currentLength++;
-                }
-
-                maxLength = Math.max(maxLength, currentLength);
-            }
+            while(K>0) {
+				for(int i=2; i<N+1; i++) {
+					if(arr[i]!=0) {
+						continue;
+					}
+					for(int j =1; j*i<N+1; j++) {
+						if(arr[j*i]==0) {
+							K--;
+							arr[j*i]=1;
+							if(K==0) {
+								System.out.print(j*i);
+								break;
+							}
+						}
+					}
+				}
+			}
 ```
 
 
 ## :black_nib: **Review**
-나쁘지 않은 골드5 문제... 
+문제에서 시키는데로 하니깐 바로 풀려요
 
 ## 📡**Link**
-https://www.acmicpc.net/problem/2195
+https://www.acmicpc.net/problem/2960
