@@ -1,13 +1,11 @@
-# [백준 - S5] 2161. 카드1
+# [백준 - S4] 18258. 큐2
 
 ## ⏰ **time**
 
-15분
+25분
 
 ## :pushpin: **Algorithm**
 
-- 구현
-- 자료 구조
 - 큐
 
 ## ⏲️**Time Complexity**
@@ -15,20 +13,44 @@
 $O(N)$
 
 ## :round_pushpin: **Logic**
-queue의 앞 부분을 덱의 윗장이라고 생각하고 한장을 바닥에 내려놓고(출력) 한장을 덱의 가장 아래(큐의 뒤)로 옮기는 동작을 반복한다.
+- 그냥 조건에 맞게 코드 작성하면 됨
 
 ```java
-	while (!dq.isEmpty()) {
-		System.out.print(dq.poll() + " ");
-		if (dq.isEmpty())
-			break;
-		dq.add(dq.poll());
-	}
+	if (input.startsWith("push")) {
+                queue.offer(Integer.parseInt(input.split(" ")[1]));
+            } else if (input.equals("pop")) {
+                
+                if(queue.isEmpty()) {
+                	sb.append("-1\n");
+                }else {
+                	sb.append(queue.pop()).append("\n");
+                }
+            } else if (input.equals("size")) {
+            	sb.append(queue.size()).append("\n");
+            } else if (input.equals("empty")) {
+            	if(queue.isEmpty()) {
+            		sb.append(1).append("\n");
+                }else {
+                	sb.append(0).append("\n");
+                }
+            } else if (input.equals("front")) {
+            	if(queue.isEmpty()) {
+            		sb.append("-1\n");
+                }else {
+                	sb.append(queue.peekFirst()).append("\n");
+                }
+            } else if (input.equals("back")) {
+            	if(queue.isEmpty()) {
+            		sb.append("-1\n");
+                }else {
+                	sb.append(queue.peekLast()).append("\n");
+                }
+            }
 ```
 
 ## :black_nib: **Review**
-deque를 사용하긴했는데 그냥 queue랑 똑같이썼다.
+- 하나씩 출력을 하니깐 시간초과 뜸
 
 ## 📡**Link**
 
-https://www.acmicpc.net/problem/2161
+https://www.acmicpc.net/problem/18258
