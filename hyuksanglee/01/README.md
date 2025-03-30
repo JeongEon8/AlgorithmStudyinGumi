@@ -1,8 +1,8 @@
-# [백준 - S5] 15688. 수 정렬하기 5
+# [백준 - S5] 11650. 좌표 정렬하기
 
 ## ⏰ **time**
 
-5분
+20분
 
 ## :pushpin: **Algorithm**
 
@@ -13,17 +13,25 @@
 $O(NlogN)$
 
 ## :round_pushpin: **Logic**
-정렬하면된다.  
+Comparable 써서 정렬하면 끝.  
 ```java
-Arrays.sort(arr);
-for (int num : arr) {
-	sb.append(num).append('\n');
+class Point implements Comparable<Point> {
+    int x, y;
+    
+    
+    @Override
+    public int compareTo(Point other) {
+        if (this.x == other.x) {
+            return Integer.compare(this.y, other.y);
+        }
+        return Integer.compare(this.x, other.x);
+    }
 }
 ```
 
 
 ## :black_nib: **Review**  
-실버..?
+정렬하기!!!
 ## 📡**Link**
 
-https://www.acmicpc.net/problem/15688
+https://www.acmicpc.net/problem/11650
