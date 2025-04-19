@@ -1,41 +1,33 @@
-# [백준 - S2] 2885. 초콜릿 식사
+# [백준 - S4] 25179. 배스킨라빈스~N~귀엽고~깜찍하게~
 
 ## ⏰ **time**
 
-20분
+15분
 
 ## :pushpin: **Algorithm**
 
 - 수학
-- 정수론
-- 비트마스킹
+- 게임 이론
 
 ## ⏲️**Time Complexity**
 
-$O(N)$
+$O(1)$
 
 ## :round_pushpin: **Logic**  
-초콜릿의 최소 크기는 상근이가 원하는 크기보다 큰 2의 제곱수 중 가장 작은 수이다.  
-상근이가 원하는 초콜릿의 크기는 이진수로 표현할 수 있고 쪼게는 경우 이진수의 가장 오른쪽1의 수까지 쪼게서 만들어야하므로 가장 오른쪽 1의 인덱스만큼 쪼게면 상근이가 원하는 수를 만들 수 있다.
+상대가 어떤 수를 부르든 m+1을 만드는 식의 전략이 필승법이다.  
+이 때 상대가 준서가 부를 수 있는 숫자가 n한개 밖에 없는경우만 패배하므로 (n % (m + 1)) == 1인 경우만 패배한다.
 ```java
-int n = Integer.parseInt(in.readLine());
-String binary = Integer.toBinaryString(n);
-int chocolate = (int) Math.pow(2, binary.length());
-int cnt = 0;
-if (chocolate / n == 2) {
-	chocolate /= 2;
+long n = Long.parseLong(split[0]);
+long m = Long.parseLong(split[1]);
+if ((n % (m + 1)) == 1) {
+	System.out.println("Can't win");
 } else {
-	for (int i = binary.length(); i >= 0; i--) {
-		if (binary.charAt(i - 1) == '1') {
-			cnt += i;
-			break;
-		}
-	}
+	System.out.println("Can win");
 }
 ```
 
 ## :black_nib: **Review**
-
+유명한 게임
 
 ## 📡**Link**
-https://www.acmicpc.net/problem/2885
+https://www.acmicpc.net/problem/25179
