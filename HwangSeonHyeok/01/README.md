@@ -1,4 +1,4 @@
-# [백준 - S5] 15688. 수 정렬하기 5
+# [백준 - S5] 26517. 연속인가??
 
 ## ⏰ **time**
 
@@ -6,18 +6,25 @@
 
 ## :pushpin: **Algorithm**
 
-- 정렬
+- 수학
 
 ## ⏲️**Time Complexity**
 
-$O(NlogN)$
+$O(1)$
 
 ## :round_pushpin: **Logic**
-정렬하면된다.  
+극한의 규칙대로  $\lim_{x \rightarrow t} f(x) = f(t)$에서 좌극한 우극한이 같은지 확인하면된다.
 ```java
-Arrays.sort(arr);
-for (int num : arr) {
-	sb.append(num).append('\n');
+long a = Long.parseLong(split[0]);
+long b = Long.parseLong(split[1]);
+long c = Long.parseLong(split[2]);
+long d = Long.parseLong(split[3]);
+long ans1 = a * k + b;
+long ans2 = c * k + d;
+if (ans1 == ans2) {
+	System.out.println("Yes " + ans1);
+} else {
+	System.out.println("No");
 }
 ```
 
@@ -26,4 +33,4 @@ for (int num : arr) {
 실버..?
 ## 📡**Link**
 
-https://www.acmicpc.net/problem/15688
+https://www.acmicpc.net/problem/26517
