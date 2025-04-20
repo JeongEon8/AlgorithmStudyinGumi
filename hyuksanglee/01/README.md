@@ -1,36 +1,38 @@
-# [백준 - S5] 26517. 연속인가??
+# [백준 - S2] 1965. 상자넣기
 
 ## ⏰ **time**
 
-5분
+20분
 
 ## :pushpin: **Algorithm**
 
-- 수학
+- dp
 
 ## ⏲️**Time Complexity**
 
-$O(1)$
+$O(n)$
 
 ## :round_pushpin: **Logic**
-극한의 규칙대로  $\lim_{x \rightarrow t} f(x) = f(t)$에서 좌극한 우극한이 같은지 확인하면된다.
+- Collections.binarySearch() 리스트 안에 들어가야할 인덱스를 찾는다
+- 인덱스의 크기가 리스트 사이즈랑 같으면 add로 추가하고 작으면 해당 인데스랑 변경한다.
 ```java
-long a = Long.parseLong(split[0]);
-long b = Long.parseLong(split[1]);
-long c = Long.parseLong(split[2]);
-long d = Long.parseLong(split[3]);
-long ans1 = a * k + b;
-long ans2 = c * k + d;
-if (ans1 == ans2) {
-	System.out.println("Yes " + ans1);
-} else {
-	System.out.println("No");
-}
+List<Integer> lis = new ArrayList<>();
+        for (int box : arr) {
+            int idx = Collections.binarySearch(lis, box);
+            if (idx < 0) {
+                idx = -(idx + 1);
+            }
+            if (idx == lis.size()) {
+                lis.add(box);
+            } else {
+                lis.set(idx, box);
+            }
+        }
 ```
 
 
 ## :black_nib: **Review**  
-실버..?
+어렵네요
 ## 📡**Link**
 
-https://www.acmicpc.net/problem/26517
+https://www.acmicpc.net/problem/1965
