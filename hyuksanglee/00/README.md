@@ -1,36 +1,29 @@
-# [백준 - S5] 26517. 연속인가??
+# [백준 - S3] 1003. 피보나치 함수
 
 ## ⏰ **time**
 
-5분
+30분
 
 ## :pushpin: **Algorithm**
 
-- 수학
+- Dp
 
 ## ⏲️**Time Complexity**
 
-$O(1)$
+$O(n)$
 
 ## :round_pushpin: **Logic**
-극한의 규칙대로  $\lim_{x \rightarrow t} f(x) = f(t)$에서 좌극한 우극한이 같은지 확인하면된다.
+- 0,1,2, 일때 미리 설정후 3부터 n-1, n-2일때의 0과 1 횟수를 더해준다.
 ```java
-long a = Long.parseLong(split[0]);
-long b = Long.parseLong(split[1]);
-long c = Long.parseLong(split[2]);
-long d = Long.parseLong(split[3]);
-long ans1 = a * k + b;
-long ans2 = c * k + d;
-if (ans1 == ans2) {
-	System.out.println("Yes " + ans1);
-} else {
-	System.out.println("No");
-}
+public static void test(int n) {
+		arr[n][0]+= arr[n-1][0]+arr[n-2][0];
+		arr[n][1]+= arr[n-1][1]+arr[n-2][1];
+	}
 ```
 
 
 ## :black_nib: **Review**  
-실버..?
+오랜만에 쉬웠어요
 ## 📡**Link**
 
-https://www.acmicpc.net/problem/26517
+https://www.acmicpc.net/problem/1003
