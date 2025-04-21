@@ -31,4 +31,4 @@ $O(n)$
 - 정신없게 일단 후다닥 푼다... 난 오늘이 회식인지도 아침에 알았다
 
 ## 📡 Link
-https://www.acmicpc.net/problem/1476
+https://www.acmicpc.net/problem/10610
