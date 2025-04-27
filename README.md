@@ -6,7 +6,7 @@
 |[구현진(2jin8)](https://github.com/2jin8)| 실버 2문제 |
 |[김미경(rmfosem613)](https://github.com/rmfosem613)| 실버 2문제 |
 |[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 취뽀축하합니다~ |
-|[김정언(JeongEon)](https://github.com/JeongEon8)| 정언이가 지금 없따. |
+|[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 2문제 |
 |[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 실버 2문제 |
 |[이서현(kizife)](https://github.com/kizife)| 실버 2문제 |
 |[장홍준(ajang369)](https://github.com/ajang369)| 실버 4문제 |
