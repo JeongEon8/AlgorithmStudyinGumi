@@ -1,36 +1,31 @@
-# [백준 - S5] 26517. 연속인가??
+# [백준 - S5] 1427. 소트인사이드
 
 ## ⏰ **time**
 
-5분
+10분
 
 ## :pushpin: **Algorithm**
 
-- 수학
+- 정렬
 
 ## ⏲️**Time Complexity**
 
-$O(1)$
+$O(n)$
 
 ## :round_pushpin: **Logic**
-극한의 규칙대로  $\lim_{x \rightarrow t} f(x) = f(t)$에서 좌극한 우극한이 같은지 확인하면된다.
+배열로 받고 sort로 정렬해서 반대로 출력하면 끝!!
 ```java
-long a = Long.parseLong(split[0]);
-long b = Long.parseLong(split[1]);
-long c = Long.parseLong(split[2]);
-long d = Long.parseLong(split[3]);
-long ans1 = a * k + b;
-long ans2 = c * k + d;
-if (ans1 == ans2) {
-	System.out.println("Yes " + ans1);
-} else {
-	System.out.println("No");
-}
+String[] input  = in.readLine().split("");
+		Arrays.sort(input);
+	
+		for(int i =0; i<input.length;i++) {
+			System.out.print(input[input.length-i-1]);
+		}
 ```
 
 
 ## :black_nib: **Review**  
-실버..?
+너무 쉽네요
 ## 📡**Link**
 
-https://www.acmicpc.net/problem/26517
+https://www.acmicpc.net/problem/1427
