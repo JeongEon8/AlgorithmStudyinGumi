@@ -1,31 +1,61 @@
-# [백준 - S5] 26517. 연속인가??
+# [백준 - S4] 28279. 덱2
 
 ## ⏰ **time**
 
-5분
+10분
 
 ## :pushpin: **Algorithm**
 
-- 수학
+- 덱
 
 ## ⏲️**Time Complexity**
 
-$O(1)$
+$O(n)$
 
 ## :round_pushpin: **Logic**
-극한의 규칙대로  $\lim_{x \rightarrow t} f(x) = f(t)$에서 좌극한 우극한이 같은지 확인하면된다.
+LinkedList을 사용해서 덱을 구현
 ```java
-long a = Long.parseLong(split[0]);
-long b = Long.parseLong(split[1]);
-long c = Long.parseLong(split[2]);
-long d = Long.parseLong(split[3]);
-long ans1 = a * k + b;
-long ans2 = c * k + d;
-if (ans1 == ans2) {
-	System.out.println("Yes " + ans1);
-} else {
-	System.out.println("No");
-}
+if(input[0].equals("1")) {
+				int num = Integer.parseInt(input[1]);
+				deque.addFirst(num);
+			}else if(input[0].equals("2")) {
+				int num = Integer.parseInt(input[1]);
+				deque.addLast(num);
+			}else if(input[0].equals("3")) {
+				if(deque.size()>0) {
+					System.out.println(deque.removeFirst());
+				}else {
+					System.out.println(-1);
+				}
+			}else if(input[0].equals("4")) {
+				if(deque.size()>0) {
+					System.out.println(deque.removeLast());
+				}else {
+					System.out.println(-1);
+				}
+			}else if(input[0].equals("5")) {
+				
+					System.out.println(deque.size());
+				
+			}else if(input[0].equals("6")) {
+				if(deque.size()>0) {
+					System.out.println(0);
+				}else {
+					System.out.println(1);
+				}
+			}else if(input[0].equals("7")) {
+				if(deque.size()>0) {
+					System.out.println(deque.peekFirst());
+				}else {
+					System.out.println(-1);
+				}
+			}else if(input[0].equals("8")) {
+				if(deque.size()>0) {
+					System.out.println(deque.peekLast());
+				}else {
+					System.out.println(-1);
+				}
+			}
 ```
 
 
@@ -33,4 +63,4 @@ if (ans1 == ans2) {
 실버..?
 ## 📡**Link**
 
-https://www.acmicpc.net/problem/26517
+https://www.acmicpc.net/problem/28279
