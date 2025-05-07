@@ -9,7 +9,7 @@
 |[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 2문제 |
 |[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 실버 2문제 |
 |[이서현(kizife)](https://github.com/kizife)| 실버 2문제 |
-|[장홍준(ajang369)](https://github.com/ajang369)| 실버 4문제 |
+|[장홍준(ajang369)](https://github.com/ajang369)| 실버 2문제 |
 |[한아영(hanayoung)](https://github.com/hanayoung) | 실버 2문제 |
 |[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버 4문제 이상 |
 
