@@ -1,17 +1,17 @@
-# 벌금은 계속된다 싸피가 끝날 때까지
+# 5월 23일에 만나요오 개발 열심히 할 것
 
 # 📚 목표
 |아이디|목표|
 |------|---|
-|[구현진(2jin8)](https://github.com/2jin8)| 실버 2문제 |
-|[김미경(rmfosem613)](https://github.com/rmfosem613)| 실버 2문제 |
+|[구현진(2jin8)](https://github.com/2jin8)|  |
+|[김미경(rmfosem613)](https://github.com/rmfosem613)|  |
 |[김성수(Dufrane-S)](https://github.com/Dufrane-S)| 취뽀축하합니다~ |
-|[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 2문제 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 실버 2문제 |
-|[이서현(kizife)](https://github.com/kizife)| 실버 2문제 |
-|[장홍준(ajang369)](https://github.com/ajang369)| 실버 2문제 |
-|[한아영(hanayoung)](https://github.com/hanayoung) | 실버 2문제 |
-|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버 4문제 이상 |
+|[김정언(JeongEon)](https://github.com/JeongEon8)|  |
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)|  |
+|[이서현(kizife)](https://github.com/kizife)|  |
+|[장홍준(ajang369)](https://github.com/ajang369)|  |
+|[한아영(hanayoung)](https://github.com/hanayoung) |  |
+|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)|  |
 
 <br>
 
