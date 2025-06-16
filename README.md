@@ -5,7 +5,7 @@
 |[김미경(rmfosem613)](https://github.com/rmfosem613)| 골드 3개 |
 |[김성수(Dufrane-S)](https://github.com/Dufrane-S)| (취업자 배려전형) 실버 3개  |
 |[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 3개 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 골골드 3개 |
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 골드 3개 |
 |[이서현(kizizip)](https://github.com/kizizip)| 실버 3개 |
 |[이승지(gaga9353)](https://github.com/gaga9353)| 실버 4개 |
 |[장홍준(ajang369)](https://github.com/ajang369)| 실버 3개 |
