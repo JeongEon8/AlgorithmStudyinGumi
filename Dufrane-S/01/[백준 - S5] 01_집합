@@ -1,0 +1,82 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.StringTokenizer;
+
+class Main {
+    
+    static StringBuilder sb;
+    
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        sb = new StringBuilder();
+        int num = Integer.parseInt(br.readLine());
+        boolean[] nums = new boolean[20];
+        StringTokenizer st;
+        for (int i = 0; i < num; i++) {
+            st = new StringTokenizer(br.readLine());
+            List<String> methods = new ArrayList<>();
+            while (st.hasMoreTokens()) {
+                methods.add(st.nextToken());
+            }
+            if(methods.size()==1){
+                switch (methods.get(0)) {
+                    case "all":
+                        all(nums);
+                        break;
+                    case "empty":
+                        empty(nums);
+                        break;
+                }
+            }else{
+                switch (methods.get(0)) {
+                    case "add":
+                        add(nums, Integer.parseInt(methods.get(1)));
+                        break;
+                    case "remove":
+                        remove(nums, Integer.parseInt(methods.get(1)));
+                        break;
+                    case "check":
+                        check(nums, Integer.parseInt(methods.get(1)));
+                        break;
+                    case "toggle":
+                        toggle(nums, Integer.parseInt(methods.get(1)));
+                        break;
+                }
+            }
+        }
+        System.out.println(sb.toString());
+    }
+    
+    private static void add(boolean[] nums, int num) {
+        nums[num - 1] = true;
+    }
+    
+    private static void remove(boolean[] nums, int num) {
+        nums[num - 1] = false;
+    }
+    
+    private static void check(boolean[] nums, int num) {
+        if (nums[num - 1]) {
+            sb.append("1\n");
+        } else {
+            sb.append("0\n");
+        }
+    }
+    
+    private static void toggle(boolean[] nums, int num) {
+        nums[num - 1] = !nums[num - 1];
+    }
+    
+    private static void all(boolean[] nums) {
+        Arrays.fill(nums, true);
+    }
+    
+    private static void empty(boolean[] nums) {
+        Arrays.fill(nums, false);
+    }
+    
+}
