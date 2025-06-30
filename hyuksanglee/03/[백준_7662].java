@@ -17,8 +17,8 @@ public class Baekjoon7662 {
 		for(int t = 0; t<T; t++) {
 			int K = Integer.parseInt(in.readLine());
 			
-			PriorityQueue<Integer> minHeap = new PriorityQueue<>();
-            PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+			PriorityQueue<Integer> minQue = new PriorityQueue<>();
+            PriorityQueue<Integer> maxQue = new PriorityQueue<>(Collections.reverseOrder());
             Map<Integer, Integer> countMap = new HashMap<>();
             
 			
@@ -29,8 +29,8 @@ public class Baekjoon7662 {
 				int num = Integer.parseInt(input[1]);
 				
 				if(comment.contains( "I")) {
-					minHeap.offer(num);
-                    maxHeap.offer(num);
+					minQue.offer(num);
+                    maxQue.offer(num);
 					countMap.put(num, countMap.getOrDefault(num, 0) + 1);
 				
 				}
@@ -38,20 +38,20 @@ public class Baekjoon7662 {
 				if(comment.contains("D")) {
 					 if (countMap.isEmpty()) continue;
 
-	                    if (num == 1) remove(maxHeap, countMap);
-	                    else remove(minHeap, countMap);
+	                    if (num == 1) remove(maxQue, countMap);
+	                    else remove(minQue, countMap);
 					
 				}
 				
 			}
 			
-			clean(minHeap, countMap);
-            clean(maxHeap, countMap);
+			clean(minQue, countMap);
+            clean(maxQue, countMap);
 			
 			if (countMap.isEmpty()) {
                 System.out.println("EMPTY");
             } else {
-                System.out.println(maxHeap.peek() + " " + minHeap.peek());
+                System.out.println(maxQue.peek() + " " + minQue.peek());
             }
 			
 			
@@ -60,9 +60,9 @@ public class Baekjoon7662 {
 	}
 	
 	
-	static void remove(PriorityQueue<Integer> heap, Map<Integer, Integer> map) {
-        while (!heap.isEmpty()) {
-            int val = heap.poll();
+	static void remove(PriorityQueue<Integer> que, Map<Integer, Integer> map) {
+        while (!que.isEmpty()) {
+            int val = que.poll();
             if (map.containsKey(val)) {
                 map.put(val, map.get(val) - 1);
                 if (map.get(val) == 0) map.remove(val);
@@ -71,9 +71,9 @@ public class Baekjoon7662 {
         }
     }
 	
-	static void clean(PriorityQueue<Integer> heap, Map<Integer, Integer> map) {
-        while (!heap.isEmpty() && !map.containsKey(heap.peek())) {
-            heap.poll();
+	static void clean(PriorityQueue<Integer> que, Map<Integer, Integer> map) {
+        while (!que.isEmpty() && !map.containsKey(que.peek())) {
+			que.poll();
         }
     }
 
