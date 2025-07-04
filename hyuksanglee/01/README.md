@@ -1,33 +1,59 @@
-# [백준- G4] 13975. 파일 합치기 3
+# [백준- G3] 14442. 벽 부수고 이동하기 2
  
 ## ⏰  **time**
-30분
+40분
 
 ## :pushpin: **Algorithm**
-우선순위 큐
+bfs
 
 ## ⏲️**Time Complexity**
-$O(N log N)$
+$O(N × M × K)$
 
 ## :round_pushpin: **Logic**
-- 가장 작은 값 2개를 더하는 것이 최소값을 구하는 방식으로 생각해서 우선순위 큐 사용
-  1. 입력 받은 값을 우선순위 큐에 추가
-  2. 우선순위 큐에서 2개의 값을 꺼내어 더해준다
-  3. 그 값을 최종값에 더해주고 다시 우선순위 큐에 넣어준다.
-  4. 2,3번을 큐에정수가 한개가 남을때까지 반복한다.
+- bfs를 사용해서 최적의 경로를 찾는다
+  	1. 해당 위치, 벽을 부술수 있는 스킬수, 현재까지 이동횟수를 담는 클래스를 생성한다.
+  	2. map 정보를 담는 2차원 배열과 해당 지역에 스킬을 사용횟수에 따라 방문했는지 체크하는 3차원 배열을 만들어 둔다.
+  	3. bfs 탐색
+  		1. 좌표: (0,0), 스킬수 : K, 이동횟수 : 0으 정보 클래스에 담아서 큐에 넣어준다.
+  		2. 큐에서 값을 하나씩 뽑고 상하좌우 주변을 탐색해서 0이면 큐에 담고, 1이면 벽을 부수는 스킬이 있으면 담아준다.
+  	    		- 탐색할때 한번 방문을 했으면 넘겨준다.
+  	 	4. 좌표를 하나씩 뽑는데 (N,M)이면 count값을 출력한다.
 
 ```java
-while(que.size()>1) {
-				long a = que.poll();
-				long b = que.poll();
-				long total = a+b;
-				sum += total;
-				que.add(total);
+	static void bfs() {
+		que.add(new Info(0, 0, K,1));
+		while(!que.isEmpty()) {
+			Info newInfo = que.poll();
+			int x = newInfo.x;
+			int y = newInfo.y;
+			int skill = newInfo.skill;
+			if(x==M-1 && y== N-1) {
+				result = newInfo.count;
+				return;
 			}
+			for(int d =0; d<4; d++) {
+				int newX = x+dx[d];
+				int newY = y+dy[d];
+				
+				if(newY <0 || newX <0 || newY>=N || newX>=M) {
+					continue;
+				}
+				if(map[newY][newX]==0 && !isVisited[newY][newX][skill]) {
+					isVisited[newY][newX][skill] = true;
+					Info inputInfo = new Info(newX, newY, skill, newInfo.count+1);
+					que.add(inputInfo);
+				}else if(map[newY][newX]==1 && skill>0 && !isVisited[newY][newX][skill - 1]) {
+					isVisited[newY][newX][skill-1] = true;
+					Info inputInfo = new Info(newX, newY, skill-1, newInfo.count+1);
+					que.add(inputInfo);
+				}
+			}
+		}
+	}
 ```
 
 ## :black_nib: **Review**
-처음에는 데이터 타입을 int형으로 풀었지만 틀렸어요. 데이터 타입을 계산해서 코드를 작성해야할거 같아요
+- 1학기에 알고리즘으로 풀었던 말숭이문제랑 비슷해서 쉽게 풀었어요
 
 ## 📡**Link**
-- https://www.acmicpc.net/problem/13975
+- https://www.acmicpc.net/problem/14442
