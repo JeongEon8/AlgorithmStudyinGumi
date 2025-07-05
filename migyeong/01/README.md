@@ -1,33 +1,44 @@
-# [백준- G4] 2458. 키 순서
+# [백준- G4] 1753. 최단경로
  
 ## ⏰  **time**
 50분
 
 ## :pushpin: **Algorithm**
-플로이드-워셜
+다익스트라
 
 ## ⏲️**Time Complexity**
-$O(N^3)$
+$O((V + E) * log V)$
 
 ## :round_pushpin: **Logic**
-- 플로이드-워셜 알고리즘으로 모든 경로 탐색
-- 각 학생에 대해 자신보다 크거나 작은 학생의 수를 계산
-- 자신의 순서를 확실히 알 수 있는 학생이면 결과 증가
+- 가장 가까운 정점을 찾기 위해 PriorityQueue를 사용
+- 다익스트라 알고리즘으로 현재 노드까지의 거리가 저장된 거리보다 크면 무시
+- 더 짧은 경로 발견 시 업데이트 및 큐에 추가
 ```java
-// 플로이드-워셜 알고리즘으로 모든 경로 탐색
-for (int k = 1; k <= N; k++) {
-	for (int i = 1; i <= N; i++) {
-		for (int j = 1; j <= N; j++) {
-			if (graph[i][k] && graph[k][j]) {
-				graph[i][j] = true;
-			}
+while (!pq.isEmpty()) {
+	int[] current = pq.poll();
+	int currNode = current[0];
+	int currDist = current[1];
+
+	// 현재 노드까지의 거리가 저장된 거리보다 크면 무시
+	if (currDist > node[currNode]) continue;
+
+	// 인접한 노드를 확인하며 최단 거리 갱신
+	for (int[] neighbor : list[currNode]) {
+		int nextNode = neighbor[0];
+		int weight = neighbor[1];
+		int newDist = currDist + weight;
+
+		// 더 짧은 경로 발견 시 업데이트 및 큐에 추가
+		if (newDist < node[nextNode]) {
+			node[nextNode] = newDist;
+			pq.offer(new int[] { nextNode, newDist });
 		}
 	}
 }
 ```
 
 ## :black_nib: **Review**
-- 플로이드-워셜을 다시 상기시킬 수 있었습니다.
+- Priority Queue를 사용하니 해결 시간이 단축되는 것을 확인했습니다.
 
 ## 📡**Link**
-- https://www.acmicpc.net/problem/2458
+- https://www.acmicpc.net/problem/1753
