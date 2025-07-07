@@ -1,59 +1,60 @@
-# [백준- G3] 14442. 벽 부수고 이동하기 2
+# [백준- G4] 1504. 특정한 최단 경로
  
 ## ⏰  **time**
-40분
+70분
 
 ## :pushpin: **Algorithm**
-bfs
+다익스트라
 
 ## ⏲️**Time Complexity**
 $O(N × M × K)$
 
 ## :round_pushpin: **Logic**
-- bfs를 사용해서 최적의 경로를 찾는다
-  	1. 해당 위치, 벽을 부술수 있는 스킬수, 현재까지 이동횟수를 담는 클래스를 생성한다.
-  	2. map 정보를 담는 2차원 배열과 해당 지역에 스킬을 사용횟수에 따라 방문했는지 체크하는 3차원 배열을 만들어 둔다.
-  	3. bfs 탐색
-  		1. 좌표: (0,0), 스킬수 : K, 이동횟수 : 0으 정보 클래스에 담아서 큐에 넣어준다.
-  		2. 큐에서 값을 하나씩 뽑고 상하좌우 주변을 탐색해서 0이면 큐에 담고, 1이면 벽을 부수는 스킬이 있으면 담아준다.
-  	    		- 탐색할때 한번 방문을 했으면 넘겨준다.
-  	 	4. 좌표를 하나씩 뽑는데 (N,M)이면 count값을 출력한다.
+- 다익스트라 이용해서 시작점에서 모든점 최단 경로 구하고 걸쳐야하는 두점에서 모든점 최단 경로 구한다.
+- 나올수 있는 경우에서 2가지가있다.
+  	1. 시작점 -> point1 -> point2 -> 종점
+  	2. 시작점 -> point2 -> point1 -> 종점
+- 둘중 최소로 나오는 값 출력
 
 ```java
-	static void bfs() {
-		que.add(new Info(0, 0, K,1));
-		while(!que.isEmpty()) {
-			Info newInfo = que.poll();
-			int x = newInfo.x;
-			int y = newInfo.y;
-			int skill = newInfo.skill;
-			if(x==M-1 && y== N-1) {
-				result = newInfo.count;
-				return;
-			}
-			for(int d =0; d<4; d++) {
-				int newX = x+dx[d];
-				int newY = y+dy[d];
-				
-				if(newY <0 || newX <0 || newY>=N || newX>=M) {
-					continue;
-				}
-				if(map[newY][newX]==0 && !isVisited[newY][newX][skill]) {
-					isVisited[newY][newX][skill] = true;
-					Info inputInfo = new Info(newX, newY, skill, newInfo.count+1);
-					que.add(inputInfo);
-				}else if(map[newY][newX]==1 && skill>0 && !isVisited[newY][newX][skill - 1]) {
-					isVisited[newY][newX][skill-1] = true;
-					Info inputInfo = new Info(newX, newY, skill-1, newInfo.count+1);
-					que.add(inputInfo);
-				}
-			}
-		}
-	}
+	static int[] dijkstra(int start) {
+        int[] dist = new int[N + 1];
+        boolean[] visited = new boolean[N + 1];
+
+        
+        for (int i = 1; i <= N; i++) {
+            dist[i] = INF;
+        }
+
+        dist[start] = 0;
+
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> Integer.compare(a[1], b[1]));
+        pq.offer(new int[]{start, 0});
+
+        while (!pq.isEmpty()) {
+            int[] now = pq.poll();
+            int cur = now[0];
+            int cost = now[1];
+
+            if (visited[cur]) continue;
+            visited[cur] = true;
+
+            for (int next = 1; next <= N; next++) {
+                if (map[cur][next] != 0 && !visited[next]) {
+                    if (dist[next] > cost + map[cur][next]) {
+                        dist[next] = cost + map[cur][next];
+                        pq.offer(new int[]{next, dist[next]});
+                    }
+                }
+            }
+        }
+
+        return dist;
+    }
 ```
 
 ## :black_nib: **Review**
-- 1학기에 알고리즘으로 풀었던 말숭이문제랑 비슷해서 쉽게 풀었어요
+- 다익스트라 오랜만에 푸니깐 어렵네요
 
 ## 📡**Link**
-- https://www.acmicpc.net/problem/14442
+- https://www.acmicpc.net/problem/1504
