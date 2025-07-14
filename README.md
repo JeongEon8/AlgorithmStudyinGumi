@@ -1,5 +1,5 @@
 # 💵 현재 벌금 총액
-### 벌금 105,000원 + 이자 308원 = 총액 115,308원
+### 벌금 105,000원 + 이자 308원 = 총액 130,308원
 
 <br>
 
@@ -9,7 +9,7 @@
 |[구현진(2jin8)](https://github.com/2jin8)| 실버 1개 골드 2개 |
 |[김미경(rmfosem613)](https://github.com/rmfosem613)| 골드 3개 |
 |[김성수(Dufrane-S)](https://github.com/Dufrane-S)| (취업자 배려전형) 실버 1개 골드 1개 |
-|[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 2개|
+|[김정언(JeongEon)](https://github.com/JeongEon8)| 골드 2개 |
 |[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 골드 3개 | 
 |[이서현(kizizip)](https://github.com/kizizip)| 실버 3개 |
 |[이승지(bmlsj)](https://github.com/bmlsj)| 실버 2개, 골드 2개 |
@@ -28,7 +28,7 @@
 <br>
 
 # ⌛ 진행상황
-### 제 32회 [25.07.07 - 25.07.14] (진행중)
+### 제 33회 [25.07.15 - 25.07.21] (진행중)
 <details>
   <summary>2024년</summary>
   - 제 1회 [24.08.01 - 24.08.05] (진행완료) <br>
@@ -65,6 +65,7 @@
   - 제 29회 [25.06.16 - 25.06.22] (진행완료) <br>
   - 제 30회 [25.06.23 - 25.06.29] (진행완료) <br>
   - 제 31회 [25.06.30 - 25.07.06] (진행완료) <br>
+  - 제 32회 [25.07.07 - 25.07.14] (진행완료) <br>
 </details>
 
 
