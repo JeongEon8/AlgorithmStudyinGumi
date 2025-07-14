@@ -1,59 +1,45 @@
-# [백준 - G4] 14938. 서강그라운드
+# [백준 - G3] 11066. 파일 합치기
 
 ## ⏰ **time**
 
-60분
+120분
 
 ## :pushpin: **Algorithm**
-- 다익스트라
+- dp
 
 ## ⏲️**Time Complexity**
 
-$O(N²)$
+$O(N³)$
 
 ## :round_pushpin: **Logic**
-1. for 문으로 0부터 n까지 탐색하는데 다익스트라를 이용해서 현재지점에서 모든 지점까지 최소 거리를 구하고 그거리가 수색범위 안에 들면 해당 지역의 아이템 수를 더해 준다.
+1. 점화식 : i부터 j까지 구하려면 중간 k를 만들어서 i~k 부터 k~j 최솟값 끼리 더해주면 된다. 
+	- 예를 들어 1부터 4까지 최솟값을 구하려면
+		1. 1~1이랑 2~4
+     		2. 1~2랑 3~4
+          	3. 1~3이랑 4~4
+	이렇게 3가지가 있다 그래서 중간값 k를 for 문을 돌면서 최솟값으로 dp를 채우준다
 ```java
-	private static int dist(int i) {
-		
-		int total = t[i];
-		
-		int[] go = new int[n];
-		for(int j =0; j< n; j++) {
-			go[j] = Integer.MAX_VALUE;
-		}
-		go[i]= 0;
-		
-		Queue<Info> que = new ArrayDeque<>();
-		Info info = new Info(i,0);
-		
-		que.add(info);
-		while(!que.isEmpty()) {
-			Info data = que.poll();
-			int num = data.num;
-			for(int j = 0; j<n; j++) {
-				if(j == num) {
-					continue;
-				}
-				if( map[num][j] != 0 && map[num][j]+ data.sum <= m && go[j]>map[num][j]+ data.sum) {
-					if(go[j]==Integer.MAX_VALUE) {
-						total+=t[j];
-					}
-					
-					go[j] = map[num][j]+ data.sum;
-					
-					Info newData = new Info(j,map[num][j]+ data.sum);
-					que.add(newData);
-				}
-			}
-		}
-		
-		return total;
-		
-	}
+	for (int len = 1; len < K; len++) {
+                for (int i = 0; i < K - len; i++) {
+                    int j = i + len ;
+                    dp[i][j] = Integer.MAX_VALUE;
+
+                    for (int k = i; k < j; k++) {
+                    	int num = 0;
+                    	if(i>0) {
+                    		num = sum[i-1];
+                    	}
+                        int total = sum[j] - num;
+                        if(dp[i][j] > dp[i][k] + dp[k + 1][j] + total) {
+                        	dp[i][j] = dp[i][k] + dp[k + 1][j] + total;
+                        }
+                        
+                    }
+                }
+            }
 ```
 
 ## :black_nib: **Review**  
-- 이문제가 bfs보다 쉬워요
+- dp문제는 점화식을 생각하는데 너무 오래걸리고 어려워요
 ## 📡**Link**
-https://www.acmicpc.net/problem/14938
+https://www.acmicpc.net/problem/11066
