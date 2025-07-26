@@ -1,107 +1,52 @@
-# [백준 - G3] 4179. 불!
+# [백준 - G4] 1339. 단어 수학!
  
 ## ⏰  **time**
 1시간 30분
 
 ## :pushpin: **Algorithm**
-BFS
+그리드
 
 ## ⏲️**Time Complexity**
-O(RxC) = $O(N^2)$
+$O(N × L)$
 
 ## :round_pushpin: **Logic**
 
-- 불 확산하는 경우와 지훈이의 이동. 2가지 경우의 BFS가 필요
-
-1. 불이 먼저 퍼지는 시간을 미리 계산해둠 → `fireTime[][]`
-
-2. 이후 지훈이의 이동을 BFS로 시뮬레이션하며:
-	- 방문하지 않은 칸
-	- 벽이 아닌 칸
-	- 불이 아직 도착하지 않았거나, 지훈이보다 나중에 도착하는 칸
-	이 조건을 만족할 때만 이동 가능
-3. 만약 지훈이가 범위 밖(지도 밖)으로 이동하면 탈출 성공 → `visited[][] + 1` 출력
-4. 끝까지 탈출하지 못하면 `IMPOSSIBLE` 출력
+- 알파벳에 자리수만큼 가중치를 더해준다.
+	- ABC이면 A : 100, B : 10, C: 1
+   	- ADB 추가로 있으면 A : 100 + 100 = 200, D : 10, B : 10 + 1 =11
+- 알파벳 배열에서 큰거 부터 9 ~ 1 까지 하나씩 뽑아서 곱해준다
 
 ```java
-static void escape(int x, int y) {
-
-	int[][] fireTime = new int[R][C];
-	for (int i = 0; i < R; i++) {
-		for (int j = 0; j < C; j++) {
-			fireTime[i][j] = -1; // 불이 퍼지지 않은 상태로 초기화
-		}
-	}
-
-	Queue<int[]> queue = new ArrayDeque<int[]>();
-	Queue<int[]> fireQueue = new ArrayDeque<>();
-
-	for (int i = 0; i < R; i++) {
-		for (int j = 0; j < C; j++) {
-			if (map[i][j].equals("F")) {
-				fireQueue.offer(new int[] { i, j });
-				fireTime[i][j] = 0;
+	for(int n = 0; n<N; n++) {
+			String input = in.readLine();
+				
+			int weight = 1;
+			for (int i = 0 ; i< input.length()-1; i++) {
+				weight *= 10;
+			}
+			
+			for(int l = 0; l< input.length(); l++) {
+				char c = input.charAt(l);
+				num[c-'A'] += weight;
+				
+				weight /= 10;
 			}
 		}
-	}
-
-	while (!fireQueue.isEmpty()) {
-		int[] curr = fireQueue.poll();
-		int fx = curr[0];
-		int fy = curr[1];
-
-		for (int i = 0; i < 4; i++) {
-			int nx = fx + dx[i];
-			int ny = fy + dy[i];
-
-			if (nx < 0 || ny < 0 || nx >= R || ny >= C) {
-				continue;
-			}
-
-			if (fireTime[nx][ny] == -1 && map[nx][ny].equals(".")) {
-				fireTime[nx][ny] = fireTime[fx][fy] + 1;
-				fireQueue.offer(new int[] { nx, ny });
+		
+		Arrays.sort(num);
+		int total = 0;
+		int point = 9;
+		for(int i = 25; i>=0; i--) {
+			total += num[i] * point ;
+			point--;
+			if(point <=0) {
+				break;
 			}
 		}
-	}
-
-	queue.offer(new int[] { x, y });
-
-	// 지훈이의 시작 위치가 이미 가장자리일 경우
-	if (x == 0 || x == R - 1 || y == 0 || y == C - 1) {
-		ans = 1;
-		return;
-	}
-
-	while (!queue.isEmpty()) {
-		int[] curr = queue.poll();
-		x = curr[0];
-		y = curr[1];
-
-		for (int i = 0; i < 4; i++) {
-			int nx = x + dx[i];
-			int ny = y + dy[i];
-
-			if (nx < 0 || ny < 0 || nx >= R || ny >= C) {
-				ans = visited[x][y] + 1;
-				return;
-			}
-
-			if (visited[nx][ny] == 0 && map[nx][ny].equals(".")
-					&& (fireTime[nx][ny] == -1 || fireTime[nx][ny] > visited[x][y] + 1)) {
-
-				visited[nx][ny] = visited[x][y] + 1;
-				queue.offer(new int[] { nx, ny });
-			}
-		}
-
-	}
-}
 ```
 
 ## :black_nib: **Review**
-`(fireTime > 지훈이 이동 시간)` 조건이 중요하며, 동시 도착 불가
-=> 몬가 어려웠다
+- 가중치를 처음에 생각이 안나서 배열 어려개를 만들어야하나 생각하다가 오래 걸렸음
 
 ## 📡**Link**
-- https://www.acmicpc.net/problem/4179
+- https://www.acmicpc.net/problem/1339
