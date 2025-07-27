@@ -1,52 +1,37 @@
-# [백준 - G4] 1339. 단어 수학!
+# [백준 - G3] 1516. 게임 개발!
  
 ## ⏰  **time**
-1시간 30분
+1시간 10분
 
 ## :pushpin: **Algorithm**
-그리드
+위상정렬
 
 ## ⏲️**Time Complexity**
-$O(N × L)$
+$O(N)$
 
 ## :round_pushpin: **Logic**
 
-- 알파벳에 자리수만큼 가중치를 더해준다.
-	- ABC이면 A : 100, B : 10, C: 1
-   	- ADB 추가로 있으면 A : 100 + 100 = 200, D : 10, B : 10 + 1 =11
-- 알파벳 배열에서 큰거 부터 9 ~ 1 까지 하나씩 뽑아서 곱해준다
+- 위상정렬을 사용해서 선행건물이 있으면 차수를 증가시키고 건물을 지을때 마다 -1해준다.
+- 차수가 0이되면 큐에 넣는다
+- 큐에서 하나 뽑고 그 건물에 시간을 선행 건물의 최대시간에 현재건물 건설 시간을 더해준다.
+- 건물 건설 시간을 하나씩 출력해준다.
 
 ```java
-	for(int n = 0; n<N; n++) {
-			String input = in.readLine();
-				
-			int weight = 1;
-			for (int i = 0 ; i< input.length()-1; i++) {
-				weight *= 10;
-			}
-			
-			for(int l = 0; l< input.length(); l++) {
-				char c = input.charAt(l);
-				num[c-'A'] += weight;
-				
-				weight /= 10;
-			}
-		}
-		
-		Arrays.sort(num);
-		int total = 0;
-		int point = 9;
-		for(int i = 25; i>=0; i--) {
-			total += num[i] * point ;
-			point--;
-			if(point <=0) {
-				break;
-			}
-		}
+	while (!queue.isEmpty()) {
+            int cur = queue.poll();
+
+            for (int next : graph[cur]) {
+                result[next] = Math.max(result[next], result[cur] + time[next]);
+                inDegree[next]--;
+                if (inDegree[next] == 0) {
+                    queue.add(next);
+                }
+            }
+        }
 ```
 
 ## :black_nib: **Review**
-- 가중치를 처음에 생각이 안나서 배열 어려개를 만들어야하나 생각하다가 오래 걸렸음
+- 위상정렬만 알면 쉽게 풀리는 문제에요
 
 ## 📡**Link**
-- https://www.acmicpc.net/problem/1339
+- https://www.acmicpc.net/problem/1516
