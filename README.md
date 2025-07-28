@@ -1,5 +1,5 @@
 # 💵 현재 벌금 총액
-### 벌금 145,000원 + 이자 308원 = 총액 145,308원
+### 벌금 145,000원 + 이자 308원 = 총액 150,308원
 
 <br>
 
@@ -7,12 +7,12 @@
 |아이디|목표|
 |------|---|
 |[구현진(2jin8)](https://github.com/2jin8)| 골드 2개 |
-|[김미경(rmfosem613)](https://github.com/rmfosem613)| 실버 1개, 골드 1개 |
-|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| (취업자 배려전형) 실버 3개 |
-|[김정언(JeongEon)](https://github.com/JeongEon8)| 골드 2개 |
+|[김미경(rmfosem613)](https://github.com/rmfosem613)| 골드 2개 |
+|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| (취업자 배려전형) 골드 1개 + 실버 1개 |
+|[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 7개 |
 |[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 골드 2개 | 
 |[이서현(kizizip)](https://github.com/kizizip)| 실버 3개 |
-|[이승지(bmlsj)](https://github.com/bmlsj)| 골드 2개 |
+|[이승지(bmlsj)](https://github.com/bmlsj)| 골드 3개 |
 |[장홍준(ajang369)](https://github.com/ajang369)| 실버 4개 |
 |[한아영(hanayoung)](https://github.com/hanayoung) | 실버 1개, 골드 2개 |
 |[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버 4개 |
