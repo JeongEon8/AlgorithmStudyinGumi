@@ -7,7 +7,7 @@
 DP
 
 ## ⏲️**Time Complexity**
-$O(N^2)$
+$O(N*K)$
 
 ## :round_pushpin: **Logic**
 
