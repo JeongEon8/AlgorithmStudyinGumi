@@ -1,92 +1,47 @@
 
-# [백준- G4] 3055. 탈출
+# [백준- G5] 12865. 평범한 배낭
 ## ⏰  **time**
 60분
 
 ## :pushpin: **Algorithm**
-BFS
+DP
 
 ## ⏲️**Time Complexity**
 $O(N^2)$
 
 ## :round_pushpin: **Logic**
 
-- 물이 먼저 퍼지고, 고슴도치가 이동해야한다.
-- 1회씩만 진행해야하기 때문에, for문을 사용해 각 큐의 크기만큼만 진행할 수 있게 구현
+- 물품을 입력 받을때 이전에 입력 된값이랑 비교해서 최대값으로 갱신 해준다.
+  	- 가방 최대 무게가 10이고 물품 무게가 7이면
+  		- dp[10] = 입력받은 물품 가치 + dp[3]
+  		- dp[9] = 입력받은 물품 가치 + dp[2]
+  	  		...
+  	   	- dp[7] = 입력받은 물품 가치 + dp[0]
+	- 마지막에 dp[10] 출력해준다.
 
 ```java
-static void move(int x, int y) {
-
-	Queue<int[]> queue = new ArrayDeque<int[]>();
-	Queue<int[]> water = new ArrayDeque<int[]>();
-	queue.offer(new int[] { x, y });
-	visited[x][y] = 1;
-
-	// 물 위치
-	for (int i = 0; i < R; i++) {
-		for (int j = 0; j < C; j++) {
-			if (map[i][j].equals("*")) {
-				water.offer(new int[] { i, j });
-			}
-		}
-	}
-
-	while (!queue.isEmpty()) {
-		// 물 먼저 이동
-		int waterSize = water.size();
-		for (int i = 0; i < waterSize; i++) {
-			int[] curr = water.poll();
-			int wx = curr[0];
-			int wy = curr[1];
-
-			for (int d = 0; d < 4; d++) {
-				int nx = wx + dx[d];
-				int ny = wy + dy[d];
-				if (nx < 0 || ny < 0 || nx >= R || ny >= C) {
-					continue;
-				}
-
-				if (map[nx][ny].equals(".")) {
-					map[nx][ny] = "*";
-					water.offer(new int[] { nx, ny });
+	for (int n = 0; n<N; n++) {
+			input = in.readLine().split(" ");
+			int W = Integer.parseInt(input[0]); // 물품의 무게
+			int V = Integer.parseInt(input[1]);	// 물품의 가치
+			
+			for(int k = K; k>=W; k--) {
+				
+				if(dp[k] <= V+dp[k-W]) {
+					dp[k] = V+dp[k-W];
 				}
 			}
+			
 		}
-
-		// 고슴도치 이동
-		int size = queue.size();
-		for (int i = 0; i < size; i++) {
-			int[] curr = queue.poll();
-			x = curr[0];
-			y = curr[1];
-
-			for (int d = 0; d < 4; d++) {
-				int nx = x + dx[d];
-				int ny = y + dy[d];
-
-				if (nx < 0 || ny < 0 || nx >= R || ny >= C) {
-					continue;
-				}
-
-				if (map[nx][ny].equals("D")) {
-					visited[nx][ny] = visited[x][y] + 1;
-					return;
-				}
-
-				if (visited[nx][ny] == 0 && map[nx][ny].equals(".")) {
-					visited[nx][ny] = visited[x][y] + 1;
-					queue.offer(new int[] { nx, ny });
-				}
-			}
-		}
-	}
-}
+		
+		
+		System.out.println(dp[K]);
 ```
 
 ## :black_nib: **Review**
-탈출하고 싶은 나으 마음을 표출...
+- 여행가고 싶은데 알고리즘으로 대신 ㅠㅠ
 
 
 ## 📡**Link**
-- https://www.acmicpc.net/problem/3055
+- https://www.acmicpc.net/problem/12865
 
