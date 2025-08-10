@@ -7,7 +7,7 @@
 누적합
 
 ## ⏲️**Time Complexity**
-$O(N*K)$
+$O(N log N)$
 
 ## :round_pushpin: **Logic**
 
