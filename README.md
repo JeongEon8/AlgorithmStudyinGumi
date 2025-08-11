@@ -1,18 +1,18 @@
 # 💵 현재 벌금 총액
-### 벌금 165,000원 + 이자 437원 = 총액 165,437원
+### 벌금 175,000원 + 이자 437원 = 총액 175,437원
 
 <br>
 
 # 📚 목표
 |아이디|목표|
 |------|---|
-|[구현진(2jin8)](https://github.com/2jin8)| 골드 1개, 실버 1개 |
-|[김미경(rmfosem613)](https://github.com/rmfosem613)| 골드 3개 |
+|[구현진(2jin8)](https://github.com/2jin8)| 골드 2개 |
+|[김미경(rmfosem613)](https://github.com/rmfosem613)| (취업자 배려전형) 실버 2개 |
 |[김성수(Dufrane-S)](https://github.com/Dufrane-S)| (취업자 배려전형) 실버 3개 |
-|[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 7개 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 골드 3개 | 
-|[이서현(kizizip)](https://github.com/kizizip)| 골드 1개, 실버 2개 |
-|[이승지(bmlsj)](https://github.com/bmlsj)| 골드 3개 |
+|[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 4개 |
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 골드 2개 | 
+|[이서현(kizizip)](https://github.com/kizizip)| 실버 4개 |
+|[이승지(bmlsj)](https://github.com/bmlsj)| 골드 2개 |
 |[장홍준(ajang369)](https://github.com/ajang369)| 실버 4개 |
 |[한아영(hanayoung)](https://github.com/hanayoung) | 골드 2개, 실버 1개 |
 |[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버 4개 |
@@ -28,7 +28,7 @@
 <br>
 
 # ⌛ 진행상황
-### 제 36회 [25.08.05 - 25.08.11] (진행중)
+### 제 37회 [25.08.12 - 25.08.18] (진행중)
 <details>
   <summary>2024년</summary>
   - 제 1회 [24.08.01 - 24.08.05] (진행완료) <br>
@@ -69,6 +69,7 @@
   - 제 33회 [25.07.15 - 25.07.21] (진행완료) <br>
   - 제 34회 [25.07.22 - 25.07.28] (진행완료) <br>
   - 제 35회 [25.07.29 - 25.08.04] (진행완료) <br>
+  - 제 36회 [25.08.05 - 25.08.11] (진행완료) <br>
 </details>
 
 
