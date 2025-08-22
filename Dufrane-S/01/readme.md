@@ -1,13 +1,13 @@
   # [백준 - 실버 5] 15235. Olympiad Pizza
   
   ## ⏰**time**
-  
+  10분
   
   ## :pushpin: **Algorithm**
-  (알고리즘을 작성해주세요.)
+  큐
   
   ## ⏲️**Time Complexity**
-  $O(N)$ (시간 복잡도를 작성해주세요.)
+  $O(N)$
   
   ## :round_pushpin: **Logic**
   1. 큐 1개로 실제 사람을 구현하고
