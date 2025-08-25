@@ -1,17 +1,17 @@
 # 💵 현재 벌금 총액
-### 벌금 195,000원 + 이자 632원 = 총액 195,632원
+### 벌금 215,000원 + 이자 632원 = 총액 215,632원
 
 <br>
 
 # 📚 목표
 |아이디|목표|
 |------|---|
-|[구현진(2jin8)](https://github.com/2jin8)| 실버 2개 |
-|[김미경(rmfosem613)](https://github.com/rmfosem613)| (취업자 배려전형) 실버 2개 |
-|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| (취업자 배려전형) 실버 3개 |
+|[구현진(2jin8)](https://github.com/2jin8)| (취업자 배려전형) 9월 8일 컴백 |
+|[김미경(rmfosem613)](https://github.com/rmfosem613)| (취업자 배려전형) 9월 8일 컴백 |
+|[김성수(Dufrane-S)](https://github.com/Dufrane-S)| (취업자 배려전형) 실버 2개 |
 |[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 4개 |
-|[양성원(YSW-Yang)](https://github.com/YSW-Yang)| 실버 2개 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 골드 2개, 실버 1개 | 
+|[양성원(YSW-Yang)](https://github.com/YSW-Yang)| 실버 3개 |
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 골드 2개 | 
 |[이서현(kizizip)](https://github.com/kizizip)| 실버 4개 |
 |[이승지(bmlsj)](https://github.com/bmlsj)| 골드 2개 |
 |[장홍준(ajang369)](https://github.com/ajang369)| 실버 4개 |
@@ -24,12 +24,12 @@
 - 목표: 매주 알고리즘 문제를 풀며 감을 잃지 말자!
 - 🎉전원 A형 취득 달성!🎉
 - 전체 기간: 24년 8월 ~
-- 인원: 10명
+- 인원: 11명
 - 방식: 매주 월요일 오후 8시 온라인 회의
 <br>
 
 # ⌛ 진행상황
-### 제 38회 [25.08.19 - 25.08.25] (진행중)
+### 제 39회 [25.08.26 - 25.09.01] (진행중)
 <details>
   <summary>2024년</summary>
   - 제 1회 [24.08.01 - 24.08.05] (진행완료) <br>
@@ -72,6 +72,7 @@
   - 제 35회 [25.07.29 - 25.08.04] (진행완료) <br>
   - 제 36회 [25.08.05 - 25.08.11] (진행완료) <br>
   - 제 37회 [25.08.12 - 25.08.18] (진행완료) <br>
+  - 제 38회 [25.08.19 - 25.08.25] (진행완료) <br>
 </details>
 
 
