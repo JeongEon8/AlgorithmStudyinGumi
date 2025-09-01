@@ -1,70 +1,68 @@
-# [백준 - G4] 17404. RGB거리 2
+# [백준 - G4] 6593. 상범 빌딩
 
 ## ⏰  **time**
-42분
+70분
 
 ## :pushpin: **Algorithm**
-dp
+bfs
 
 ## ⏲️**Time Complexity**
 $O(N)$
 
 ## :round_pushpin: **Logic**
-1. 현재 선택한 색깔을 제외하고 이전 다른 색들중 작은수를 더해서 현재 색상칸에 넣어준다.
-2. 마지막 값은 첫번째 값이랑 달라야하므로 3번 반복해서 첫번쨰 값을 하나로 고정해서 계산해준다.
+1. bfs를 사용해서 주변탐색(상,하,좌,우,위층,아래층) 후 금이 가져 있지 않은곳을 탐색하면 끝
 ```java
-        for(int start = 0; start<3; start++) {
-			int[][] dp = new int[N][3];
-			for(int n=0; n<N; n++) {
-				if(n ==0) {
-					for(int j =0; j<3; j++) {
-						if(j==start) {
-							dp[n][j] = cost[n][j];
-						}else {
-							
-							dp[n][j] = Integer.MAX_VALUE;
-						}
-						
-					}
-					
-				}else {
-					for(int i =0; i<3; i++) {
-						int max = Integer.MAX_VALUE;
-						for(int j = 0; j<3; j++) {
-							if(j != i) {
-								if(max>dp[n-1][j]) {
-									max = dp[n-1][j];
-								}
-								
-							}
-						}
-						if(max == Integer.MAX_VALUE) {
-							dp[n][i] = max;
-						}else {
-							dp[n][i] = cost[n][i] + max;
-						}
-						
-					}
-					
+        static int bfs() {
+		
+		// 큐 생
+		Queue<Info> que = new ArrayDeque<Info>();
+		// 시작점 넣기
+		Info inputInfo = new Info(doorway[0][0],doorway[0][1],doorway[0][2],0);
+		// 현재 위치 방문처리 하기
+		isCheck[doorway[0][0]][doorway[0][1]][doorway[0][2]] = true;
+		// 큐에 시작점 담기
+		que.add(inputInfo);
+		
+		// 큐에 값이 비어있을때까지 반복
+		while(!que.isEmpty()) {
+			// 큐에서 현재 좌표 꺼내기
+			Info infoC = que.poll();
+			
+			// 출구에 도착했을 때
+			if(infoC.l == doorway[1][0] && infoC.r == doorway[1][1] && infoC.c == doorway[1][2]) {
+				return infoC.count;
+			}
+			
+			// 주변 탐색
+			 
+			for( int d =0; d<6; d++) { 	
+				int nl = infoC.l + dl[d]; 	// 탐색하려는 층수
+				// 상, 하, 좌, 우
+				int nr = infoC.r + dr[d]; 	 
+				int nc = infoC.c + dc[d];
+				
+				// 탐색하려는 좌표가 건물 밖에 나가면 건너뛰기
+				if(nl <0 || nr <0 || nc < 0 || nl>=L || nc>= C || nr >= R) {
+					continue;
+				}
+				if( isCheck[nl][nr][nc]== false && !building[nl][nr][nc].equals("#")) { // 한번도 방문하지 않았고 금이 가지 않은 곳
+					Info newInfo = new Info(nl, nr, nc, infoC.count+1);
+					que.add(newInfo);
+					// 현재 위치 방문처리 하기
+					isCheck[nl][nr][nc] = true;
 				}
 				
+				
 			}
-			
-			for(int i =0; i<3; i++) {
-				if(i != start) {
-					if(result>dp[N-1][i]) {
-						result = dp[N-1][i];
-					}
-				}
-	
-			}
-			
 		}
+		
+		return 0;
+	}
 ```
 
 
 ## :black_nib: **Review**
-- dp도 어려워죽겠는데 원형 고리라 더 어려웠음
+- 오랜만에 bfs푸니깐 방문처리도 안해주고 푸는법 까먹었어요
 
 ## 📡**Link**
-- https://www.acmicpc.net/problem/17404
+- https://www.acmicpc.net/problem/6593
