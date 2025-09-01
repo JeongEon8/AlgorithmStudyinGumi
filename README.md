@@ -1,5 +1,5 @@
 # 💵 현재 벌금 총액
-### 벌금 220,000원 + 이자 632원 = 총액 220,632원
+### 벌금 230,000원 + 이자 632원 = 총액 230,632원
 
 <br>
 
@@ -11,7 +11,7 @@
 |[김성수(Dufrane-S)](https://github.com/Dufrane-S)| (취업자 배려전형) 실버 2개 |
 |[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 4개 |
 |[양성원(YSW-Yang)](https://github.com/YSW-Yang)| 실버 3개 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 골드 2개 | 
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 골드 4개 | 
 |[이서현(kizizip)](https://github.com/kizizip)| 실버 4개 |
 |[이승지(bmlsj)](https://github.com/bmlsj)| 골드 2개 |
 |[장홍준(ajang369)](https://github.com/ajang369)| 실버 4개 |
