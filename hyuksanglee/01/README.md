@@ -10,9 +10,7 @@
 
 ## ⏲️**Time Complexity**
 
-\$O(N^4)\$
-
-* 학생 수 $N^2$ × 자리 후보 탐색 $N^2$ × 인접 4칸 확인(상수)
+O(N log N)
 
 ## \:round\_pushpin: **Logic**
 그리디
