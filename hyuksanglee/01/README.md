@@ -1,12 +1,12 @@
-# \[백준 - 실버 1] 21608. 상어 초등학교
+# \[백준 - 골드 4] 1744. 수 묶기
 
 ## ⏰  **time**
 
-30분
+60분
 
 ## \:pushpin: **Algorithm**
 
-시뮬레이션 + 우선순위 큐
+그리디 + 우선순위 큐, dp
 
 ## ⏲️**Time Complexity**
 
@@ -15,53 +15,85 @@
 * 학생 수 $N^2$ × 자리 후보 탐색 $N^2$ × 인접 4칸 확인(상수)
 
 ## \:round\_pushpin: **Logic**
+그리디
+1. 2이상 양수 우선순위큐, 음수 우선순위큐, 1의개수, 0의개수 담는 객체 생성.
+2. 2이상은 갯수가 홀수 이면 한개를 먼저 더하고 나머지는 두개씩 곱해서 더해준다.
+3. 음수는 음수 2개를 곱하면 양수가 되므로 두개씩 곱해서 더해준다.(한개가 남을시 0이 있으면 곱해서 없애준다)
+4. 1의 개수만큼 더해준다.
 
-1. 입력: 학생 `id`와 좋아하는 친구 4명을 저장. 좌석판은 `0`(빈칸)/학생번호로 관리.
-2. 각 학생을 한 명씩 배치할 때, 모든 빈 칸을 후보로 보며 아래 우선순위로 **최적 좌석**을 고른다.
-
-   * (1) 인접 4칸에 있는 **좋아하는 친구 수**가 많은 자리
-   * (2) (1)이 같다면 **빈 칸 수**가 많은 자리
-   * (3) (1)(2)가 같다면 **행 번호가 작은** 자리
-   * (4) (1)(2)(3)이 같다면 **열 번호가 작은** 자리
-3. 우선순위는 `priority_queue`의 비교 연산자로 처리.
-
-```cpp
-struct info {
-  int x, y, blankCnt = 0, friendCnt = 0;
-  bool operator<(const info& o) const {
-    if (friendCnt != o.friendCnt) return friendCnt < o.friendCnt; // 더 많은 친구 우선
-    if (blankCnt  != o.blankCnt ) return blankCnt  < o.blankCnt;  // 더 많은 빈칸 우선
-    if (x != o.x)                return x > o.x;                  // 행 번호 오름차순
-    return y > o.y;                                              // 열 번호 오름차순
-  }
-};
+```java
+// 우선순위 큐에는 작은 순부터이므로 홀수이면 작은수를 더해준다.
+		if(plus.size()%2 == 1) {
+			result +=plus.poll();
+		}
+		
+		// 나머지 2이상 값들을 2개씩 곱해준다.
+		while(!plus.isEmpty()) {
+			int sum = 0;
+		
+			sum = plus.poll() * plus.poll();
+			
+			result += sum;
+		}
+		
+		
+		while(!minus.isEmpty()) {
+			
+			// 음수끼리 곱하면 양수가 되므로 2개씩 곱해준다.
+			if(minus.size()>1) {
+				result += minus.poll() * minus.poll();
+			}else {
+				// 한개 남았을때는 0이 있으면 곱해서 상쇄시켜주고 아니면 결과값에 더해준다.
+				if(zero>0) {
+					zero--;
+					minus.poll();
+				}else {
+					result+= minus.poll();
+				}
+			}
+		
+		}
+		
 ```
+dp
+1. 정렬 시킨다.
+2. +했을 경우 *경우를 받기 위해 2차원 dp 배열 생성
+3. 더할겨우는 이전 값에서 최댓값에 현재값을 더해주고
+4. 곱할경우는 전전값에서 최댓값에 이전값과 현재값 곱해서 더해준다.
 
-4. 배치가 끝나면 모든 학생에 대해 **인접 4칸의 좋아하는 친구 수**를 세고 만족도 배열 `manjok = {0,1,10,100,1000}`으로 누적합을 계산.
-
-```cpp
-// 각 빈 칸마다 인접 친구/빈칸 카운트 후 PQ에 푸시
-for (int i = 0; i < N; i++)
-  for (int j = 0; j < N; j++)
-    if (board[i][j] == 0) {
-      int blank=0, fr=0;
-      for (int d=0; d<4; d++){
-        int nx=i+dx[d], ny=j+dy[d];
-        if (nx<0||nx>=N||ny<0||ny>=N) continue;
-        if (board[nx][ny]==0) blank++;
-        else if (isFav(board[nx][ny], students[s])) fr++; // 4명 목록 중 포함 여부
-      }
-      pq.push({i,j,blank,fr});
-    }
-// 최적 자리 = pq.top()
+```java
+Arrays.sort(number);
+		
+		int[][]dp = new int[2][N+1];
+		
+		for(int i =0; i<N; i++) {
+			if(i==0) {
+				dp[0][1] =number[i];
+				dp[1][1] =number[i];
+			}else if(i == 1){
+				dp[0][2] = number[i]+dp[0][1];
+				dp[1][2] = number[i]*dp[0][1];
+			}else {
+				int max = dp[1][i];
+				if(dp[0][i]> dp[1][i]) {
+					max = dp[0][i];
+				}
+				dp[0][i+1] = number[i] +max;
+				
+				max = dp[1][i-1];
+				if(dp[0][i-1]> dp[1][i-1]) {
+					max = dp[0][i-1];
+				}
+				
+				dp[1][i+1] = number[i]*number[i-1] +max;
+			}
+		}
 ```
 
 ## \:black\_nib: **Review**
 
-* 조건 4개(친구 수 → 빈 칸 수 → 행 → 열)만 정확히 우선순위에 반영하면 구현은 깔끔.
-* 만족도 계산 시 인접 4칸만 보면 되니 `manjok[friends]`로 바로 매핑하니 편했다.
-* 시간복잡도는 $N \le 20$라서 전체 $N^4$ 시뮬레이션도 충분히 통과!
+* 2가지 방법으로 풀어봤는데 그리디가 1시간 이상걸렸는데 dp로 풀때는 20분 밖에 안걸렸어요
 
 ## 📡 Link
 
-[https://www.acmicpc.net/problem/21608](https://www.acmicpc.net/problem/21608)
+[https://www.acmicpc.net/problem/1744)
