@@ -7,7 +7,7 @@
 투포인터
 
 ## ⏲️**Time Complexity**
-$O(N*K)$
+$O(N log N)$
 
 ## :round_pushpin: **Logic**
 
