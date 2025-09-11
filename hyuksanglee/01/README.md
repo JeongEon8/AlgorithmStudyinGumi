@@ -1,47 +1,69 @@
 
-# [백준- G5] 12865. 평범한 배낭
+# [백준- G5] 2660. 회장뽑기
 ## ⏰  **time**
-60분
+50분
 
 ## :pushpin: **Algorithm**
-DP
+bfs
 
 ## ⏲️**Time Complexity**
-$O(N*K)$
+$O(N^3)$
 
 ## :round_pushpin: **Logic**
 
-- 물품을 입력 받을때 이전에 입력 된값이랑 비교해서 최대값으로 갱신 해준다.
-  	- 가방 최대 무게가 10이고 물품 무게가 7이면
-  		- dp[10] = 입력받은 물품 가치 + dp[3]
-  		- dp[9] = 입력받은 물품 가치 + dp[2]
-  	  		...
-  	   	- dp[7] = 입력받은 물품 가치 + dp[0]
-	- 마지막에 dp[10] 출력해준다.
-
+- 인접 행렬로 두 지점을 입력 받으면 두곳 다 연결처리
+	- ex) A - B 이면 arr[A][B] = true, arr[B][A] = true
+- for문을 돌면서 하나씩 bfs를 탐색해주고 최장거리를 저장해준다.
 ```java
-	for (int n = 0; n<N; n++) {
-			input = in.readLine().split(" ");
-			int W = Integer.parseInt(input[0]); // 물품의 무게
-			int V = Integer.parseInt(input[1]);	// 물품의 가치
+	for(int i =1; i<N+1; i++) {
+			boolean[] isCheck = new boolean[N+1];
+			int count =0;
+			Queue<Friend> que = new ArrayDeque();
 			
-			for(int k = K; k>=W; k--) {
-				
-				if(dp[k] <= V+dp[k-W]) {
-					dp[k] = V+dp[k-W];
+			que.add(new Friend(i,0));
+			while(!que.isEmpty()) {
+				Friend friend = que.poll();
+				isCheck[friend.f]= true;
+				for(int j = 1; j<N+1; j++) {
+					if(!isCheck[j] && arr[friend.f][j]) {
+						que.add(new Friend(j,friend.count+1));
+						isCheck[j]= true;
+						if(total[i]<friend.count+1) {
+							total[i]=friend.count+1;
+						}
+					}
 				}
 			}
-			
+		}
+```
+
+- 각각의 초기점의 최장거리들을 비교해서 최솟값을 출력 해준다.
+```java
+	int result = Integer.MAX_VALUE;
+		int co = 0;
+		for(int i = 1; i<N+1; i++) {
+			if(result >total[i]) {
+				result =total[i];
+				co=0;
+			}
+			if(result ==total[i]) {
+				co++;
+			}
 		}
 		
-		
-		System.out.println(dp[K]);
+		System.out.println(result+" "+co);
+		for(int i = 1; i<N+1; i++) {
+			
+			if(result ==total[i]) {
+				System.out.print(i+" ");
+			}
+		}
 ```
 
 ## :black_nib: **Review**
-- 여행가고 싶은데 알고리즘으로 대신 ㅠㅠ
+- bfs,dfs로 푸는거는 이제 쉽네요
 
 
 ## 📡**Link**
-- https://www.acmicpc.net/problem/12865
+- https://www.acmicpc.net/problem/2660
 
