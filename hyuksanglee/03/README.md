@@ -1,50 +1,48 @@
 
-# [백준- G5] 2230. 수 고르기
+# [백준- G5] 1011. Fly me to the Alpha Centauri
 ## ⏰  **time**
-60분
+80분
 
 ## :pushpin: **Algorithm**
-투포인터
+수학
 
 ## ⏲️**Time Complexity**
-$O(N log N)$
+$O(T)$
 
 ## :round_pushpin: **Logic**
 
-- 투포인터를 사용하기 위해서는 입력 받은 값을 정렬시켜야한다.
-- A는 처음부터 끝까지 비교하고 B는 0부터 증가시킨다.
-- B-A를 했을때 M보다 크면 해당 값을 저장하고 A를 증가시키고
-- 작을경우 B를 증가시킨다
-- 저장된 값들 중에서 최솟값을 출력해준다.
-
+- 두 수의 뺀 값에 제곱근을 구한다.
+  - 시작 값이랑 끝값이 무조건 1이 돼야하므로 피라미드 형태가 나온다(1+2+3+2+1)
+    - 20일 경우 최대 낼수 있는 속도는 4이고 5까지 내면 초과 된다.
+    	- (1+2+3+4+3+2+1)=16(4*4), (1+2+3+4+5+4+3+2+1) = 25(5*5)
+     	- (1+2+3+4+3+2+1) 이거 갯수는 2n-1 로 계산할수 있고 2(4)-1 =7
+      	- 16은 20보다 작으므로 어딘가에서 한개를 더해주었을거다 7+1 이된다.
 ```java
-	Arrays.sort(arr);
-		
-		int index = 0;
-		int result = Integer.MAX_VALUE;
-		int type = 0;
-		
-		for(int n = 0; n<N; n++) {
-			while(arr[index]-arr[n]<M) {
-				index++;
-				if(index>N-1) {
-					type = 1;
-					break;
-				}
+	for(int t=0; t<T; t++) {
+			String [] input = in.readLine().split(" ");
+			long x = Integer.parseInt(input[0]);
+			long y = Integer.parseInt(input[1]);
+			
+			long total = y-x;
+			long n =(long) Math.sqrt(total);
+			
+			if(n*n==total) {
+				System.out.println(2*n-1);
+			}else if (n*n+n <total){
+				System.out.println(2*n+1);
+			}else {
+				System.out.println(2*n);
 			}
-			if(type==1) {
-				break;
-			}
-			if(arr[index]-arr[n]<result) {
-				result = arr[index]-arr[n];
-			}
+			
+			
+			
 		}
 ```
 
 ## :black_nib: **Review**
-- 처음에는 한쪽은 앞에서 한쪽은 뒤에서 가는거를 생각하고 풀었는데 안풀리더라구요
+- 수학 문제 푸는거 같아, 수학은 알고리즘이 맞을까?
 
 
 ## 📡**Link**
-- https://www.acmicpc.net/problem/2230
+- https://www.acmicpc.net/problem/1011
 
