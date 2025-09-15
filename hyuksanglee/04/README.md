@@ -1,48 +1,64 @@
 
-# [백준- G5] 1011. Fly me to the Alpha Centauri
+# [백준- G5] 2447. 별 찍기 - 10
 ## ⏰  **time**
-80분
+60분
 
 ## :pushpin: **Algorithm**
-수학
+재귀
 
 ## ⏲️**Time Complexity**
-$O(T)$
+$O(nlog3​8)$
 
 ## :round_pushpin: **Logic**
 
-- 두 수의 뺀 값에 제곱근을 구한다.
-  - 시작 값이랑 끝값이 무조건 1이 돼야하므로 피라미드 형태가 나온다(1+2+3+2+1)
-    - 20일 경우 최대 낼수 있는 속도는 4이고 5까지 내면 초과 된다.
-    	- (1+2+3+4+3+2+1)=16(4*4), (1+2+3+4+5+4+3+2+1) = 25(5*5)
-     	- (1+2+3+4+3+2+1) 이거 갯수는 2n-1 로 계산할수 있고 2(4)-1 =7
-      	- 16은 20보다 작으므로 어딘가에서 한개를 더해주었을거다 7+1 이된다.
+- 재귀로 3배수만큼 잘라서 탐색하는데 중간값은 패스
+	- for문으로 0~3까지 돌는데 1이되면 패스
+ 	- 나머지는 재귀 호출
+  - n/3 == 1이 될때까지 재귀 돌린다
+
 ```java
-	for(int t=0; t<T; t++) {
-			String [] input = in.readLine().split(" ");
-			long x = Integer.parseInt(input[0]);
-			long y = Integer.parseInt(input[1]);
-			
-			long total = y-x;
-			long n =(long) Math.sqrt(total);
-			
-			if(n*n==total) {
-				System.out.println(2*n-1);
-			}else if (n*n+n <total){
-				System.out.println(2*n+1);
-			}else {
-				System.out.println(2*n);
+	static void dfs(int startY,int startX, int n) {
+		if(n==1) {
+			for(int i =0; i<3;i++) {
+				for(int j =0; j<3; j++) {
+					if(i==1&& j==1) {
+						continue;
+					}
+					arr[startY+i][startX+j]=1;
+				}
 			}
-			
-			
-			
+			return;
+		}else {
+			for(int y =0; y<3; y++) {
+			    for(int x = 0; x<3; x++ ) {
+			        if(x==1 && y==1) {
+			            continue;
+			        }
+			        if(startY+y*n<N && startX+x*n<N)
+			        dfs(startY+y*n,startX+x*n,n/3);
+			    }
+			}
 		}
+		
+	}
 ```
 
+- 출력 시간 줄이기 위해 StringBuilder 사용
+  ```java
+  StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                sb.append(arr[i][j] == 1 ? '*' : ' ');
+            }
+            sb.append('\n');
+        }
+        System.out.print(sb);
+  ```
+
 ## :black_nib: **Review**
-- 수학 문제 푸는거 같아, 수학은 알고리즘이 맞을까?
+- 이거 그냥 출력하면 시간초과 뜨고 StringBuilder 써야하더라구요
 
 
 ## 📡**Link**
-- https://www.acmicpc.net/problem/1011
+- https://www.acmicpc.net/problem/2447
 
