@@ -10,9 +10,9 @@
 |[김미경(rmfosem613)](https://github.com/rmfosem613)| (취업자 배려전형) 실버 1개 |
 |[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 3개 |
 |[양성원(YSW-Yang)](https://github.com/YSW-Yang)| 실버 3개 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 골드 4개 |
-|[이서현(kizizip)](https://github.com/kizizip)| 실버 4개 |
-|[이승지(bmlsj)](https://github.com/bmlsj)| 골드 2개 |
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 골드 3개 |
+|[이서현(kizizip)](https://github.com/kizizip)| lv.2•실버 4개 |
+|[이승지(bmlsj)](https://github.com/bmlsj)| 골드 2개, 실버 1개 |
 |[장홍준(ajang369)](https://github.com/ajang369)| 실버 4개 |
 |[한아영(hanayoung)](https://github.com/hanayoung) | 골드 2개, 실버 1개 |
 |[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버 4개 |
@@ -28,7 +28,7 @@
 <br>
 
 # ⌛ 진행상황
-### 제 41회 [25.09.09 - 25.09.15] (진행중)
+### 제 42회 [25.09.15 - 25.09.22] (진행중)
 <details>
   <summary>2024년</summary>
   - 제 1회 [24.08.01 - 24.08.05] (진행완료) <br>
