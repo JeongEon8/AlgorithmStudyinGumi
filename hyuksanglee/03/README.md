@@ -1,69 +1,54 @@
 
-# [백준- G5] 2660. 회장뽑기
+# [백준- G5] 1665. 가운데를 말해요
 ## ⏰  **time**
-50분
+30분
 
 ## :pushpin: **Algorithm**
-bfs
+우선순위큐
 
 ## ⏲️**Time Complexity**
-$O(N^3)$
+$O(log N)$
 
 ## :round_pushpin: **Logic**
 
-- 인접 행렬로 두 지점을 입력 받으면 두곳 다 연결처리
-	- ex) A - B 이면 arr[A][B] = true, arr[B][A] = true
-- for문을 돌면서 하나씩 bfs를 탐색해주고 최장거리를 저장해준다.
+- 작은 순 우선순위 큐, 큰순 우선순위큐 2개 생성
+- 처음에는 작은 순 큐에 숫자를 넣어준다.
+- 그다음 작은 순 큐에서 하나 뽑아서 비교하여 클경우 넣어주고 아닐경우 큰순 큐에 넣어준다.
+- 작은순 큐와 큰순 큐 비교하여 대칭이 되게 조절해준다.
+- 작은순 큐에서 하나 뽑아서 출력
+
 ```java
-	for(int i =1; i<N+1; i++) {
-			boolean[] isCheck = new boolean[N+1];
-			int count =0;
-			Queue<Friend> que = new ArrayDeque();
-			
-			que.add(new Friend(i,0));
-			while(!que.isEmpty()) {
-				Friend friend = que.poll();
-				isCheck[friend.f]= true;
-				for(int j = 1; j<N+1; j++) {
-					if(!isCheck[j] && arr[friend.f][j]) {
-						que.add(new Friend(j,friend.count+1));
-						isCheck[j]= true;
-						if(total[i]<friend.count+1) {
-							total[i]=friend.count+1;
-						}
-					}
+		PriorityQueue<Integer> minQ = new PriorityQueue<>();
+
+		PriorityQueue<Integer> maxQ = new PriorityQueue<>(Collections.reverseOrder());
+		
+		
+		for(int n = 0; n <N; n++) {
+			int num = Integer.parseInt(in.readLine());
+			if(maxQ.size()==0) {
+				maxQ.add(num);
+			}else {
+				if(maxQ.peek()>=num) {
+					maxQ.add(num);
+				}else {
+					minQ.add(num);
 				}
 			}
+			
+			while(minQ.size()-maxQ.size()<-1) {
+				minQ.add(maxQ.poll());
+			}
+			while(maxQ.size()-minQ.size()<0) {
+				maxQ.add(minQ.poll());
+			}
+			System.out.println(maxQ.peek());
 		}
 ```
 
-- 각각의 초기점의 최장거리들을 비교해서 최솟값을 출력 해준다.
-```java
-	int result = Integer.MAX_VALUE;
-		int co = 0;
-		for(int i = 1; i<N+1; i++) {
-			if(result >total[i]) {
-				result =total[i];
-				co=0;
-			}
-			if(result ==total[i]) {
-				co++;
-			}
-		}
-		
-		System.out.println(result+" "+co);
-		for(int i = 1; i<N+1; i++) {
-			
-			if(result ==total[i]) {
-				System.out.print(i+" ");
-			}
-		}
-```
 
 ## :black_nib: **Review**
-- bfs,dfs로 푸는거는 이제 쉽네요
+- 이번 문제는 골드 2 치고는 너무 쉬웠어요
 
 
 ## 📡**Link**
-- https://www.acmicpc.net/problem/2660
-
+- https://www.acmicpc.net/problem/1655
