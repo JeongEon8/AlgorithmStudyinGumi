@@ -1,69 +1,112 @@
 
-# [백준- G5] 2660. 회장뽑기
+# [백준- G5] 21939. 문제 추천 시스템 Version 1
 ## ⏰  **time**
-50분
+80분
 
 ## :pushpin: **Algorithm**
-bfs
+우선순위 큐
 
 ## ⏲️**Time Complexity**
-$O(N^3)$
+$O(log N)$
 
 ## :round_pushpin: **Logic**
 
-- 인접 행렬로 두 지점을 입력 받으면 두곳 다 연결처리
-	- ex) A - B 이면 arr[A][B] = true, arr[B][A] = true
-- for문을 돌면서 하나씩 bfs를 탐색해주고 최장거리를 저장해준다.
+- 우선순위 큐 2개생성(작은 순, 큰순), 문제번호에 맞는 난이도를 담는 배열 생성
+- 두큐에 문제번호를 넣어주고 배열에도 해당 문제에 맞게 난이도 갱신해준다.
+- 출력할때는 1일경우 작은 순 큐에서 poll()을 통해 하나씩 뽑는데 해당 문제가 난이도 배열이랑 같을경우 출력 아닐경우 패스한다.
+- -1 경우는 큰순 큐에서 똑같은 방법으로 출력한다.
 ```java
-	for(int i =1; i<N+1; i++) {
-			boolean[] isCheck = new boolean[N+1];
-			int count =0;
-			Queue<Friend> que = new ArrayDeque();
+	for(int n = 0; n< N; n++) {
+			String[] input = in.readLine().split(" ");
+			int P = Integer.parseInt(input[0]);
+			int L = Integer.parseInt(input[1]);
 			
-			que.add(new Friend(i,0));
-			while(!que.isEmpty()) {
-				Friend friend = que.poll();
-				isCheck[friend.f]= true;
-				for(int j = 1; j<N+1; j++) {
-					if(!isCheck[j] && arr[friend.f][j]) {
-						que.add(new Friend(j,friend.count+1));
-						isCheck[j]= true;
-						if(total[i]<friend.count+1) {
-							total[i]=friend.count+1;
-						}
-					}
-				}
+			nums[P]=L;
+			listMa[L].add(P);
+			listMi[L].add(P);
+			if(maxL<L) {
+				maxL = L;
 			}
-		}
-```
-
-- 각각의 초기점의 최장거리들을 비교해서 최솟값을 출력 해준다.
-```java
-	int result = Integer.MAX_VALUE;
-		int co = 0;
-		for(int i = 1; i<N+1; i++) {
-			if(result >total[i]) {
-				result =total[i];
-				co=0;
+			if(minL>L) {
+				minL=L;
 			}
-			if(result ==total[i]) {
-				co++;
-			}
+			
 		}
 		
-		System.out.println(result+" "+co);
-		for(int i = 1; i<N+1; i++) {
-			
-			if(result ==total[i]) {
-				System.out.print(i+" ");
+		int M = Integer.parseInt(in.readLine());
+		StringBuilder out = new StringBuilder();
+		for(int m = 0; m<M; m++) {
+			String [] input = in.readLine().split(" ");
+			String comment = input[0];
+			if(comment.equals("add")) {
+				int P = Integer.parseInt(input[1]);
+				int L = Integer.parseInt(input[2]);
+				
+				nums[P]=L;
+				listMa[L].add(P);
+				listMi[L].add(P);
+				if(maxL<L) {
+					maxL = L;
+				}
+				if(minL>L) {
+					minL=L;
+				}
+			}else if(comment.equals("solved")) {
+				int P = Integer.parseInt(input[1]);
+				nums[P] = 0;
+			}else {
+				int P = Integer.parseInt(input[1]);
+				
+				if(P==1) {
+					for(int i = maxL; i>=0; i--) {
+						int check=0;
+						PriorityQueue<Integer> pq = listMa[i];
+						while(!pq.isEmpty()) {
+							int p = pq.peek();
+							if (nums[p] == i) {
+								out.append(p).append('\n');
+								i=-1;
+								break;
+                            }else {
+                            	pq.poll();
+                            }
+						}
+						 if (i == maxL && pq.isEmpty()) {
+	                            while (maxL >= 1 && listMa[maxL].isEmpty()) maxL--;
+	                        }
+						
+					}
+					
+				}else {
+					for(int i = minL; i<=maxL; i++) {
+						
+						PriorityQueue<Integer> pq = listMi[i];
+						while(!pq.isEmpty()) {
+							int p = pq.peek();
+							if (nums[p] == i) {
+								out.append(p).append('\n');
+								i=maxL+1;
+								break;
+                            }else {
+                            	pq.poll();
+                            }
+						}
+						 if (i == minL && pq.isEmpty()) {
+	                            while (minL >= 1 && listMa[minL].isEmpty()) minL--;
+	                        }
+						
+					}
+				}
+				
 			}
 		}
+		System.out.print(out);
 ```
 
 ## :black_nib: **Review**
-- bfs,dfs로 푸는거는 이제 쉽네요
+- StringBuilder를 최근에 나오는 문제들은 무조건 써야하네요.
 
 
 ## 📡**Link**
-- https://www.acmicpc.net/problem/2660
+- https://www.acmicpc.net/problem/21939
 
