@@ -1,58 +1,32 @@
-# [백준- G4] 1261. 알고스팟
+# [백준- G4] 2293. 동전1
  
 ## ⏰  **time**
-80분
+60분
 
 ## :pushpin: **Algorithm**
-BFS
+DP
 
 ## ⏲️**Time Complexity**
-$O(NM)$
-- N: 가로 길이, M: 세로 길이
-## :round_pushpin: **Logic**
-- (0,0)에서 주변탐색(상, 하, 좌, 우) 이동하려는 칸이 부순 숫자가 적을 경우 이동
-  - 벽이 있을경우 현재 벽을 부순 숫자에 +1해서 해당 칸에 넣어준다.
-  - 벽이 없을 경우 현재 벽을 부순 숫자을 넣어준다.
-  - 0일경우 앞에 넣어주고 1일경우 뒤에 넣어준다.
-- (N,M) 칸에 벽을 부순 숫자 출력
+$O(n·k)$
+n: 동전의 종류, k : 만들어야하는 돈
+- 동전 작은거 부터 1~k 까지 몇개를 들어가는지 채워준다
+	- 동전 3이면 3 : 1 , 6: arr[6-3] = 6:1 이런식으로 채워준다.
+ 	- 제일 작은 동전이 3 인데 4를 만들려면 4-3 =1 로 만들수 없으면 넘겨 준다.
+	
 ```java
-   static void bfs() {
-		Deque<Info>que = new ArrayDeque<Info>();
-		Info info = new Info(0,0,0);
-		count[0][0] = 0;
-		que.add(info);
-		
-		count[0][0] = 0;
-		while(!que.isEmpty()) {
-			Info data = que.poll();
-			for(int d = 0; d<4; d++) {
-				int nx = data.x+dx[d];
-				int ny = data.y+dy[d];
-				if(nx<0 || nx>=M || ny<0 || ny>=N) {
-					continue;
-				}
-				if(count[ny][nx]>data.br+arr[ny][nx]) {
-					
-					int newBr = data.br;
-					if(arr[ny][nx]==1) {
-						newBr+=1;
-						count[ny][nx]=data.br+1;
-						Info newData = new Info(nx,ny,newBr);
-						que.addLast(newData);
-					}else {
-						count[ny][nx]=data.br;
-						Info newData = new Info(nx,ny,newBr);
-						que.addFirst(newData);
-					}
-
+   for(int j = 0; j<n; j++) {
+			for(int i = 1; i<k+1; i++) {
+				if(i- cachs[j] ==0) {
+					arr[i]+=1;
+				}else if(i- cachs[j] >0 && arr[i- cachs[j]]>0) {
+					arr[i]+=arr[i- cachs[j]];
 				}
 			}
 		}
-	}
 ```
 
 ## :black_nib: **Review**
-0일때 앞에 넣고 1일때 뒤에 넣지 않으면 메모리 초과뜨더라구요(Deque 활용)
+예전에는 dp가 어려웠는데 이제는 dp가 코드 적기 편해서 더 좋아요
 
 ## 📡**Link**
-- https://www.acmicpc.net/problem/1261
+- https://www.acmicpc.net/problem/2293
