@@ -1,58 +1,43 @@
-# [백준- G4] 1261. 알고스팟
+# [백준- G4] 16398. 행성연결
  
 ## ⏰  **time**
 80분
 
 ## :pushpin: **Algorithm**
-BFS
+그래프
 
 ## ⏲️**Time Complexity**
-$O(NM)$
+$O(N²)$
 - N: 가로 길이, M: 세로 길이
 ## :round_pushpin: **Logic**
-- (0,0)에서 주변탐색(상, 하, 좌, 우) 이동하려는 칸이 부순 숫자가 적을 경우 이동
-  - 벽이 있을경우 현재 벽을 부순 숫자에 +1해서 해당 칸에 넣어준다.
-  - 벽이 없을 경우 현재 벽을 부순 숫자을 넣어준다.
-  - 0일경우 앞에 넣어주고 1일경우 뒤에 넣어준다.
-- (N,M) 칸에 벽을 부순 숫자 출력
+- for문으로 시작점을 하나씩 다 돌아본다
+- 방문하지 않은 행성 중에서 현재까지 연결되는 비용이 가장 작은 행성을 선택
+- N번 반복하여 모든 행성을 연결
+- 새로 선택한 행성과 다른 행성 값 비교하여 작은값으로 갱신
+- 각 행성에 기록된 최소 연결 비용합 출력
 ```java
-   static void bfs() {
-		Deque<Info>que = new ArrayDeque<Info>();
-		Info info = new Info(0,0,0);
-		count[0][0] = 0;
-		que.add(info);
-		
-		count[0][0] = 0;
-		while(!que.isEmpty()) {
-			Info data = que.poll();
-			for(int d = 0; d<4; d++) {
-				int nx = data.x+dx[d];
-				int ny = data.y+dy[d];
-				if(nx<0 || nx>=M || ny<0 || ny>=N) {
-					continue;
-				}
-				if(count[ny][nx]>data.br+arr[ny][nx]) {
-					
-					int newBr = data.br;
-					if(arr[ny][nx]==1) {
-						newBr+=1;
-						count[ny][nx]=data.br+1;
-						Info newData = new Info(nx,ny,newBr);
-						que.addLast(newData);
-					}else {
-						count[ny][nx]=data.br;
-						Info newData = new Info(nx,ny,newBr);
-						que.addFirst(newData);
-					}
-
-				}
-			}
-		}
+   static void pl(int num) {
+		int u = -1;
+        int best = Integer.MAX_VALUE;
+        
+        for (int v = 0; v < N; v++) {
+            if (!isVisited[v] && de[v] < best) {
+                best = arr[num][v];
+                u = v;
+            }
+        }
+        
+        isVisited[u] = true;
+        for (int v = 0; v < N; v++) {
+            if (!isVisited[v] && arr[u][v] < de[v]) {
+                de[v] = arr[u][v];
+            }
+        }
 	}
 ```
 
 ## :black_nib: **Review**
-0일때 앞에 넣고 1일때 뒤에 넣지 않으면 메모리 초과뜨더라구요(Deque 활용)
+어려워요
 
 ## 📡**Link**
-- https://www.acmicpc.net/problem/1261
+- https://www.acmicpc.net/problem/16398
