@@ -1,24 +1,24 @@
+<img width="2000" height="360" alt="행복한 추석 연휴" src="https://github.com/user-attachments/assets/1c02b06e-07d1-4ea2-9bcc-8e4e529fb022" />
+
 # 💵 현재 벌금 총액
-### 벌금 260,000원 + 이자 632원 = 총액 260,632원
-### -> 스터디장님의 업데이트가 필요합니다!
+### 벌금 290,000원 + 이자 1,004원 = 총액 291,004원
 
 <br>
 
 # 📚 목표
-### 이하 목표는 지난 목표입니다.
 ### 추석 연휴는 즐겨요~ 모두들 해피 한가위~ 🍁🌕
 |아이디|목표|
 |------|---|
-|[구현진(2jin8)](https://github.com/2jin8)| (취업자 배려전형) 실버 1개 |
-|[김미경(rmfosem613)](https://github.com/rmfosem613)| (취업자 배려전형) 실버 1개 |
-|[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 3개 |
-|[양성원(YSW-Yang)](https://github.com/YSW-Yang)| 실버 3개 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 골드 4개 |
-|[이서현(kizizip)](https://github.com/kizizip)| lv.2•실버 3개 |
-|[이승지(bmlsj)](https://github.com/bmlsj)| 골드 2개, 실버 1개 |
-|[장홍준(ajang369)](https://github.com/ajang369)| 실버 4개 |
-|[한아영(hanayoung)](https://github.com/hanayoung) | 골드 2개, 실버 1개 |
-|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버 4개 |
+|[구현진(2jin8)](https://github.com/2jin8)| (취업자 배려전형) |
+|[김미경(rmfosem613)](https://github.com/rmfosem613)| (취업자 배려전형)|
+|[김정언(JeongEon)](https://github.com/JeongEon8)| |
+|[양성원(YSW-Yang)](https://github.com/YSW-Yang)|  |
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)|  |
+|[이서현(kizizip)](https://github.com/kizizip)|  |
+|[이승지(bmlsj)](https://github.com/bmlsj)|  |
+|[장홍준(ajang369)](https://github.com/ajang369)|  |
+|[한아영(hanayoung)](https://github.com/hanayoung) |  |
+|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)|  |
 
 <br>
 
@@ -31,7 +31,6 @@
 <br>
 
 # ⌛ 진행상황
-### 제 43회 [25.09.23 - 25.09.29] (진행중)
 <details>
   <summary>2024년</summary>
   - 제 1회 [24.08.01 - 24.08.05] (진행완료) <br>
