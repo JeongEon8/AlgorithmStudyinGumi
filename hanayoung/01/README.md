@@ -7,7 +7,7 @@
 bfs
 
 ## ⏲️**Time Complexity**
-$O(R × C)$
+$O(N^2)$
 
 ## :round_pushpin: **Logic**
 1. 집 위치를 담는 list 생성
