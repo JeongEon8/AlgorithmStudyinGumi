@@ -1,5 +1,3 @@
-<img width="2000" height="360" alt="행복한 추석 연휴" src="https://github.com/user-attachments/assets/1c02b06e-07d1-4ea2-9bcc-8e4e529fb022" />
-
 # 💵 현재 벌금 총액
 ### 벌금 290,000원 + 이자 1,004원 = 총액 291,004원
 
@@ -9,16 +7,15 @@
 ### 추석 연휴는 즐겨요~ 모두들 해피 한가위~ 🍁🌕
 |아이디|목표|
 |------|---|
-|[구현진(2jin8)](https://github.com/2jin8)| (취업자 배려전형) |
-|[김미경(rmfosem613)](https://github.com/rmfosem613)| (취업자 배려전형)|
-|[김정언(JeongEon)](https://github.com/JeongEon8)| |
-|[양성원(YSW-Yang)](https://github.com/YSW-Yang)|  |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)|  |
-|[이서현(kizizip)](https://github.com/kizizip)|  |
-|[이승지(bmlsj)](https://github.com/bmlsj)|  |
-|[장홍준(ajang369)](https://github.com/ajang369)|  |
-|[한아영(hanayoung)](https://github.com/hanayoung) |  |
-|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)|  |
+|[구현진(2jin8)](https://github.com/2jin8)| (취업자 배려전형) 골드 1개 |
+|[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 3개 |
+|[양성원(YSW-Yang)](https://github.com/YSW-Yang)| 실버 3개 |
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 골드 2개 |
+|[이서현(kizizip)](https://github.com/kizizip)| 실버 혹은 프로그래머스 2이상 3개 |
+|[이승지(bmlsj)](https://github.com/bmlsj)| 골드 1개 + 프로그래머스 2이상 2개 |
+|[장홍준(ajang369)](https://github.com/ajang369)| 실버 4개 |
+|[한아영(hanayoung)](https://github.com/hanayoung) | 골드 2개 + 실버 1개 |
+|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버 4문제 |
 
 <br>
 
@@ -26,11 +23,12 @@
 - 목표: 매주 알고리즘 문제를 풀며 감을 잃지 말자!
 - 🎉전원 A형 취득 달성!🎉
 - 전체 기간: 24년 8월 ~
-- 인원: 11명
+- 인원: 9명
 - 방식: 매주 월요일 오후 8시 온라인 회의
 <br>
 
 # ⌛ 진행상황
+### 제 44회 [25.10.14 ~ 25.10.20] (진행중)
 <details>
   <summary>2024년</summary>
   - 제 1회 [24.08.01 - 24.08.05] (진행완료) <br>
@@ -156,3 +154,4 @@
 
 ### 비고
 - 성수 굿바이ㅠ (~25.09.05)
+- 미경(rmfosem613) 굿바이ㅠ (~25.10.13)
