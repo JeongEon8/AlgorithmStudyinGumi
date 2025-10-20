@@ -2,38 +2,49 @@
 
 ## ⏰ **time**
 
-15분
+45분
 
 ## :pushpin: **Algorithm**
-- 그리디 알고리즘
-- 문자열
+- 이분탐색
 
 ## ⏲️**Time Complexity**
 
 $O(N)$
 
 ## :round_pushpin: **Logic**
-'H','Y','U' 각각의 알파벳이 나올 때마다 그때까지 HYU 이외의 알파벳을 일일히 delete로 지우는데 드는 에너지와 드래그하고 지우는데 드는 에너지중 작은 수치만큼 더하고 map에 나온 횟수를 기록한다. 사용한 에너지의 최소합과 3개중 가장 적게 나온 항목의 수를 출력한다.
+- 배열에 넣고 3숫자를 1번째 숫자: 한번씩 돌고, 2번째 숫자: 1번째 숫자로 1을 더해서 시작하고, 3번째는 마지막 숫자로 설정하고
+- 세개를 더했을때 크면 3번째꺼를 줄이고 작으면 2번째꺼를 늘려준다.
+- 세개 더했을때 최솟값을 출력해준다.
 ```java
-    Map<Character, Integer> map = new HashMap<>();
-    map.put('H', 0);
-    map.put('Y', 0);
-    map.put('U', 0);
-    int energy = 0;
-    int others = 0;
-    for (int i = 0; i < n; i++) {
-        char c = str.charAt(i);
-        if (map.containsKey(c)) {
-            energy += Math.min(others * d, m + d);
-            others = 0;
-            map.put(c, map.get(c) + 1);
-        } else {
-            others++;
-        }
-    }
-    energy += Math.min(others * d, m + d);
+   for(int i = 0; i<N; i++) {
+			int j = i+1;
+			int k = N-1;
+			while(j<k) {
+				if(max>  Math.abs(arr[i]+arr[j]+arr[k])) {
+					max = Math.abs(arr[i]+arr[j]+arr[k]);
+					result[0] = arr[i];
+					result[1] = arr[j];
+					result[2] = arr[k];
+					if(max ==0) {
+						for(int z =0; z<3; z++) {
+							System.out.print(result[z]);
+							System.out.print(" ");
+						}
+						return;
+						
+					}
+				}
+				if(arr[i]+arr[j]+arr[k]>0) {
+					k--;
+				}else if(arr[i]+arr[j]+arr[k]<0) {
+					j++;
+				}
+			}
+		}
 ```
 
 ## :black_nib: **Review**  
+- 골3 치곤 쉬웠음
+
 ## 📡**Link**
-https://www.acmicpc.net/problem/29812
+https://www.acmicpc.net/problem/2473
