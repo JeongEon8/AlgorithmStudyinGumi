@@ -1,5 +1,5 @@
 # 💵 현재 벌금 총액
-### 벌금 300,000원 + 이자 1,004원 = 총액 301,004원
+### 벌금 300,000원 + 이자 1,254원 = 총액 301,254원
 
 <br>
 
@@ -12,7 +12,7 @@
 |[이서현(kizizip)](https://github.com/kizizip)| (취업자 배려 전형) 실버 1개 |
 |[이승지(bmlsj)](https://github.com/bmlsj)| 골드 2개 |
 |[장홍준(ajang369)](https://github.com/ajang369)| 실버 4개 |
-|[한아영(hanayoung)](https://github.com/hanayoung) | 골드 2개 + 실버 1개 |
+|[한아영(hanayoung)](https://github.com/hanayoung) | 프로그래머스 Lv2 3개 |
 |[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버 4문제 |
 
 <br>
