@@ -1,37 +1,61 @@
-# [백준 - G1] 1311. 할 일 정하기 1
+# [백준 - G5] 15681. 트리와 쿼리
 
 ## ⏰ **time**
 
 40분
 
 ## :pushpin: **Algorithm**
-- 다이나믹 프로그래밍
-- 비트마스킹
-- 비트필드를 이용한 다이나믹 프로그래밍
+- 트리
+- dfs
 
 ## ⏲️**Time Complexity**
 
 $O(2^n)$
 
 ## :round_pushpin: **Logic**
-비트 마스크를 이용해서 일을 배분하는 경우를 모두 기록한다.  
+- 트리를 이용해서 자식들을 연결해준다.
 ```java
-dp[0] = 0;
-for (int i = 0; i < allWorking; i++) {
-    if (dp[i] == Integer.MAX_VALUE)
-        continue;
-    int workNum = Integer.bitCount(i);
-    for (int j = 0; j < n; j++) {
-        if ((i & (1 << j)) == 0) {
-            int nextVisited = i | (1 << j);
-            int nextCost = dp[i] + costs[j][workNum];
-            dp[nextVisited] = Math.min(dp[nextVisited], nextCost);
-        }
-    }
-}
+for(int i = 0; i<N-1; i++) {
+			input = in.readLine().split(" ");
+			int U = Integer.parseInt(input[0]);
+			int V = Integer.parseInt(input[1]);
+			
+			if(list[U]== null) {
+				Node node = new Node(U,V);
+				list[U] = node;
+			}else {
+				list[U].ch.add(V);
+			}
+			
+			if(list[V]== null) {
+				Node node = new Node(V,U);
+				list[V] = node;
+			}else {
+				list[V].ch.add(U);
+			}
+			
+		}
+```
+- dfs를 활용해서 최상의 부모의 자식들을 탐색한다.
+- 젤 마지막 자식부터 올라오면서 간선수를 더해서 저장해준다.
+```java
+static int dfs(Node node) {
+		int count =1;
+		check[node.n] = true;
+		for(int i = 0; i<node.ch.size(); i++) {
+			int num = node.ch.get(i);
+			if(!check[num]) {
+				count += dfs(list[num]);
+			}
+		}
+		
+		arr[node.n]= count;
+		return count;
+	}
 ```
 
+
 ## :black_nib: **Review**  
-비트 마스킹 복습
+
 ## 📡**Link**
-https://www.acmicpc.net/problem/1311
+https://www.acmicpc.net/problem/15681
