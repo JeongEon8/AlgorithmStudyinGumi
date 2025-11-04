@@ -12,7 +12,7 @@
 |[이서현(kizizip)](https://github.com/kizizip)| (취업자 배려 전형) 실버 1개 |
 |[이승지(bmlsj)](https://github.com/bmlsj)| 골드 2개 |
 |[장홍준(ajang369)](https://github.com/ajang369)| 실버 4개 |
-|[한아영(hanayoung)](https://github.com/hanayoung) | 프로그래머스 Lv2 3개 |
+|[한아영(hanayoung)](https://github.com/hanayoung) | 골드 2개, 실버 1개 |
 |[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버 4문제 |
 
 <br>
@@ -77,6 +77,7 @@
   - 제 43회 [25.09.23 - 25.09.29] (진행완료) <br>
   - 제 44회 [25.10.14 ~ 25.10.20] (진행완료) <br>
   - 제 45회 [25.10.21 ~ 25.10.27] (진행완료) <br>
+  - 제 46회 [25.10.28 ~ 25.11.03] (진행완료) <br>
 </details>
 
 
