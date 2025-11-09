@@ -1,56 +1,66 @@
-# [백준 - G3] 17182. 우주 탐사선
+# [백준 - G3] 18808. 스티커붙이기
 
 ## ⏰  **time**
 60분
 
 ## :pushpin: **Algorithm**
-- 플로이드
-- dfs
+- 시뮬레이션
 
 ## ⏲️**Time Complexity**
-$O(Y*N*M)$
+$O(N*M*R*C)$
 
 ## :round_pushpin: **Logic**
-1. 플로이드를 사용해서 각 지점의 최소시간 구하기
+1. 노트북크기 만큼 돌면서 스티커를 붙일수 있는곳을 찾는다. 
 ```java
- for(int k = 0; k<N; k++) {
-			for(int n = 0; n<N; n++) {
-				for(int m = 0; m<N; m++) {
-					if(map[n][m] > map[n][k]+map[k][m]) {
-						map[n][m] = map[n][k]+map[k][m];
+for(int n = 0; n<N; n++) {
+					for(int m =0; m<M; m++) {
+						boolean ch = true;
+						check2 :for(int r=0; r<st.length; r++) {
+							for(int c = 0; c<st[0].length; c++) {
+								if(n+r >=N || m+c>=M) {
+									ch = false;
+									break check2;
+								}
+								if(st[r][c]==1 && map[n+r][m+c]==1) {
+									ch = false;
+									break check2;
+								}
+							}
+						}
+						if(ch) {
+							for(int r=0; r<st.length; r++) {
+								for(int c = 0; c<st[0].length; c++) {
+									
+									if(st[r][c] == 1) {
+										map[n+r][m+c] =st[r][c];
+										result -=1;
+									}
+								}
+							}
+							break check1;
+						}	
 					}
 				}
-				
-			}
-		}
 ```
-2. dfs를 통해 모든점을 다 돌았을때 최소시간 구하기
+	- 탐색 구간이 노트북 화면보다 오바할경우와 이미 스티커가 붙여있는 부분이면 패스한다.
+2. 노트북을 다 탐색했는데 붙일데가 없으면 90도 회전 시켜 다시 탐색
 ```java
-            static void dfs( int n, int sum, int count) {
-		if (sum >= best) return;
-        if (count == N) {
-            best = Math.min(best, sum);
-            return;
+	static int[][] rotate90(int[][] src) {
+        int R = src.length;
+        int C = src[0].length;
+        int[][] rot = new int[C][R];
+        for (int r = 0; r < R; r++) {
+            for (int c = 0; c < C; c++) {
+                rot[c][R - 1 - r] = src[r][c];
+            }
         }
-        
-		for(int i = 0; i<N; i++) {
-			
-			if(!check[i]) {
-				check[i] = true;
-				int total = sum+map[n][i];
-				count++;
-				dfs(i,total,count);
-				count--;
-				check[i] = false;
-			}
-		}
-		
-	}
+        return rot;
+    }
 ```
 
 
 ## :black_nib: **Review**
-- 처음에는 dp로 풀어볼까 생각했다가 도저히 못하겠어서 dfs를 풀었어요
+- 시뮬레이션 문제는 코드 적을게 많아서 싫어요
 
 ## 📡**Link**
-- https://www.acmicpc.net/problem/17182
+- https://www.acmicpc.net/problem/18808
