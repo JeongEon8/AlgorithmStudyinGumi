@@ -1,66 +1,68 @@
-# [백준 - G3] 18808. 스티커붙이기
+# [프로그래머스 - Lv2] PCCP_2번. 퍼즐게임챌린지
 
 ## ⏰  **time**
-60분
+80분
 
 ## :pushpin: **Algorithm**
-- 시뮬레이션
+- 이분탐색
 
 ## ⏲️**Time Complexity**
-$O(N*M*R*C)$
+$O(n log n + n log M)$
 
 ## :round_pushpin: **Logic**
-1. 노트북크기 만큼 돌면서 스티커를 붙일수 있는곳을 찾는다. 
+1. 순서에 맞게 이전 값과 현재값합을 구해주고 diffs 크기 별로 정렬해준다.
+    
+    ex) diffs: [1, 5, 3] times: [2, 4, 7] 
+    
+    arr {1 : 2}, {5 : 6} , {3 : 11} 이런식으로 누럽합을 구해주고 
+    arr {1 : 2}, {3 : 11}, {5 : 6} 이렇게 다시 정렬해준다.
+    
+2. 레벨이 가장 큰 값에서 하나씩 줄여준다. 
+    - 5 → 4 → 3 →2 →1 이런식으로
+    - 처음에는 5이므로 한번에 다 풀 수 있으므로 2 + 4 + 7 = 13
+    - 4이면 5는 한번 더 풀어야하므로 기존에 더한것에서 5의 누접합 6을 더해준다. 13 + 6 = 19
+    - 3 이면 19+6 = 25
+    - 2 이면 25 + 6 + 11 = 44
+        - 44 는 30보다 초과하므로 3이 정답
 ```java
-for(int n = 0; n<N; n++) {
-					for(int m =0; m<M; m++) {
-						boolean ch = true;
-						check2 :for(int r=0; r<st.length; r++) {
-							for(int c = 0; c<st[0].length; c++) {
-								if(n+r >=N || m+c>=M) {
-									ch = false;
-									break check2;
-								}
-								if(st[r][c]==1 && map[n+r][m+c]==1) {
-									ch = false;
-									break check2;
-								}
-							}
-						}
-						if(ch) {
-							for(int r=0; r<st.length; r++) {
-								for(int c = 0; c<st[0].length; c++) {
-									
-									if(st[r][c] == 1) {
-										map[n+r][m+c] =st[r][c];
-										result -=1;
-									}
-								}
-							}
-							break check1;
-						}	
-					}
-				}
-```
-	- 탐색 구간이 노트북 화면보다 오바할경우와 이미 스티커가 붙여있는 부분이면 패스한다.
-2. 노트북을 다 탐색했는데 붙일데가 없으면 90도 회전 시켜 다시 탐색
-```java
-	static int[][] rotate90(int[][] src) {
-        int R = src.length;
-        int C = src[0].length;
-        int[][] rot = new int[C][R];
-        for (int r = 0; r < R; r++) {
-            for (int c = 0; c < C; c++) {
-                rot[c][R - 1 - r] = src[r][c];
-            }
+	for(int i = 0; i<diffs.length; i++){
+            if(i == 0){
+                Info info = new Info(diffs[i],times[i]);
+                infos[i] = info;
+            }else{
+                Info info = new Info(diffs[i],times[i]+times[i-1]);
+                infos[i] = info;
+            }   
         }
-        return rot;
-    }
+        Arrays.sort(infos);
+        
+       
+        int left =1;
+        int right = maxLev;
+        
+        while(left<=right){
+            long total2 = total;
+            int mid = (left+right) /2;
+             for(int i =0; i< infos.length; i++){
+                if(infos[i].lev <= mid){
+                    break;
+                }
+               total2 += (infos[i].time*(infos[i].lev-mid));
+            }
+             if (total2 <= limit) {
+                answer = mid;
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+            
+        }
 ```
+
 
 
 ## :black_nib: **Review**
-- 시뮬레이션 문제는 코드 적을게 많아서 싫어요
+- 14번 테케는 왜 left가 0이면 안되는지 모르겠어요
 
 ## 📡**Link**
-- https://www.acmicpc.net/problem/18808
+- https://school.programmers.co.kr/learn/courses/30/lessons/340212
