@@ -6,13 +6,13 @@
 # 📚 목표
 |아이디|목표|
 |------|---|
-|[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 3개 |
+|[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 2개 |
 |[양성원(YSW-Yang)](https://github.com/YSW-Yang)| 실버 3개 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 골드 2개 |
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 프로그래머스 lv2 2개 |
 |[이서현(kizizip)](https://github.com/kizizip)| (취업자 배려 전형) 실버 1개 |
-|[이승지(bmlsj)](https://github.com/bmlsj)| 골드 2개 |
-|[장홍준(ajang369)](https://github.com/ajang369)| 실버 4개 |
-|[한아영(hanayoung)](https://github.com/hanayoung) | 골드 2개, 실버 1개 |
+|[이승지(bmlsj)](https://github.com/bmlsj)| 실버 3개 |
+|[장홍준(ajang369)](https://github.com/ajang369)| 프로그래머스 lv2 4개 |
+|[한아영(hanayoung)](https://github.com/hanayoung) | 골드 1개 프로그래머스 lv2 2개 |
 |[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버 4문제 |
 
 <br>
@@ -26,7 +26,7 @@
 <br>
 
 # ⌛ 진행상황
-### 제 46회 [25.10.28 ~ 25.11.03] (진행중)
+### 제 48회 [25.11.11 ~ 25.11.17] (진행중)
 <details>
   <summary>2024년</summary>
   - 제 1회 [24.08.01 - 24.08.05] (진행완료) <br>
@@ -78,6 +78,7 @@
   - 제 44회 [25.10.14 ~ 25.10.20] (진행완료) <br>
   - 제 45회 [25.10.21 ~ 25.10.27] (진행완료) <br>
   - 제 46회 [25.10.28 ~ 25.11.03] (진행완료) <br>
+  - 제 47회 [25.11.04 ~ 25.11.10] (진행완료) <br>
 </details>
 
 
