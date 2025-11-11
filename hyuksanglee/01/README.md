@@ -1,66 +1,76 @@
-# [백준 - G3] 18808. 스티커붙이기
+# [프로그래머스 - Lv2]PCCP_2번. 석유 시추
 
 ## ⏰  **time**
-60분
+50분
 
 ## :pushpin: **Algorithm**
-- 시뮬레이션
+- bfs
 
 ## ⏲️**Time Complexity**
-$O(N*M*R*C)$
+$O(C × R)$
 
 ## :round_pushpin: **Logic**
-1. 노트북크기 만큼 돌면서 스티커를 붙일수 있는곳을 찾는다. 
+1. 땅을 하나씩 탐색 
+    - 기름을 만날때까지 탐색하고 기름이면 bfs로 개수를 세어준다.
+    - bfs로 탐색할때 가로해당하는 번호 저장
+        - 4번에서 기름을 만나서 bfs탐색을 할때 가로에 해당하는 번호를 저장하면 4,5,6이 저장됨
+        - bfs로 갯수를 4,5,6 인덱스 배열에 더해준다.
+        - [0, 0, 0, 7, 7, 7, 7 0]
+2. 마지막에 배열에서 가장 큰값 출력
+    - [8, 8, 8, 7, 7, 7, 9, 2]
+    - 여기서 가장 큰값 9를 출력해준다.
 ```java
-for(int n = 0; n<N; n++) {
-					for(int m =0; m<M; m++) {
-						boolean ch = true;
-						check2 :for(int r=0; r<st.length; r++) {
-							for(int c = 0; c<st[0].length; c++) {
-								if(n+r >=N || m+c>=M) {
-									ch = false;
-									break check2;
-								}
-								if(st[r][c]==1 && map[n+r][m+c]==1) {
-									ch = false;
-									break check2;
-								}
-							}
-						}
-						if(ch) {
-							for(int r=0; r<st.length; r++) {
-								for(int c = 0; c<st[0].length; c++) {
-									
-									if(st[r][c] == 1) {
-										map[n+r][m+c] =st[r][c];
-										result -=1;
-									}
-								}
-							}
-							break check1;
-						}	
-					}
-				}
-```
-	- 탐색 구간이 노트북 화면보다 오바할경우와 이미 스티커가 붙여있는 부분이면 패스한다.
-2. 노트북을 다 탐색했는데 붙일데가 없으면 90도 회전 시켜 다시 탐색
-```java
-	static int[][] rotate90(int[][] src) {
-        int R = src.length;
-        int C = src[0].length;
-        int[][] rot = new int[C][R];
-        for (int r = 0; r < R; r++) {
-            for (int c = 0; c < C; c++) {
-                rot[c][R - 1 - r] = src[r][c];
+for(int c = 0; c<C; c++){
+            for(int r = 0; r<R; r++){
+                if(land[c][r] ==1 && check[c][r] == false){
+                    check[c][r] = true;
+                    Queue<Info>que = new ArrayDeque<Info>();
+                    Info info = new Info(c, r);
+                    que.add(info);
+                    
+                    int count =0;
+                    type ++;
+                    
+                    find[r] = type;
+                    
+                    while(!que.isEmpty()){
+                        Info newInfo = que.poll();
+                        count++;
+                        int nc = newInfo.c;
+                        int nr = newInfo.r;
+                        for(int d = 0; d<4; d++){
+                            int cc = nc + dc[d];
+                            int cr = nr + dr[d];
+                            if(cc<0 || cc>=C || cr<0 || cr>=R){
+                                continue;
+                            }
+                            
+                            if(land[cc][cr] == 1 && check[cc][cr] ==false){
+                                check[cc][cr] = true;
+                                info = new Info(cc,cr);
+                                que.add(info);
+                                find[cr] = type;
+                            }
+                        }
+                    }
+                    
+                    for(int i =0; i<R; i++){
+                        if(find[i] == type){
+                            save[i] += count;
+                            if(max< save[i]){
+                                max= save[i];
+                            }
+                        }
+                    }
+                }
             }
         }
-        return rot;
-    }
 ```
+
 
 
 ## :black_nib: **Review**
-- 시뮬레이션 문제는 코드 적을게 많아서 싫어요
+- 프로그래머스로 하니깐 디버깅이 없으니 너무 어려워요
 
 ## 📡**Link**
-- https://www.acmicpc.net/problem/18808
+- https://school.programmers.co.kr/learn/courses/30/lessons/250136
