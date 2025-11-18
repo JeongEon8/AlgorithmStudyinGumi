@@ -1,88 +1,52 @@
-# [프로그래머스 - Lv2]PCCP_3번. 충돌위험찾기
+# [프로그래머스 - Lv2] 서버 증설 횟수
 
 ## ⏰  **time**
-59분
+50분
 
 ## :pushpin: **Algorithm**
-- 시뮬레이션
+- 큐
 
 ## ⏲️**Time Complexity**
-$O(R)$
+$O(len + answer)$
 
 ## :round_pushpin: **Logic**
-1. 로봇에 정보를 담는 클래스 생성
-    - 로봇에 현재 위치, 이동해야 할 위치
-2. routes 크기 만큼 배열을 생성해서 로봇의 정보클래스를 넣어준다.
-    - 예시
-    
-    | [[3, 2], [6, 4], [4, 7], [1, 4]] | [[4, 2], [1, 3], [2, 4]] | 1 |
-    | --- | --- | --- |
-    
-    첫번째 배열에는 로봇에 현재 위치: {1, 4} , 이동해야 할 위치 : {2}
-    
-    두번째 배열에는 로봇에 현재 위치: {3, 2} , 이동해야 할 위치 : {3}
-    
-3. 배열을 하나씩 꺼내서 이동시켜준다. 
-4. 곁치는 부분이 있으면 개수를 세어준다.
-5. 곁치는 개수 출력
+1. players을 m으로 나누기 - m 마다 서버가 증설 되야 하므로 
+    - [0, 2, 3, 3, 1, 2, 0, …] ⇒ [0,0,1,1,0,0,…]
+2. 서버 증설이 필요하면 현재 시간과 k를 더해서 큐에 담아 준다.
+    - 2번째 인덱스 부터 2 + k  값을 큐에 담아 준다.
+3. 서버 증설 개수랑 큐에 개수랑 비교 해서 작으면 추가해준다.
+4. 큐에 첫번째 값이랑 비교해서 현재시간 보다 작으면 pop해준다.
 ```java
- while (count > 0) {
-            check = new int[maxC + 1][maxR + 1];
+for(int i = 0; i<len; i++){
+            players[i] /=m;
+        }
+        
+        Queue<Integer> que = new ArrayDeque<Integer>();
+        
+        for(int i = 0 ; i<len; i++){
             
-            for (int i = 0; i < infos.length; i++) {
-                Info cur = infos[i];
-                if (cur.done) continue; 
-                
-                int rr = cur.r;               
-                int rc = cur.c;                
-                int ar = cur.arrive[1];         
-                int ac = cur.arrive[0];         
-                
-                if (rr == ar && rc == ac) {
-                    count--;
-                    
-                    if (!cur.que.isEmpty()) {
-                        int next = cur.que.poll();
-                        cur.arrive[0] = points[next][0]; 
-                        cur.arrive[1] = points[next][1]; 
-                        
-                        ar = cur.arrive[1];
-                        ac = cur.arrive[0];
-                    } else {
-                        cur.done = true;
-                        continue; 
-                    }
-                }
-                
-                if (rc > ac) {
-                    rc--;
-                } else if (rc < ac) {
-                    rc++;
-                } else if (rr > ar) {
-                    rr--;
-                } else if (rr < ar) {
-                    rr++;
-                }
-                
-                cur.r = rr;
-                cur.c = rc;
-                
-                if (!cur.done) { 
-                    if (rc >= 0 && rr >= 0 && rc <= maxC && rr <= maxR) {
-                        check[rc][rr]++;
-                        if (check[rc][rr] == 2) {
-                            answer++;
-                        }
-                    }
+            if(que.size()>0){
+                while(!que.isEmpty() && que.peek()<=i){
+                    que.poll();
                 }
             }
+            
+            if(players[i]>que.size()){
+                int need = players[i] - que.size();
+                for(int j = 0; j<need; j++){
+                   answer++;
+                    que.add(i+k); 
+                }
+                
+            }
+            
         }
 ```
 
 
 
 ## :black_nib: **Review**
-- 코드가 너무 길거같은데 통과만 하면 되지
+- 만료된 서버 삭제와 서버 추가 하는 부분 순서 바꿔서 처음에 틀렸어요
 
 ## 📡**Link**
-- https://school.programmers.co.kr/learn/courses/30/lessons/340211
+- https://school.programmers.co.kr/learn/courses/30/lessons/389479
