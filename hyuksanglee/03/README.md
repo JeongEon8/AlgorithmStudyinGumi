@@ -1,52 +1,75 @@
-# [프로그래머스 - Lv2] 서버 증설 횟수
+# [프로그래머스 - Lv2] 봉인된 주문
 
 ## ⏰  **time**
 50분
 
 ## :pushpin: **Algorithm**
-- 큐
+- 정렬
 
 ## ⏲️**Time Complexity**
-$O(len + answer)$
+$O(log n)$
 
 ## :round_pushpin: **Logic**
-1. players을 m으로 나누기 - m 마다 서버가 증설 되야 하므로 
-    - [0, 2, 3, 3, 1, 2, 0, …] ⇒ [0,0,1,1,0,0,…]
-2. 서버 증설이 필요하면 현재 시간과 k를 더해서 큐에 담아 준다.
-    - 2번째 인덱스 부터 2 + k  값을 큐에 담아 준다.
-3. 서버 증설 개수랑 큐에 개수랑 비교 해서 작으면 추가해준다.
-4. 큐에 첫번째 값이랑 비교해서 현재시간 보다 작으면 pop해준다.
+1. bans배열을 문자수 작은순, 알파벳 순 으로 정렬
+    
+    ex) ["d", "e", "bb", "aa", "ae"] ⇒ [”d”, “e”, “aa”, “ae”, “bb”]    
+2. 정렬된 bans배열에서 하나씩 꺼내서 해당 알파벳이 몇번째인지 알아낸다.
+3. n보다 작으면 total을 하나 증가 시킴
+4. n보다 클경우 n - total을 해주고 해당 인덱스에 해당하는 알파벳 찾아준다.
 ```java
-for(int i = 0; i<len; i++){
-            players[i] /=m;
+    int len = bans.length;
+        Alpha[] alphas = new Alpha[len];
+        for(int i = 0; i<len; i++){
+            Alpha alpha = new Alpha(bans[i]);
+            alphas[i] = alpha;
+        }
+        Arrays.sort(alphas);
+        
+        int total = 0;
+        for(int i =0; i<len; i++){
+            String s = alphas[i].alphabet;
+            long index = getIndexOf(s);
+            if(index-total <=n){
+                total++;
+            }else{
+                break;
+            }
         }
         
-        Queue<Integer> que = new ArrayDeque<Integer>();
         
-        for(int i = 0 ; i<len; i++){
-            
-            if(que.size()>0){
-                while(!que.isEmpty() && que.peek()<=i){
-                    que.poll();
-                }
-            }
-            
-            if(players[i]>que.size()){
-                int need = players[i] - que.size();
-                for(int j = 0; j<need; j++){
-                   answer++;
-                    que.add(i+k); 
-                }
-                
-            }
-            
+        
+        String answer = getStringAt(n+total);
+        return answer;
+```
+- 해당 문자가 몇번째 인덱스 인지
+```java
+    static long getIndexOf(String s) {
+        long result = 0;
+        for (char ch : s.toCharArray()) {
+            result = result * 26 + (ch - 'a' + 1);
         }
+        return result;
+    }
+```
+- 해당 인덱스에 어떤 문자인지
+```java
+   static String getStringAt(long n) {
+        StringBuilder sb = new StringBuilder();
+        long num = n;
+
+        while (num > 0) {
+            num -= 1;  
+            long remainder = num % 26;
+            sb.append((char)('a' + remainder));
+            num /= 26;
+        }
+
+        return sb.reverse().toString();
+    }
 ```
 
 
-
 ## :black_nib: **Review**
-- 만료된 서버 삭제와 서버 추가 하는 부분 순서 바꿔서 처음에 틀렸어요
 
 ## 📡**Link**
-- https://school.programmers.co.kr/learn/courses/30/lessons/389479
+- https://school.programmers.co.kr/learn/courses/30/lessons/389481
