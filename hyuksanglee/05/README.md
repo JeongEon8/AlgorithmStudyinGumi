@@ -1,66 +1,65 @@
-# [프로그래머스 - Lv2] 리코쳇 로봇
+# [백준 - S1] 그림
 
 ## ⏰  **time**
-70분
+30분
 
 ## :pushpin: **Algorithm**
 - bfs
 
 ## ⏲️**Time Complexity**
-$O(log n)$
+$O(n × m)$
+- n : 세로 길이
+- m : 가로 길이
 
 ## :round_pushpin: **Logic**
-1. bfs를 사용해서 탐색할고 방문처리는 3차원 배열을 사용해서 해당칸에 어느방향으로 방문을 했는지 체크를 할거 같다.
-2. R 위치를 si, sj 에 담는다.
-3. 큐에 si,sj, count를 담아주고 하나씩 뽑아서 주변 탐색(상, 하, 좌,우) 
-4. 주변탐색후 길이 있으면 벽을 만날때까지나 끝에 도착할때 까지 직선으로 이동한다. 이동후에는 방문여부를 방향에 맞게 설정해준다.
-- [0,6] →[0,5] 로 이동하면 [0][5][좌] 를 방문 체크를 해준다. 
+1. 2차원 배열에 그림 정보 입력 받기
+2. for문을 돌면서 1이고 방문하지 않았으면 큐에다 담아주기
+    -이때 그림수도 증가 시켜줌
+3. while로 큐에 빌때까지 돌아준다.
+     - 상,하,좌,우 탐색하고 1이고 방문하지 않을경우 큐에 담아준다.
+     - 그림의 크기수도 증가
+4. 지금까지 그림의 최댓값이랑 비교해서 더 크면 업데이트 시켜줌
 ```java
-  while(!que.isEmpty()){
-            info = que.poll();
-            int ni = info.i;
-            int nj = info.j;
-            int ncount = info.count;
-            for(int d =0; d<4; d++){
-                int ci = ni+di[d];
-                int cj = nj+dj[d];
-                if(ci<0 || ci>=board.length || cj<0 || cj>=board[0].length()){
-                    continue;
-                }
-                if(check[ci][cj][d]==false){
-                    while(true){
-                    if(ci<0 || ci>=board.length || cj<0 || cj>=board[0].length()){
-                            break;
-                        }
-                        if(map[ci][cj]=='D'){
-                            break;
-                        }
-                        
-                        check[ci][cj][d]=true;
-                        ci = ci+di[d];
-                        cj = cj+dj[d];
-                    }
-                    ci = ci-di[d];
-                    cj = cj - dj[d];
-                    
-                    if (ci == ni && cj == nj) continue;
-                    check[ci][cj][d] = true;
-                    if(map[ci][cj]=='G'){
-                        return ncount+1;
-                    }
-                    Info ninfo= new Info(ci,cj,ncount+1);
-                    que.add(ninfo);
-                }
-            }
-            
-        }
-        
-        int answer = -1;
-        return answer;
+  for(int i = 0; i<n; i++) {
+			for(int j = 0; j<m; j++) {
+				if(map[i][j] ==1 && !check[i][j]) {
+					count++;
+					Info info = new Info(i,j);
+					check[i][j] = true;
+					que.add(info);
+					int total = 1;
+					while(!que.isEmpty()) {
+						Info newInfo = que.poll();
+						int ni = newInfo.i;
+						int nj = newInfo.j;
+						for(int d = 0; d<4; d++) {
+							int ci = ni+ di[d];
+							int cj = nj + dj[d];
+							if(ci<0 || ci>=n || cj<0 || cj>=m) {
+								continue;
+							}
+							
+							if(map[ci][cj]==1 && !check[ci][cj]) {
+								check[ci][cj] = true;
+								total++;
+								info = new Info(ci,cj);
+								que.add(info);
+							}
+							
+						}
+					}
+					if(max < total) {
+						max = total;
+					}
+				}
+			}
+		}
 ```
 
 
 ## :black_nib: **Review**
+- 이클립스로 해서 디버깅을 할수 있어서 틀렸지만 바로 해결할수 있었어요
+- 코테도 이클립스로 칠수 있었으면 좋겠다
 
 ## 📡**Link**
-- https://school.programmers.co.kr/learn/courses/30/lessons/169199
+- https://www.acmicpc.net/problem/1926
