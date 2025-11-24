@@ -1,76 +1,56 @@
-# [프로그래머스 - Lv2]PCCP_2번. 석유 시추
+# [프로그래머스 - S3]2579. 계단 오르기
 
 ## ⏰  **time**
-50분
+30분
 
 ## :pushpin: **Algorithm**
-- bfs
+- dp
 
 ## ⏲️**Time Complexity**
-$O(C × R)$
+$O(N)$
 
 ## :round_pushpin: **Logic**
-1. 땅을 하나씩 탐색 
-    - 기름을 만날때까지 탐색하고 기름이면 bfs로 개수를 세어준다.
-    - bfs로 탐색할때 가로해당하는 번호 저장
-        - 4번에서 기름을 만나서 bfs탐색을 할때 가로에 해당하는 번호를 저장하면 4,5,6이 저장됨
-        - bfs로 갯수를 4,5,6 인덱스 배열에 더해준다.
-        - [0, 0, 0, 7, 7, 7, 7 0]
-2. 마지막에 배열에서 가장 큰값 출력
-    - [8, 8, 8, 7, 7, 7, 9, 2]
-    - 여기서 가장 큰값 9를 출력해준다.
+1. 2차원 배열 만들어서 1번째 칸에는 2번 밑에 있는 계단에서 가장 큰값 불러와서 현제 값이랑 더해서 넣어주고
+2. 2번째 칸에는 1번 밑에 있는 1번째 값이랑 더해서 넣어준다.
 ```java
-for(int c = 0; c<C; c++){
-            for(int r = 0; r<R; r++){
-                if(land[c][r] ==1 && check[c][r] == false){
-                    check[c][r] = true;
-                    Queue<Info>que = new ArrayDeque<Info>();
-                    Info info = new Info(c, r);
-                    que.add(info);
-                    
-                    int count =0;
-                    type ++;
-                    
-                    find[r] = type;
-                    
-                    while(!que.isEmpty()){
-                        Info newInfo = que.poll();
-                        count++;
-                        int nc = newInfo.c;
-                        int nr = newInfo.r;
-                        for(int d = 0; d<4; d++){
-                            int cc = nc + dc[d];
-                            int cr = nr + dr[d];
-                            if(cc<0 || cc>=C || cr<0 || cr>=R){
-                                continue;
-                            }
-                            
-                            if(land[cc][cr] == 1 && check[cc][cr] ==false){
-                                check[cc][cr] = true;
-                                info = new Info(cc,cr);
-                                que.add(info);
-                                find[cr] = type;
-                            }
-                        }
-                    }
-                    
-                    for(int i =0; i<R; i++){
-                        if(find[i] == type){
-                            save[i] += count;
-                            if(max< save[i]){
-                                max= save[i];
-                            }
-                        }
-                    }
-                }
-            }
-        }
+for(int i = 0; i<n; i++) {
+			int max = 0;
+			int p = Integer.parseInt(in.readLine());
+			if(i == 0) {
+				dp[i][0] = p;
+				dp[i][1] = p;
+			}
+			else if(i==1) {
+				dp[i][0] = p;
+				dp[i][1] = p+dp[0][0];
+			}
+			else {
+				if(max < dp[i-2][0]) {
+					max = dp[i-2][0];
+				}
+				if(max < dp[i-2][1]) {
+					max = dp[i-2][1];
+				}
+				dp[i][0] = max + p;
+				dp[i][1] = dp[i-1][0] + p;
+			}
+				
+			
+		}
+		
+		int max = 0;
+		if(dp[n-1][0]>max) {
+			max=dp[n-1][0];
+		}
+		if(dp[n-1][1]>max) {
+			max = dp[n-1][1];
+		}
 ```
 
 
 
 ## :black_nib: **Review**
-- 프로그래머스로 하니깐 디버깅이 없으니 너무 어려워요
+- 잠이 안와서 한문제 풀었어요
 
 ## 📡**Link**
-- https://school.programmers.co.kr/learn/courses/30/lessons/250136
+- https://www.acmicpc.net/problem/2579
