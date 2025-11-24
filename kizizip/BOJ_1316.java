@@ -7,7 +7,7 @@ public class Main {
         int count = 0;
 
         for (int i = 0; i < n; i++) {
-            String word = sc.next();
+            String word = sc.next(); 
             if (isGroup(word)) count++;
         }
 
