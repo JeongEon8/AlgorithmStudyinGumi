@@ -9,10 +9,10 @@
 |[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 3개 |
 |[양성원(YSW-Yang)](https://github.com/YSW-Yang)| 실버 3개 |
 |[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 프로그래머스 lv2 2개 |
-|[이서현(kizizip)](https://github.com/kizizip)| (취업자 배려 전형) 실버 1개 |
+|[이서현(kizizip)](https://github.com/kizizip)| (취업자 배려 전형) 휴식! |
 |[이승지(bmlsj)](https://github.com/bmlsj)| 실버 1개 + 프로그래머스 lv2 2개 |
-|[장홍준(ajang369)](https://github.com/ajang369)| 프로그래머스 lv2 4개 |
-|[한아영(hanayoung)](https://github.com/hanayoung) | 골드 1개 프로그래머스 lv2 2개 |
+|[장홍준(ajang369)](https://github.com/ajang369)| 실버 3개 |
+|[한아영(hanayoung)](https://github.com/hanayoung) | 골드 2개 프로그래머스 lv2 1개 |
 |[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버 4문제 |
 
 <br>
@@ -81,6 +81,7 @@
   - 제 47회 [25.11.04 ~ 25.11.10] (진행완료) <br>
   - 제 48회 [25.11.11 ~ 25.11.17] (진행완료) <br>
   - 제 49회 [25.11.18 ~ 25.11.24] (진행완료) <br>
+  - 제 50회 [25.11.25 ~ 25.12.01] (진행완료) <br>
 </details>
 
 
