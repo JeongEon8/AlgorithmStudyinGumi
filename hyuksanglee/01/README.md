@@ -1,13 +1,13 @@
-# [백준 - G4] 2240. 자두나무
+# [프로그래머스 - lv2] 과제 진행하기
 
 ## ⏰  **time**
-70분
+40분
 
 ## :pushpin: **Algorithm**
-dp
+스택, 큐, 정렬
 
 ## ⏲️**Time Complexity**
-$O(Y*N*M)$
+$O(N log N)$
 
 ## :round_pushpin: **Logic**
 1. dp배열 3차원 배열을 만들어준다.
@@ -44,7 +44,7 @@ for(int i = 0; i<W+1; i++) {
 
 
 ## :black_nib: **Review**
-- 맞힌사람이 별로없는 문제는 어렵긴하네요
+- 
 
 ## 📡**Link**
-- https://www.acmicpc.net/problem/2240
+- https://school.programmers.co.kr/learn/courses/30/lessons/176962
