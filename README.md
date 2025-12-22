@@ -1,21 +1,27 @@
+# 연말 잘 지내고 봐요~~ (2025.01.05 시작)
+<img width="1500" height="500" alt="Merry Christmas" src="https://github.com/user-attachments/assets/6965dec5-22a2-492d-957e-e4eb1e066c8d" />
+<img width="1500" height="500" alt="happy new year" src="https://github.com/user-attachments/assets/032b2102-73e0-421a-adf0-769319cb577a" />
+
+<br>
+
 # 💵 현재 벌금 총액
 
-### 벌금 365,000원 + 이자 1,810원 = 총액 366,810원
+### 벌금 380,000원 + 이자 2,009원 = 총액 382,009원
 
 <br>
 
 # 📚 목표
 
 |아이디|목표|
-|------|---|
-|[김정언(JeongEon)](https://github.com/JeongEon8)| 실버 3개 |
-|[양성원(YSW-Yang)](https://github.com/YSW-Yang)| 실버이상 3개 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 프로그래머스 lv2 2개 |
-|[이서현(kizizip)](https://github.com/kizizip)| (취업자 배려 전형) 휴식! |
-|[이승지(bmlsj)](https://github.com/bmlsj)| 실버 1개 + 프로그래머스 lv2 2개 |
-|[장홍준(ajang369)](https://github.com/ajang369)| 휴식! 대신 잘 보고 와야함 |
-|[한아영(hanayoung)](https://github.com/hanayoung) | 실버이상 3개 |
-|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)| 실버이상 4개 |
+|---|---|
+|[김정언(JeongEon)](https://github.com/JeongEon8)||
+|[양성원(YSW-Yang)](https://github.com/YSW-Yang)||
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)||
+|[이승지(bmlsj)](https://github.com/bmlsj)||
+|[이서현(kizizip)](https://github.com/kizizip)|(취업자배려전형)|
+|[장홍준(ajang369)](https://github.com/ajang369)|(취업자배려전형)|
+|[한아영(hanayoung)](https://github.com/hanayoung)|(취업자배려전형)|
+|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)|(취업자배려전형)|
 
 <br>
 
