@@ -15,7 +15,7 @@
 |아이디|목표|
 |---|---|
 |[김정언(JeongEon)](https://github.com/JeongEon8)||
-|[양성원(YSW-Yang)](https://github.com/YSW-Yang)||
+|[양성원(YSW-Yang)](https://github.com/YSW-Yang)| 백준 실버이상 3개 |
 |[이상혁(hyuksanglee)](https://github.com/hyuksanglee)||
 |[이승지(bmlsj)](https://github.com/bmlsj)| 백준 실버 3개 |
 |[이서현(kizizip)](https://github.com/kizizip)|(취업자배려전형)|
