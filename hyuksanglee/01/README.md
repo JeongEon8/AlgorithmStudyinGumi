@@ -1,39 +1,43 @@
-# [백준 - 실버 3] 1051. 숫자 정사각형
+# [프로그래머스 - lv2] 178870. 연속된 부분 수열의 합
 
 ## ⏰**time**
-20분
+30분
 
 ## :pushpin: **Algorithm**
-브루트포스 (완전 탐색)
+* 큐
 
 ## ⏲️**Time Complexity**
-$O(N \times M \times \min(N, M))$
-(모든 좌표에서 가능한 정사각형 한 변의 길이를 탐색)
+$O(N)$
 
 ## :round_pushpin: **Logic**
-1. 입력으로 주어진 숫자판을 2차원 배열에 저장한다.
-2. 만들 수 있는 정사각형의 최대 변 길이는 `min(N, M)`이다.
-3. 변의 길이를 1부터 최대 길이까지 늘려가며 탐색한다.
-4. 각 위치 `(i, j)`를 정사각형의 왼쪽 위 꼭짓점으로 잡고,
-
-   * `(i, j)`
-   * `(i + len - 1, j)`
-   * `(i, j + len - 1)`
-   * `(i + len - 1, j + len - 1)`
-     네 꼭짓점의 숫자가 모두 같은지 확인한다.
-5. 조건을 만족하면 해당 변의 길이를 최댓값으로 갱신한다.
-6. 최종적으로 **가장 큰 정사각형의 넓이 (`변의 길이²`)**를 출력한다.
+1. 정렬되어 있는 배열을 역순으로 뽑는다
+2. 큐에 저장하고 total 변수에 더해준다.
+3. total이 k보다 크면 큐에서 하나씩 빼주고 total에서 그 값을 빼준다.
+4. total이 k일 경우 큐의 사이즈를 가져와서 이전에 정답 사이즈 값이랑 비교 하여 작거나 같을 경우 큐에 저장된 인덱스 값 저장
+     - for문으로 정렬된 배열을 역순으로 돌기 때문에 for문의 인덱스를 시작 인덱스로 잡고 사이즈를 더해서 마지막 인덱스로 잡아준다.
 
 ```
-for len = 1 to min(N, M)
-    for i = 0 to N - len
-        for j = 0 to M - len
-            네 꼭짓점의 값이 같은지 확인
-            같다면 최대 길이 갱신
+Queue<Integer> que = new ArrayDeque<Integer>();
+        for(int l = len-1; l>=0; l--){
+            int n = sequence[l];
+            total+= n;
+            que.add(n);
+            while(total>k && !que.isEmpty()){
+                total -= que.poll();
+            }
+            if(total == k){
+                if(size >= que.size()){
+                  size = que.size();
+                    a = l;
+                    b = l+size-1;
+                }
+            }
+            
+        }
 ```
 
 ## :black_nib: **Review**
--
+- 오랜만에 알고리즘~~~
 
 ## 📡 Link
-[https://www.acmicpc.net/problem/1051](https://www.acmicpc.net/problem/1051)
+https://school.programmers.co.kr/learn/courses/30/lessons/178870
