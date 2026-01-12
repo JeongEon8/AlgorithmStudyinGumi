@@ -1,6 +1,12 @@
 # 💵 현재 벌금 총액
 
-### 벌금 10000원 + 이자 0원 = 총액 10000원
+[✨벌금은 투명하게 공개됩니다✨](https://docs.google.com/spreadsheets/d/1SA-3FZ68yAtUvqcq3b33LhOsZJc6WIB4Fr1K43GUGK0/edit?usp=sharing)
+
+|항목|금액|
+|---|---|
+|벌금|10,000원|
+|이자|0원|
+|총액|10,000원|
 
 <br>
 
