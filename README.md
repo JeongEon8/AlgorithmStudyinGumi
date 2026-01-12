@@ -1,6 +1,6 @@
 # 💵 현재 벌금 총액
 
-### 벌금 0원 + 이자 0원 = 총액 0원
+### 벌금 10000원 + 이자 0원 = 총액 10000원
 
 <br>
 
@@ -8,15 +8,15 @@
 
 |아이디|목표|
 |---|---|
-|[김정언(JeongEon)](https://github.com/JeongEon8)|백준 실버 이상 3개|
-|[양성원(YSW-Yang)](https://github.com/YSW-Yang)| 백준 실버이상 3개 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 프로그래머스 Lv2 2개 |
-|[이승지(bmlsj)](https://github.com/bmlsj)| 백준 실버 3개 |
-|[정찬우(Jhanoo)](https://github.com/Jhanoo)| 백준 골드 2개 |
+|[김정언(JeongEon)](https://github.com/JeongEon8)| 백준 실버 이상 4개 |
+|[양성원(YSW-Yang)](https://github.com/YSW-Yang)| 백준 실버 이상 3개 |
+|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 백준 골드 이상 2개 |
+|[이승지(bmlsj)](https://github.com/bmlsj)| 백준 실버 이상 3개 |
+|[정찬우(Jhanoo)](https://github.com/Jhanoo)| 백준 골드 이상 3개 |
 |[이서현(kizizip)](https://github.com/kizizip)|(취업자배려전형)|
 |[장홍준(ajang369)](https://github.com/ajang369)|(취업자배려전형)|
-|[한아영(hanayoung)](https://github.com/hanayoung)|(취업자배려전형)|
-|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)|(취업자배려전형)|
+|[한아영(hanayoung)](https://github.com/hanayoung)|(취업자배려전형) 백준 실버 이상 3개 |
+|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)|(취업자배려전형) 19일에 봐용 |
 
 <br>
 
@@ -31,7 +31,7 @@
 
 # ⌛ 진행상황
 
-### 제 54회 [26.01.05 ~ 26.01.12] (진행중)
+### 제 55회 [26.01.13 ~ 26.01.19] (진행중)
 
 <details>
   <summary>2024년</summary>
@@ -91,6 +91,7 @@
   - 제 51회 [25.12.02 ~ 25.12.08] (진행완료) <br>
   - 제 52회 [25.12.09 ~ 25.12.15] (진행완료) <br>
   - 제 53회 [25.12.16 ~ 25.12.22] (진행완료) <br>
+  - 제 54회 [26.01.05 ~ 26.01.12] (진행완료) <br>
 </details>
 
 <br>
