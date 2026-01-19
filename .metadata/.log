@@ -1,0 +1,16 @@
+!SESSION 2025-12-17 14:18:16.068 -----------------------------------------------
+eclipse.buildId=4.32.0.20240606-1231
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/isanghyeog/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.jee.product -keyring /Users/isanghyeog/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2025-12-17 14:18:17.351
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-12-17 14:18:40.172
+!MESSAGE Logback config file: /Users/isanghyeog/Documents/java/hyuksanglee/AlgorithmStudyinGumi/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-12-17 14:18:46.269
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.urischeme.AutoRegisterSchemeHandlersJob
