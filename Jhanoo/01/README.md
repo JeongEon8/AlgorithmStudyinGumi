@@ -16,37 +16,37 @@ $O(N)$
 
 1. 두 개의 포인터 `l`(왼쪽)과 `r`(오른쪽)을 초기화하고, 현재 부분합 `sum`을 0으로 설정합니다.
 
-```
-int l = 0;
-int r = 0;
-int sum = 0;
-int ans = Integer.MAX_VALUE;
-```
+   ```java
+   int l = 0;
+   int r = 0;
+   int sum = 0;
+   int ans = Integer.MAX_VALUE;
+   ```
 
 2. 현재 부분합이 S 이상이면, 최소 길이를 업데이트하고 왼쪽 포인터를 이동시켜 구간을 줄입니다.
 
-```
-if (sum >= S) {
-    ans = Math.min(ans, r - l);
-    sum -= a[l++];
-}
-```
+   ```java
+   if (sum >= S) {
+       ans = Math.min(ans, r - l);
+       sum -= a[l++];
+   }
+   ```
 
 3. 현재 부분합이 S 미만이면, 오른쪽 포인터를 이동시켜 구간을 확장합니다. 오른쪽 포인터가 배열의 끝에 도달하면 종료합니다.
 
-```
-else {
-    if (r == N)
-        break;
-    sum += a[r++];
-}
-```
+   ```java
+   else {
+       if (r == N)
+           break;
+       sum += a[r++];
+   }
+   ```
 
 4. 모든 가능한 구간을 탐색한 후, 조건을 만족하는 구간이 없으면 0을 출력하고, 있으면 최소 길이를 출력합니다.
 
-```
-System.out.println(ans == Integer.MAX_VALUE ? 0 : ans);
-```
+   ```java
+   System.out.println(ans == Integer.MAX_VALUE ? 0 : ans);
+   ```
 
 ## :black_nib: **Review**
 
