@@ -2,27 +2,27 @@
 
 [✨벌금은 투명하게 공개됩니다✨](https://docs.google.com/spreadsheets/d/1SA-3FZ68yAtUvqcq3b33LhOsZJc6WIB4Fr1K43GUGK0/edit?usp=sharing)
 
-|항목|금액|
-|---|---|
-|벌금|20,000원|
-|이자|0원|
-|총액|20,000원|
+| 항목 | 금액     |
+| ---- | -------- |
+| 벌금 | 20,000원 |
+| 이자 | 0원      |
+| 총액 | 20,000원 |
 
 <br>
 
 # 📚 목표
 
-|아이디|목표|
-|---|---|
-|[김정언(JeongEon)](https://github.com/JeongEon8)| 백준 실버 이상 4개 |
-|[양성원(YSW-Yang)](https://github.com/YSW-Yang)| 백준 실버 이상 4개 |
-|[이상혁(hyuksanglee)](https://github.com/hyuksanglee)| 백준 골드 이상 2개 |
-|[이승지(bmlsj)](https://github.com/bmlsj)| 백준 실버 이상 3개 |
-|[정찬우(Jhanoo)](https://github.com/Jhanoo)| 백준 골드 이상 3개 |
-|[이서현(kizizip)](https://github.com/kizizip)|(취업자배려전형)|
-|[장홍준(ajang369)](https://github.com/ajang369)|(취업자배려전형)|
-|[한아영(hanayoung)](https://github.com/hanayoung)|(취업자배려전형) 백준 실버 이상 3개 |
-|[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)|(취업자배려전형) 백준 실버 이상 2개 |
+| 아이디                                                      | 목표                                |
+| ----------------------------------------------------------- | ----------------------------------- |
+| [김정언(JeongEon)](https://github.com/JeongEon8)            | 백준 실버 이상 4개                  |
+| [양성원(YSW-Yang)](https://github.com/YSW-Yang)             | 백준 실버 이상 4개                  |
+| [이상혁(hyuksanglee)](https://github.com/hyuksanglee)       | 백준 골드 이상 2개                  |
+| [이승지(bmlsj)](https://github.com/bmlsj)                   | 백준 실버 이상 3개                  |
+| [정찬우(Jhanoo)](https://github.com/Jhanoo)                 | 백준 골드 이상 3개                  |
+| [이서현(kizizip)](https://github.com/kizizip)               | (취업자배려전형)                    |
+| [장홍준(ajang369)](https://github.com/ajang369)             | (취업자배려전형)                    |
+| [한아영(hanayoung)](https://github.com/hanayoung)           | (취업자배려전형) 백준 실버 이상 3개 |
+| [황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok) | (취업자배려전형) 백준 실버 이상 2개 |
 
 <br>
 
@@ -33,7 +33,7 @@
 - 전체 기간: 24년 8월 ~
 - 인원: 8명
 - 방식: 매주 월요일 오후 8시 온라인 회의
-<br>
+  <br>
 
 # ⌛ 진행상황
 
@@ -97,6 +97,9 @@
   - 제 51회 [25.12.02 ~ 25.12.08] (진행완료) <br>
   - 제 52회 [25.12.09 ~ 25.12.15] (진행완료) <br>
   - 제 53회 [25.12.16 ~ 25.12.22] (진행완료) <br>
+</details>
+<details>
+    <summary>2026년</summary>
   - 제 54회 [26.01.05 ~ 26.01.12] (진행완료) <br>
   - 제 55회 [26.01.13 ~ 26.01.19] (진행완료) <br>
   - 제 56회 [26.01.20 ~ 26.01.26] (진행완료) <br>
@@ -159,30 +162,36 @@
 
 # README.md 예시
 
-```mkdown
-  # [백준 - 골드 5] 5467. 용액
-  
-  ## ⏰**time**
-  (걸린 시간을 작성해주세요.)
-  
-  ## :pushpin: **Algorithm**
-  (알고리즘을 작성해주세요.)
-  
-  ## ⏲️**Time Complexity**
-  $O(N)$ (시간 복잡도를 작성해주세요.)
-  
-  ## :round_pushpin: **Logic**
-  1. (풀이 방식을 작성해주세요.)
-  \```
-    로직
-  \```
-  
-  ## :black_nib: **Review**
-  - (소감을 작성해주세요.)
-  
-  ## 📡 Link
-  https://www.acmicpc.net/problem/(문제번호)
-```
+````mkdown
+# [백준 - 골드 5] 5467. 용액
+
+## ⏰**time**
+
+(걸린 시간을 작성해주세요.)
+
+## :pushpin: **Algorithm**
+
+(알고리즘을 작성해주세요.)
+
+## ⏲️**Time Complexity**
+
+$O(N)$ (시간 복잡도를 작성해주세요.)
+
+## :round_pushpin: **Logic**
+
+1. (풀이 방식을 작성해주세요.)
+   \```
+   로직
+   \```
+
+## :black_nib: **Review**
+
+- (소감을 작성해주세요.)
+
+## 📡 Link
+
+https://www.acmicpc.net/problem/(문제번호)
+````
 
 ### 비고
 
