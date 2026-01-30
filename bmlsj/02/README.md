@@ -64,4 +64,4 @@ static void move(int x, int y, int d, int g) {
 
 ## 📡**Link**
 
-- [https://www.acmicpc.net/problem/1002](https://www.acmicpc.net/problem/1002)
+- [https://www.acmicpc.net/problem/15685](https://www.acmicpc.net/problem/15685)
