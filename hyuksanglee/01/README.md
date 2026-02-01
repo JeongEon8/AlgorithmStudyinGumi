@@ -1,4 +1,4 @@
-# [백준 - S3] 1002. 터렛
+# [백준 - G5] . 치킨 배달
 
 ## ⏰ **time**
 
@@ -6,42 +6,78 @@
 
 ## ⏲️**Time Complexity**
 
-$O(N)$
+$O(집*M* 치킨)$
 
 ## :round_pushpin: **Logic**
 
-- `sum`: 두 반지름의 합의 제곱 => 외접
-- `diff`' : 두 반지름의 차의 제곱 => 내접
-
-1. 두 원의 중심이 같고 반지름이 같을 경우 => 교점이 무한 개이므로 `-1`
-2. 두 원이 너무 멀리 떨어져있거나 한 원이 다른 원 안에 있어 만나지 않을 때 => 교점이 `0`개
-3. 외접이나 내접일 경우 => 교점 `1`개
-4. 두 원이 두 점에서 교차할 때 => 교점 `2`개
+1. 리스트로 치킨의 좌표와 집 좌표를 담아준다.
+```java
+for(int i = 0; i<N; i++) {
+			input = in.readLine().split(" ");
+			for(int j = 0; j<N; j++) {
+				int num = Integer.parseInt(input[j]);
+				
+				if(num ==1) {
+					Info ih = new Info(i,j);
+					home.add(ih);
+				}
+				else if(num ==2 ) {
+					Info ic = new Info(i,j);
+					chicken.add(ic);
+					sizeC++;
+				}
+			}
+		}
+```
+2. 치킨집에서 집까지 각각의 거리를 미리 계산해서 배열에 담아준다.
 
 ```java
-static void dir(int x1, int y1, int r1, int x2, int y2, int r2) {
-
-	long dx = x1 - x2;
-	long dy = y1 - y2;
-	long d = dx * dx + dy * dy; // 거리의 제곱
-
-	long sum = (long) (r1 + r2) * (r1 + r2);
-	long diff = (long) (r1 - r2) * (r1 - r2);
-
-	if (d == 0 && r1 == r2) {
-		System.out.println(-1);
-	} else if (d > sum || d < diff) {
-		System.out.println(0);
-	} else if (d == sum || d == diff) {
-		System.out.println(1);
-	} else {
-		System.out.println(2);
-	}
-}
+ for(int i = 0; i<chicken.size(); i++) {
+	        	
+			 int c = chicken.get(i).i;
+			 int r = chicken.get(i).j;
+			 for(int j = 0 ; j<home.size(); j++) {
+				 
+				 di[i][j] = Math.abs(c-home.get(j).i) + Math.abs(r-home.get(j).j);
+				 
+			 }
+        }
 ```
+		
+		
+3. 조합으로 치킨집이 가능한 수만큼 수를 조합하고 해당 배열에 있는 조합의 거리중 최솟값을 더해준다.
+```java
+static void combination(int depth, int start) {
+	   
+	    if (depth == M) {
+	    	int total =0;
+	        for(int i = 0; i<home.size(); i++) {
+	        	int min = Integer.MAX_VALUE;
+	        	for(int j = 0; j<M; j++) {
+	        		if(min > di[pick[j]][i]) {
+	        			min = di[pick[j]][i];
+	        		}
+	        	}
+	        	total+= min;
+	        	
+	        	
+	        }
+	        if(result > total) {
+        		result = total;
+        	}
+	        return;
+	    }
+	    
+	    for (int i = start; i < sizeC; i++) {
+	        pick[depth] = i;
+	        combination(depth + 1, i + 1);
+	    }
+	}
+```
+4. 총 더한 값이 최소가 되는값 출력
 
 ## :black_nib: Review
 
 ## 📡**Link**
 
-- [https://www.acmicpc.net/problem/1002](https://www.acmicpc.net/problem/1002)
+- https://www.acmicpc.net/problem/15686
