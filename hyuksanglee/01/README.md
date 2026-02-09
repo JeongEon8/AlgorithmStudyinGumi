@@ -1,94 +1,80 @@
-# [백준 - S4] 20125. 쿠키의 신체 측정
+# [백준 - G5] 20055. 컨베이어 벨트 위의 로봇
 
 ## ⏰ **time**
 
-30분
+90분
 
 ## ⏲️**Time Complexity**
 
-$O(N^2)$
+$O(N × K)$
 
+- N : 컨베이어 수
+- K : 최대 0의 개수
 ## :round_pushpin: **Logic**
 
-1. 심장 위치 탐색
-
-- 심장은 상, 하, 좌, 우가 모두 `*`인 위치
-
-1. 팔 길이 측정
-
-- 왼팔: 심장 위치에서 왼쪽으로 이동
-- 오른팔: 심장 위치에서 오른쪽으로 이동
-
-1. 허리 길이 측정
-   심장 바로 아래에서 시작하여 아래 방향으로 `*`의 개수를 센다.
-   허리의 끝 위치를 `waistEnd`로 저장한다.
-2. 다리 길이 측정
-
-- 왼쪽 다리: 허리 끝 바로 아래의 왼쪽 칸에서 시작하여 아래 방향으로 `*` 개수를 센다.
-
-- 오른쪽 다리: 허리 끝 바로 아래의 오른쪽 칸에서 시작하여 아래 방향으로 `*` 개수를 센다.
-
+1. 내구도를 하나씩 넣어준다.
 ```java
-int heart_x = 0, heart_y = 0;
-  for (int i = 1; i < N - 1; i++) {
-   for (int j = 1; j < N - 1; j++) {
-    if (cookie[i][j] == '*') {
-     // 상하좌우가 모두 * 면, 심장
-     if (cookie[i - 1][j] == '*' && cookie[i + 1][j] == '*' && cookie[i][j - 1] == '*'
-       && cookie[i][j + 1] == '*') {
-      heart_x = i;
-      heart_y = j;
-      break;
-     }
-    }
-   }
-   if (heart_x != 0)
-    break;
-  }
+   input =in.readLine().split(" ");
+		for(int i =0; i<2*N; i++) {
+			arr[i] = Integer.parseInt(input[i]);
+		}
+```
+2. 먼저 내구도와 로봇 한바퀴 돌려준다.
+ ```java
+   boolean temN = check[2*N-1];
+			for(int i =2*N-1; i>0; i--) {
+				check[i]=check[i-1];
+			}
+			check[0]= temN;
+			
+			int temM = arr[2*N-1];
+			for(int i =2*N-1; i>0; i--) {
+				arr[i]=arr[i-1];
+			}
+			arr[0]= temM;
+			
+```
+3. 첫번쨰 칸이랑 n-1칸 비워준다.
+```java
+         check[0]=false;
+			check[N-1]=false;
+```
+4. 로봇을 옆에 비어있으면 이동시켜주고 그 칸이 n-1이면 비워준다.
+```java
+			for(int i =N-2; i>=0; i--) {
+				if( check[i] && check[i+1]==false && arr[i+1]>0) {
+					check[i]=false;
+					check[i+1]=true;
+					arr[i+1]--;
+				}
+				check[N-1]=false;
+			}
+```
+5. 첫번째 칸이 내구도가 있으면 로봇을 생성 한다.
+```java
+	if(arr[0]>0) {
+				arr[0]--;
+				check[0] = true;
+			}
+```
+   
+6. 내구도가 0인게 k 될때까지 돌려준다.
+```java
+   while(count<K) {
+   ~~~~~
 
-  int leftArm = 0;
-  int y = heart_y - 1;
-  while (y >= 0 && cookie[heart_x][y] == '*') {
-   leftArm++;
-   y--;
-  }
-
-  int rightArm = 0;
-  y = heart_y + 1;
-  while (y < N && cookie[heart_x][y] == '*') {
-   rightArm++;
-   y++;
-  }
-
-  int waist = 0;
-  int x = heart_x + 1;
-  while (x < N && cookie[x][heart_y] == '*') {
-   waist++;
-   x++;
-  }
-
-  int waistEnd = waist + heart_x;
-  int leftLeg = 0;
-  x = waistEnd + 1;
-  y = heart_y - 1;
-
-  while (x < N && cookie[x][y] == '*') {
-   x++;
-   leftLeg++;
-  }
-
-  int rightLeg = 0;
-  x = waistEnd + 1;
-  y = heart_y + 1;
-  while (x < N && cookie[x][y] == '*') {
-   x++;
-   rightLeg++;
-  }
-
+   count =0;
+			 for (int i = 0; i < 2 * N; i++) {
+	                if (arr[i] == 0) {
+	                    count++;
+	                }
+	            }
 ```
 
-## :black_nib: Review
 
+## :black_nib: Review
+- 너무 어려운거 골랐어요
+- 처음에는 index 값을 만들어서 그것만 돌릴려고 했는데 안되더라구요
 ## 📡**Link**
 
-- [https://www.acmicpc.net/problem/20125](https://www.acmicpc.net/problem/20125)
+- [https://www.acmicpc.net/problem/20055](https://www.acmicpc.net/problem/20055)
