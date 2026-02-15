@@ -1,8 +1,8 @@
-# [백준 - G5] 12852. 1로 만들기 2 
+# [백준 - G5] 5557. 1학년
 
 ## ⏰ **time**
 
-40분
+30분
 
 ## :pushpin: **Algorithm**
 
@@ -13,68 +13,44 @@
 $O(N)$
 
 ## :round_pushpin: **Logic**
-- 주어진 숫자를 -1, 나누기2, 3 을 해서 최소한으로 횟수로 1을 만드는 문제
-- 1부터 N까지 순차적으로 찾으면 되것이라 판단
-  - 배열 2개를 만들어서 하나는 최소 개수를 담고 하나는 이전 값을 담는 배열
-    1. 크기가 N+1 인 배열 2개 생성
-	
-    2. 1부터 3까지 직접 넣어준다. 
-		- 1일경우 :  횟수 0이고 이전값 1
-    	- 2일경우 : 횟수 1이고 이전값 1
-     	- 3일경우 : 횟수 1이고 이전값 1
-    3. 그 다음 숫자 부터 -1값의 횟수와 나누기2, 나누기 3 각각의 횟수를 비교 해서 최솟값을 선정
-    4. 선정한다음 횟수는 +1 시키고 이전값에도 추가해준다.
-       - 4 일 경우 : -1 값은 3 이고 횟수는 1이고, 나누기 2를 하면 2이고 횟수는 1, 나누기 3은 안됨
-	   				최소 횟수인 -1, /2 중에 하나 고르고 값을 반영 arr[4] =  1+1 =2, save[4] = 3 또는 2
+- 왼쪽 수부터 N-1 까지 더하거나 뺴서 N숫자 만들기 ( 대신 중간에 0미만이나 20 초과 뜨면 안됨)
+  1. 계산 결과를 담는 2차원 배열 생성
+     - 첫번째가 8 이고 두번째가 7이면 arr[1][8] =1 이고 arr[2][8+7] = 1, arr[2][8-7] =1
+  2. 첫번째값은 해당 값에 1을 채워준다.
+     - [8 3 2 4 8 7 2 4 0 8 8] 일경우 arr[1][8] = 1 을 채워준다.
+  3. 두번째 부터 N-1 까지 이전 값에 횟수가 1이상이면 더하거나 뺴서 0이나 20안이면 이전 값의 횟수를 더해준다.
+     - ex) 3번째 : n-1(2)이 5,11 이 횟수가 1씩있고 5+2 = 7, 5-2= 3, 11+2 = 13, 11-2 = 9 가 다 0~20 사이 이므로 arr[3][7], arr[3][3], arr[3][13], arr[3][9] 에 arr[2][5], arr[2][11] 의 값인 1씩 더해준다. 
 	```java
-	for(int i = 0; i<=N; i++) {
-			if(i ==0) {
-				arr[i] = 0;
-			}else if(i==1) {
-				arr[i] = 0;
-				save[i] = 1;
-			}else if(i==2) {
-				arr[i] = 1;
-				save[i]=1;
-			}else if(i==3) {
-				arr[i] = 1;
-				save[i] =1;
+	for(int n = 0; n < N-1; n++) {
+			int num = Integer.parseInt(input[n]);
+			if(n==0) {
+				arr[n+1][num] =1;
 			}else {
-				int min = arr[i-1];
-				int index = i-1;
-		
-				if(i % 2 ==0 && min > arr[i/2] ) {
-					min = arr[i/2];
-					index = i/2;
+				for(int i = 0; i<21; i++) {
+					long nu = arr[n][i];
+					if(nu >= 1) {
+						int total = i + num;
+						if(total <=20) {
+							arr[n+1][total] += arr[n][i];
+						}
+						total = i - num;
+						
+						if(total>=0) {
+							arr[n+1][total] += arr[n][i];
+						}
+					}
 				}
-				
-				if(i % 3 == 0 && min > arr[i/3] ) {
-					min = arr[i/3];
-					index = i/3;
-				}
-				
-				arr[i]=min+1;
-				save[i]= index;
 			}
+			
+			
 		}
 ```
 
-
-	5. N까지 반복하고 횟수는 arr[N]으로 출력 하고 숫자는 save를 1이 나올때 까지 탐색해준다.
-	```java
-	System.out.println(arr[N]);
-		int n = N;
-		System.out.print(n);
-		while(n!=1) {
-			n = save[n];
-			System.out.print(" "+n);
-		}
-```
 
 
 
 ## :black_nib: **Review**
-- 황금연휴 시작을 알고리즘
+- 알고리즘 풀 때 크기를 잘보고 코드를 짜야할거 같아요 처음에 int로 했다가 틀렸어요
 
 ## 📡**Link**
-[https://www.acmicpc.net/problem/12852](https://www.acmicpc.net/problem/12852)
+[https://www.acmicpc.net/problem/5557](https://www.acmicpc.net/problem/5557)
