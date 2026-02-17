@@ -1,31 +1,44 @@
-# [백준 - S5] 9656. 돌 게임 2
+# [백준 - S2] 10819. 차이를 최대로
 
 ## ⏰ **time**
 
-10분
+20분
 
 ## ⏲️**Time Complexity**
 
-$O(N)$
+$O(N^2)$
 
 ## :round_pushpin: **Logic**
 
-- 가져갈수 있는 돌맹이 수가 1또는 3이라서 홀수 일경우 CY, 짝수 일경우 SK이다
+- 조합을 사용해서 하나씩 다 계산해서 최댓값을 출력시킴
+- N이 8이하로 다 탐색해도 시간을 남을거가 판단
 ```java
-   int N = Integer.parseInt(in.readLine());
+   static void dfs(int num, int total, int count) {
 		
-		String result = "CY";
-		
-		if(N %2==0) {
-			result = "SK";
+		if(count ==N) {
+			if(max < total) {
+				max = total;
+			}
+			return;
 		}
+		
+		for(int n = 0; n < N; n++) {
+			
+			if(!check[n]) {
+				int sum = total+ Math.abs(num-arr[n]);
+				check[n]= true;
+				dfs(arr[n], sum, count +1);
+				check[n] = false;
+			}
+		}
+		
+	}
 ```
 
 
 
 ## :black_nib: Review
-- 너무 쉬운거 풀었나
-- solved 랜덤돌려서 나온거에요
+- 골드 풀다가 실버푸니깐 너무 편안
 ## 📡**Link**
 
-- [https://www.acmicpc.net/problem/9656](https://www.acmicpc.net/problem/9656)
+- [https://www.acmicpc.net/problem/10819](https://www.acmicpc.net/problem/10819)
