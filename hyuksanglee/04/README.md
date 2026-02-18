@@ -1,44 +1,31 @@
-# [백준 - S2] 10819. 차이를 최대로
+# [백준 - S4] 1057. 토너먼트
 
 ## ⏰ **time**
 
-20분
+45분
 
 ## ⏲️**Time Complexity**
 
-$O(N^2)$
+$O(N)$
 
 ## :round_pushpin: **Logic**
 
-- 조합을 사용해서 하나씩 다 계산해서 최댓값을 출력시킴
-- N이 8이하로 다 탐색해도 시간을 남을거가 판단
+- 2명씩 게임이 이루어 지므로 같이 경기를 하는경우는 나누기 2를 했을때 같은 숫자여야한다.
+  - ex) 1 ,2 가 경기를 하는데 같이 경기를 하기위해서는 +1 해서 나누기 2를 해야 같아진다. (1+1)/2 = 1, (2+1)/2= 1
+- 같은 같이 나올때 까지 계속 나눠준다. 
 ```java
-   static void dfs(int num, int total, int count) {
-		
-		if(count ==N) {
-			if(max < total) {
-				max = total;
-			}
-			return;
+   while(A!=B) {
+			A = (A+1)/2;
+			B= (B+1)/2;
+			result ++;
 		}
-		
-		for(int n = 0; n < N; n++) {
-			
-			if(!check[n]) {
-				int sum = total+ Math.abs(num-arr[n]);
-				check[n]= true;
-				dfs(arr[n], sum, count +1);
-				check[n] = false;
-			}
-		}
-		
-	}
 ```
 
 
 
 ## :black_nib: Review
-- 골드 풀다가 실버푸니깐 너무 편안
+- 처음에는 dfs로 풀었더니 스텍오버 뜨다라구요
+- 이문제 수학 모르고 풀면 실버 아닌데
 ## 📡**Link**
 
-- [https://www.acmicpc.net/problem/10819](https://www.acmicpc.net/problem/10819)
+- [https://www.acmicpc.net/problem/1057](https://www.acmicpc.net/problem/1057)
