@@ -1,44 +1,43 @@
-# [백준 - S2] 10819. 차이를 최대로
+# [백준 - S3] 9375. 패션왕 신해빈
 
 ## ⏰ **time**
 
-20분
+10분
 
 ## ⏲️**Time Complexity**
 
-$O(N^2)$
+$O(N)$
 
 ## :round_pushpin: **Logic**
 
-- 조합을 사용해서 하나씩 다 계산해서 최댓값을 출력시킴
-- N이 8이하로 다 탐색해도 시간을 남을거가 판단
+- 의상을 입을수 있는 경우의 수를 구하면 된다.
+  	- ex) 상의 :2, 하의 : 2 일경우, 상의는 1을 입거나 2번을 입거나 아무것도 안입거나 3가지고 하의도 3가지 이다
+  	- 3 x 3 = 9 이고 총 나올수 있는 경우가 9이고 여기서 아무것도 안입는 경우 1개를 빼면 된다.
 ```java
-   static void dfs(int num, int total, int count) {
-		
-		if(count ==N) {
-			if(max < total) {
-				max = total;
-			}
-			return;
-		}
-		
-		for(int n = 0; n < N; n++) {
+   for(int t = 0 ; t<T; t++) {
 			
-			if(!check[n]) {
-				int sum = total+ Math.abs(num-arr[n]);
-				check[n]= true;
-				dfs(arr[n], sum, count +1);
-				check[n] = false;
+			int N = Integer.parseInt(in.readLine());
+			Map<String, Integer> map = new HashMap<String, Integer>();
+			for(int n = 0; n<N; n++) {
+				String [] input = in.readLine().split(" ");
+				if(map.containsKey(input[1])) {
+					map.put(input[1], map.getOrDefault(input[1], 0) + 1);
+				}else {
+					map.put(input[1],1);
+				}
 			}
+			int total = 1;
+			for(int count : map.values()) {
+				total *= count +1;
+			}
+			System.out.println(total-1);
 		}
-		
-	}
 ```
 
 
 
 ## :black_nib: Review
-- 골드 풀다가 실버푸니깐 너무 편안
+- 썬글라스만 끼고 나갈수가 있다니 충격!!!!
 ## 📡**Link**
 
-- [https://www.acmicpc.net/problem/10819](https://www.acmicpc.net/problem/10819)
+- [https://www.acmicpc.net/problem/9375](https://www.acmicpc.net/problem/9375)
