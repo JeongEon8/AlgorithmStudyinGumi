@@ -1,4 +1,4 @@
-# [백준 - S2] 10819. 차이를 최대로
+# [백준 - S5] 3986. 좋은 단어
 
 ## ⏰ **time**
 
@@ -6,39 +6,41 @@
 
 ## ⏲️**Time Complexity**
 
-$O(N^2)$
+$O(N)$
 
 ## :round_pushpin: **Logic**
 
-- 조합을 사용해서 하나씩 다 계산해서 최댓값을 출력시킴
-- N이 8이하로 다 탐색해도 시간을 남을거가 판단
+- 스택을 활용해서 이전 값이랑 비교해 값으면 뺴주고 다르면 넣어준다.
+- 마지막으로 스택이 비어있으면 좋은단어
 ```java
-   static void dfs(int num, int total, int count) {
-		
-		if(count ==N) {
-			if(max < total) {
-				max = total;
+   for(int n = 0 ; n<N; n++) {
+			String input = in.readLine();
+			Stack<Character> st =new Stack<>();
+			for(int i =0; i<input.length(); i++) {
+				char c = input.charAt(i);
+				if(st.isEmpty()) {
+					st.add(c);
+				}else {
+					char pc = st.peek();
+					if(pc==c) {
+						st.pop();
+					}else {
+						st.add(c);
+					}
+				}
+				
 			}
-			return;
-		}
-		
-		for(int n = 0; n < N; n++) {
+			if(st.size()==0) {
+				result++;
+			}
 			
-			if(!check[n]) {
-				int sum = total+ Math.abs(num-arr[n]);
-				check[n]= true;
-				dfs(arr[n], sum, count +1);
-				check[n] = false;
-			}
 		}
-		
-	}
 ```
 
 
 
 ## :black_nib: Review
-- 골드 풀다가 실버푸니깐 너무 편안
+- 
 ## 📡**Link**
 
-- [https://www.acmicpc.net/problem/10819](https://www.acmicpc.net/problem/10819)
+- [https://www.acmicpc.net/problem/3986](https://www.acmicpc.net/problem/3986)
