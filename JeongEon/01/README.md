@@ -40,4 +40,4 @@ void search() {
 - 닌텐도는 최고야!
 
 ## 📡 Link
-[https://www.acmicpc.net/problem/14494](https://www.acmicpc.net/problem/1543)
+[https://www.acmicpc.net/problem/1543](https://www.acmicpc.net/problem/1543)
