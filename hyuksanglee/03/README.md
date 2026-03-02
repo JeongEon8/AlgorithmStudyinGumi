@@ -1,45 +1,39 @@
-# [백준 - 실버 3] 1021. 회전하는 큐
+# [백준 - 실버 3] 14501. 퇴사
 
 ## ⏰**time**
-30분
+20분
 
 ## :pushpin: **Algorithm**
-큐
+dp
 
 ## ⏲️**Time Complexity**
 $O(N)$
 
 ## :round_pushpin: **Logic**
-1. 데큐에 1~N까지 넣어준다.
-2. 데큐에서 찾는 숫자의 인덱스를 알아낸다
-3. 절반 이상이면 왼쪽으로 이동해서 찾아주고
-4. 이하면 오르쪽으로 이동해서 찾아준다.
-5. 이동한 수를 저장해서 마지막에 출력해준다.
+1. 일을 만료한 이후 금액을 비교했을때 더 클경우 변경해준다.
 ```
-for(int m = 0; m< M; m++) {
-			int n = Integer.parseInt(input[m]);
-			int index = 0;
-			for(int num : que) {
-				if(num == n) {
-					break;
+for(int n = 0; n<N; n++) {
+			String[] input = in.readLine().split(" ");
+			int T = Integer.parseInt(input[0]);
+			int P = Integer.parseInt(input[1]);
+			
+			if(T+n<=N  && dp[T+n] < dp[n]+P) {
+				dp[T+n] = dp[n]+P;
+				if(result< dp[T+n]) {
+					result = dp[T+n];
 				}
-				index++;
 			}
-			if(index > que.size()/2) {
-				while(que.peek()!=n) {
-					int q = que.pollLast();
-					que.addFirst(q);
-					total++;
+			
+			for(int m = T+n+1; m<=N; m++) {
+				if(dp[m] < dp[n]+P) {
+					dp[m]= dp[n]+P;
 				}
-				que.poll();
-			}else {
-				while(que.peek()!=n) {
-					int q = que.pollFirst();
-					que.add(q);
-					total++;
+				if(result< dp[T+n]) {
+					result = dp[T+n];
 				}
-				que.poll();
 			}
+			
+			
 		}
 ```
 
@@ -47,4 +41,4 @@ for(int m = 0; m< M; m++) {
 -
 
 ## 📡 Link
-[https://www.acmicpc.net/problem/1021](https://www.acmicpc.net/problem/1021)
+[https://www.acmicpc.net/problem/14501](https://www.acmicpc.net/problem/14501)
