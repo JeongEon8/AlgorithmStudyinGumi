@@ -1,13 +1,21 @@
-# [백준 - 실버 2] 4963. 섬의 개수
+# [백준 - 실버 4] 14425. 문자열 집합
 
 ## ⏰**time**
 
-40분
+10분
 
 ## :pushpin: **Algorithm**
 
-bfs
+hashset
+
+## :round_pushpin: **Logic**
+
+1. hashset 사용하는 문자열 문제.
+
+```
+HashSet<String>set = new HashSet<>();
+```
 
 ## 📡 Link
 
-https://www.acmicpc.net/problem/4963
+https://www.acmicpc.net/problem/14425
