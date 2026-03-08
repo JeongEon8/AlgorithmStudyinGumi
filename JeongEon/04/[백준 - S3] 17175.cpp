@@ -1,5 +1,5 @@
 #include <iostream> // cin, cout
-
+ 
 using namespace std;
 
 int N;
