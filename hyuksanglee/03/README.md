@@ -1,84 +1,54 @@
-# [백준 - 실버 3] 1431. 시리얼 번호
+# [백준 - 실버 2] 21736. 헌내기는 친구가 필요해
 
 ## ⏰**time**
 
-60분
+20분
 
 ## :pushpin: **Algorithm**
 
-정렬
+dfs
 
 ## ⏲️**Time Complexity**
 
-$O(N log N)$
+$O(N x N)$
 
 ## :round_pushpin: **Logic**
 
-1.  문자, 길이, 숫자만 더한값 이렇게 담을수 있는 class를 만들어준다.
+1.  I 좌표에서 dfs로 탐색하여 P를 찾은 개수를 체크후 0이면 TT, 아니면 찾은 수를 출력해준다.
    ```java
-static class Info implements Comparable<Info> {
+static void dfs(char[][] list, int i, int j) {
 		
-		String serial;
-		int len;
-		long totalN;
-		long totalC;
-
-		@Override
-		public int compareTo(Info o) {
-			if(o.len != this.len) {
-				return this.len - o.len;
-			}
-			if(o.totalN != this.totalN) {
-				return (int)(this.totalN - o.totalN);
-			}
-					
-			return this.serial.compareTo(o.serial);
-	
-		
+		if(list[i][j]=='P') {
+			result++;
 		}
 		
-	}
-```
-2.  문자를 받을때 마다 class에 맞게 담아서 리스트에 넣어준다.
-3.  정렬 시켜주는데 일단 길이가 작을수록 숫자가 작을수록 그다음 문자열 순으로 정렬 시켜주는데 Comparable사용해서 정렬시켜준다.
- ```java
-List<Info> list = new ArrayList<Info>();
-		for(int n = 0; n<N; n++) {
-			String input = in.readLine();
-			Info info = new Info();
-			info.serial = input;
-			info.len = input.length();
-			long totalN = 0;
-			long totalC = 0;
-			for(int i = 0; i<info.len; i++) {
-				char c = input.charAt(i);
-				if(c<60) {
-					totalN += c-'0';
-					totalC = totalC*36 + c-'0';
-				}else {
-					totalC = totalC*36 + (c-'A')+10;
-				}
+		for(int d = 0; d<4; d++) {
+			int ci = i + di[d];
+			int cj = j + dj[d];
+			if(ci<0 || ci>=N || cj <0 || cj >=M) {
+				continue;
+			}
+			
+			if(!check[ci][cj] && list[ci][cj]!='X') {
+				check[ci][cj] = true;
 				
+				dfs(list,ci,cj);
 			}
-			info.totalN =totalN;
-			info.totalC= totalC;
-			
-			list.add(info);
 		}
-		
-		Collections.sort(list);
-
-		for(int i = 0; i<N; i++) {
-			System.out.println(list.get(i).serial);
-			
-		}
+		return ;
 	}
+
+	if(result ==0) {
+			System.out.println("TT");
+		}else {
+			System.out.println(result);
+		}
 ```
+
 
 ## :black_nib: **Review**
 
-- 이문제 너무 어려운데요
 
 ## 📡 Link
 
-<https://www.acmicpc.net/problem/1431>
+<https://www.acmicpc.net/problem/21736>
