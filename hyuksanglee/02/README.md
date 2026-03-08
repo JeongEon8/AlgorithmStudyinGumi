@@ -1,4 +1,4 @@
-# [백준 - 실버 3] 1431. 시리얼 번호
+# [백준 - 실버 3] 1018. 체스판 다시 칠하기
 
 ## ⏰**time**
 
@@ -6,79 +6,52 @@
 
 ## :pushpin: **Algorithm**
 
-정렬
+dfs
 
 ## ⏲️**Time Complexity**
 
-$O(N log N)$
+$O(N x N)$
+N: 세로길이, M: 가로길이
 
 ## :round_pushpin: **Logic**
 
-1.  문자, 길이, 숫자만 더한값 이렇게 담을수 있는 class를 만들어준다.
+1.  체스판을 8칸씩 끊어서 먼저 (1,1) 에 W시작했을때 칠해야하는 수를 구하고 B일경우는 64에서 빼주었다
+2.  최소로 칠할수 있는 값을 뽑아준다.
    ```java
-static class Info implements Comparable<Info> {
-		
-		String serial;
-		int len;
-		long totalN;
-		long totalC;
-
-		@Override
-		public int compareTo(Info o) {
-			if(o.len != this.len) {
-				return this.len - o.len;
-			}
-			if(o.totalN != this.totalN) {
-				return (int)(this.totalN - o.totalN);
-			}
-					
-			return this.serial.compareTo(o.serial);
-	
-		
-		}
-		
-	}
-```
-2.  문자를 받을때 마다 class에 맞게 담아서 리스트에 넣어준다.
-3.  정렬 시켜주는데 일단 길이가 작을수록 숫자가 작을수록 그다음 문자열 순으로 정렬 시켜주는데 Comparable사용해서 정렬시켜준다.
- ```java
-List<Info> list = new ArrayList<Info>();
-		for(int n = 0; n<N; n++) {
-			String input = in.readLine();
-			Info info = new Info();
-			info.serial = input;
-			info.len = input.length();
-			long totalN = 0;
-			long totalC = 0;
-			for(int i = 0; i<info.len; i++) {
-				char c = input.charAt(i);
-				if(c<60) {
-					totalN += c-'0';
-					totalC = totalC*36 + c-'0';
-				}else {
-					totalC = totalC*36 + (c-'A')+10;
+static int dfs(String[] list, int count, int i, int j) {
+		for(int n =i; n< i+8; n++) {
+			if(n%2==0) {
+				for(int m =j; m<j+8; m++) {
+					char c = list[n].charAt(m);
+					if(m%2==0 && list[n].charAt(m)!='W') {
+						count++;
+					}
+					if(m%2!=0 && list[n].charAt(m)!='B') {
+						count++;
+					}
 				}
-				
+			}else {
+				for(int m =j; m<j+8; m++) {
+					if(m%2!=0 && list[n].charAt(m)!='W') {
+						count++;
+					}
+					if(m%2==0 && list[n].charAt(m)!='B') {
+						count++;
+					}			
+										
+									
+				}
 			}
-			info.totalN =totalN;
-			info.totalC= totalC;
-			
-			list.add(info);
 		}
 		
-		Collections.sort(list);
-
-		for(int i = 0; i<N; i++) {
-			System.out.println(list.get(i).serial);
-			
-		}
+		return count;
 	}
 ```
+
 
 ## :black_nib: **Review**
 
-- 이문제 너무 어려운데요
 
 ## 📡 Link
 
-<https://www.acmicpc.net/problem/1431>
+<https://www.acmicpc.net/problem/1018>
