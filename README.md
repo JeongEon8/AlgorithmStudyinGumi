@@ -22,7 +22,7 @@
 | [정찬우(Jhanoo)](https://github.com/Jhanoo)                 | 백준 골드 이상 2개                  |
 | [이서현(kizizip)](https://github.com/kizizip)               | (취업자배려전형)                    |
 | [장홍준(ajang369)](https://github.com/ajang369)             | (취업자배려전형)                    |
-| [한아영(hanayoung)](https://github.com/hanayoung)           | (취업자배려전형) 백준 실버 이상 1개  |
+| [한아영(hanayoung)](https://github.com/hanayoung)           | (취업자배려전형) 백준 실버 이상 2개  |
 | [황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok) | (취업자배려전형) 백준 실버 이상 2개  |
 
 <br>
@@ -38,7 +38,7 @@
 
 # ⌛ 진행상황
 
-### 제 62회 [26.03.03 ~ 26.03.09] (진행중)
+### 제 63회 [26.03.10 ~ 26.03.16] (진행중)
 
 <details>
   <summary>2024년</summary>
@@ -109,6 +109,7 @@
   - 제 59회 [26.02.10 ~ 26.02.16] (진행완료) <br>
   - 제 60회 [26.02.17 ~ 26.02.23] (진행완료) <br>
   - 제 61회 [26.02.24 ~ 26.03.02] (진행완료) <br>
+  - 제 62회 [26.03.03 ~ 26.03.09] (진행완료) <br>
 </details>
 
 <br>
