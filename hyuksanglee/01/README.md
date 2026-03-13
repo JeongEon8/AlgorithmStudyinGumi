@@ -1,33 +1,41 @@
-# [백준 - 실버 4] 1620. 나는야 포켓몬 마스터 이다솜
+# [백준 - 실버 1] 2583. 영역 구하기
 
 ## ⏰**time**
 
-30분
+60분
 
 ## :pushpin: **Algorithm**
 
-hashmap
+- dfs, 우선순위 큐
 
 ## :round_pushpin: **Logic**
 
-1. 포켓몬 이름 -> 번호 는 hashmap으로 저장
-2. 포켓몬 번호 -> 이름은 배열로 저장
-3. 포켓몬 번호가 1부터 시작이니까, i=1; i<=N 이여야함.
+1. 두번째줄부터 해당되는 칸에 체크 해준다
+2. dfs를 탐색하면서 체크되어 있지 않은 곳을 탐색하고 개수를 우선순위 큐에 저장
+3. 큐의 개수와 큐에서 하나씩 뽑아서 출력
 
-- hashmap은 key 로 value 찾는건 잘 되는데, 반대는 안됨. 그래서 번호 -> 이름 검색을 위한 배열이 필요.
-- 번호 -> 이름을 검색하는 hashmap 만들어도됨.
 
-```
-HashMap<String, Integer> map = new HashMap<>();
-```
+``` kotlin
+fun dfs(i: Int, j: Int): Int {
+    check[i][j] = true
+    var area = 1
 
-4. 주요 메서드
+    for (d in 0..3) {
+        val ni = i + DI[d]
+        val nj = j + DJ[d]
 
+        if (ni in 0 until M && nj in 0 until N) {
+            if (!check[ni][nj]) {
+                area += dfs(ni, nj)
+            }
+        }
+    }
+    return area
+}
 ```
-map.put();
-map.get();
-```
+## 📡 Review
+- 코틀린으로 푸니깐 너무 어려워요
 
 ## 📡 Link
 
-https://www.acmicpc.net/problem/7562
+https://www.acmicpc.net/problem/2583
