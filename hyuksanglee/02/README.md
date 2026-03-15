@@ -1,12 +1,12 @@
-# [백준 - 실버 5] 1436. 영화감독 숌
+# [백준 - 골드 4] 2056. 작업
 
 ## ⏰**time**
 
-약 20분
+약 30분
 
 ## :pushpin: **Algorithm**
+- dp
 
-Brute Force
 
 ## ⏲️**Time Complexity**
 
@@ -14,32 +14,30 @@ $O(N)$
 
 ## :round_pushpin: **Logic**
 
-666이 포함된 수에서 N번째 작은 수를 구하는 문제
-ex) 6 -> 5666, 7 -> 6660
 
-1. 숫자 num을 계속 증가시키면서 666을 포함한다면 cnt를 증가시킨다.
-2. cnt가 N과 같다면 멈춘다.
+1. 앞에서 부터 차근차근 값을 더해주는데 선행 작업들 중에서 최대시간과 더해준다.
 
-```java
-int num = 666;
-int cnt = 0;
-while (true) {
-
-    if (String.valueOf(num).contains("666")) {
-        cnt++;
+```kotlin
+for (l in 0 until len){
+        val input = readLine().split(" ").map{it.toInt()}
+        val price = input[0]
+        val plen = input[1]
+        var max = 0;
+        for(pl in 0 until plen){
+            val imPrice = list[input[2+pl]]
+            if(max<imPrice){
+                max = imPrice
+            }
+        }
+        list[l+1] = price + max
+        if(result<list[l+1]){
+            result = list[l+1]
+        }
     }
-
-    if (cnt == N) {
-        System.out.println(num);
-        break;
-    }
-
-    num++;
-}
 ```
 
 ## :black_nib: **Review**
 
 ## 📡 Link
 
-<https://www.acmicpc.net/problem/1436>
+<https://www.acmicpc.net/problem/2056>
