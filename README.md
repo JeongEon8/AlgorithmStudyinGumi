@@ -4,9 +4,9 @@
 
 | 항목 | 금액     |
 | ---- | -------- |
-| 벌금 | 75,000원 |
-| 이자 | 117원     |
-| 총액 | 75,117원 |
+| 벌금 | 85,000원 |
+| 이자 | 163원     |
+| 총액 | 85,163원 |
 
 <br>
 
@@ -14,15 +14,15 @@
 
 | 아이디                                                      | 목표                                |
 | ----------------------------------------------------------- | ----------------------------------- |
-| [김정언(JeongEon)](https://github.com/JeongEon8)            | 백준 실버 이상 5개                  |
+| [김정언(JeongEon)](https://github.com/JeongEon8)            | 백준 실버 이상 4개                  |
 | [양성원(YSW-Yang)](https://github.com/YSW-Yang)             | 백준 실버 이상 3개                  |
 | [이상혁(hyuksanglee)](https://github.com/hyuksanglee)       | 백준 실버 이상 3개                  |
-| [이승지(bmlsj)](https://github.com/bmlsj)                   | 백준 실버 이상 3개                  |
-| [정유진(breadbirds)](https://github.com/breadbirds)         | 백준 실버 이상 3개                  |
+| [이승지(bmlsj)](https://github.com/bmlsj)                   | 백준 실버 이상 4개 (안 들어온 선물✨+1)                  |
+| [정유진(breadbirds)](https://github.com/breadbirds)         | 백준 실버 이상 4개 (안 들어온 선물✨+1)                  |
 | [정찬우(Jhanoo)](https://github.com/Jhanoo)                 | 백준 골드 이상 2개                  |
 | [이서현(kizizip)](https://github.com/kizizip)               | (취업자배려전형)                    |
 | [장홍준(ajang369)](https://github.com/ajang369)             | (취업자배려전형)                    |
-| [한아영(hanayoung)](https://github.com/hanayoung)           | (취업자배려전형) 백준 실버 이상 2개  |
+| [한아영(hanayoung)](https://github.com/hanayoung)           | (취업자배려전형) 백준 실버 이상 1개  |
 | [황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok) | (취업자배려전형) 백준 실버 이상 2개  |
 
 <br>
@@ -38,7 +38,7 @@
 
 # ⌛ 진행상황
 
-### 제 63회 [26.03.10 ~ 26.03.16] (진행중)
+### 제 64회 [26.03.17 ~ 26.03.23] (진행중)
 
 <details>
   <summary>2024년</summary>
@@ -110,6 +110,7 @@
   - 제 60회 [26.02.17 ~ 26.02.23] (진행완료) <br>
   - 제 61회 [26.02.24 ~ 26.03.02] (진행완료) <br>
   - 제 62회 [26.03.03 ~ 26.03.09] (진행완료) <br>
+  - 제 63회 [26.03.10 ~ 26.03.16] (진행완료) <br>
 </details>
 
 <br>
