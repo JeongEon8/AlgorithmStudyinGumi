@@ -1,94 +1,56 @@
-# [백준 - S4] 20125. 쿠키의 신체 측정
+# [백준 - S4] 1916. 최소비용 구하기
 
 ## ⏰ **time**
 
-30분
+50분
 
 ## ⏲️**Time Complexity**
 
-$O(N^2)$
+$O(M \log M)$
 
 ## :round_pushpin: **Logic**
 
-1. 심장 위치 탐색
+1. 인접 리스트로 시작점 리스트에 도착점과 비용을 담아준다
 
-- 심장은 상, 하, 좌, 우가 모두 `*`인 위치
-
-1. 팔 길이 측정
-
-- 왼팔: 심장 위치에서 왼쪽으로 이동
-- 오른팔: 심장 위치에서 오른쪽으로 이동
-
-1. 허리 길이 측정
-   심장 바로 아래에서 시작하여 아래 방향으로 `*`의 개수를 센다.
-   허리의 끝 위치를 `waistEnd`로 저장한다.
-2. 다리 길이 측정
-
-- 왼쪽 다리: 허리 끝 바로 아래의 왼쪽 칸에서 시작하여 아래 방향으로 `*` 개수를 센다.
-
-- 오른쪽 다리: 허리 끝 바로 아래의 오른쪽 칸에서 시작하여 아래 방향으로 `*` 개수를 센다.
-
-```java
-int heart_x = 0, heart_y = 0;
-  for (int i = 1; i < N - 1; i++) {
-   for (int j = 1; j < N - 1; j++) {
-    if (cookie[i][j] == '*') {
-     // 상하좌우가 모두 * 면, 심장
-     if (cookie[i - 1][j] == '*' && cookie[i + 1][j] == '*' && cookie[i][j - 1] == '*'
-       && cookie[i][j + 1] == '*') {
-      heart_x = i;
-      heart_y = j;
-      break;
-     }
+```kotlin
+ for(m in 1..M){
+        val input = readLine().split(" ").map{it.toInt()}
+        val start = input[0]
+        val end = input[1]
+        val price = input[2]
+        list[start].add(Node(end,price.toLong()))
     }
-   }
-   if (heart_x != 0)
-    break;
-  }
-
-  int leftArm = 0;
-  int y = heart_y - 1;
-  while (y >= 0 && cookie[heart_x][y] == '*') {
-   leftArm++;
-   y--;
-  }
-
-  int rightArm = 0;
-  y = heart_y + 1;
-  while (y < N && cookie[heart_x][y] == '*') {
-   rightArm++;
-   y++;
-  }
-
-  int waist = 0;
-  int x = heart_x + 1;
-  while (x < N && cookie[x][heart_y] == '*') {
-   waist++;
-   x++;
-  }
-
-  int waistEnd = waist + heart_x;
-  int leftLeg = 0;
-  x = waistEnd + 1;
-  y = heart_y - 1;
-
-  while (x < N && cookie[x][y] == '*') {
-   x++;
-   leftLeg++;
-  }
-
-  int rightLeg = 0;
-  x = waistEnd + 1;
-  y = heart_y + 1;
-  while (x < N && cookie[x][y] == '*') {
-   x++;
-   rightLeg++;
-  }
-
 ```
 
+2. 다익스트라 배열 생성 ( 모든 값을 최대값으로 초기화)
+3. 찾고자 하는 시작점만 0으로 수정
+4. 우선순위큐를 생성한다( 비용 기준으로 정렬)
+5. 초기에는 시작점과 비용0을 넣어준다.
+6. 인점 리스트에서 하나씩 꺼내서 다익스트라 비용과 비교후 값이 작으면 변경 해주고 큐에 넣어준다.
+   - 값을 비교할때 현제까지의 비용과 도착지까지 비용을 합친다음 비교
+```kotlin
+  while(que.isNotEmpty()){
+        val node = que.poll()
+        val priceC = node.price
+        if(dist[node.target] < priceC){
+            continue
+        }
+        for(l in list[node.target]){
+           val priceN = l.price+priceC
+            if(dist[l.target]>priceN){
+                dist[l.target] = priceN
+                que.add(Node(l.target, priceN))
+            }
+        }
+
+    }
+```
+
+
 ## :black_nib: Review
+- 코틀린으로 푸니깐 쉬운거 같으면서도 어렵네요
+- 처음에는 인점리스트 말고 행렬로 풀었다가 시간초과 떴어요(앞으로 인접리스트로 풀어야할거 같아요)
 
 ## 📡**Link**
 
-- [https://www.acmicpc.net/problem/20125](https://www.acmicpc.net/problem/20125)
+- [https://www.acmicpc.net/problem/1916](https://www.acmicpc.net/problem/1916)
