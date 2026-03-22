@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+ 
 int dp[200000];
 int min_num;
 
