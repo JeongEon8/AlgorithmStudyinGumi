@@ -1,4 +1,4 @@
-# [백준 - G3] 8979. 올림픽
+# [백준 - S1] 1160. 구간 합 구하기 5
 
 ## ⏰**time**
 
@@ -6,39 +6,33 @@
 
 ## :pushpin: **Algorithm**
 
-우선순위 큐
+누접합
 
 ## :round_pushpin: **Logic**
 
-매달의 수에 따라 순위를 매기고 특정 국가의 순위를 알려주는 문제이다
-- n의 개수가 1000개 라서 2번 돌아도 문제가 없을거라고 생각해서 for문으로 우선순위 큐에 넣었습니다
-- 큐에 넣을떄 compareByDescending 을 사용해서 우선순위를 정해주었음
-- 골드가 많은 순, 실버, 브론즈, 순으로 많으면 우선순위를 주었고 세가지가 다 같을 경우 알고자 하는 국가를 우선순위를 주었음
-- 큐에 다 넣은 다음 하나씩 뽑아서 국가번호가 k( 알고자 하는 국가) 일경우 index 값을 출력
+좌표 x1,y1에서 x2,y2 를 합을 구하는 식이고 하나씩 더해주면 1024*1024*100000이므로 시간 초과 될가능성이 있음
+- 누접합을 구해서 전체에서 아닌 부분을 빼주는 방식으로 구했음
+- 누접합을 구할때는 현재값 + x축과 y축의 이전값들을 더해주고 중복값인 x-1,y-1을 뺴준다.
 
 ```kotlin
-val que = PriorityQueue<Score>(
-       compareByDescending<Score>{it.gold}
-           .thenByDescending{it.silver}
-           .thenByDescending{it.bronze}
-           .thenBy{it.name != K}
-   )
-
-    for( n in 1.. N){
-        val(name, g, s, b ) = readLine().split(" ").map{it.toInt()}
-        que.add(Score(name, g, s, b))
-
+for (i in 1..N) {
+        val st = StringTokenizer(readLine())
+        for (j in 1..N) {
+            val num = st.nextToken().toInt()
+            array[i][j] = num + array[i - 1][j] + array[i][j - 1] - array[i - 1][j - 1]
+        }
     }
-    var result = 0
-    while(que.isNotEmpty()){
-        result++
-        val score = que.poll()
-        if(score.name == K) break
-    }
+```
 
-    println(result)
+- x1, y1 ~ x2, y2 까지 구할때는 전체에서 x축과 y축의 이전값들을 빼주고 중복값은 더해준다.
+```kotlin
+ for(m in 1..M){
+        val (x1, y1, x2, y2) = readLine().split(" ").map{it.toInt()}
+        val result = array[x2][y2] - array[x1 - 1][y2] - array[x2][y1 - 1] + array[x1 - 1][y1 - 1]
+        println(result)
+    }
 ```
 
 ## 📡 Link
 
-<https://www.acmicpc.net/problem/8979>
+<https://www.acmicpc.net/problem/11660>
