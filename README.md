@@ -4,9 +4,9 @@
 
 | 항목 | 금액     |
 | ---- | -------- |
-| 벌금 | 95,000원 |
-| 이자 | 188원     |
-| 총액 | 95,188원 |
+| 벌금 | 100,000원 |
+| 이자 | 216원     |
+| 총액 | 100,216원 |
 
 <br>
 
@@ -19,10 +19,10 @@
 | [이상혁(hyuksanglee)](https://github.com/hyuksanglee)       | 백준 실버 이상 3개                  |
 | [이승지(bmlsj)](https://github.com/bmlsj)                   | 백준 골드 이상 2개                   |
 | [정유진(breadbirds)](https://github.com/breadbirds)         | 백준 실버 이상 3개                   |
-| [정찬우(Jhanoo)](https://github.com/Jhanoo)                 | 면접 잘 보고 오기⭐                 |
+| [정찬우(Jhanoo)](https://github.com/Jhanoo)                 | 백준 골드 이상 2개                  |
 | [이서현(kizizip)](https://github.com/kizizip)               | (취업자배려전형)                    |
 | [장홍준(ajang369)](https://github.com/ajang369)             | (취업자배려전형)                    |
-| [한아영(hanayoung)](https://github.com/hanayoung)           | (취업자배려전형) 대구에서 맛난거 먹고 오기⭐  |
+| [한아영(hanayoung)](https://github.com/hanayoung)           | (취업자배려전형)                    |
 | [황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok) | (취업자배려전형) 백준 실버 이상 2개  |
 
 <br>
@@ -38,7 +38,7 @@
 
 # ⌛ 진행상황
 
-### 제 65회 [26.03.24 ~ 26.03.30] (진행중)
+### 제 66회 [26.03.31 ~ 26.04.06] (진행중)
 
 <details>
   <summary>2024년</summary>
@@ -112,6 +112,7 @@
   - 제 62회 [26.03.03 ~ 26.03.09] (진행완료) <br>
   - 제 63회 [26.03.10 ~ 26.03.16] (진행완료) <br>
   - 제 64회 [26.03.17 ~ 26.03.23] (진행완료) <br>
+  - 제 65회 [26.03.24 ~ 26.03.30] (진행완료) <br>
 </details>
 
 <br>
