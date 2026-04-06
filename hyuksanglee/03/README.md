@@ -1,65 +1,66 @@
-# [백준 - B1] 1952. 달팽이2
+# [백준 - G4] 16202. MST게임
 
 ## ⏰ **time**
 
-30분
+60분
 
 ## :pushpin: **Algorithm**
 
-- 구현
+- MST
 
 ## ⏲️**Time Complexity** 
 
-$O(M*N)$
+$O(N)$
 
 ## :round_pushpin: **Logic**
 
-1. 한방향으로 길이 있을때까지 이동
-2. 더이상 갈수 없을경우 시계방향으로 변경해준다
-3. 변경했는데도 갈일이 없으면 중단
-4. 방향 변경 횟수 세어서 출력
-   - 변경을 했는데도 길이 없을 경우 제외
+1. x,y를 map을 통해서 연결해준다.
+2. mst를 활용해서 최소거리 구해준다
+   - 해당 지역에서 갈수 있는 지역 큐에 담고 큐에서는 거리에 짧은 순으로 정렬
 
 ```kotlin
-		while (count > 0){
-        val cn = n + dn[d]
-        val cm = m + dm[d]
-        if(cn<0 || cm <0 || cn>=N || cm>=M){
-            if(check){
-                cross--
-                break
-            }
+		fun mst(N:Int):Int{
+    val minPrices = IntArray(N+1){Int.MAX_VALUE}
+    minPrices[0]=0
+    val check = BooleanArray(N+1){true}
+    val que = PriorityQueue<Pair<Int,Int>>(compareBy{it.second})
+    que.add(Pair(1,0))
 
-            d = (d+1)%4
-            check = true
-            cross++
-            continue
-        }else if(map[cm][cn]==1){
-            if(check){
-                cross--
-                break
-            }
-            d = (d+1)%4
-            check= true
-            cross++
+    while(que.isNotEmpty()){
+        val q = que.poll()
+        if(!check[q.first]){
             continue
         }
-
-
-        if(map[cm][cn] ==0){
-            map[cm][cn]=1
-            n = cn
-            m = cm
-            check = false
-            continue
+        check[q.first] = false
+        minPrices[q.first]= q.second
+        val nodes =map[q.first]!!.connect
+        for(node in nodes){
+            val price = node.second
+            val num = node.first
+            if(check[num] && minPrices[num]>price && ban[price]){
+                que.add(Pair(num,price))
+            }
         }
-
 
     }
+    var total = 0
+    var minPrice = Int.MAX_VALUE
+    for(i in 2..N){
+        if(minPrices[i]==Int.MAX_VALUE){
+            return 0
+        }
+        if(minPrice>minPrices[i]){
+            minPrice= minPrices[i]
+        }
+        total +=  minPrices[i]
+    }
+    ban[minPrice]=false
+    return total
+}
 ```
 
 ## :black_nib: **Review**
 
 ## 📡**Link**
 
-https://www.acmicpc.net/problem/1952
+https://www.acmicpc.net/problem/16202
