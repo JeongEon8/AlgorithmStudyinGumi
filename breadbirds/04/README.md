@@ -1,4 +1,4 @@
-# [백준 - S3] 03\_자리배정 - 10157
+# [백준 - S1] 04\_경비원 - 2564
 
 ## ⏰**time**
 
@@ -6,11 +6,11 @@
 
 ## :pushpin: **Algorithm**
 
-브루트포스
+구현
 
 ```
 
 ## 📡 Link
 
-https://www.acmicpc.net/problem/10157
+https://www.acmicpc.net/problem/2564
 ```
