@@ -1,4 +1,4 @@
-# [백준 - B1] 1952. 달팽이2
+# [백준 - G4] 31091. 거짓말
 
 ## ⏰ **time**
 
@@ -6,7 +6,7 @@
 
 ## :pushpin: **Algorithm**
 
-- 구현
+- 누접합
 
 ## ⏲️**Time Complexity** 
 
@@ -14,47 +14,44 @@ $O(M*N)$
 
 ## :round_pushpin: **Logic**
 
-1. 한방향으로 길이 있을때까지 이동
-2. 더이상 갈수 없을경우 시계방향으로 변경해준다
-3. 변경했는데도 갈일이 없으면 중단
-4. 방향 변경 횟수 세어서 출력
-   - 변경을 했는데도 길이 없을 경우 제외
+1. 2개의 배열 생성
+	- x개 이상을 저장하는 배열(크기:N)
+ 	- x개 이하를 저장하는 배열(크기:N) 	
+2. 양수(이상)이면 이상벼열 음수이면 이하배열에 개수를 증가시켜준다
+3. 양수일경우 N ->0 까지 누접합을 구하고 음수일경우 0->N 까지 구한다.
+4. 우선순위 큐를 생성하고 이상배열에 작은 숫자부터 비교
+   - 말했던 개수랑 이하의 -1 개수를 큐에 담아준다.
 
 ```kotlin
-		while (count > 0){
-        val cn = n + dn[d]
-        val cm = m + dm[d]
-        if(cn<0 || cm <0 || cn>=N || cm>=M){
-            if(check){
-                cross--
-                break
-            }
+		val arrayP = IntArray(N + 2)
+    val arrayM = IntArray(N + 2)
 
-            d = (d+1)%4
-            check = true
-            cross++
-            continue
-        }else if(map[cm][cn]==1){
-            if(check){
-                cross--
-                break
-            }
-            d = (d+1)%4
-            check= true
-            cross++
-            continue
+    for (n in 1..N) {
+        val k = st.nextToken().toInt()
+        if (k > 0) {
+            arrayP[k]++
+        } else {
+            arrayM[-k]++
         }
+    }
 
+    for (n in N downTo 1) {
+        arrayP[n] += arrayP[n + 1]
+    }
+    for (n in 1..N) {
+        arrayM[n] += arrayM[n - 1]
+    }
 
-        if(map[cm][cn] ==0){
-            map[cm][cn]=1
-            n = cn
-            m = cm
-            check = false
-            continue
+    val answers = mutableListOf<Int>()
+    for (i in 0..N) {
+        val pLiar = arrayP[i + 1]
+        val mLiar = if (i > 0) arrayM[i - 1] else 0
+
+        val actualLiar = pLiar + mLiar
+
+        if (actualLiar == i) {
+            answers.add(i)
         }
-
-
     }
 ```
 
@@ -62,4 +59,4 @@ $O(M*N)$
 
 ## 📡**Link**
 
-https://www.acmicpc.net/problem/1952
+https://www.acmicpc.net/problem/31091
