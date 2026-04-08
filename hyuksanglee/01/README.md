@@ -1,60 +1,83 @@
-# [백준 - G4] 1261. 알고스팟 (Easy)
+# [백준 - S1] 14888. 연산자 끼워넣기
 
 ## ⏰ **time**
 
-50분
+45분
 
 ## :pushpin: **Algorithm**
 
-- 그래프 이론
-- 그래프 탐색
-- 최단 경로
-- 데이크스트라
-- 격자 그래프
-- 0-1 너비 우선 탐색
+- dfs
 
 ## ⏲️**Time Complexity**
 
-$O(N * M * Log(N * M))$
+$O((N-1) \times (N-1)!)$
 
 ## :round_pushpin: **Logic**
 
-이 문제는 목적지까지 도달하는 경로 중 벽을 부수는 횟수(가중치)의 합이 최소가 되는 경로를 찾는 문제였다.
-일반적인 BFS는 모든 간선의 가중치가 같을 때 최단 거리를 구하지만, 이 문제는 '벽을 부수지 않는 경우(가중치 0)'와 '벽을 부수는 경우(가중치 1)'로 가중치가 달라서 우선순위 큐를 활용해 벽을 적게 부순 경로를 우선적으로 탐색하도록 구현했다.
-이렇게 하면 탐색 과정에서 목적지에 처음 도달하는 순간이 곧 벽을 최소한으로 부순 경우임이 보장된다.
+- 수열이 에서 연산들을 조합하여 최댓값과 최솟값을 구하는 문제
+	- DFS를 사용하여 연산자를 조합하여 차례대로 계산해서 list에 저장
+1. 수열을 배열에 담고 연산자도 배열에 담아준다. 
 
-```java
-		while (!queue.isEmpty()) {
-			Point curr = queue.poll();
-			int currRow = curr.row;
-			int currCol = curr.col;
-			int currCount = curr.count;
+```kotlin
+		nums = readLine().split(" ").map{it.toInt()}
+    type = mutableListOf()
+    result = mutableListOf()
+    isType= BooleanArray(N-1)
 
-			if (currRow == N - 1 && currCol == M - 1) {
-				System.out.println(currCount);
-				return;
-			}
-
-			for (int i = 0; i < 4; i++) {
-				int nextRow = currRow + direction[i][0];
-				int nextCol = currCol + direction[i][1];
-				if (nextRow >= 0 && nextRow < N && nextCol >= 0 && nextCol < M && !visited[nextRow][nextCol]
-						&& maze[nextRow][nextCol] == 0) {
-					queue.add(new Point(nextRow, nextCol, currCount));
-					visited[nextRow][nextCol] = true;
-				}
-
-				if (nextRow >= 0 && nextRow < N && nextCol >= 0 && nextCol < M && !visited[nextRow][nextCol]
-						&& maze[nextRow][nextCol] == 1) {
-					queue.add(new Point(nextRow, nextCol, currCount + 1));
-					visited[nextRow][nextCol] = true;
-				}
-			}
-		}
+    val input = readLine().split(" ").map{it.toInt()}
+    for(i in 0..3){
+        val count = input[i]
+        for(c in 0..count-1){
+            type.add(i)
+        }
+    }
 ```
 
+2. A1를 먼저 total에 넣어서 초기화 시켜준다.
+   - 모든 계산은 A1은 똑같아서
+3. DFS로 연산자를 하나 골라서 An을 계산
+4. 4번을 반복해서 An-1까지 계산하고 list에 담는다
+   - 연산자를 고를때는 조합방식으로 사용해준다.
+```kotlin
+fun dfs(index: Int, total:Int){
+    if(index == N-1){
+        result.add(total)
+        return
+    }
+    for(i in 0..type.size-1){
+        if(!isType[i]){
+            isType[i] = true
+            dfs(index+1,calculator(total,nums[index+1],type[i]))
+            isType[i] = false
+        }
+    }
+
+
+}
+```
+- 값을 연산자에 맞게 계산 해주는 함수
+```kotlin
+fun calculator(total: Int, num:Int, type:Int):Int{
+    when(type){
+        0 -> return total+num
+        1 -> return total-num
+        2 -> return total*num
+        else -> return total/num
+    }
+}
+```
+5. 결과 값 리스트를 정렬해서 최댓값과 최솟값 출력
+
+```kotlin
+result.sort()
+println(result.last())
+println(result[0])
+```
+
+
 ## :black_nib: **Review**
+- 코틀린에서는 lateinit 사용해서 전역변수로 사용했는데 기본 타입(Int, Long, Float, Boolean 등)은 사용이 불가능하다는거 알았어요
 
 ## 📡**Link**
 
-https://www.acmicpc.net/problem/1261
+https://www.acmicpc.net/problem/14888
