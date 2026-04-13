@@ -4,9 +4,9 @@
 
 | 항목 | 금액     |
 | ---- | -------- |
-| 벌금 | 100,000원 |
-| 이자 | 216원     |
-| 총액 | 100,216원 |
+| 벌금 | 105,000원 |
+| 이자 | 277원     |
+| 총액 | 105,277원 |
 
 <br>
 
@@ -14,11 +14,11 @@
 
 | 아이디                                                      | 목표                                |
 | ----------------------------------------------------------- | ----------------------------------- |
-| [김정언(JeongEon)](https://github.com/JeongEon8)            | 백준 실버 이상 3개                  |  
+| [김정언(JeongEon)](https://github.com/JeongEon8)            | 백준 골드 이상 2개                  |  
 | [양성원(YSW-Yang)](https://github.com/YSW-Yang)             | 백준 실버 이상 3개                  |
 | [이상혁(hyuksanglee)](https://github.com/hyuksanglee)       | 백준 실버 이상 3개                  |
-| [이승지(bmlsj)](https://github.com/bmlsj)                   | 백준 골드 이상 2개                   |
-| [정유진(breadbirds)](https://github.com/breadbirds)         | 백준 실버 이상 3개                   |
+| [이승지(bmlsj)](https://github.com/bmlsj)                   | 백준 실버 이상 3개                  |
+| [정유진(breadbirds)](https://github.com/breadbirds)         | 백준 실버 이상 2개                  |
 | [정찬우(Jhanoo)](https://github.com/Jhanoo)                 | 백준 골드 이상 2개                  |
 | [이서현(kizizip)](https://github.com/kizizip)               | (취업자배려전형)                    |
 | [장홍준(ajang369)](https://github.com/ajang369)             | (취업자배려전형)                    |
@@ -38,7 +38,7 @@
 
 # ⌛ 진행상황
 
-### 제 67회 [26.04.07 ~ 26.04.13] (진행중)
+### 제 68회 [26.04.14 ~ 26.04.20] (진행중)
 
 <details>
   <summary>2024년</summary>
@@ -114,6 +114,7 @@
   - 제 64회 [26.03.17 ~ 26.03.23] (진행완료) <br>
   - 제 65회 [26.03.24 ~ 26.03.30] (진행완료) <br>
   - 제 66회 [26.03.31 ~ 26.04.06] (진행완료) <br>
+  - 제 67회 [26.04.07 ~ 26.04.13] (진행완료) <br>
 </details>
 
 <br>
