@@ -1,58 +1,43 @@
-# [백준 - G4] 1967. 트리의 지름 (Easy)
+# [백준 - S2] 15666. N과 M (12)
 
 ## ⏰ **time**
 
-50분
+20분
 
 ## :pushpin: **Algorithm**
 
-- 그래프 이론
-- 그래프 탐색
-- 트리
-- 깊이 우선 탐색
-- 트리의 지름
+- dfs
+- set
+- 정렬
 
 ## ⏲️**Time Complexity**
 
-$O(N)$
+$O(N \log N)$
 
 ## :round_pushpin: **Logic**
 
-루트 노드에서 가장 먼 거리의 노드를 구한 다음, 그 노드에서 가장 먼 노드의 길이를 출력했다.
+set을 활용하여 중복값을 제거해주고 정렬해서 하나씩 꺼내서 숫자를 만들고 출력해준다.
 
 ```java
-	public static void main(String[] args) throws Exception {
+	fun dfs(start:Int, depth: Int, M:Int){
+    if (depth == M) {
+        for (i in 0 until M) {
+            sb.append(resultArr[i]).append(" ")
+        }
+        sb.append("\n")
+        return
+    }
 
-		...
-
-		maxLength = 0;
-		visited = new boolean[N + 1];
-		dfs(1, 0);
-
-		maxLength = 0;
-		visited = new boolean[N + 1];
-		dfs(furthestNode, 0);
-
-		System.out.println(maxLength);
-	}
-
-	public static void dfs(int current, int distance) {
-		visited[current] = true;
-		if (maxLength < distance) {
-			maxLength = distance;
-			furthestNode = current;
-		}
-
-		for (Node node : adj[current]) {
-			if (!visited[node.target]) {
-				dfs(node.target, distance + node.weight);
-			}
-		}
-	}
+    for (i in start until list.size) {
+        resultArr[depth] = list[i]
+        dfs(i, depth + 1, M)
+    }
+}
 ```
 
 ## :black_nib: **Review**
+- 코틀린은 set 타입에서 .sorted()를 활용하면 정렬상태의 리스트로 만들어주는데 완전 신세계
 
 ## 📡**Link**
 
-https://www.acmicpc.net/problem/1967
+https://www.acmicpc.net/problem/15666
