@@ -1,4 +1,4 @@
-# [백준 - G4] 1967. 트리의 지름 (Easy)
+# [백준 - G4] 20040. 사이클 게임
 
 ## ⏰ **time**
 
@@ -6,11 +6,7 @@
 
 ## :pushpin: **Algorithm**
 
-- 그래프 이론
-- 그래프 탐색
-- 트리
-- 깊이 우선 탐색
-- 트리의 지름
+- 유니온 파인드
 
 ## ⏲️**Time Complexity**
 
@@ -18,41 +14,35 @@ $O(N)$
 
 ## :round_pushpin: **Logic**
 
-루트 노드에서 가장 먼 거리의 노드를 구한 다음, 그 노드에서 가장 먼 노드의 길이를 출력했다.
+- 유니온을 이용해서 서로 연결해준다
+  ```kotlin
+	fun union(a: Int, b:Int):Boolean{
+    val aParent = find(a)
+    val bParent = find(b)
+    if(aParent != bParent){
+        parent[bParent] = aParent
+        return true
+    }
+    return false
+}
+```
+- 파인드로 서로 부모가 연결 되었는지 확인하고 연결 되었으면 0을 아닐경우 카운트를 셈
+```kotlin
+	fun find(target: Int):Int{
+    if(parent[target]== target){
+        return target
+    }
+    parent[target] = find(parent[target])
+    return parent[target]
+}
+```
+- 찾고자 하는 값 나오면 출력
 
-```java
-	public static void main(String[] args) throws Exception {
 
-		...
-
-		maxLength = 0;
-		visited = new boolean[N + 1];
-		dfs(1, 0);
-
-		maxLength = 0;
-		visited = new boolean[N + 1];
-		dfs(furthestNode, 0);
-
-		System.out.println(maxLength);
-	}
-
-	public static void dfs(int current, int distance) {
-		visited[current] = true;
-		if (maxLength < distance) {
-			maxLength = distance;
-			furthestNode = current;
-		}
-
-		for (Node node : adj[current]) {
-			if (!visited[node.target]) {
-				dfs(node.target, distance + node.weight);
-			}
-		}
-	}
 ```
 
 ## :black_nib: **Review**
 
 ## 📡**Link**
 
-https://www.acmicpc.net/problem/1967
+https://www.acmicpc.net/problem/20040
