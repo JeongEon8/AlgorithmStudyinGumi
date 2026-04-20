@@ -14,16 +14,16 @@
 
 | 아이디                                                      | 목표                                |
 | ----------------------------------------------------------- | ----------------------------------- |
-| [김정언(JeongEon)](https://github.com/JeongEon8)            | 백준 골드 이상 2개                  |  
-| [양성원(YSW-Yang)](https://github.com/YSW-Yang)             | 백준 실버 이상 3개                  |
-| [이상혁(hyuksanglee)](https://github.com/hyuksanglee)       | 백준 실버 이상 3개                  |
-| [이승지(bmlsj)](https://github.com/bmlsj)                   | 백준 실버 이상 3개                  |
-| [정유진(breadbirds)](https://github.com/breadbirds)         | 백준 실버 이상 2개                  |
-| [정찬우(Jhanoo)](https://github.com/Jhanoo)                 | 백준 골드 이상 2개                  |
+| [김정언(JeongEon)](https://github.com/JeongEon8)            | 프로그래머스 Lv2 3개                  |  
+| [양성원(YSW-Yang)](https://github.com/YSW-Yang)             | 프로그래머스 Lv2 3개                  |
+| [이상혁(hyuksanglee)](https://github.com/hyuksanglee)       | 프로그래머스 Lv2 or 릿코드 미디움 2개  |
+| [이승지(bmlsj)](https://github.com/bmlsj)                   | 프로그래머스 Lv2 3개                  |
+| [정유진(breadbirds)](https://github.com/breadbirds)         | 코드트리 트레일 챕터 3개               |
+| [정찬우(Jhanoo)](https://github.com/Jhanoo)                 | 프로그래머스 Lv2 2개                  |
 | [이서현(kizizip)](https://github.com/kizizip)               | (취업자배려전형)                    |
 | [장홍준(ajang369)](https://github.com/ajang369)             | (취업자배려전형)                    |
-| [한아영(hanayoung)](https://github.com/hanayoung)           | (취업자배려전형) 백준 실버 이상 2개  |
-| [황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok) | (취업자배려전형) 백준 실버 이상 2개  |
+| [한아영(hanayoung)](https://github.com/hanayoung)           | (취업자배려전형) 프로그래머스 Lv2 2개  |
+| [황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok) | (취업자배려전형) 프로그래머스 Lv2 2개  |
 
 <br>
 
@@ -38,7 +38,7 @@
 
 # ⌛ 진행상황
 
-### 제 68회 [26.04.14 ~ 26.04.20] (진행중)
+### 제 69회 [26.04.21 ~ 26.04.27] (진행중)
 
 <details>
   <summary>2024년</summary>
@@ -115,6 +115,7 @@
   - 제 65회 [26.03.24 ~ 26.03.30] (진행완료) <br>
   - 제 66회 [26.03.31 ~ 26.04.06] (진행완료) <br>
   - 제 67회 [26.04.07 ~ 26.04.13] (진행완료) <br>
+  - 제 68회 [26.04.14 ~ 26.04.20] (진행완료) <br>
 </details>
 
 <br>
