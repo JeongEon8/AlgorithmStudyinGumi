@@ -30,7 +30,7 @@ $O(N)$
 ```
 
 ## :black_nib: **Review**
-- 이거 뭔가 백준에서 봤던 문제 같은데? 야
+- 이거 뭔가 백준에서 봤던 문제 같은데? 야호
 
 ## 📡 Link
 [프로그래머스 레벨2 올바른 괄호](https://school.programmers.co.kr/learn/courses/30/lessons/12909)
