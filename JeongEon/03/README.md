@@ -31,6 +31,9 @@ $O(N)$
 
 ## :black_nib: **Review**
 - 이거 뭔가 백준에서 봤던 문제 같은데? 야호
+<img width="180" height="61" alt="image" src="https://github.com/user-attachments/assets/c5fe5d96-4da0-4d63-9cc4-fb05174b6687" />
+- 이거 성공하면 저 훌라춤 추고 있는거 너무 귀엽지 않아요?
+  
 
 ## 📡 Link
 [프로그래머스 레벨2 올바른 괄호](https://school.programmers.co.kr/learn/courses/30/lessons/12909)
