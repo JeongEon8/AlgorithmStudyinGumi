@@ -4,7 +4,7 @@
 8분
 
 ## :pushpin: **Algorithm**
-스
+스택
 
 ## ⏲️ **Time Complexity**
 $O(N)$
