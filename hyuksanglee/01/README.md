@@ -1,4 +1,4 @@
-# [PGS - lv2] 점프와 순간 이동
+# [프로그래머스 - lv2] 두 원 사이의 정수 쌍
 
 ## ⏰**time**
 
@@ -14,34 +14,29 @@ $O(N)$
 
 ## :round_pushpin: **Logic**
 
-`0 -> n`으로 갔더니 시간초과가 발생했다. `n -> 0`으로 반대로 진행
-
-1. 순간이동일 경우 `/2`
-2. 점프면 `-1`과 동시에 비용도 `+1` 한다.
+원 전체를 다 탐색하면 시간 초과 뜨고 1사분면만 검사해서 *4를 해주면 됨
 
 ```java
-while (n > 0) {
-    if (n % 2 == 1) {
-        ans++;   // 점프
-        n--;
-    } else {
-        n /= 2;  // 순간이동
+for (long x = 1; x <= r2; x++) {
+            long maxY = (long) Math.floor(Math.sqrt((long)r2 * r2 - x * x));
+            
+            long minY = 0;
+            if (x < r1) {
+                minY = (long) Math.ceil(Math.sqrt((long)r1 * r1 - x * x));
+            }
+            
+            answer += (maxY - minY + 1);
+        }
+        
+        return answer * 4;
     }
-}
 ```
 
-- 비트 카운팅도 가능하다고 함. 비트 카운팅은 1의 개수를 세는 것
 
-```java
-public int solution(int n) {
-    return Integer.bitCount(n);
-}
-```
 
 ## :black_nib: **Review**
 
-프로그래머스에서 벗어나고 싶다.. 먼가 별룽..
 
 ## 📡 Link
 
-<https://school.programmers.co.kr/learn/courses/30/lessons/12980>
+<https://school.programmers.co.kr/learn/courses/30/lessons/181187>
