@@ -1,46 +1,44 @@
-# [백준 - S4] 1920. 수 찾기
+# [프로그래머스 - Lv2] 요격 시스템
  
 ## ⏰  **time**
-20분
+30분
 
 ## :pushpin: **Algorithm**
-이진 탐색
+- 정렬
 
 ## ⏲️**Time Complexity**
-$O((N+M)logN)$
+$O(N \log N)$
 
 ## :round_pushpin: **Logic**
-1. 이진 탐색을 위해 A배열 정렬 시키기
-  
-2. for문을 사용해서 찾고자 하는 값들 차례대로 이진 탐색
+1. 이차원 배열 정렬
+   - End 작은순, Start 작은순으로 정렬
+2. 정렬된 배열에서 하나씩 꺼내서 Start와 End를 비교해서 계산
+   - 이전의 End보다 현제 Start가 크면 개수+1 해주고 Start와 End 값 업데이트
 ```java
-		while(true) {
-			if(arr[mid] == n) { // 찾고자하는 값이 있으면 1을 출력하고 종료
-				System.out.println(1);
-				break;
-			}
-			
-			if(st>ed) { // 시작 점이 끝 점보다 클경우 0을 출력하고 종료
-				System.out.println(0);
-				break;
-			}
-			
-			if(arr[mid]<n) { // 찾고자하는 값이 중간 값보다 클 경우 
-				st = mid +1; // 탐색을 시작 점을 중간 점보다 1크게 설정
-			}else { // 찾고자하는 값이 중간 값보다 작을 경우
-				ed = mid - 1; // 끝 점을 중간 점보다 1작게 설정
-			}
-			
-			mid = (st + ed) /2; // 변경된 값을 기준으로 중간 점 설정
-		}
+		Arrays.sort(targets, (o1, o2) -> {
+            if (o1[1] == o2[1]) {
+                return Integer.compare(o1[0], o2[0]);
+            }
+            return Integer.compare(o1[1], o2[1]);
+        });
+        int start = -1;
+        int end = -1;
+        for(int i = 0; i<targets.length; i++){
+            int[] target = targets[i];
+            if(end<=target[0]){
+                answer++;
+                start=target[0];
+                end = target[1];
+            }
+        }
 ```
 
 ## :black_nib: **Review**
-- 메모리가 부족해서 틀렸어요😭
+- 어디간거니? 내 코딩테스트 싸이트..
 
   ## 📡**Link**
 
-- https://www.acmicpc.net/problem/1920
+- https://school.programmers.co.kr/learn/courses/30/lessons/181188
 
   
 
