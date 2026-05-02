@@ -1,4 +1,4 @@
-# [PGS - lv2] N개의 최소공배수
+# [PGS - lv2] 02_N개의 최소공배수
 
 ## ⏰**time**
 
@@ -13,7 +13,6 @@
 $O(NlogN)$
 
 ## :round_pushpin: **Logic**
-
 - $lcm(a, b) = |a * b| / gcd(a, b)$ 공식 사용
 - `두 수의 곱 / 최대 공약수`
 
