@@ -2,7 +2,7 @@ name: 📆 새로운 주차 자동 시작
 
 on:
   schedule:
-    - cron: "23 15 * * 1"
+    - cron: "00 15 * * 1"
   workflow_dispatch:
 
 jobs:
