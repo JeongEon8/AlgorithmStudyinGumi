@@ -1,44 +1,79 @@
-# [프로그래머스 - Lv2] 요격 시스템
+# [프로그래머스 - Lv2] 과제진행하기
  
 ## ⏰  **time**
 30분
 
 ## :pushpin: **Algorithm**
 - 정렬
+- bfs
 
 ## ⏲️**Time Complexity**
 $O(N \log N)$
 
 ## :round_pushpin: **Logic**
-1. 이차원 배열 정렬
-   - End 작은순, Start 작은순으로 정렬
-2. 정렬된 배열에서 하나씩 꺼내서 Start와 End를 비교해서 계산
-   - 이전의 End보다 현제 Start가 크면 개수+1 해주고 Start와 End 값 업데이트
+1. 배열에 있는 값을 오래된 순으로 정렬을 시켜준다.
+2. 배열에서 차례대로 꺼내고 스택에 값이 있으면 비교를 한다
+   - 남은 시간이 0이면 큐에 넣어주고 아닐경우 스택에 넣어준다.
+3. 배열을 다 탐색을 하고 스택에 남아있는것을 하나씩 뽑아 큐에 담아준다.
+4. 큐에서 하나씩 뽑아 출력
 ```java
-		Arrays.sort(targets, (o1, o2) -> {
-            if (o1[1] == o2[1]) {
-                return Integer.compare(o1[0], o2[0]);
+		 int len = plans.length;
+        String[] answer = new String[len];
+        Info[] infos = new Info[len];
+        for(int l = 0; l < len; l++){
+            String n = plans[l][0];
+            String[] t = plans[l][1].split(":");
+            int w = Integer.parseInt(plans[l][2]);
+            int h = Integer.parseInt(t[0]);
+            int m = Integer.parseInt(t[1]);
+            
+            Info info = new Info(n,h,m,w);
+            infos[l] = info;
+        }
+        Arrays.sort(infos);
+        
+        int startH = infos[0].hour;
+        int startM = infos[0].minute;
+        
+        Stack<Info> stack = new Stack<Info>();
+        Queue<String> que = new ArrayDeque<String>();
+        for(int l = 0; l<len; l++){
+            Info info = infos[l];
+            int time = (info.hour - startH)*60 + info.minute - startM;
+            while(time !=0 && !stack.isEmpty()){
+                Info infoS = stack.pop();
+                if (infoS.work <= time) {         
+                    time -= infoS.work;
+                    que.add(infoS.name);           
+                } else {                           
+                    infoS.work -= time;             
+                    stack.push(infoS);              
+                    time = 0;
+                }
             }
-            return Integer.compare(o1[1], o2[1]);
-        });
-        int start = -1;
-        int end = -1;
-        for(int i = 0; i<targets.length; i++){
-            int[] target = targets[i];
-            if(end<=target[0]){
-                answer++;
-                start=target[0];
-                end = target[1];
-            }
+            stack.push(info);
+            startH = info.hour;
+            startM = info.minute;
+            
+        }
+        
+        while(!stack.isEmpty()){
+            Info i = stack.pop();
+            que.add(i.name);
+        }
+        
+        int index = 0;
+        for(String s : que){
+            answer[index] = s;
+            index++;
         }
 ```
 
 ## :black_nib: **Review**
-- 어디간거니? 내 코딩테스트 싸이트..
 
   ## 📡**Link**
 
-- https://school.programmers.co.kr/learn/courses/30/lessons/181188
+- https://school.programmers.co.kr/learn/courses/30/lessons/176962
 
   
 
