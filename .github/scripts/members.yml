@@ -78,7 +78,7 @@ members:
     folder: "hanayoung"
     name: "한아영" 
     goal: "swea,d2,2"
-    goal_text: "(취업자배려전형)SWEA D2 2개"
+    goal_text: "(취업자배려전형) SWEA D2 2개"
     exempt: false
 
   - display: "[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)"
