@@ -1,29 +1,27 @@
-# 💵 현재 벌금 총액
+# 💵 현재 벌금 총액 
 
 [✨벌금은 투명하게 공개됩니다✨](https://docs.google.com/spreadsheets/d/1SA-3FZ68yAtUvqcq3b33LhOsZJc6WIB4Fr1K43GUGK0/edit?usp=sharing)
-
-| 항목 | 금액     |
-| ---- | -------- |
-| 벌금 | 130,000원 |
-| 이자 | 341원     |
-| 총액 | 130,341원 |
 
 <br>
 
 # 📚 목표
 
-| 아이디                                                      | 목표                                |
-| ----------------------------------------------------------- | ----------------------------------- |
-| [김정언(JeongEon)](https://github.com/JeongEon8)            | 프로그래머스 Lv2 3개 + Lv3 1개        |  
-| [양성원(YSW-Yang)](https://github.com/YSW-Yang)             | 프로그래머스 Lv2 4개                  |
-| [이상혁(hyuksanglee)](https://github.com/hyuksanglee)       | 프로그래머스 Lv2 4개                  |
-| [이승지(bmlsj)](https://github.com/bmlsj)                   | 프로그래머스 Lv2 4개                  |
-| [정유진(breadbirds)](https://github.com/breadbirds)         | 프로그래머스 Lv2 4개                  |
-| [정찬우(Jhanoo)](https://github.com/Jhanoo)                 | 프로그래머스 카카오 Lv2 2개            |
-| [이서현(kizizip)](https://github.com/kizizip)               | (취업자배려전형) 프로그래머스 Lv1 2개 |
-| [장홍준(ajang369)](https://github.com/ajang369)             | (취업자배려전형)                    |
-| [한아영(hanayoung)](https://github.com/hanayoung)           | (취업자배려전형)                    |
-| [황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok) | (취업자배려전형) 프로그래머스 Lv2 2개 |
+<!-- STATS_START -->
+| 아이디 | 목표 | 달성 여부 | 벌금 |
+| ------ | ---- | :-------: | :--: |
+| [김정언(JeongEon)](https://github.com/JeongEon8) | 프로그래머스 Lv2 3개 + Lv3 1개 | - | - |
+| [양성원(YSW-Yang)](https://github.com/YSW-Yang) | 프로그래머스 Lv2 4개 | - | - |
+| [이상혁(hyuksanglee)](https://github.com/hyuksanglee) | 프로그래머스 Lv2 4개 | - | - |
+| [이승지(bmlsj)](https://github.com/bmlsj) | 프로그래머스 Lv2 4개 | - | - |
+| [정유진(breadbirds)](https://github.com/breadbirds) | 프로그래머스 Lv2 4개 | - | - |
+| [정찬우(Jhanoo)](https://github.com/Jhanoo) | 프로그래머스 카카오 Lv2 2개 | - | - |
+| [이서현(kizizip)](https://github.com/kizizip) | (취업자배려전형) 프로그래머스 Lv1 2개| - | - |
+| [장홍준(ajang369)](https://github.com/ajang369) | (취업자배려전형) | - | - |
+| [한아영(hanayoung)](https://github.com/hanayoung) | (취업자배려전형) | - | - |
+| [황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok) | (취업자배려전형) 프로그래머스 Lv2 2개 | - | - |
+
+> 📅 26.04.28 ~ 26.05.04 20:00 KST 기준
+<!-- STATS_END -->
 
 <br>
 
@@ -38,7 +36,9 @@
 
 # ⌛ 진행상황
 
+<!-- CURRENT_ROUND_START -->
 ### 제 70회 [26.04.28 ~ 26.05.04] (진행중)
+<!-- CURRENT_ROUND_END -->
 
 <details>
   <summary>2024년</summary>
@@ -62,7 +62,7 @@
   - 제 18회 [24.12.24 - 24.12.30] (진행완료) <br>
 </details>
 <details>
-    <summary>2025년</summary>
+  <summary>2025년</summary>
   - 제 19회 [25.1.7 - 25.1.13] (진행완료) <br>
   - 제 20회 [25.1.14 - 25.1.20] (진행완료) <br>
   - 제 21회 [25.1.21 - 25.2.3] (진행완료) <br>
@@ -100,7 +100,7 @@
   - 제 53회 [25.12.16 ~ 25.12.22] (진행완료) <br>
 </details>
 <details>
-    <summary>2026년</summary>
+  <summary>2026년</summary>
   - 제 54회 [26.01.05 ~ 26.01.12] (진행완료) <br>
   - 제 55회 [26.01.13 ~ 26.01.19] (진행완료) <br>
   - 제 56회 [26.01.20 ~ 26.01.26] (진행완료) <br>

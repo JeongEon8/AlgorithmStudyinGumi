@@ -1,0 +1,42 @@
+name: 🔍 스터디 현황 자동 검사        # 액션 이름
+
+on:                                 # 액션 실행 트리거
+  push:                             # git push 할 때 실행
+    branches:                       # main 브랜치에 push 될 때 트리거 발생
+      - main
+    paths-ignore:                   # 이 경로에서 push되는 것은 무시
+      - '.github/**'
+  workflow_dispatch:                # 액션에서 버튼 클릭을 통해 실행 
+
+
+jobs:                               # 실행할 내용
+  update-stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:                          # 액션 실행 순서
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0            # 전체 커밋 히스토리 필요 (git log 기반 시간 추적)
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'              # 계속 똑같은 Dependencies를 다운받기에는 11ms 걸려서 캐시 사용
+
+      - name: Install dependencies
+        run: pip install -r .github/scripts/requirements.txt
+
+      - name: Run stats updater
+        run: python .github/scripts/update_stats.py
+
+      - name: Commit & Push if changed  # 변경 사항 있을 때만 Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet || git commit -m "🔍 스터디 현황 자동 검사 [skip ci]"
+          git pull --rebase && git push
