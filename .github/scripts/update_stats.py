@@ -22,6 +22,7 @@ MEMBERS_YML = ".github/scripts/members.yml"
 # 플랫폼 인식 별칭 (대괄호 안 사이트명 기준, 소문자+공백제거 후 비교)
 PROGRAMMERS_ALIASES = {"프로그래머스", "플그머", "programmers", "pgs"}
 LEETCODE_ALIASES    = {"릿코드", "리트코드", "leetcode", "leet"}
+SWEA_ALIASES        = {"swea", "스웨아", "스웨어"}
 
 # ─────────────────────────────────────────────────────
 # 동급 레벨 변환 테이블 (공통 점수로 비교)
@@ -41,6 +42,15 @@ UNIFIED_SCORE: dict[tuple[str, str], int] = {
     ("leetcode", "easy"):   1,
     ("leetcode", "medium"): 2,
     ("leetcode", "hard"):   3,
+    # SWEA
+    ("swea", "D1"):         1,
+    ("swea", "D2"):         2,
+    ("swea", "D3"):         3,
+    ("swea", "D4"):         4,
+    ("swea", "D5"):         5,
+    ("swea", "D6"):         6,
+    ("swea", "D7"):         7,
+    ("swea", "D8"):         8,
 }
 
 
@@ -118,6 +128,11 @@ def parse_readme_level(readme_path: str) -> tuple[str, str] | None:
                         return ("leetcode", "medium")
                     return ("leetcode", "easy")
 
+                # ── SWEA ──
+                if site in SWEA_ALIASES:
+                    lv = re.search(r"D?(\d)", rest)
+                    return ("swea", f"lv{lv.group(1)}" if lv else "D1")
+
                 return ("unknown", "unknown")
     except Exception:
         pass
@@ -194,11 +209,16 @@ def count_valid_submissions(member: dict, week_start: datetime, week_end: dateti
             print("🔍 { problem_path }는 폴더 이름 규칙을 따르지 않아, 스킵합니다 💨💨")
             continue
 
-        readme_file = os.path.join(problem_path, "README.md")
-
+        # 대소문자 구분 없이 README.md 찾기
+        readme_file = None
+        for fname in os.listdir(problem_path):
+            if fname.lower() == "readme.md":
+                readme_file = os.path.join(problem_path, fname)
+                break
+        
         # 정해진 규칙 폴더 내 readme 파일이 없는 경우 스킵
-        if not os.path.exists(readme_file):
-            print("🔍 { problem_path } 내 README 파일이 없어, 스킵합니다 💨💨")
+        if readme_file is None:
+            print(f"🔍 {problem_path} 내 README 파일이 없어, 스킵합니다 💨💨")
             continue
 
         commit_time = get_lastest_commit_time(readme_file)  # 최근 커밋 시간 반환
