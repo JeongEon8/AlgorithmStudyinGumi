@@ -2,7 +2,7 @@ name: 📁 폴더 정리
 
 on:
   schedule:    
-    - cron: "28 00 * * 2"
+    - cron: "00 21 * * 1"
   workflow_dispatch:
 
 jobs:
