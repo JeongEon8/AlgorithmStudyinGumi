@@ -20,7 +20,7 @@
 | [한아영(hanayoung)](https://github.com/hanayoung) | (취업자배려전형)SWEA D2 2개 | ❌ | 💸10,000원 |
 | [황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok) | (취업자배려전형) 프로그래머스 Lv2 2개 | ❌ | 💸10,000원 |
 
-> 📅 26.04.28 ~ 26.05.04 20:00 KST 기준
+> 📅 26.05.05 ~ 26.05.11 20:00 KST 기준
 <!-- STATS_END -->
 
 <br>
