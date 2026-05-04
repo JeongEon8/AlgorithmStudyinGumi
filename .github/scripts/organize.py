@@ -186,32 +186,23 @@ def organize_yearly(last_week: dict):
 # members.yml의 folder → name 매핑으로 이름 변환
 # ─────────────────────────────────────────────────────
 def get_fine_list() -> list[str]:
-    # members.yml에서 folder → name 매핑 로드
-    with open(MEMBERS_YML, "r", encoding="utf-8") as f:
-        config = yaml.safe_load(f)
-    folder_to_name = {m["folder"]: m.get("name", m["folder"]) for m in config.get("members", [])}
-
     try:
         with open("README.md", "r", encoding="utf-8") as f:
             readme = f.read()
-
+ 
         m = re.search(r"<!-- STATS_START -->(.*?)<!-- STATS_END -->", readme, re.DOTALL)
         if not m:
             return []
-
+ 
         fines = []
         for line in m.group(1).splitlines():
             # | display | 목표 | ❌ | 💸5,000원 | 형식 파싱
             parts = [p.strip() for p in line.split("|") if p.strip()]
             if len(parts) >= 4 and "❌" in parts[2]:
                 fine_str = parts[3]
-                # display 안에 folder명이 포함되어 있으면 name으로 변환
-                # 예: "[양성원(YSW-Yang)]..." 에서 folder "YSW" 매칭 → "양성원"
-                name = parts[0]  # 기본값
-                for folder, n in folder_to_name.items():
-                    if folder in parts[0]:
-                        name = n
-                        break
+                # "[김정언(JeongEon)]..." → "김정언" 추출
+                name_match = re.search(r"\[([^\(]+)\(", parts[0])
+                name = name_match.group(1).strip() if name_match else parts[0]
                 # 금액 추출
                 amount_match = re.search(r"[\d,]+원", fine_str)
                 if amount_match:
