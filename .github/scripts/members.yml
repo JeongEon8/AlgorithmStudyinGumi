@@ -4,11 +4,14 @@
 #
 # [goal 작성 규칙]
 #   "플랫폼,레벨,개수"
-#   플랫폼: programmers / baekjoon / leetcode / codetree
-#   레벨:   lv0~lv5 / bronze~ruby / easy~hard / none
+#   플랫폼: programmers / baekjoon / leetcode / codetree / SWEA
+#   레벨:   lv0~lv5 / bronze~ruby / easy~hard / none / D1~D8
 #   OR 조건: "programmers,lv2,2 OR leetcode,medium,2"  → 합산 2개
 #   AND 조건: "programmers,lv2,3 AND programmers,lv3,1" -> 합산 4
 # 
+#   백준 실버 3개/ 골드 2개
+#   프로그래머스 lv1 3개 / Lv2 2개
+#
 # [exempt]
 #   true  → 취업자배려전형 (달성여부·벌금 모두 -)
 #   false → 일반 (벌금 적용)
@@ -18,43 +21,43 @@ members:
   - display: "[김정언(JeongEon)](https://github.com/JeongEon8)"
     folder: "JeongEon"
     name: "김정언" 
-    goal: "programmers,lv2,3 AND programmers,lv3,1"
-    goal_text: "프로그래머스 Lv2 3개 + Lv3 1개"
+    goal: "programmers,lv2,3"
+    goal_text: "프로그래머스 Lv2 3개"
     exempt: false
 
   - display: "[양성원(YSW-Yang)](https://github.com/YSW-Yang)"
     folder: "YSW"
     name: "양성원" 
-    goal: "programmers,lv2,4"
-    goal_text: "프로그래머스 Lv2 4개"
+    goal: "programmers,lv2,2"
+    goal_text: "프로그래머스 Lv2 2개"
     exempt: false
 
   - display: "[이상혁(hyuksanglee)](https://github.com/hyuksanglee)"
     folder: "hyuksanglee"
     name: "이상혁" 
-    goal: "programmers,lv2,4"
-    goal_text: "프로그래머스 Lv2 4개"
+    goal: "programmers,lv2,3"
+    goal_text: "프로그래머스 Lv2 3개"
     exempt: false
 
   - display: "[이승지(bmlsj)](https://github.com/bmlsj)"
     folder: "bmlsj"
     name: "이승지" 
-    goal: "programmers,lv2,4"
-    goal_text: "프로그래머스 Lv2 4개"
+    goal: "programmers,lv2,3"
+    goal_text: "프로그래머스 Lv2 3개"
     exempt: false
 
   - display: "[정유진(breadbirds)](https://github.com/breadbirds)"
     folder: "breadbirds"
     name: "정유진" 
-    goal: "programmers,lv2,4"
-    goal_text: "프로그래머스 Lv2 4개"
+    goal: "programmers,lv1,3"
+    goal_text: "프로그래머스 Lv1 3개"
     exempt: false
 
   - display: "[정찬우(Jhanoo)](https://github.com/Jhanoo)"
     folder: "Jhanoo"
     name: "정찬우" 
-    goal: "programmers,lv2,2"
-    goal_text: "프로그래머스 카카오 Lv2 2개"
+    goal: "programmers,lv2,3"
+    goal_text: "프로그래머스 Lv2 3개"
     exempt: false
 
   - display: "[이서현(kizizip)](https://github.com/kizizip)"
@@ -74,9 +77,9 @@ members:
   - display: "[한아영(hanayoung)](https://github.com/hanayoung)"
     folder: "hanayoung"
     name: "한아영" 
-    goal: ""
-    goal_text: "(취업자배려전형)"
-    exempt: true
+    goal: "swea,d2,2"
+    goal_text: "(취업자배려전형)SWEA D2 2개"
+    exempt: false
 
   - display: "[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)"
     folder: "HwangSeonHyeok"
