@@ -1,4 +1,4 @@
-# [PGS - lv2] 03.소수 찾기
+# [PGS - lv3] 05.정수 삼각형
 
 ## ⏰**time**
 
@@ -6,7 +6,7 @@
 
 ## :pushpin: \*\*Algorith
 
-- 정렬
+- dp
 
 ## ⏲️**Time Complexity**
 
@@ -14,42 +14,35 @@ $O(NlogN)$
 
 ## :round_pushpin: **Logic**
 
-1. 문자에서 나올수 있는 숫자 조합을 먼저 구하고 TreeSet에 담는다
-   - TreeSet에 담는 이유는 중복된 숫자 없이 정렬 시키기 위해
-2. 에라토스테네스의 체를 이용해서 소수를 체크한다
-3. set에서 하나씩 꺼내서 소수인지 판결하고 소수이면 count해준다.
+1. 제일 위에 (0,0) 좌표에서 부터 차례대로 탐색을 해준다.
+2. 초기값으로 (0,0)을 채워준다.
+3. 제일 왼쪽은 이전칸에 n번째, 제일 오른쪽은 이전칸에 n-1넣어주고 그외에는 둘중에 큰값을 넣어서계산
+4. 마지막에 왔을때 결과값이랑 비교해서 큰값이면 변경
 
 ```java
-            public void dfs(int depth, int len, String num){
-	        if(depth>=len){
-	            return;
-	        }
-	        
-	        for(int i =0; i<len; i++){
-	            if(!check[i]){
-	                check[i] = true;
-	                
-	                set.add(Integer.parseInt(num+ arr[i]));
-	                dfs(depth+1, len, num+ arr[i]);
-	                check[i] = false;
-	            }
-	        }
-	        
-	        
-	    }
+          dp[0][0] = arr[0][0];
+        for(int depth =1 ; depth<len; depth++){
+            for(int i =0; i <= depth; i++){
+                int max = 0;
+                
+                if(i==0){
+                    max = dp[depth-1][i];
+                }else if(i == depth){
+                    max = dp[depth-1][i-1]; 
+                }else{
+                   max = Math.max(dp[depth - 1][i], dp[depth - 1][i - 1]);
+                }
+                dp[depth][i]= max + arr[depth][i];
+                if(answer<dp[depth][i]){
+                    answer=dp[depth][i];
+                }
+            }
+        }
 ```
 
-```java
-             for (int i = 2; i * i <= max; i++) {
-                        if (!isNotPrime[i]) {
-                            for (int j = i * i; j <= max; j += i) {
-                                isNotPrime[j] = true;
-                            }
-                        }
-                    }
-```
+
 
 ## :black_nib: **Review**
 
 ## 📡 Link
-<https://school.programmers.co.kr/learn/courses/30/lessons/42839>
+<https://school.programmers.co.kr/learn/courses/30/parts/12263>
