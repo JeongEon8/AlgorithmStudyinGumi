@@ -1,4 +1,4 @@
-# [PGS - lv2] 01. 더맵게
+# [PGS - lv2] 02.K번째수
 
 ## ⏰**time**
 
@@ -6,7 +6,7 @@
 
 ## :pushpin: \*\*Algorith
 
--heap
+- 정렬
 
 ## ⏲️**Time Complexity**
 
@@ -14,22 +14,28 @@ $O(NlogN)$
 
 ## :round_pushpin: **Logic**
 
-1. 우선순위 큐 안에 음식을 담아준다.
-2. 큐에서 2개를 뽑아서 두번째꺼를 x2를 해서 합을 구해서 다시 큐에 넣어준다.
-3. 2번을 큐안에 개수가 2개 미만이고 큐의 최소 값이 K이상일때 까지 반복해준다.
-4. 반복 횟수를 출력
+1. 해당 범위만큼 리스트를 자르고 정렬 시켜서 원하는 인덱스의 값을 뽑아낸다.
 
 ```java
-while(que.size()>=2 && que.peek()<K){
-	            int f = que.poll();
-	            int s = que.poll();
-	            total = f + s*2;
-	            que.add(total);
-	            answer++;
-	        }
+for(int i =0; i<len; i++){
+            // answer[i] = commands[i][1];
+            int start = commands[i][0];
+            int end = commands[i][1];
+            int type = commands[i][2];
+            
+            int[] arr= new int [end-start+1];
+            int indexA = 0;
+            for(int j = start-1; j<end; j++){
+                arr[indexA++] = array[j];
+            }
+            
+            Arrays.sort(arr);
+            
+            answer[index++] = arr[type-1];
+        }
 ```
 
 ## :black_nib: **Review**
 
 ## 📡 Link
-<https://school.programmers.co.kr/learn/courses/30/lessons/42626>
+<https://school.programmers.co.kr/learn/courses/30/lessons/42748>
