@@ -28,8 +28,8 @@ members:
   - display: "[양성원(YSW-Yang)](https://github.com/YSW-Yang)"
     folder: "YSW"
     name: "양성원" 
-    goal: "programmers,lv2,2"
-    goal_text: "프로그래머스 Lv2 2개"
+    goal: "programmers,lv2,4"
+    goal_text: "프로그래머스 Lv2 4개"
     exempt: false
 
   - display: "[이상혁(hyuksanglee)](https://github.com/hyuksanglee)"
