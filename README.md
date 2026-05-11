@@ -12,7 +12,7 @@
 | [김정언(JeongEon)](https://github.com/JeongEon8) | 프로그래머스 Lv2 3개 | ❌ | 💸10,000원 |
 | [양성원(YSW-Yang)](https://github.com/YSW-Yang) | 프로그래머스 Lv2 2개 | ✅ | ✨굳✨ |
 | [이상혁(hyuksanglee)](https://github.com/hyuksanglee) | 프로그래머스 Lv2 3개 | ❌ | 💸10,000원 |
-| [이승지(bmlsj)](https://github.com/bmlsj) | 프로그래머스 Lv2 3개 | ❌ | 💸10,000원 |
+| [이승지(bmlsj)](https://github.com/bmlsj) | 프로그래머스 Lv2 3개 | ✅ | ✨굳✨ |
 | [정유진(breadbirds)](https://github.com/breadbirds) | 프로그래머스 Lv1 3개 | ❌ | 💸10,000원 |
 | [정찬우(Jhanoo)](https://github.com/Jhanoo) | 프로그래머스 Lv2 3개 | ❌ | 💸10,000원 |
 | [이서현(kizizip)](https://github.com/kizizip) | (취업자배려전형) 프로그래머스 Lv1 2개 | ✅ | ✨굳✨ |
