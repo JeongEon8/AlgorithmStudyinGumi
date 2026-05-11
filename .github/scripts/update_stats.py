@@ -43,14 +43,14 @@ UNIFIED_SCORE: dict[tuple[str, str], int] = {
     ("leetcode", "medium"): 2,
     ("leetcode", "hard"):   3,
     # SWEA
-    ("swea", "D1"):         1,
-    ("swea", "D2"):         2,
-    ("swea", "D3"):         3,
-    ("swea", "D4"):         4,
-    ("swea", "D5"):         5,
-    ("swea", "D6"):         6,
-    ("swea", "D7"):         7,
-    ("swea", "D8"):         8,
+    ("swea", "d1"):         1,
+    ("swea", "d2"):         2,
+    ("swea", "d3"):         3,
+    ("swea", "d4"):         4,
+    ("swea", "d5"):         5,
+    ("swea", "d6"):         6,
+    ("swea", "d7"):         7,
+    ("swea", "d8"):         8,
 }
 
 
@@ -131,7 +131,7 @@ def parse_readme_level(readme_path: str) -> tuple[str, str] | None:
                 # ── SWEA ──
                 if site in SWEA_ALIASES:
                     lv = re.search(r"D?(\d)", rest)
-                    return ("swea", f"lv{lv.group(1)}" if lv else "D1")
+                    return ("swea", f"d{lv.group(1)}" if lv else "d1")
 
                 return ("unknown", "unknown")
     except Exception:
