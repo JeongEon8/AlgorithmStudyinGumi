@@ -284,6 +284,9 @@ def get_ratio(result: dict) -> float:
         total_submitted = sum(counts)
         total_required = sum(g["count"] for g in parsed_goal["groups"])
         return total_submitted / total_required if total_required > 0 else 1.0
+    else:  # OR
+        required = parsed_goal["groups"][0]["count"] if parsed_goal["groups"] else 1
+        return counts[0] / required if required > 0 else 1.0
 
 
 # ─────────────────────────────────────────────────────
