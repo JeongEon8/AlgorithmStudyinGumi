@@ -1,27 +1,31 @@
-# [PGS - Lv2] 01_다음 큰 숫자
+# [PGS - Lv2] 01\_다음 큰 숫자
 
 ## ⏰**time**
 
-(걸린 시간을 작성해주세요.)
+40
 
 ## :pushpin: **Algorithm**
 
-(알고리즘을 작성해주세요.)
+-구현
 
 ## ⏲️**Time Complexity**
 
-$O(N)$ (시간 복잡도를 작성해주세요.)
+$O(N)$
 
 ## :round_pushpin: **Logic**
 
-1. (풀이 방식을 작성해주세요.)
-   ```
-   로직
+1. n을 1씩 증가 시키면서 제일 먼저 나오는 n과 비트수가 같은 수를 반환하게 했다.
+
+   ```java
+     while (true) {
+         n++;
+         if (Integer.bitCount(n) == count) {
+             return n;
+         }
+     }
    ```
 
 ## :black_nib: **Review**
-
-- (소감을 작성해주세요.)
 
 ## 📡 Link
 
