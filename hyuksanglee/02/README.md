@@ -20,7 +20,7 @@ $O(1)$
 4, 둘다 승리 할경우 잘못됨
 위 경우일때는 0을 출력 아닐경우 1을 출력
    ```
- boolean bingoO = isWin(board,'O');
+       boolean bingoO = isWin(board,'O');
         boolean bingoX = isWin(board,'X');
         
         
