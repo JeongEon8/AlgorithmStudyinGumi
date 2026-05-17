@@ -2,7 +2,7 @@
 
 ## ⏰**time**
 
-미기재
+16분
 
 ## :pushpin: **Algorithm**
 
