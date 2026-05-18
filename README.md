@@ -10,7 +10,7 @@
 | 아이디 | 목표 | 달성 여부 | 벌금 |
 | ------ | ---- | :-------: | :--: |
 | [김정언(JeongEon)](https://github.com/JeongEon8) | 프로그래머스 Lv2 3개 | ✅ | ✨굳✨ |
-| [양성원(YSW-Yang)](https://github.com/YSW-Yang) | 프로그래머스 Lv2 4개 | ✅ | ✨굳✨ |
+| [양성원(YSW-Yang)](https://github.com/YSW-Yang) | 프로그래머스 Lv2 3개 | ✅ | ✨굳✨ |
 | [이상혁(hyuksanglee)](https://github.com/hyuksanglee) | 프로그래머스 Lv2 3개 | ❌ | 💸5,000원 |
 | [이승지(bmlsj)](https://github.com/bmlsj) | 프로그래머스 Lv2 3개 | ✅ | ✨굳✨ |
 | [정유진(breadbirds)](https://github.com/breadbirds) | 프로그래머스 Lv1 3개 | ✅ | ✨굳✨ |
@@ -37,7 +37,7 @@
 # ⌛ 진행상황
 
 <!-- CURRENT_ROUND_START -->
-### 제 72회 [26.05.12 ~ 26.05.18] (진행중)
+### 제 73회 [26.05.19 ~ 26.05.25] (진행중)
 <!-- CURRENT_ROUND_END -->
 
 <details>
@@ -119,6 +119,7 @@
   - 제 69회 [26.04.21 ~ 26.04.27] (진행완료) <br>
   - 제 70회 [26.04.28 ~ 26.05.04] (진행완료) <br>
   - 제 71회 [26.05.05 ~ 26.05.11] (진행완료) <br>
+  - 제 72회 [26.05.12 ~ 26.05.18] (진행완료) <br>
 </details>
 
 <br>
