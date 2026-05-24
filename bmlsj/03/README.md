@@ -50,7 +50,3 @@ while(storey > 0) {
 ## 📡 Link
 
 - <https://school.programmers.co.kr/learn/courses/30/lessons/148653>
-
-- <https://school.programmers.co.kr/learn/courses/30/lessons/148653>
-- <https://school.programmers.co.kr/learn/courses/30/lessons/148653>
-- <https://school.programmers.co.kr/learn/courses/30/lessons/148653>
