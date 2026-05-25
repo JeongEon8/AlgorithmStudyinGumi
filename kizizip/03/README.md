@@ -7,7 +7,7 @@
 
 ## ⏲️**Time Complexity**
 
-$O(N)$ (시간 복잡도를 작성해주세요.)
+$O(N)$ 
 
 ## :round_pushpin: **Logic**
 
