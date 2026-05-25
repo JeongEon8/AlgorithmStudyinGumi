@@ -42,8 +42,8 @@ members:
   - display: "[이승지(bmlsj)](https://github.com/bmlsj)"
     folder: "bmlsj"
     name: "이승지" 
-    goal: "programmers,lv2,4"
-    goal_text: "프로그래머스 Lv2 4개"
+    goal: "programmers,lv2,3"
+    goal_text: "프로그래머스 Lv2 3개"
     exempt: false
 
   - display: "[정유진(breadbirds)](https://github.com/breadbirds)"
@@ -63,8 +63,8 @@ members:
   - display: "[이서현(kizizip)](https://github.com/kizizip)"
     folder: "kizizip"
     name: "이서현" 
-    goal: "programmers,lv1,3"
-    goal_text: "(취업자배려전형) 프로그래머스 Lv1 3개"
+    goal: "programmers,lv1,2"
+    goal_text: "(취업자배려전형) 프로그래머스 Lv1 2개"
     exempt: false
 
   - display: "[장홍준(ajang369)](https://github.com/ajang369)"
