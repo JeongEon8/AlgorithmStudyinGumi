@@ -18,7 +18,7 @@
 | [이서현(kizizip)](https://github.com/kizizip) | (취업자배려전형) 프로그래머스 Lv1 2개 | ❌ | 💸10,000원 |
 | [장홍준(ajang369)](https://github.com/ajang369) | (취업자배려전형) | - | - |
 | [한아영(hanayoung)](https://github.com/hanayoung) | (취업자배려전형) SWEA D3 2개 | ❌ | 💸10,000원 |
-| [황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok) | (취업자배려전형) 프로그래머스 Lv2 2개 | ❌ | 💸10,000원 |
+| [황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok) | (취업자배려전형) 프로그래머스 Lv2 2개 | ✅ | ✨굳✨ |
 
 > 📅 26.05.26 ~ 26.06.01 20:00 KST 기준
 <!-- STATS_END -->
