@@ -1,4 +1,4 @@
-# [SWEA - D?] 02_[S W 문제해결 기본] 3일차 - String
+# [SWEA - D3] 02_[S W 문제해결 기본] 3일차 - String
 
 ## ⏰**time**
 
