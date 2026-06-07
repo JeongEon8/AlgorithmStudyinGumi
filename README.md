@@ -9,7 +9,7 @@
 <!-- STATS_START -->
 | 아이디 | 목표 | 달성 여부 | 벌금 |
 | ------ | ---- | :-------: | :--: |
-| [김정언(JeongEon)](https://github.com/JeongEon8) | 프로그래머스 Lv1 2개 | ❌ | 💸5,000원 |
+| [김정언(JeongEon)](https://github.com/JeongEon8) | 프로그래머스 Lv1 2개 | ✅ | ✨굳✨ |
 | [양성원(YSW-Yang)](https://github.com/YSW-Yang) | 프로그래머스 Lv2 2개 | ✅ | ✨굳✨ |
 | [이상혁(hyuksanglee)](https://github.com/hyuksanglee) | 프로그래머스 Lv2 1개 | ✅ | ✨굳✨ |
 | [이승지(bmlsj)](https://github.com/bmlsj) | 프로그래머스 Lv2 1개 | ✅ | ✨굳✨ |
