@@ -17,32 +17,32 @@ $O(N*M)$
 1. bfs로 L을 찾아주고 못찾을 경우 -1 리턴 아닐경우 움직인 개수를 더해주고 해당 좌표에서 E를 찾아준다
 2. 여기서도 못찾을 경우 -1 리턴하고 찾을경우 개수를 더해서 리턴해준다
    ```
- public Info bfs(int x, int y, char find, String[] maps){
-        Queue<Info> que = new ArrayDeque<>();
-        que.add(new Info(x,y,0));
-        int[] dx = {1,0,-1,0};
-        int[] dy = {0,1,0,-1};
-        boolean[][] check = new boolean[N][M];
-        while(!que.isEmpty()){
-            Info info = que.poll();
-            if(maps[info.y].charAt(info.x)== find){
-                return info;
-            }
-            for(int d = 0; d<4; d++){
-                int nx = info.x+dx[d];
-                int ny = info.y+dy[d];
-                if(nx<0 || ny<0 || nx>= M || ny>=N){
-                    continue;
-                }
-                if(maps[ny].charAt(nx)!='X' && !check[ny][nx]){
-                    check[ny][nx]=true;
-                    que.add(new Info(nx, ny, info.count+1));
-                }
-                
-            }
-        }
-        return new Info(-1,-1,-1);
-    }
+       public Info bfs(int x, int y, char find, String[] maps){
+              Queue<Info> que = new ArrayDeque<>();
+              que.add(new Info(x,y,0));
+              int[] dx = {1,0,-1,0};
+              int[] dy = {0,1,0,-1};
+              boolean[][] check = new boolean[N][M];
+              while(!que.isEmpty()){
+                  Info info = que.poll();
+                  if(maps[info.y].charAt(info.x)== find){
+                      return info;
+                  }
+                  for(int d = 0; d<4; d++){
+                      int nx = info.x+dx[d];
+                      int ny = info.y+dy[d];
+                      if(nx<0 || ny<0 || nx>= M || ny>=N){
+                          continue;
+                      }
+                      if(maps[ny].charAt(nx)!='X' && !check[ny][nx]){
+                          check[ny][nx]=true;
+                          que.add(new Info(nx, ny, info.count+1));
+                      }
+                      
+                  }
+              }
+              return new Info(-1,-1,-1);
+          }
    ```
 
 ## :black_nib: **Review**
