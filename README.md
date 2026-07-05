@@ -17,7 +17,7 @@
 | [정찬우(Jhanoo)](https://github.com/Jhanoo) | 프로그래머스 Lv2 3개 | ❌ | 💸10,000원 |
 | [이서현(kizizip)](https://github.com/kizizip) | (취업자배려전형) 프로그래머스 Lv1 2개 | ❌ | 💸10,000원 |
 | [장홍준(ajang369)](https://github.com/ajang369) | (취업자배려전형) | - | - |
-| [한아영(hanayoung)](https://github.com/hanayoung) | (취업자배려전형) SWEA D3 1개 | ❌ | 💸10,000원 |
+| [한아영(hanayoung)](https://github.com/hanayoung) | (취업자배려전형) SWEA D3 1개 | ✅ | ✨굳✨ |
 | [황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok) | (취업자배려전형) 프로그래머스 Lv2 2개 | ✅ | ✨굳✨ |
 
 > 📅 26.06.30 ~ 26.07.06 20:00 KST 기준
