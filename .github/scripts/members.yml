@@ -22,7 +22,7 @@ members:
     folder: "JeongEon8"
     name: "김정언" 
     goal: "programmers,lv2,3"
-    goal_text: "프로그래머스 Lv2 3개 + 잼얘"
+    goal_text: "(취업자배려전형) 프로그래머스 Lv2 3개 + 잼얘"
     exempt: false
 
   - display: "[양성원(YSW-Yang)](https://github.com/YSW-Yang)"
