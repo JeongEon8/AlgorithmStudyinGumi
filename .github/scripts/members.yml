@@ -79,7 +79,7 @@ members:
     name: "한아영" 
     goal: ""
     goal_text: "(취업자배려전형) 휴식 ㅎ.ㅎ"
-    exempt: false
+    exempt: true
 
   - display: "[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)"
     folder: "HwangSeonHyeok"
