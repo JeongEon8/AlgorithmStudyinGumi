@@ -4,7 +4,7 @@
 #
 # [goal 작성 규칙]
 #   "플랫폼,레벨,개수"
-#   플랫폼: programmers / baekjoon / leetcode / codetree / SWEA
+#   플랫폼: programmers / baekjoon / leetcode / codetree / SWEA / SQL
 #   레벨:   lv0~lv5 / bronze~ruby / easy~hard / none / D1~D8
 #   OR 조건: "programmers,lv2,2 OR leetcode,medium,2"  → 합산 2개
 #   AND 조건: "programmers,lv2,3 AND programmers,lv3,1" -> 합산 4
@@ -35,8 +35,8 @@ members:
   - display: "[이승지(bmlsj)](https://github.com/bmlsj)"
     folder: "bmlsj"
     name: "이승지" 
-    goal: "programmers,lv2,2"
-    goal_text: "프로그래머스 Lv2 2개"
+    goal: "programmers,lv2,1 AND SQL,none,1"
+    goal_text: "프로그래머스 Lv2 1개 + SQL 1개"
     exempt: false
 
   - display: "[정유진(breadbirds)](https://github.com/breadbirds)"
@@ -49,15 +49,15 @@ members:
   - display: "[정찬우(Jhanoo)](https://github.com/Jhanoo)"
     folder: "Jhanoo"
     name: "정찬우" 
-    goal: "programmers,lv2,4"
-    goal_text: "프로그래머스 Lv2 4개 + 잼얘"
+    goal: "programmers,lv2,3"
+    goal_text: "프로그래머스 Lv2 3개"
     exempt: false
 
   - display: "[김정언(JeongEon)](https://github.com/JeongEon8)"
     folder: "JeongEon8"
     name: "김정언" 
-    goal: "programmers,lv1,3"
-    goal_text: "(취업자배려전형) 프로그래머스 Lv1 3개"
+    goal: "programmers,lv1,2"
+    goal_text: "(취업자배려전형) 프로그래머스 Lv1 2개"
     exempt: false
 
   - display: "[이서현(kizizip)](https://github.com/kizizip)"
@@ -77,13 +77,13 @@ members:
   - display: "[한아영(hanayoung)](https://github.com/hanayoung)"
     folder: "hanayoung"
     name: "한아영" 
-    goal: "SWEA,D3,1"
-    goal_text: "(취업자배려전형) SWEA D3 1개"
-    exempt: false
+    goal: ""
+    goal_text: "(취업자배려전형)"
+    exempt: true
 
   - display: "[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)"
     folder: "HwangSeonHyeok"
     name: "황선혁" 
-    goal: "programmers,lv2,1"
-    goal_text: "(취업자배려전형) 프로그래머스 Lv2 1개"
-    exempt: false
+    goal: ""
+    goal_text: "(취업자배려전형)"
+    exempt: true
