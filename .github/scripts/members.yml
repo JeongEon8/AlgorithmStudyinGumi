@@ -30,7 +30,7 @@ members:
     name: "이상혁"
     goal: "programmers,lv2,2"
     goal_text: "프로그래머스 Lv2 2개"
-    exempt: false3
+    exempt: false
 
   - display: "[이승지(bmlsj)](https://github.com/bmlsj)"
     folder: "bmlsj"
