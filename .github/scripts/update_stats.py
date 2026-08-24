@@ -23,7 +23,6 @@ MEMBERS_YML = ".github/scripts/members.yml"
 PROGRAMMERS_ALIASES = {"프로그래머스", "플그머", "programmers", "pgs"}
 LEETCODE_ALIASES    = {"릿코드", "리트코드", "leetcode", "leet"}
 SWEA_ALIASES        = {"swea", "스웨아", "스웨어"}
-SQL_ALIASES         = {"sql", "sql문제", "sql문제풀이"}
 
 # ─────────────────────────────────────────────────────
 # 동급 레벨 변환 테이블 (공통 점수로 비교)
@@ -52,8 +51,6 @@ UNIFIED_SCORE: dict[tuple[str, str], int] = {
     ("swea", "d6"):         6,
     ("swea", "d7"):         7,
     ("swea", "d8"):         8,
-    # SQL
-    ("sql", "none"):        1,
 }
 
 
@@ -135,10 +132,6 @@ def parse_readme_level(readme_path: str) -> tuple[str, str] | None:
                 if site in SWEA_ALIASES:
                     lv = re.search(r"D?(\d)", rest)
                     return ("swea", f"d{lv.group(1)}" if lv else "d1")
-
-                # ── SQL ──
-                if site in SQL_ALIASES:
-                    return ("sql", "none")
 
                 return ("unknown", "unknown")
     except Exception:

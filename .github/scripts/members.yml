@@ -35,7 +35,7 @@ members:
   - display: "[이승지(bmlsj)](https://github.com/bmlsj)"
     folder: "bmlsj"
     name: "이승지" 
-    goal: "programmers,lv2,1 AND SQL,none,1"
+    goal: "programmers,lv2,2"
     goal_text: "프로그래머스 Lv2 1개 + SQL 1개"
     exempt: false
 
