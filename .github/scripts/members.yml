@@ -77,9 +77,9 @@ members:
   - display: "[한아영(hanayoung)](https://github.com/hanayoung)"
     folder: "hanayoung"
     name: "한아영" 
-    goal: ""
-    goal_text: "(취업자배려전형)"
-    exempt: true
+    goal: "swea,d3,1"
+    goal_text: "(취업자배려전형) SWEA D3 1개"
+    exempt: false
 
   - display: "[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)"
     folder: "HwangSeonHyeok"
