@@ -1,4 +1,4 @@
-# 💵 현재 벌금 총액 
+# 💵 현재 벌금 총액
 
 [✨벌금은 투명하게 공개됩니다✨](https://docs.google.com/spreadsheets/d/1SA-3FZ68yAtUvqcq3b33LhOsZJc6WIB4Fr1K43GUGK0/edit?usp=sharing)
 
@@ -7,20 +7,22 @@
 # 📚 목표
 
 <!-- STATS_START -->
-| 아이디 | 목표 | 달성 여부 | 벌금 |
-| ------ | ---- | :-------: | :--: |
-| [양성원(YSW-Yang)](https://github.com/YSW-Yang) | 프로그래머스 Lv2 2개 | ❌ | 💸10,000원 |
-| [이상혁(hyuksanglee)](https://github.com/hyuksanglee) | 프로그래머스 Lv2 2개 | ❌ | 💸10,000원 |
-| [이승지(bmlsj)](https://github.com/bmlsj) | 프로그래머스 Lv2 1개 + SQL 1개 | ❌ | 💸10,000원 |
-| [정유진(breadbirds)](https://github.com/breadbirds) | 프로그래머스 Lv1 1개 | ❌ | 💸10,000원 |
-| [정찬우(Jhanoo)](https://github.com/Jhanoo) | 프로그래머스 Lv2 3개 | ❌ | 💸10,000원 |
-| [김정언(JeongEon)](https://github.com/JeongEon8) | (취업자배려전형) 프로그래머스 Lv1 2개 | ❌ | 💸10,000원 |
-| [이서현(kizizip)](https://github.com/kizizip) | (취업자배려전형) 프로그래머스 Lv1 2개 | ❌ | 💸10,000원 |
-| [장홍준(ajang369)](https://github.com/ajang369) | (취업자배려전형) | - | - |
-| [한아영(hanayoung)](https://github.com/hanayoung) | (취업자배려전형) SWEA D3 1개 | ❌ | 💸10,000원 |
-| [황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok) | (취업자배려전형) | - | - |
+
+| 아이디                                                      | 목표                                  | 달성 여부 |    벌금    |
+| ----------------------------------------------------------- | ------------------------------------- | :-------: | :--------: |
+| [양성원(YSW-Yang)](https://github.com/YSW-Yang)             | 프로그래머스 Lv2 2개                  |    ❌     | 💸10,000원 |
+| [이상혁(hyuksanglee)](https://github.com/hyuksanglee)       | 프로그래머스 Lv2 2개                  |    ❌     | 💸10,000원 |
+| [이승지(bmlsj)](https://github.com/bmlsj)                   | 프로그래머스 Lv2 1개 + SQL 1개        |    ❌     | 💸5,000원  |
+| [정유진(breadbirds)](https://github.com/breadbirds)         | 프로그래머스 Lv1 1개                  |    ❌     | 💸10,000원 |
+| [정찬우(Jhanoo)](https://github.com/Jhanoo)                 | 프로그래머스 Lv2 3개                  |    ❌     | 💸10,000원 |
+| [김정언(JeongEon)](https://github.com/JeongEon8)            | (취업자배려전형) 프로그래머스 Lv1 2개 |    ❌     | 💸10,000원 |
+| [이서현(kizizip)](https://github.com/kizizip)               | (취업자배려전형) 프로그래머스 Lv1 2개 |    ❌     | 💸10,000원 |
+| [장홍준(ajang369)](https://github.com/ajang369)             | (취업자배려전형)                      |     -     |     -      |
+| [한아영(hanayoung)](https://github.com/hanayoung)           | (취업자배려전형) SWEA D3 1개          |    ❌     | 💸10,000원 |
+| [황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok) | (취업자배려전형)                      |     -     |     -      |
 
 > 📅 26.08.25 ~ 26.08.31 20:00 KST 기준
+
 <!-- STATS_END -->
 
 <br>
@@ -37,7 +39,9 @@
 # ⌛ 진행상황
 
 <!-- CURRENT_ROUND_START -->
+
 ### 제 86회 [26.08.25 ~ 26.08.31] (진행중)
+
 <!-- CURRENT_ROUND_END -->
 
 <details>
@@ -130,7 +134,7 @@
   - 제 80회 [26.07.07 ~ 26.07.13] (진행완료) <br>
   - 제 81회 [26.07.14 ~ 26.07.20] (진행완료) <br>
   - 제 82회 [26.07.21 ~ 26.07.27] (진행완료) <br>
-  - 제 83회 [26.07.28 ~ 26.08.03] (진행완료) <br> 
+  - 제 83회 [26.07.28 ~ 26.08.03] (진행완료) <br>
   - 제 83회 [26.08.04 ~ 26.08.10] (진행완료) <br>
   - 제 84회 [26.08.11 ~ 26.08.17] (진행완료) <br>
   - 제 85회 [26.08.18 ~ 26.08.24] (진행완료) <br>
