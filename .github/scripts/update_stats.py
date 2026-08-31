@@ -20,7 +20,7 @@ README_PATH = "README.md"
 MEMBERS_YML = ".github/scripts/members.yml"
 
 # 플랫폼 인식 별칭 (대괄호 안 사이트명 기준, 소문자+공백제거 후 비교)
-PROGRAMMERS_ALIASES = {"프로그래머스", "플그머", "programmers", "pgs"}
+PROGRAMMERS_ALIASES = {"프로그래머스", "플그머", "programmers", "pgs", "sql"}
 LEETCODE_ALIASES    = {"릿코드", "리트코드", "leetcode", "leet"}
 SWEA_ALIASES        = {"swea", "스웨아", "스웨어"}
 
