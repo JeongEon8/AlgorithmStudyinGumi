@@ -20,7 +20,7 @@
 | [한아영(hanayoung)](https://github.com/hanayoung) | (취업자배려전형) | - | - |
 | [황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok) | (취업자배려전형) 프로그래머스 lv2 2개 | ❌ | 💸10,000원 |
 
-> 📅 26.08.25 ~ 26.08.31 20:00 KST 기준
+> 📅 26.09.01 ~ 26.09.07 20:00 KST 기준
 <!-- STATS_END -->
 
 <br>
