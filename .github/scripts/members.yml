@@ -21,8 +21,8 @@ members:
   - display: "[양성원(YSW-Yang)](https://github.com/YSW-Yang)"
     folder: "YSW-Yang"
     name: "양성원"
-    goal: "programmers,lv2,2"
-    goal_text: "프로그래머스 Lv2 2개"
+    goal: "programmers,lv2,1"
+    goal_text: "프로그래머스 Lv2 1개"
     exempt: false
 
   - display: "[이상혁(hyuksanglee)](https://github.com/hyuksanglee)"
@@ -49,8 +49,8 @@ members:
   - display: "[정찬우(Jhanoo)](https://github.com/Jhanoo)"
     folder: "Jhanoo"
     name: "정찬우" 
-    goal: "programmers,lv2,2"
-    goal_text: "프로그래머스 Lv2 2개"
+    goal: "programmers,lv2,1"
+    goal_text: "프로그래머스 Lv2 1개"
     exempt: false
 
   - display: "[김정언(JeongEon)](https://github.com/JeongEon8)"
@@ -77,9 +77,9 @@ members:
   - display: "[한아영(hanayoung)](https://github.com/hanayoung)"
     folder: "hanayoung"
     name: "한아영" 
-    goal: ""
-    goal_text: "(취업자배려전형)"
-    exempt: true
+    goal: "SWEA,D1,1"
+    goal_text: "(취업자배려전형) SWEA D1 1개"
+    exempt: false
 
   - display: "[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)"
     folder: "HwangSeonHyeok"
