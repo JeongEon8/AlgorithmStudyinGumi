@@ -8,7 +8,7 @@
 #   레벨:   lv0~lv5 / bronze~ruby / easy~hard / none / D1~D8
 #   OR 조건: "programmers,lv2,2 OR leetcode,medium,2"  → 합산 2개
 #   AND 조건: "programmers,lv2,3 AND programmers,lv3,1" -> 합산 4
-# 
+#
 #   백준 실버 3개/ 골드 2개
 #   프로그래머스 lv1 3개 / Lv2 2개
 #
@@ -28,13 +28,13 @@ members:
   - display: "[이상혁(hyuksanglee)](https://github.com/hyuksanglee)"
     folder: "hyuksanglee"
     name: "이상혁"
-    goal: "programmers,lv2,2"
-    goal_text: "프로그래머스 Lv2 2개"
+    goal: "programmers,lv2,1"
+    goal_text: "프로그래머스 Lv2 1개"
     exempt: false
 
   - display: "[이승지(bmlsj)](https://github.com/bmlsj)"
     folder: "bmlsj"
-    name: "이승지" 
+    name: "이승지"
     goal: "programmers,lv2,2"
     goal_text: "프로그래머스 Lv2 2개"
     exempt: false
@@ -48,42 +48,42 @@ members:
 
   - display: "[정찬우(Jhanoo)](https://github.com/Jhanoo)"
     folder: "Jhanoo"
-    name: "정찬우" 
+    name: "정찬우"
     goal: "programmers,lv2,1"
     goal_text: "프로그래머스 Lv2 1개"
     exempt: false
 
   - display: "[김정언(JeongEon)](https://github.com/JeongEon8)"
     folder: "JeongEon8"
-    name: "김정언" 
+    name: "김정언"
     goal: "programmers,lv1,2"
     goal_text: "(취업자배려전형) 프로그래머스 Lv1 2개"
     exempt: false
 
   - display: "[이서현(kizizip)](https://github.com/kizizip)"
     folder: "kizizip"
-    name: "이서현" 
+    name: "이서현"
     goal: "programmers,lv1,2"
     goal_text: "(취업자배려전형) 프로그래머스 Lv1 2개"
     exempt: false
 
   - display: "[장홍준(ajang369)](https://github.com/ajang369)"
     folder: "ajang369"
-    name: "장홍준" 
+    name: "장홍준"
     goal: ""
     goal_text: "(취업자배려전형)"
     exempt: true
 
   - display: "[한아영(hanayoung)](https://github.com/hanayoung)"
     folder: "hanayoung"
-    name: "한아영" 
+    name: "한아영"
     goal: "SWEA,D1,1"
     goal_text: "(취업자배려전형) SWEA D1 1개"
     exempt: false
 
   - display: "[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)"
     folder: "HwangSeonHyeok"
-    name: "황선혁" 
-    goal: "programmers,lv2,2"
-    goal_text: "(취업자배려전형) 프로그래머스 lv2 2개"
+    name: "황선혁"
+    goal: "programmers,lv2,1"
+    goal_text: "(취업자배려전형) 프로그래머스 lv2 1개"
     exempt: false

@@ -7,20 +7,22 @@
 # 📚 목표
 
 <!-- STATS_START -->
-| 아이디 | 목표 | 달성 여부 | 벌금 |
-| ------ | ---- | :-------: | :--: |
-| [양성원(YSW-Yang)](https://github.com/YSW-Yang) | 프로그래머스 Lv2 1개 | ✅ | ✨굳✨ |
-| [이상혁(hyuksanglee)](https://github.com/hyuksanglee) | 프로그래머스 Lv2 2개 | ✅ | ✨굳✨ |
-| [이승지(bmlsj)](https://github.com/bmlsj) | 프로그래머스 Lv2 2개 | ✅ | ✨굳✨ |
-| [정유진(breadbirds)](https://github.com/breadbirds) | 프로그래머스 Lv1 1개 | ✅ | ✨굳✨ |
-| [정찬우(Jhanoo)](https://github.com/Jhanoo) | 프로그래머스 Lv2 1개 | ✅ | ✨굳✨ |
-| [김정언(JeongEon)](https://github.com/JeongEon8) | (취업자배려전형) 프로그래머스 Lv1 2개 | ✅ | ✨굳✨ |
-| [이서현(kizizip)](https://github.com/kizizip) | (취업자배려전형) 프로그래머스 Lv1 2개 | ✅ | ✨굳✨ |
-| [장홍준(ajang369)](https://github.com/ajang369) | (취업자배려전형) | - | - |
-| [한아영(hanayoung)](https://github.com/hanayoung) | (취업자배려전형) SWEA D1 1개 | ❌ | 💸10,000원 |
-| [황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok) | (취업자배려전형) 프로그래머스 lv2 2개 | ✅ | ✨굳✨ |
+
+| 아이디                                                      | 목표                                  | 달성 여부 |    벌금    |
+| ----------------------------------------------------------- | ------------------------------------- | :-------: | :--------: |
+| [양성원(YSW-Yang)](https://github.com/YSW-Yang)             | 프로그래머스 Lv2 1개                  |    ✅     |   ✨굳✨   |
+| [이상혁(hyuksanglee)](https://github.com/hyuksanglee)       | 프로그래머스 Lv2 2개                  |    ✅     |   ✨굳✨   |
+| [이승지(bmlsj)](https://github.com/bmlsj)                   | 프로그래머스 Lv2 2개                  |    ✅     |   ✨굳✨   |
+| [정유진(breadbirds)](https://github.com/breadbirds)         | 프로그래머스 Lv1 1개                  |    ✅     |   ✨굳✨   |
+| [정찬우(Jhanoo)](https://github.com/Jhanoo)                 | 프로그래머스 Lv2 1개                  |    ✅     |   ✨굳✨   |
+| [김정언(JeongEon)](https://github.com/JeongEon8)            | (취업자배려전형) 프로그래머스 Lv1 2개 |    ✅     |   ✨굳✨   |
+| [이서현(kizizip)](https://github.com/kizizip)               | (취업자배려전형) 프로그래머스 Lv1 2개 |    ✅     |   ✨굳✨   |
+| [장홍준(ajang369)](https://github.com/ajang369)             | (취업자배려전형)                      |     -     |     -      |
+| [한아영(hanayoung)](https://github.com/hanayoung)           | (취업자배려전형) SWEA D1 1개          |    ❌     | 💸10,000원 |
+| [황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok) | (취업자배려전형) 프로그래머스 lv2 2개 |    ✅     |   ✨굳✨   |
 
 > 📅 26.09.08 ~ 26.09.14 20:00 KST 기준
+
 <!-- STATS_END -->
 
 <br>
@@ -38,7 +40,7 @@
 
 <!-- CURRENT_ROUND_START -->
 
-### 제 88회 [26.09.08 ~ 26.09.14] (진행중)
+### 제 89회 [26.09.15 ~ 26.09.21] (진행중)
 
 <!-- CURRENT_ROUND_END -->
 
@@ -138,6 +140,7 @@
   - 제 85회 [26.08.18 ~ 26.08.24] (진행완료) <br>
   - 제 86회 [26.08.25 ~ 26.08.31] (진행완료) <br>
   - 제 87회 [26.09.01 ~ 26.09.07] (진행완료) <br>
+  - 제 88회 [26.09.08 ~ 26.09.14] (진행완료) <br>
 </details>
 
 <br>
