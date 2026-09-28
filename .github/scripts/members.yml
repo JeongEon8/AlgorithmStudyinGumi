@@ -28,8 +28,8 @@ members:
   - display: "[이상혁(hyuksanglee)](https://github.com/hyuksanglee)"
     folder: "hyuksanglee"
     name: "이상혁"
-    goal: "programmers,lv2,1"
-    goal_text: "프로그래머스 Lv2 1개"
+    goal: "programmers,lv2,2"
+    goal_text: "프로그래머스 Lv2 2개"
     exempt: false
 
   - display: "[이승지(bmlsj)](https://github.com/bmlsj)"
@@ -42,22 +42,22 @@ members:
   - display: "[정유진(breadbirds)](https://github.com/breadbirds)"
     folder: "breadbirds"
     name: "정유진"
-    goal: "programmers,lv1,1"
-    goal_text: "프로그래머스 Lv1 1개"
+    goal: "programmers,lv2,1"
+    goal_text: "프로그래머스 Lv2 1개"
     exempt: false
 
   - display: "[정찬우(Jhanoo)](https://github.com/Jhanoo)"
     folder: "Jhanoo"
     name: "정찬우"
-    goal: "programmers,lv2,1"
-    goal_text: "프로그래머스 Lv2 1개"
-    exempt: false
+    goal: ""
+    goal_text: ""
+    exempt: true
 
   - display: "[김정언(JeongEon)](https://github.com/JeongEon8)"
     folder: "JeongEon8"
     name: "김정언"
-    goal: "programmers,lv1,2"
-    goal_text: "(취업자배려전형) 프로그래머스 Lv1 2개"
+    goal: "programmers,lv1,1"
+    goal_text: "(취업자배려전형) 프로그래머스 Lv1 1개"
     exempt: false
 
   - display: "[이서현(kizizip)](https://github.com/kizizip)"
@@ -84,6 +84,6 @@ members:
   - display: "[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)"
     folder: "HwangSeonHyeok"
     name: "황선혁"
-    goal: "programmers,lv2,1"
-    goal_text: "(취업자배려전형) 프로그래머스 lv2 1개"
+    goal: "programmers,lv2,2"
+    goal_text: "(취업자배려전형) 프로그래머스 lv2 2개"
     exempt: false
