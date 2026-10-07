@@ -43,14 +43,14 @@ members:
     folder: "breadbirds"
     name: "정유진"
     goal: ""
-    goal_text: "휴식(정처기)"
+    goal_text: ""
     exempt: true
 
   - display: "[정찬우(Jhanoo)](https://github.com/Jhanoo)"
     folder: "Jhanoo"
     name: "정찬우"
     goal: ""
-    goal_text: "휴식(부캠)"
+    goal_text: ""
     exempt: true
 
   - display: "[김정언(JeongEon)](https://github.com/JeongEon8)"
