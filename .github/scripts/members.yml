@@ -32,12 +32,11 @@ members:
     goal_text: "프로그래머스 Lv2 2개"
     exempt: false
 
-
   - display: "[정유진(breadbirds)](https://github.com/breadbirds)"
     folder: "breadbirds"
     name: "정유진"
-    goal: ""
-    goal_text: "정보처리기사 시험까지 쉬기"
+    goal: "programmers,lv1,2"
+    goal_text: "프로그래머스 Lv1 2개"
     exempt: true
 
   - display: "[정찬우(Jhanoo)](https://github.com/Jhanoo)"
@@ -58,7 +57,7 @@ members:
     folder: "kizizip"
     name: "이서현"
     goal: ""
-    goal_text: "(취업자배려전형) 한 주 쉬어용 "
+    goal_text: "(취업자배려전형) "
     exempt: true
 
   - display: "[이승지(bmlsj)](https://github.com/bmlsj)"
