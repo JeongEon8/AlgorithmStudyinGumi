@@ -1,8 +1,8 @@
-# [PGS - Lv2] 01_숫자 블록
+# [PGS - Lv2] 01\_숫자 블록
 
 ## ⏰**time**
 
-O(n*end^(1/2))
+- 40분
 
 ## :pushpin: **Algorithm**
 
@@ -10,7 +10,7 @@ O(n*end^(1/2))
 
 ## ⏲️**Time Complexity**
 
-$O(N)$ (시간 복잡도를 작성해주세요.)
+$O(n*end^(1/2))$
 
 ## :round_pushpin: **Logic**
 
