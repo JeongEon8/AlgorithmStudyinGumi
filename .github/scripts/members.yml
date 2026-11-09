@@ -28,8 +28,8 @@ members:
   - display: "[이상혁(hyuksanglee)](https://github.com/hyuksanglee)"
     folder: "hyuksanglee"
     name: "이상혁"
-    goal: "programmers,lv1,1"
-    goal_text: "프로그래머스 Lv1 1개"
+    goal: "programmers,lv2,2"
+    goal_text: "프로그래머스 Lv2 2개"
     exempt: false
 
   - display: "[정유진(breadbirds)](https://github.com/breadbirds)"
@@ -43,7 +43,7 @@ members:
     folder: "Jhanoo"
     name: "정찬우"
     goal: ""
-    goal_text: "부캠 끝날때까지 쉬기"
+    goal_text: "11월 16일 컴백"
     exempt: true
 
   - display: "[김정언(JeongEon)](https://github.com/JeongEon8)"
@@ -57,15 +57,15 @@ members:
     folder: "kizizip"
     name: "이서현"
     goal: ""
-    goal_text: "(취업자배려전형) "
+    goal_text: "(취업자배려전형)"
     exempt: true
 
   - display: "[이승지(bmlsj)](https://github.com/bmlsj)"
     folder: "bmlsj"
     name: "이승지"
-    goal: "programmers,lv1,1"
-    goal_text: "(취업자배려전형) 프로그래머스 Lv1 1개"
-    exempt: false
+    goal: ""
+    goal_text: "(취업자배려전형) 한 주 쉬기"
+    exempt: true
 
   - display: "[장홍준(ajang369)](https://github.com/ajang369)"
     folder: "ajang369"
