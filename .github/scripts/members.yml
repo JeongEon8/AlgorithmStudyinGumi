@@ -28,22 +28,22 @@ members:
   - display: "[이상혁(hyuksanglee)](https://github.com/hyuksanglee)"
     folder: "hyuksanglee"
     name: "이상혁"
-    goal: "programmers,lv2,2"
-    goal_text: "프로그래머스 Lv2 2개"
+    goal: "programmers,lv2,1"
+    goal_text: "프로그래머스 Lv2 1개"
     exempt: false
 
   - display: "[정유진(breadbirds)](https://github.com/breadbirds)"
     folder: "breadbirds"
     name: "정유진"
-    goal: "programmers,lv1,1"
-    goal_text: "프로그래머스 Lv1 1개"
-    exempt: false
+    goal: ""
+    goal_text: ""
+    exempt: true
 
   - display: "[정찬우(Jhanoo)](https://github.com/Jhanoo)"
     folder: "Jhanoo"
     name: "정찬우"
-    goal: ""
-    goal_text: "11월 16일 컴백"
+    goal: "programmers,lv2,2"
+    goal_text: "프로그래머스 Lv2 2개"
     exempt: true
 
   - display: "[김정언(JeongEon)](https://github.com/JeongEon8)"
@@ -64,7 +64,7 @@ members:
     folder: "bmlsj"
     name: "이승지"
     goal: ""
-    goal_text: "(취업자배려전형) 한 주 쉬기"
+    goal_text: "(취업자배려전형)"
     exempt: true
 
   - display: "[장홍준(ajang369)](https://github.com/ajang369)"
@@ -78,12 +78,12 @@ members:
     folder: "hanayoung"
     name: "한아영"
     goal: ""
-    goal_text: "(취업자배려전형) 휴...식..."
+    goal_text: "(취업자배려전형)"
     exempt: true
 
   - display: "[황선혁(HwangSeonHyeok)](https://github.com/HwangSeonHyeok)"
     folder: "HwangSeonHyeok"
     name: "황선혁"
-    goal: "programmers,lv1,1"
-    goal_text: "(취업자배려전형) 프로그래머스 lv1 1개"
+    goal: "programmers,lv1,1 OR baekjoon,silver,1"
+    goal_text: "(취업자배려전형) 프로그래머스 lv1 1개 혹은 백준 실버 1개"
     exempt: false
